@@ -1,0 +1,11 @@
+{
+  "embedding_model": "BAAI/bge-m3",
+  "embedding_dimension": 1024,
+  "distance_metric": "cosine",
+  "normalized": true,
+  "collection_name": "drugs",
+  "total_documents": 5978,
+  "embedded": 5978,
+  "skipped_existing": 0,
+  "failed": 0
+}

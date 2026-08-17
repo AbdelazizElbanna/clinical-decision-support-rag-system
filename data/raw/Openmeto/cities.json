@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "governorate_ar": "القاهرة",
+    "governorate_en": "Cairo",
+    "capital_ar": "القاهرة",
+    "capital_en": "Cairo City",
+    "lat": 30.0444,
+    "lon": 31.2357,
+    "aliases": ["القاهرة", "مصر", "القاهره", "Cairo", "Helwan", "حلوان", "مصر الجديدة", "التجمع"]
+  },
+  {
+    "id": 2,
+    "governorate_ar": "الجيزة",
+    "governorate_en": "Giza",
+    "capital_ar": "الجيزة",
+    "capital_en": "Giza City",
+    "lat": 30.0131,
+    "lon": 31.2089,
+    "aliases": ["الجيزة", "الجيزه", "Giza", "أكتوبر", "6th of October", "الشيخ زايد", "Sheikh Zayed", "الهرم"]
+  },
+  {
+    "id": 3,
+    "governorate_ar": "الإسكندرية",
+    "governorate_en": "Alexandria",
+    "capital_ar": "الإسكندرية",
+    "capital_en": "Alexandria City",
+    "lat": 31.2001,
+    "lon": 29.9187,
+    "aliases": ["الإسكندرية", "الإسكندريه", "اسكندرية", "اسكندريه", "Alexandria", "Alex", "برج العرب", "الساحل"]
+  },
+  {
+    "id": 4,
+    "governorate_ar": "الدقهلية",
+    "governorate_en": "Dakahlia",
+    "capital_ar": "المنصورة",
+    "capital_en": "Mansoura",
+    "lat": 31.0409,
+    "lon": 31.3785,
+    "aliases": ["الدقهلية", "الدقهليه", "المنصورة", "المنصوره", "Dakahlia", "Mansoura", "ميت غمر"]
+  },
+  {
+    "id": 5,
+    "governorate_ar": "البحر الأحمر",
+    "governorate_en": "Red Sea",
+    "capital_ar": "الغردقة",
+    "capital_en": "Hurghada",
+    "lat": 27.2579,
+    "lon": 33.8116,
+    "aliases": ["البحر الأحمر", "البحر الاحمر", "الغردقة", "الغردقه", "Hurghada", "Red Sea", "الجونة", "مرسى علم", "سفاجا"]
+  },
+  {
+    "id": 6,
+    "governorate_ar": "البحيرة",
+    "governorate_en": "Beheira",
+    "capital_ar": "دمنهور",
+    "capital_en": "Damanhour",
+    "lat": 31.0361,
+    "lon": 30.4695,
+    "aliases": ["البحيرة", "البحيره", "دمنهور", "كفر الدوار", "Beheira", "Damanhour"]
+  },
+  {
+    "id": 7,
+    "governorate_ar": "الفيوم",
+    "governorate_en": "Fayoum",
+    "capital_ar": "الفيوم",
+    "capital_en": "Fayoum City",
+    "lat": 29.3084,
+    "lon": 30.8428,
+    "aliases": ["الفيوم", "Fayoum", "Faiyum", "طامية", "سنورس"]
+  },
+  {
+    "id": 8,
+    "governorate_ar": "الغربية",
+    "governorate_en": "Gharbia",
+    "capital_ar": "طنطا",
+    "capital_en": "Tanta",
+    "lat": 30.7865,
+    "lon": 31.0004,
+    "aliases": ["الغربية", "الغربيه", "طنطا", "المحلة الكبرى", "المحلة", "Gharbia", "Tanta", "El Mahalla"]
+  },
+  {
+    "id": 9,
+    "governorate_ar": "الإسماعيلية",
+    "governorate_en": "Ismailia",
+    "capital_ar": "الإسماعيلية",
+    "capital_en": "Ismailia City",
+    "lat": 30.5965,
+    "lon": 32.2715,
+    "aliases": ["الإسماعيلية", "الاسماعيلية", "الاسماعيليه", "Ismailia", "فايد", "القنطرة"]
+  },
+  {
+    "id": 10,
+    "governorate_ar": "المنوفية",
+    "governorate_en": "Monufia",
+    "capital_ar": "شبين الكوم",
+    "capital_en": "Shibin El Kom",
+    "lat": 30.5526,
+    "lon": 31.0090,
+    "aliases": ["المنوفية", "المنوفيه", "شبين الكوم", "أشمون", "السادات", "Monufia", "Menofia"]
+  },
+  {
+    "id": 11,
+    "governorate_ar": "المنيا",
+    "governorate_en": "Minya",
+    "capital_ar": "المنيا",
+    "capital_en": "Minya City",
+    "lat": 28.1099,
+    "lon": 30.7503,
+    "aliases": ["المنيا", "Minya", "ملوي", "مغاغة", "بني مزار"]
+  },
+  {
+    "id": 12,
+    "governorate_ar": "القليوبية",
+    "governorate_en": "Qalyubia",
+    "capital_ar": "بنها",
+    "capital_en": "Banha",
+    "lat": 30.4660,
+    "lon": 31.1856,
+    "aliases": ["القليوبية", "القليوبيه", "بنها", "شبرا الخيمة", "شبرا", "Qalyubia", "Banha"]
+  },
+  {
+    "id": 13,
+    "governorate_ar": "الوادي الجديد",
+    "governorate_en": "New Valley",
+    "capital_ar": "الخارجة",
+    "capital_en": "Kharga",
+    "lat": 25.4514,
+    "lon": 30.5475,
+    "aliases": ["الوادي الجديد", "الوادى الجديد", "الخارجة", "الداخلة", "الفرافرة", "New Valley", "Kharga"]
+  },
+  {
+    "id": 14,
+    "governorate_ar": "السويس",
+    "governorate_en": "Suez",
+    "capital_ar": "السويس",
+    "capital_en": "Suez City",
+    "lat": 29.9668,
+    "lon": 32.5498,
+    "aliases": ["السويس", "Suez", "العين السخنة", "السخنة", "Ain Sokhna"]
+  },
+  {
+    "id": 15,
+    "governorate_ar": "أسوان",
+    "governorate_en": "Aswan",
+    "capital_ar": "أسوان",
+    "capital_en": "Aswan City",
+    "lat": 24.0889,
+    "lon": 32.8998,
+    "aliases": ["أسوان", "اسوان", "Aswan", "النوبة", "ابو سمبل", "إدفو", "كوم أمبو"]
+  },
+  {
+    "id": 16,
+    "governorate_ar": "أسيوط",
+    "governorate_en": "Asyut",
+    "capital_ar": "أسيوط",
+    "capital_en": "Asyut City",
+    "lat": 27.1809,
+    "lon": 31.1837,
+    "aliases": ["أسيوط", "اسيوط", "Asyut", "Assiut", "ديروط", "منفلوط"]
+  },
+  {
+    "id": 17,
+    "governorate_ar": "بني سويف",
+    "governorate_en": "Beni Suef",
+    "capital_ar": "بني سويف",
+    "capital_en": "Beni Suef City",
+    "lat": 29.0661,
+    "lon": 31.0994,
+    "aliases": ["بني سويف", "بنى سويف", "Beni Suef", "الواسطى", "ببا"]
+  },
+  {
+    "id": 18,
+    "governorate_ar": "بورسعيد",
+    "governorate_en": "Port Said",
+    "capital_ar": "بورسعيد",
+    "capital_en": "Port Said City",
+    "lat": 31.2653,
+    "lon": 32.3019,
+    "aliases": ["بورسعيد", "بور سعيد", "Port Said", "بورفؤاد"]
+  },
+  {
+    "id": 19,
+    "governorate_ar": "دمياط",
+    "governorate_en": "Damietta",
+    "capital_ar": "دمياط",
+    "capital_en": "Damietta City",
+    "lat": 31.4175,
+    "lon": 31.8144,
+    "aliases": ["دمياط", "Damietta", "رأس البر", "كفر سعد"]
+  },
+  {
+    "id": 20,
+    "governorate_ar": "الشرقية",
+    "governorate_en": "Sharkia",
+    "capital_ar": "الزقازيق",
+    "capital_en": "Zagazig",
+    "lat": 30.5765,
+    "lon": 31.5041,
+    "aliases": ["الشرقية", "الشرقيه", "الزقازيق", "العاشر من رمضان", "بلبيس", "فاقوس", "Sharkia", "Zagazig"]
+  },
+  {
+    "id": 21,
+    "governorate_ar": "جنوب سيناء",
+    "governorate_en": "South Sinai",
+    "capital_ar": "الطور",
+    "capital_en": "El Tor",
+    "lat": 27.9158,
+    "lon": 34.3299,
+    "aliases": ["جنوب سيناء", "South Sinai", "شرم الشيخ", "شرم", "دهب", "نويبع", "طابا", "طور سيناء", "سانت كاترين", "Sharm El Sheikh", "Dahab"]
+  },
+  {
+    "id": 22,
+    "governorate_ar": "كفر الشيخ",
+    "governorate_en": "Kafr El Sheikh",
+    "capital_ar": "كفر الشيخ",
+    "capital_en": "Kafr El Sheikh City",
+    "lat": 31.1107,
+    "lon": 30.9388,
+    "aliases": ["كفر الشيخ", "Kafr El Sheikh", "دسوق", "بلطيم"]
+  },
+  {
+    "id": 23,
+    "governorate_ar": "مطروح",
+    "governorate_en": "Matrouh",
+    "capital_ar": "مرسى مطروح",
+    "capital_en": "Marsa Matruh",
+    "lat": 31.3543,
+    "lon": 27.2373,
+    "aliases": ["مطروح", "مرسى مطروح", "مرسي مطروح", "Matrouh", "Marsa Matruh", "سيوة", "العلمين", "الضبعة"]
+  },
+  {
+    "id": 24,
+    "governorate_ar": "الأقصر",
+    "governorate_en": "Luxor",
+    "capital_ar": "الأقصر",
+    "capital_en": "Luxor City",
+    "lat": 25.6872,
+    "lon": 32.6396,
+    "aliases": ["الأقصر", "الاقصر", "Luxor", "إسنا", "ارمنت"]
+  },
+  {
+    "id": 25,
+    "governorate_ar": "قنا",
+    "governorate_en": "Qena",
+    "capital_ar": "قنا",
+    "capital_en": "Qena City",
+    "lat": 26.1551,
+    "lon": 32.7160,
+    "aliases": ["قنا", "Qena", "نجع حمادي", "دشنا", "قوص"]
+  },
+  {
+    "id": 26,
+    "governorate_ar": "شمال سيناء",
+    "governorate_en": "North Sinai",
+    "capital_ar": "العريش",
+    "capital_en": "Arish",
+    "lat": 31.1316,
+    "lon": 33.7984,
+    "aliases": ["شمال سيناء", "North Sinai", "العريش", "رفح", "الشيخ زويد", "بئر العبد", "Arish"]
+  },
+  {
+    "id": 27,
+    "governorate_ar": "سوهاج",
+    "governorate_en": "Sohag",
+    "capital_ar": "سوهاج",
+    "capital_en": "Sohag City",
+    "lat": 26.5569,
+    "lon": 31.6948,
+    "aliases": ["سوهاج", "Sohag", "طهطا", "جرجا", "أخميم"]
+  }
+]
