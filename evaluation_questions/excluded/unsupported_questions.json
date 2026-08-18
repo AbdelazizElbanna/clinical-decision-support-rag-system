@@ -1,0 +1,956 @@
+[
+  {
+    "question_id": "ecz_017",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the exact mg dose of Dupixent I should inject for my body weight?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should decline to give a specific dosage number not present in the data and refer to a prescriber.",
+    "entities": {
+      "drugs": [
+        "dupixent"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "dupixent"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [
+      "eczema_systemic_therapy_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_systemic_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "Systemic Therapy / Biologic / JAK Inhibitor",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "Administration: Subcutaneous injection administered every 2 to 4 weeks. No weight-based mg dosing data is present in the knowledge base."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_018",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Can you tell me about the latest 2026 FDA-approved eczema drug that just came out?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should say it cannot confirm anything beyond what's in the AAD-sourced data provided and not fabricate a new drug name.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_019",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the treatment for lupus?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should state this condition is outside the eczema knowledge base and decline to answer from this data.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "lupus"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "lupus"
+    ],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_020",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Which specific brand of moisturizer is scientifically proven best for eczema?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should give only the general guidance available (fragrance-free, ointment-based) without naming or endorsing a specific commercial brand not present in the data.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Skin Care and Self Care"
+    ],
+    "target_chunk_ids": [
+      "eczema_skin_care_and_self_care"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_skin_care_and_self_care",
+        "section": "Skin Care and Self Care",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+        "citation_evidence": "Select thick ointments (like petroleum jelly) or rich barrier creams rather than thin lotions. Only use products explicitly labeled 'Fragrance-Free'. No specific brand names are endorsed."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_016",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the exact UVB dose in millijoules I should get per phototherapy session?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should decline to give a precise dosing number not present in the data and refer to a dermatologist.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_017",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is the new biologic drug that came out last month effective for psoriasis?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should say it can't confirm anything not present in the sourced data.",
+    "entities": {
+      "drugs": [
+        "biologic"
+      ],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [
+      "biologic"
+    ],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_018",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the treatment for eczema herpeticum?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should recognize this term belongs to the eczema knowledge base, not psoriasis, and redirect appropriately.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema",
+        "eczema herpeticum"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema",
+      "eczema herpeticum"
+    ],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_019",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Which insurance companies in Egypt cover biologic psoriasis treatment?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should decline — insurance/administrative information is not in the medical knowledge base.",
+    "entities": {
+      "drugs": [
+        "biologic"
+      ],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [
+      "biologic"
+    ],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_013",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the exact dose of omalizumab I should be prescribed?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should decline to give a specific dosage number not present in the data and defer to a prescriber.",
+    "entities": {
+      "drugs": [
+        "omalizumab"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "omalizumab"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_014",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Can you diagnose whether my hives are from a food allergy?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should decline to provide a diagnosis and recommend seeing a doctor/allergist.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_015",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the treatment for psoriatic arthritis?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "OUT_OF_SCOPE_QUERY",
+    "intent": "Should recognize this belongs to the psoriasis file, not urticaria, and state it's out of scope for this dataset.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriatic arthritis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriatic arthritis"
+    ],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_016",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Which pharmacy in Alexandria has the cheapest antihistamines right now?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should decline — real-time local pricing/availability isn't in the knowledge base.",
+    "entities": {
+      "drugs": [
+        "antihistamine",
+        "antihistamines"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "antihistamine",
+      "antihistamines"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_009",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the exact price of Dupixent in Egyptian pounds this month?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DRUG",
+    "retrieval_target": "NEITHER",
+    "question_type": "PRICE_QUERY",
+    "intent": "Should decline — pricing isn't part of the drug database's fields.",
+    "entities": {
+      "drugs": [
+        "dupixent"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "dupixent"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_010",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Can I substitute methotrexate for prednisone for my psoriasis without asking my doctor?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DRUG",
+    "retrieval_target": "NEITHER",
+    "question_type": "UNFAIR_SUBSTITUTION",
+    "intent": "Should decline to advise a medication substitution and stress that this decision must involve a physician.",
+    "entities": {
+      "drugs": [
+        "methotrexate",
+        "prednisone"
+      ],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [
+      "methotrexate",
+      "prednisone"
+    ],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_011",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Which drug in this database is completely 100% safe with zero risk for everyone?",
+    "primary_domain": "OUT_OF_SCOPE",
+    "secondary_domain": "DRUG",
+    "retrieval_target": "NEITHER",
+    "question_type": "UNREALISTIC_SAFETY_CLAIM",
+    "intent": "Should decline this framing — no drug is universally risk-free, and the database records condition-specific caution flags.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "External Knowledge / Out of Scope",
+    "requires_drug_db": false,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Question asks for out-of-scope information (e.g. real-time drug prices in EGP, specific ungrounded dosages, or unindexed external diseases).",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "out_of_scope",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "not_grounded",
+    "expected_sections": [],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "wx_ecz_001",
+    "source_file": "new_questions.json",
+    "question_text": "What is the current humidity in Cairo right now, and based on that, should someone with eczema be worried about a flare today?",
+    "primary_domain": "WEATHER_API",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "LIVE_WEATHER_RISK_ASSESSMENT",
+    "intent": "Should (1) query Open-Meteo for Cairo's current relative_humidity_2m value, (2) compare it to the eczema knowledge base threshold (<40% RH = high risk per trig_dry_air), and (3) give a personalized flare-risk assessment plus prevention advice. Must NOT invent a humidity value.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Live Weather API + Disease Knowledge Base Threshold",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Requires live external weather API data (Open-Meteo) combined with disease trigger threshold. Cannot be answered by vector search alone.",
+    "confidence": 0.95,
+    "retrieval_difficulty": "HARD",
+    "original_category": "live_weather_integration",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json + Open-Meteo",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Triggers - Dry Air and Low Humidity"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": {
+      "medical_chunk": "eczema_trigger_trig_dry_air",
+      "live_api": "Open-Meteo: relative_humidity_2m for Cairo (lat=30.06, lon=31.25)"
+    },
+    "evaluation_goal": "Tests live weather retrieval + medical chunk grounding + threshold reasoning"
+  },
+  {
+    "question_id": "wx_ecz_002",
+    "source_file": "new_questions.json",
+    "question_text": "It's a summer afternoon in Alexandria — should a child with eczema be allowed to play outside right now? What does the current temperature tell us about sweat-triggered flare risk?",
+    "primary_domain": "WEATHER_API",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "LIVE_WEATHER_RISK_ASSESSMENT",
+    "intent": "Should (1) query Open-Meteo for Alexandria's current temperature, (2) check it against the eczema high-heat trigger threshold (>28°C), and (3) advise accordingly on outdoor activity timing, cooling strategies, and rapid shower-and-moisturize protocol.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Live Weather API + Disease Knowledge Base Threshold",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Requires live external weather API data (Open-Meteo) combined with disease trigger threshold. Cannot be answered by vector search alone.",
+    "confidence": 0.95,
+    "retrieval_difficulty": "HARD",
+    "original_category": "live_weather_integration",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json + Open-Meteo",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Triggers - High Heat and Sweating"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": {
+      "medical_chunk": "eczema_trigger_trig_heat_sweat",
+      "live_api": "Open-Meteo: temperature_2m for Alexandria (lat=31.20, lon=29.92)"
+    },
+    "evaluation_goal": "Tests live weather + pediatric eczema context + evidence-based activity guidance"
+  },
+  {
+    "question_id": "wx_ecz_003",
+    "source_file": "new_questions.json",
+    "question_text": "I have eczema and I'm going from an air-conditioned office to the hot street in Giza today. Is that transition dangerous for my skin, and what does the current temperature gap tell you?",
+    "primary_domain": "WEATHER_API",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "LIVE_WEATHER_RISK_ASSESSMENT",
+    "intent": "Should (1) query Open-Meteo for Giza's current temperature, (2) infer the likely indoor-outdoor temperature delta, (3) connect this to the sudden temperature shift trigger (trig_temp_shift) causing neurogenic itch, and (4) advise on layering and preparation. Must not fabricate the temperature reading.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Live Weather API + Disease Knowledge Base Threshold",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Requires live external weather API data (Open-Meteo) combined with disease trigger threshold. Cannot be answered by vector search alone.",
+    "confidence": 0.95,
+    "retrieval_difficulty": "HARD",
+    "original_category": "live_weather_integration",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json + Open-Meteo",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Triggers - Sudden Temperature Shifts"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": {
+      "medical_chunk": "eczema_trigger_trig_temp_shift",
+      "live_api": "Open-Meteo: temperature_2m for Giza (lat=30.01, lon=31.21)"
+    },
+    "evaluation_goal": "Tests sudden-shift trigger grounding + live temp retrieval + practical advice"
+  },
+  {
+    "question_id": "wx_pso_001",
+    "source_file": "new_questions.json",
+    "question_text": "I have psoriasis and I live in Aswan. Is today's UV index high enough that going outside without sunscreen could trigger a flare?",
+    "primary_domain": "WEATHER_API",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "LIVE_WEATHER_RISK_ASSESSMENT",
+    "intent": "Should (1) query Open-Meteo for Aswan's current UV index (uv_index), (2) compare it to the psoriasis sunburn trigger threshold (UV index >= 6 = high risk per trig_sunburn_and_excess_sun), and (3) give a sunburn-induced Koebner phenomenon risk assessment with protection advice. Must not invent the UV reading.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Live Weather API + Disease Knowledge Base Threshold",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Requires live external weather API data (Open-Meteo) combined with disease trigger threshold. Cannot be answered by vector search alone.",
+    "confidence": 0.95,
+    "retrieval_difficulty": "HARD",
+    "original_category": "live_weather_integration",
+    "original_source_file": "psoriasis_chunked.json + Open-Meteo",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Triggers - Severe Sunburn and Excessive UV Exposure"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": {
+      "medical_chunk": "psoriasis_trigger_trig_sunburn_and_excess_sun",
+      "live_api": "Open-Meteo: uv_index for Aswan (lat=24.09, lon=32.90)"
+    },
+    "evaluation_goal": "Tests UV-index API integration + Koebner trigger grounding + evidence-based prevention"
+  },
+  {
+    "question_id": "wx_pso_002",
+    "source_file": "new_questions.json",
+    "question_text": "It's winter and I'm in Mansoura with psoriasis — is today's weather likely to worsen my plaques, and what should I do before leaving the house?",
+    "primary_domain": "WEATHER_API",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "LIVE_WEATHER_RISK_ASSESSMENT",
+    "intent": "Should (1) query Open-Meteo for Mansoura's current temperature and relative humidity, (2) compare both to the dry/cold weather trigger thresholds (<10°C and <40% RH), and (3) provide moisturizer, clothing, and humidifier guidance from the trigger chunk. Must not make up weather values.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Live Weather API + Disease Knowledge Base Threshold",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Requires live external weather API data (Open-Meteo) combined with disease trigger threshold. Cannot be answered by vector search alone.",
+    "confidence": 0.95,
+    "retrieval_difficulty": "HARD",
+    "original_category": "live_weather_integration",
+    "original_source_file": "psoriasis_chunked.json + Open-Meteo",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Triggers - Dry Cold Weather and Low Humidity"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": {
+      "medical_chunk": "psoriasis_trigger_trig_dry_cold_weather",
+      "live_api": "Open-Meteo: temperature_2m + relative_humidity_2m for Mansoura (lat=31.04, lon=31.38)"
+    },
+    "evaluation_goal": "Tests dual-variable weather threshold evaluation + cold weather trigger grounding"
+  },
+  {
+    "question_id": "wx_urt_001",
+    "source_file": "new_questions.json",
+    "question_text": "I have cold urticaria and I want to walk by the sea in Alexandria this evening. What does the current temperature there say about my risk?",
+    "primary_domain": "WEATHER_API",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "LIVE_WEATHER_RISK_ASSESSMENT",
+    "intent": "Should (1) query Open-Meteo for Alexandria's current temperature (and possibly wind_speed_10m for wind-chill effect), (2) assess whether conditions would trigger cold-sensitive mast cell activation per the cold urticaria trigger chunk, and (3) advise on protective clothing and the risk of body-wide reaction. Must not invent weather values.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "cold urticaria",
+        "urticaria"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "cold urticaria",
+      "urticaria"
+    ],
+    "expected_knowledge_type": "Live Weather API + Disease Knowledge Base Threshold",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Requires live external weather API data (Open-Meteo) combined with disease trigger threshold. Cannot be answered by vector search alone.",
+    "confidence": 0.95,
+    "retrieval_difficulty": "HARD",
+    "original_category": "live_weather_integration",
+    "original_source_file": "urticaria_hives_chunked.json + Open-Meteo",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Triggers - Cold Temperature and Cold Exposure (Cold Urticaria)"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": {
+      "medical_chunk": "urticaria_trigger_trig_cold_exposure",
+      "live_api": "Open-Meteo: temperature_2m for Alexandria (lat=31.20, lon=29.92)"
+    },
+    "evaluation_goal": "Tests cold urticaria trigger + live temperature retrieval + patient scenario"
+  },
+  {
+    "question_id": "wx_urt_002",
+    "source_file": "new_questions.json",
+    "question_text": "I get hives whenever I sweat (cholinergic urticaria). Is it safe for me to go for a run in Cairo right now given today's heat?",
+    "primary_domain": "WEATHER_API",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "TRIGGER_IDENTIFICATION",
+    "intent": "Should (1) query Open-Meteo for Cairo's current temperature, (2) check it against the cholinergic urticaria threshold (>28°C), (3) assess activity-in-heat risk, and (4) recommend cool-environment alternatives and pre/post-exercise strategies per the chunk. Must not invent the temperature.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "cholinergic urticaria",
+        "hives",
+        "urticaria"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "cholinergic urticaria",
+      "hives",
+      "urticaria"
+    ],
+    "expected_knowledge_type": "Live Weather API + Disease Knowledge Base Threshold",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Requires live external weather API data (Open-Meteo) combined with disease trigger threshold. Cannot be answered by vector search alone.",
+    "confidence": 0.95,
+    "retrieval_difficulty": "HARD",
+    "original_category": "live_weather_integration",
+    "original_source_file": "urticaria_hives_chunked.json + Open-Meteo",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Triggers - Heat Exercise and Sweating (Cholinergic Urticaria)"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": {
+      "medical_chunk": "urticaria_trigger_trig_heat_and_sweating",
+      "live_api": "Open-Meteo: temperature_2m for Cairo (lat=30.06, lon=31.25)"
+    },
+    "evaluation_goal": "Tests cholinergic urticaria trigger + live heat data + activity safety guidance"
+  },
+  {
+    "question_id": "wx_missing_001",
+    "source_file": "new_questions.json",
+    "question_text": "What's the current temperature in the middle of the Sahara Desert, and does it affect my psoriasis?",
+    "primary_domain": "WEATHER_API",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "NEITHER",
+    "question_type": "LIVE_WEATHER_RISK_ASSESSMENT",
+    "intent": "Should attempt to query Open-Meteo with the specified location, and if coordinates are outside available grid coverage or the API returns no usable data, transparently disclose this limitation rather than fabricating a temperature value. Should still describe the general cold/dry weather psoriasis trigger principle from the medical chunk without pretending live data was obtained.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Live Weather API + Disease Knowledge Base Threshold",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": false,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Requires live external weather API data (Open-Meteo) combined with disease trigger threshold. Cannot be answered by vector search alone.",
+    "confidence": 0.95,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "live_weather_graceful_failure",
+    "original_source_file": "psoriasis_chunked.json + Open-Meteo",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": null,
+    "expected_sections": [
+      "Triggers - Dry Cold Weather and Low Humidity"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": {
+      "medical_chunk": "psoriasis_trigger_trig_dry_cold_weather",
+      "live_api": "Open-Meteo: attempt query — disclose if unavailable"
+    },
+    "evaluation_goal": "Tests graceful failure when live weather data is unavailable or ambiguous — must NOT hallucinate a weather value"
+  }
+]

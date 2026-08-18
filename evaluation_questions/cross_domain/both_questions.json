@@ -1,0 +1,278 @@
+[
+  {
+    "question_id": "drg_006",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My dermatologist mentioned dupilumab for my eczema — what is it, and is it available as a specific product I could ask my pharmacist about in Egypt?",
+    "primary_domain": "DRUG",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "BOTH",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should combine the eczema knowledge base's description of dupilumab's mechanism/use with the drugs database's product entry (Dupixent) and manufacturer/route info.",
+    "entities": {
+      "drugs": [
+        "dupilumab"
+      ],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [
+      "dupilumab"
+    ],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Multi-Database (Disease Clinical Guidelines + Drug Local Products)",
+    "requires_drug_db": true,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": true,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Cross-domain query: requires retrieving disease guidelines/indications from Disease KB AND local product availability/warnings from Drug KB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "multi_hop",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_multi_source",
+    "expected_sections": [
+      "eczema: Medications and Treatments - Systemic Therapy",
+      "drug lookup: DUPIXENT"
+    ],
+    "target_chunk_ids": [
+      "eczema_systemic_therapy_01",
+      "dupixent"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_systemic_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "Systemic Therapy / Biologic / JAK Inhibitor",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "Drug Name: Dupilumab. Brand Name: Dupixent. Mechanism: Biologic monoclonal antibody (IL-4 / IL-13 receptor alpha inhibitor). Administration: Subcutaneous injection every 2 to 4 weeks."
+      },
+      {
+        "chunk_id": "dupixent",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: DUPIXENT. Active Ingredients: DUPILUMAB. Egyptian market product entry in karem505/egyptian-drug-database and mahmoudfalous/eg-drugs."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_007",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "For urticaria, what's the first-line antihistamine treatment, and are there Egyptian-market products with that ingredient?",
+    "primary_domain": "DRUG",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "BOTH",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should combine the urticaria file's first-line therapy description with matching antihistamine products from the drugs database.",
+    "entities": {
+      "drugs": [
+        "antihistamine"
+      ],
+      "diseases": [
+        "urticaria"
+      ]
+    },
+    "drug_entities": [
+      "antihistamine"
+    ],
+    "disease_entities": [
+      "urticaria"
+    ],
+    "expected_knowledge_type": "Multi-Database (Disease Clinical Guidelines + Drug Local Products)",
+    "requires_drug_db": true,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": true,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Cross-domain query: requires retrieving disease guidelines/indications from Disease KB AND local product availability/warnings from Drug KB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "multi_hop",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_multi_source",
+    "expected_sections": [
+      "urticaria: Medications and Treatments - First-Line Therapy",
+      "drug lookup: antihistamine products"
+    ],
+    "target_chunk_ids": [
+      "urticaria_first_line_therapy_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_first_line_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "First-Line Therapy",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-treatment",
+        "citation_evidence": "Class: Second-Generation H1-Antihistamines. Examples: Cetirizine, Loratadine, Fexofenadine, Desloratadine, Levocetirizine. First-line cornerstone of urticaria therapy."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_014",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I'm on methotrexate for my psoriasis and now I have a fever and feel extremely unwell — should I just wait it out?",
+    "primary_domain": "DRUG",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "BOTH",
+    "question_type": "EMERGENCY_RED_FLAG",
+    "intent": "Should NOT tell them to wait — methotrexate toxicity/infection risk requires prompt medical attention.",
+    "entities": {
+      "drugs": [
+        "methotrexate"
+      ],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [
+      "methotrexate"
+    ],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Multi-Database (Disease Clinical Guidelines + Drug Local Products)",
+    "requires_drug_db": true,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": true,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Cross-domain query: requires retrieving disease guidelines/indications from Disease KB AND local product availability/warnings from Drug KB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "safety_red_flag",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_multi_source",
+    "expected_sections": [
+      "drug lookup: METHOTREXATE",
+      "psoriasis: Red Flags and Warning Signs"
+    ],
+    "target_chunk_ids": [
+      "methotrexate",
+      "psoriasis_when_to_see_doctor_04"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "methotrexate",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: METHOTREXATE (various Egyptian brand names). Drug Class: Antineoplastics / Immunosuppressants. Fever while on methotrexate may indicate serious infection or drug toxicity requiring urgent evaluation."
+      },
+      {
+        "chunk_id": "psoriasis_when_to_see_doctor_04",
+        "section": "When to See Doctor",
+        "subsection": null,
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/treatment",
+        "citation_evidence": "If signs of medical emergencies develop (widespread pus bumps, body-wide red burnt skin, fever, chills). Source: AAD."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_018",
+    "source_file": "new_questions.json",
+    "question_text": "My doctor prescribed tacrolimus ointment for my eczema — what is it, and is there a product with that active ingredient available in Egypt?",
+    "primary_domain": "DRUG",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "BOTH",
+    "question_type": "ACTIVE_INGREDIENT_LOOKUP",
+    "intent": "Should (1) retrieve the eczema knowledge base description of topical calcineurin inhibitors (tacrolimus) as a non-steroidal alternative, (2) cross-reference the drugs database to find Adport (tacrolimus) as the matching Egyptian-market product, and (3) combine both to give a complete, grounded answer including manufacturer/route info. Must not fabricate drug details.",
+    "entities": {
+      "drugs": [
+        "tacrolimus"
+      ],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [
+      "tacrolimus"
+    ],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Multi-Database (Disease Clinical Guidelines + Drug Local Products)",
+    "requires_drug_db": true,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": true,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Cross-domain query: requires retrieving disease guidelines/indications from Disease KB AND local product availability/warnings from Drug KB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "multi_hop",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json + drugs_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "eczema: Medications and Treatments - Topical Therapy",
+      "drug lookup: ADPORT"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_019",
+    "source_file": "new_questions.json",
+    "question_text": "I have chronic hives and my doctor mentioned prednisone as a short-term bridge — what does the knowledge base say about that drug class, and does the Egyptian drug database have a prednisone product?",
+    "primary_domain": "DRUG",
+    "secondary_domain": "DISEASE",
+    "retrieval_target": "BOTH",
+    "question_type": "DRUG_CLASS_LOOKUP",
+    "intent": "Should (1) retrieve the urticaria file's emergency/short-term systemic corticosteroid context, (2) look up Hostacortin (prednisone, glucocorticoid class) in the drugs database, and (3) combine both to explain the role and note the relevant Egyptian product. Should also advise checking pregnancy/heart/kidney safety fields before assuming it is appropriate.",
+    "entities": {
+      "drugs": [
+        "prednisone"
+      ],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [
+      "prednisone"
+    ],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Multi-Database (Disease Clinical Guidelines + Drug Local Products)",
+    "requires_drug_db": true,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": true,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Cross-domain query: requires retrieving disease guidelines/indications from Disease KB AND local product availability/warnings from Drug KB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "multi_hop",
+    "original_source_file": "urticaria_hives_chunked.json + drugs_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "urticaria: Medications and Treatments - Emergency / Short-Term Therapy",
+      "drug lookup: HOSTACORTIN"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  }
+]

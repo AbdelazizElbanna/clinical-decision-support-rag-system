@@ -1,0 +1,1595 @@
+[
+  {
+    "question_id": "ecz_001",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What does atopic dermatitis look like on a baby under 2 years old?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "SYMPTOM_MANIFESTATION",
+    "intent": "Should describe cheeks/scalp/extensor surfaces involvement, pink/red or purplish-brown rash, oozing, crusting, and restlessness — grounded in the infants age-variation chunk.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "atopic dermatitis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "atopic dermatitis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Age Variation - Infants and Babies (Under 2)"
+    ],
+    "target_chunk_ids": [
+      "eczema_age_variation_infants"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_age_variation_infants",
+        "section": "Symptoms",
+        "subsection": "Age Variation - Infants and Babies (Under 2)",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+        "citation_evidence": "Typical Locations: Cheeks and facial skin, Scalp and forehead, Outer arms and legs (extensor surfaces), Trunk. Appearance: Pink/red rash on lighter skin or purplish/grayish/brown on darker skin; rough bumps, oozing lesions, and crusting. Behavioral Impact: Extreme restlessness, constant rubbing against sheets or caregivers, fussiness, and severe difficulty sleeping."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_002",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is eczema contagious?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "TRANSMISSION_CONTAGION",
+    "intent": "Should answer no, citing the overview chunk's contagious:false field.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Overview"
+    ],
+    "target_chunk_ids": [
+      "eczema_overview"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_overview",
+        "section": "Overview",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
+        "citation_evidence": "Contagious: No (contagious: false). Source: American Academy of Dermatology (AAD), Page: (AAD)/Eczema types: Atopic dermatitis overview."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_003",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the difference between how eczema looks on light vs dark skin tones?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should describe pink/red with visible redness on lighter tones vs purple/gray/brown with follicular papules and lingering hyper/hypopigmentation on darker tones.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Skin Tone Variations"
+    ],
+    "target_chunk_ids": [
+      "eczema_skin_tone_variations"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_skin_tone_variations",
+        "section": "Symptoms",
+        "subsection": "Skin Tone Variations",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+        "citation_evidence": "Lighter Skin Tones: Rashes typically present with distinct pink or red coloration accompanied by visible redness and swelling. Darker Skin Tones: Rashes frequently appear purple, grayish, or dark brown with subtle or absent redness; prominent follicular papules are more common; post-inflammatory hyperpigmentation or hypopigmentation often lingers for months after healing."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_004",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "How does dry air make eczema worse?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should explain that low humidity accelerates transepidermal water loss, causing flaking, tightness, and itching, and mention prevention (humidifier, ointment).",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_multi_source",
+    "expected_sections": [
+      "Environmental Factors",
+      "Triggers"
+    ],
+    "target_chunk_ids": [
+      "eczema_trigger_trig_dry_air",
+      "eczema_environmental_factor_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_trigger_trig_dry_air",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+        "citation_evidence": "Name: Dry Air and Low Humidity. Threshold Risk: Relative humidity below 40% or sudden indoor/outdoor humidity drops. Mechanism: Dries out the stratum corneum rapidly, widening skin barrier gaps, causing micro-cracking, severe tightness, and triggering intense itch receptors. Prevention and Action: Use an indoor cool-mist humidifier; apply thick ointment or cream emollients 2 to 3 times daily."
+      },
+      {
+        "chunk_id": "eczema_environmental_factor_01",
+        "section": "Environmental Factors",
+        "subsection": "Environmental Factor",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+        "citation_evidence": "Factor: Low Relative Humidity / Dry Air. Open-Meteo Variable: relative_humidity_2m. Risk Condition: Relative humidity < 40%. Clinical Effect: Accelerates transepidermal water loss, causes severe skin flaking, tight sensation, micro-fissuring, and intense itching."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_005",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's Dupixent used for in eczema?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should identify Dupixent (dupilumab) as a biologic IL-4/IL-13 inhibitor for moderate-to-severe atopic dermatitis, injected every 2-4 weeks.",
+    "entities": {
+      "drugs": [
+        "dupixent"
+      ],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [
+      "dupixent"
+    ],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Medications and Treatments - Systemic Therapy / Biologic / JAK Inhibitor"
+    ],
+    "target_chunk_ids": [
+      "eczema_systemic_therapy_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_systemic_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "Systemic Therapy / Biologic / JAK Inhibitor",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "Drug Name: Dupilumab. Brand Name: Dupixent. Mechanism: Biologic monoclonal antibody (IL-4 / IL-13 receptor alpha inhibitor). Indication: FDA-approved for moderate-to-severe atopic dermatitis in patients 6 months of age and older whose disease is not adequately controlled with topical therapies. Administration: Subcutaneous injection administered every 2 to 4 weeks."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_006",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What is a bleach bath and why would a dermatologist recommend one?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should describe the dilute-bleach-bath protocol (small amount per bathtub, 2-3x weekly) used to reduce bacterial colonization and flare frequency.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Medications and Treatments - Supportive / Infection Treatment"
+    ],
+    "target_chunk_ids": [
+      "eczema_supportive_treatment_02"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_supportive_treatment_02",
+        "section": "Medications and Treatments",
+        "subsection": "Supportive / Infection Treatment",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "Intervention: Dilute Bleach-Bath Therapy. Details: Adding a precise, small amount of household bleach to warm water 2 to 3 times weekly as prescribed by a dermatologist. Helps reduce bacterial colonization on the skin and reduce flare frequency without causing bacterial resistance."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_007",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "At what age does atopic dermatitis usually start?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should say most often between 2 months and 5 years, though it can begin at puberty or adulthood.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "atopic dermatitis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "atopic dermatitis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Overview"
+    ],
+    "target_chunk_ids": [
+      "eczema_overview"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_overview",
+        "section": "Overview",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
+        "citation_evidence": "How Common: Very common, especially in children; it most often begins early in life (between 2 months and 5 years of age). It can also start during puberty or adulthood."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_027",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Where did you get the information that 70% of people with eczema have relatives with atopic conditions?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GROUNDING_VERIFICATION",
+    "intent": "Should cite the AAD (American Academy of Dermatology) causes page as the source with the correct section attribution.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Causes"
+    ],
+    "target_chunk_ids": [
+      "eczema_cause_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_cause_01",
+        "section": "Causes",
+        "subsection": "Cause Factor",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
+        "citation_evidence": "Factor: Genetic Predisposition. Description: Around 70% of individuals with atopic dermatitis have blood relatives with atopic dermatitis, asthma, or hay fever (allergic rhinitis). Source: American Academy of Dermatology (AAD), Page: (AAD)/Eczema types: Atopic dermatitis causes."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_028",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Can you back up the claim about bleach baths reducing flares — is that from a real medical source?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GROUNDING_VERIFICATION",
+    "intent": "Should cite the AAD supportive/infection treatment page as the source.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Medications and Treatments - Supportive / Infection Treatment"
+    ],
+    "target_chunk_ids": [
+      "eczema_supportive_treatment_02"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_supportive_treatment_02",
+        "section": "Medications and Treatments",
+        "subsection": "Supportive / Infection Treatment",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "Intervention: Dilute Bleach-Bath Therapy. Helps reduce bacterial colonization and flare frequency. Source: American Academy of Dermatology (AAD), Page: (AAD)/Eczema types: Atopic dermatitis diagnosis and treatment."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_029",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is that skin-barrier 'brick wall' explanation something you made up or is it sourced?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GROUNDING_VERIFICATION",
+    "intent": "Should confirm it is sourced from the AAD overview page describing skin barrier pathophysiology.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Overview"
+    ],
+    "target_chunk_ids": [
+      "eczema_overview"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_overview",
+        "section": "Overview",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
+        "citation_evidence": "Skin Barrier Pathophysiology: The skin barrier (stratum corneum) functions like a protective brick wall. In atopic dermatitis, microscopic gaps form in this barrier, allowing excessive moisture to escape while permitting environmental irritants, allergens, and microbial pathogens to penetrate into deeper skin layers. Source: American Academy of Dermatology (AAD)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_001",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the most common type of psoriasis?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should identify Plaque Psoriasis (Psoriasis Vulgaris) as the most common, ~80-90% of cases.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Types of Psoriasis - Plaque Psoriasis"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_type_plaque"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_type_plaque",
+        "section": "Symptoms",
+        "subsection": "Types of Psoriasis - Plaque Psoriasis",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Name: Plaque Psoriasis (Psoriasis Vulgaris). Prevalence: Most common type, accounting for 80% to 90% of all psoriasis cases."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_002",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What does guttate psoriasis look like and who usually gets it?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "SYMPTOM_MANIFESTATION",
+    "intent": "Should describe small drop-shaped scaly spots on trunk/arms/legs and note it's common in children and young adults.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "guttate psoriasis",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "guttate psoriasis",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Types of Psoriasis - Guttate Psoriasis"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_type_guttate"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_type_guttate",
+        "section": "Symptoms",
+        "subsection": "Types of Psoriasis - Guttate Psoriasis",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Name: Guttate Psoriasis. Prevalence: Common in children and young adults. Clinical Features: Sudden outbreak of numerous small, drop-shaped, scaly spots across the trunk, arms, and legs. Frequently triggered by an acute streptococcal infection."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_003",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's inverse psoriasis and where does it show up on the body?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should describe smooth, shiny, bright-red patches without silvery scale, occurring in skin folds.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "inverse psoriasis",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "inverse psoriasis",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Types of Psoriasis - Inverse Psoriasis"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_type_inverse"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_type_inverse",
+        "section": "Symptoms",
+        "subsection": "Types of Psoriasis - Inverse Psoriasis",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Name: Inverse Psoriasis (Flexural Psoriasis). Clinical Features: Smooth, shiny, bright red or discolored patches without silvery scales; develops in skin folds (armpits, under breasts, groin, buttocks); aggravated by friction and sweat."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_005",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What percentage of psoriasis patients develop joint problems?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should state approximately 30% of psoriasis patients develop psoriatic arthritis.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_related_condition_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_related_condition_01",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
+        "citation_evidence": "Condition: Psoriatic Arthritis (PsA). Relationship: Approximately 30% of patients with psoriasis develop psoriatic arthritis."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_026",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Where does the 30% psoriatic arthritis statistic come from?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GROUNDING_VERIFICATION",
+    "intent": "Should cite the AAD-sourced related conditions section for psoriasis.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriatic arthritis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriatic arthritis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_related_condition_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_related_condition_01",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
+        "citation_evidence": "Approximately 30% of patients with psoriasis develop psoriatic arthritis. Source: American Academy of Dermatology (AAD)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_027",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is the Koebner phenomenon info something you're sure about, or could it be wrong?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GROUNDING_VERIFICATION",
+    "intent": "Should confirm it's grounded in the AAD-sourced triggers chunk and cite it.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Triggers"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_skin_injury_koebner"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_trigger_trig_skin_injury_koebner",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+        "citation_evidence": "Name: Skin Injury and Physical Trauma (Koebner Phenomenon). Source: American Academy of Dermatology (AAD), Page: (AAD)/Psoriasis triggers: Flare-ups due to triggers."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_001",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "How long do individual hives usually last?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should describe the transient nature of individual wheals as captured in the core symptoms chunk.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Core Symptoms"
+    ],
+    "target_chunk_ids": [
+      "urticaria_core_symptom_03"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_core_symptom_03",
+        "section": "Symptoms",
+        "subsection": "Core Symptoms",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-symptoms",
+        "citation_evidence": "Name: Evanescent / Migratory Pattern. Description: An individual hive typically fades and completely disappears within 24 hours without leaving a scar, while new lesions emerge elsewhere."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_002",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What can trigger hives from cold exposure?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "TRIGGER_IDENTIFICATION",
+    "intent": "Should describe the cold-exposure trigger mechanism and prevention advice from the triggers chunk.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_multi_source",
+    "expected_sections": [
+      "Triggers"
+    ],
+    "target_chunk_ids": [
+      "urticaria_trigger_trig_cold_exposure",
+      "urticaria_environmental_factor_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_trigger_trig_cold_exposure",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Name: Cold Temperature and Cold Exposure (Cold Urticaria). Mechanism: Direct activation of cold-sensitive cutaneous mast cells causing histamine release upon re-warming. Prevention and Action: Wear warm windproof clothing; avoid sudden immersion in cold bodies of water."
+      },
+      {
+        "chunk_id": "urticaria_environmental_factor_01",
+        "section": "Environmental Factors",
+        "subsection": "Environmental Factor",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Factor: Cold Ambient Temperature / Cold Waves. Open-Meteo Variable: temperature_2m. Risk Condition: Sudden temperature drop or cold weather (< 10°C / 50°F)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_003",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What autoimmune conditions are linked to chronic hives?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should mention autoimmune thyroiditis (Hashimoto's) and lupus as associated conditions.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "urticaria_related_condition_03"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_related_condition_03",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Condition: Autoimmune Disorders (Autoimmune Thyroiditis, Lupus). CSU frequently associated with autoimmune thyroid disease (Hashimoto's thyroiditis) and antithyroid antibodies."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_004",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the first-line medication for hives?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should identify the first-line therapy listed in the medications chunk (an antihistamine-class treatment).",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Medications and Treatments - First-Line Therapy"
+    ],
+    "target_chunk_ids": [
+      "urticaria_first_line_therapy_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_first_line_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "First-Line Therapy",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-treatment",
+        "citation_evidence": "Class: Second-Generation H1-Antihistamines (Non-Sedating). Examples: Cetirizine, Loratadine, Fexofenadine, Desloratadine, Levocetirizine. First-line cornerstone of urticaria therapy."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_005",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What percentage of urticaria patients also get angioedema?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should state approximately 40-50% of urticaria patients also experience angioedema.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "angioedema",
+        "urticaria"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "angioedema",
+      "urticaria"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "urticaria_related_condition_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_related_condition_01",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Condition: Angioedema. Relationship: Approximately 40% to 50% of patients with urticaria also experience angioedema."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_023",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Where does the 40-50% angioedema statistic come from?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GROUNDING_VERIFICATION",
+    "intent": "Should cite the AAD-sourced related conditions section for urticaria.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "angioedema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "angioedema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "urticaria_related_condition_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_related_condition_01",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Approximately 40% to 50% of patients with urticaria also experience angioedema. Source: American Academy of Dermatology (AAD)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_024",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is the autoimmune thyroid connection to chronic hives actually documented, or is that speculation?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GROUNDING_VERIFICATION",
+    "intent": "Should confirm it's grounded in the sourced related-conditions data and cite the source.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "urticaria_related_condition_03"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_related_condition_03",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "CSU frequently associated with underlying autoimmune thyroid disease (Hashimoto's thyroiditis) and antithyroid antibodies. Source: American Academy of Dermatology (AAD)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_030",
+    "source_file": "new_questions.json",
+    "question_text": "Where does eczema typically appear on a school-age child compared to a toddler or adult?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should describe the children/adolescents age variation locations (elbow creases, backs of knees, neck, wrists, ankles, front of knees in darker skin tones, trunk) and contrast with the infant pattern (cheeks, scalp, extensor surfaces) and adult pattern (hands, eyelids, face, flexural creases).",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": null,
+    "expected_sections": [
+      "Symptoms - Age Variation - Children and Adolescents (2 to Puberty)",
+      "Symptoms - Age Variation - Infants and Babies (Under 2)",
+      "Symptoms - Age Variation - Adults"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_031",
+    "source_file": "new_questions.json",
+    "question_text": "My skin has become thick and leathery from years of scratching my eczema — is that a real thing, and what is it called?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should identify this as lichenification / skin thickening, describing the leathery texture, deepened skin lines, and note that thickened areas often itch continuously even outside active flares — per the core symptom chunk.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": null,
+    "expected_sections": [
+      "Symptoms - Core Symptoms"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_032",
+    "source_file": "new_questions.json",
+    "question_text": "Is living in a city with lots of air pollution a known risk factor for developing eczema?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "TRIGGER_IDENTIFICATION",
+    "intent": "Should confirm this is explicitly documented as both a cause factor (Environmental and Urban Factors) and a risk factor chunk (urban residence and air pollution) from the AAD-sourced data.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": null,
+    "expected_sections": [
+      "Causes",
+      "Risk Factors"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_028",
+    "source_file": "new_questions.json",
+    "question_text": "I have psoriasis and my nails look pitted and yellowish with crumbling edges — is this related to my psoriasis, and what's it called?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should identify nail psoriasis (onycholysis, subungual hyperkeratosis, pitting, oil-drop discoloration) from the psoriasis core symptom chunk and confirm it is a documented manifestation of psoriasis, not a separate condition.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": null,
+    "expected_sections": [
+      "Symptoms - Core Symptoms"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_029",
+    "source_file": "new_questions.json",
+    "question_text": "How does psoriasis look different on darker skin tones versus lighter skin tones?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "SYMPTOM_MANIFESTATION",
+    "intent": "Should describe lighter-tone presentation (salmon-pink/bright-red with silvery-white scales) vs. darker-tone presentation (violet/purplish/grayish/dark brown with gray scales, less apparent redness, and persistent post-inflammatory hypo/hyperpigmentation) from the skin tone variation chunk.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": null,
+    "expected_sections": [
+      "Symptoms - Skin Tone Variations"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_030",
+    "source_file": "new_questions.json",
+    "question_text": "Is psoriasis contagious? My colleague is afraid to share a desk with me.",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "TRANSMISSION_CONTAGION",
+    "intent": "Should clearly state psoriasis is not contagious per the overview chunk, explain the immune-mediated mechanism (T-cell driven, not infectious), and encourage sharing this with the colleague — without diagnosing or adding undocumented claims.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": null,
+    "expected_sections": [
+      "Overview"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_033",
+    "source_file": "new_questions.json",
+    "question_text": "Is the claim that 80-90% of psoriasis cases are plaque psoriasis something you're sure about or a guess?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GROUNDING_VERIFICATION",
+    "intent": "Should confirm this comes from the AAD-sourced psoriasis types/symptoms chunk (psoriasis_type_plaque chunk_id) and cite it, rather than treating it as general knowledge.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "plaque psoriasis",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "plaque psoriasis",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": null,
+    "expected_sections": [
+      "Symptoms - Types of Psoriasis - Plaque Psoriasis"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_025",
+    "source_file": "new_questions.json",
+    "question_text": "What does histamine actually do in the skin to cause hives — what's the underlying mechanism?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should explain the mast cell/basophil histamine pathophysiology from the overview chunk: capillary dilation, fluid leakage into superficial dermis producing wheal/erythema/warmth/itch, and deeper extravasation producing angioedema. Must not add pharmacological detail not in the chunk.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": null,
+    "expected_sections": [
+      "Overview"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_026",
+    "source_file": "new_questions.json",
+    "question_text": "How do hives look different on darker vs. lighter skin tones? My friend says they can't even see hers clearly.",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should describe lighter skin: bright pink/red raised welts with pale central edema; darker skin: hives may match skin tone or appear slightly darker/brown/violaceous, redness subtle or undetectable, and post-inflammatory hyperpigmentation after resolution — per the skin tone variation chunk.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": null,
+    "expected_sections": [
+      "Symptoms - Skin Tone Variations"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_027",
+    "source_file": "new_questions.json",
+    "question_text": "What's dermographism and is it related to hives?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should identify dermographism (skin writing) as a form of physical/inducible urticaria where mechanical friction/pressure activates mast cells, per the physical stimuli cause chunk. Must not invent diagnostic criteria or treatments not present in the source data.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "dermographism",
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "dermographism",
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": null,
+    "expected_sections": [
+      "Causes"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  }
+]

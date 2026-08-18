@@ -1,0 +1,696 @@
+[
+  {
+    "question_id": "ecz_013",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "How can I tell if my itchy rash is eczema and not psoriasis?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "DIFFERENTIAL_DIAGNOSIS",
+    "intent": "Should describe eczema-specific features (intense itch, dry/oozing skin, flexural creases in adults) as distinct from psoriasis's silvery scale and different typical body sites.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Core Symptoms",
+      "Symptoms - Age Variation - Adults"
+    ],
+    "target_chunk_ids": [
+      "eczema_core_symptom_01",
+      "eczema_core_symptom_03",
+      "eczema_age_variation_adults",
+      "psoriasis_type_plaque"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_core_symptom_01",
+        "section": "Symptoms",
+        "subsection": "Core Symptoms",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+        "citation_evidence": "Name: Intense Itching (Pruritus). Description: 'The itch that rashes'. Often severe, persistent, worsens at night, disrupts sleep."
+      },
+      {
+        "chunk_id": "psoriasis_type_plaque",
+        "section": "Symptoms",
+        "subsection": "Types of Psoriasis - Plaque Psoriasis",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Clinical Features: Raised, red/salmon patches covered with silvery-white or gray scales. Contrasts with eczema's oozing/weeping presentation."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_014",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My hives come and go within hours but my other rash stays for weeks — could the second one be eczema?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "DIFFERENTIAL_DIAGNOSIS",
+    "intent": "Should note eczema is chronic/relapsing (can last for years) unlike the fleeting nature described for hives.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema",
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema",
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Overview"
+    ],
+    "target_chunk_ids": [
+      "eczema_overview",
+      "urticaria_core_symptom_03"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_overview",
+        "section": "Overview",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
+        "citation_evidence": "Chronic Or Acute: Chronic condition that can last for years or be lifelong. Follows a relapsing-remitting course characterized by acute flare-ups and periods of clearance."
+      },
+      {
+        "chunk_id": "urticaria_core_symptom_03",
+        "section": "Symptoms",
+        "subsection": "Core Symptoms",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-symptoms",
+        "citation_evidence": "Name: Evanescent / Migratory Pattern. Individual hive fades and disappears within 24 hours without leaving a scar."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_015",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is eczema the same thing as contact dermatitis?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "DIFFERENTIAL_DIAGNOSIS",
+    "intent": "Should clarify they are related but distinct — contact dermatitis is listed as a related condition made more likely by eczema's impaired skin barrier, not a synonym.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "contact dermatitis",
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "contact dermatitis",
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "eczema_related_condition_04"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_related_condition_04",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
+        "citation_evidence": "Condition: Contact Dermatitis (Allergic and Irritant). Relationship: Disrupted skin barrier increases vulnerability to allergic contact sensitization and irritant contact dermatitis. Type: Dermatologic Overlap."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_016",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Are eczema and psoriasis both contagious?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "TRANSMISSION_CONTAGION",
+    "intent": "Should confirm eczema is not contagious and note psoriasis is also not contagious per both files.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Overview"
+    ],
+    "target_chunk_ids": [
+      "eczema_overview",
+      "psoriasis_overview"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_overview",
+        "section": "Overview",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
+        "citation_evidence": "Contagious: No (contagious: false). Source: AAD."
+      },
+      {
+        "chunk_id": "psoriasis_overview",
+        "section": "Overview",
+        "subsection": null,
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/overview",
+        "citation_evidence": "Contagious: Not Contagious. Source: AAD."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_012",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My rash has thick silvery scales, not oozing or weepy — is that more likely psoriasis or eczema?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should identify silvery scaling as characteristic of plaque psoriasis, distinct from eczema's oozing/weeping presentation.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Types of Psoriasis - Plaque Psoriasis"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_type_plaque",
+      "eczema_core_symptom_03"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_type_plaque",
+        "section": "Symptoms",
+        "subsection": "Types of Psoriasis - Plaque Psoriasis",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Clinical Features: Raised patches covered with silvery-white or gray scales."
+      },
+      {
+        "chunk_id": "eczema_core_symptom_03",
+        "section": "Symptoms",
+        "subsection": "Core Symptoms",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+        "citation_evidence": "Name: Rash, Swelling, and Oozing Blisters. Small bumps/blisters that may leak fluid and form crusts."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_013",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I have joint pain along with skin plaques — is that something eczema or urticaria would cause too?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should note joint involvement (psoriatic arthritis) is specifically linked to psoriasis, not described for eczema or urticaria.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema",
+        "urticaria"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema",
+      "urticaria"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_related_condition_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_related_condition_01",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
+        "citation_evidence": "Condition: Psoriatic Arthritis (PsA). Psoriatic arthritis is NOT listed in eczema or urticaria related conditions."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_014",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Can psoriasis suddenly turn life-threatening the way I've heard hives can?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should describe psoriasis's own emergency form (erythrodermic/generalized pustular psoriasis), distinct from urticaria's anaphylaxis risk.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_red_flag_01",
+      "psoriasis_red_flag_02"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_red_flag_01",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Sign: Generalized Pustular Psoriasis (von Zumbusch). Urgency: Medical Emergency. Widespread pustules, high fever, shivering, intense burning pain."
+      },
+      {
+        "chunk_id": "psoriasis_red_flag_02",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Sign: Erythrodermic Psoriasis. Urgency: Medical Emergency. >90% body surface area involvement."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_015",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is psoriasis caused by an allergy like hives usually is?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should clarify psoriasis is an immune-mediated inflammatory condition, not primarily allergy-driven the way urticaria often is.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Causes"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_cause_01",
+      "urticaria_cause_02"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_cause_01",
+        "section": "Causes",
+        "subsection": "Cause Factor",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/causes",
+        "citation_evidence": "Factor: Immune System Dysregulation. Overactive T-cells and pro-inflammatory cytokines. Not an IgE-mediated allergic mechanism."
+      },
+      {
+        "chunk_id": "urticaria_cause_02",
+        "section": "Causes",
+        "subsection": "Cause Factor",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Factor: IgE-Mediated Allergic Reactions. Immediate hypersensitivity reactions to specific allergens."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_010",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My welts move around and disappear within a day, but my friend's rash has stayed in the same spot for a week — could we have the same thing?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should note urticaria's transient, migratory wheal pattern differs from a persistent fixed rash, without asserting a diagnosis.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Core Symptoms"
+    ],
+    "target_chunk_ids": [
+      "urticaria_core_symptom_03",
+      "eczema_overview"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_core_symptom_03",
+        "section": "Symptoms",
+        "subsection": "Core Symptoms",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-symptoms",
+        "citation_evidence": "Name: Evanescent / Migratory Pattern. Individual hive fades within 24 hours without leaving a scar."
+      },
+      {
+        "chunk_id": "eczema_overview",
+        "section": "Overview",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
+        "citation_evidence": "Chronic Or Acute: Chronic condition lasting for years. Persistent fixed rash is more consistent with eczema/psoriasis than urticaria."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_011",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Do hives cause the same joint problems that I've heard psoriasis can cause?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should clarify psoriatic arthritis is a psoriasis-specific related condition, not something listed under urticaria's related conditions.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_related_condition_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_related_condition_01",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
+        "citation_evidence": "Psoriatic Arthritis is listed under psoriasis Related Conditions only. Urticaria Related Conditions do not mention joint disease."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_012",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is the swelling I get with my hives the same thing as the dry, scaly skin my sister gets with her eczema?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "DIFFERENTIAL_DIAGNOSIS",
+    "intent": "Should distinguish urticaria's angioedema (deep swelling) from eczema's xerosis/scaling presentation.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema",
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema",
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "urticaria_core_symptom_04",
+      "eczema_core_symptom_02"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_core_symptom_04",
+        "section": "Symptoms",
+        "subsection": "Core Symptoms",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-symptoms",
+        "citation_evidence": "Name: Deep Subcutaneous Swelling (Angioedema). Commonly affects eyelids, lips, tongue, throat. Lesions feel painful, tight, or burning."
+      },
+      {
+        "chunk_id": "eczema_core_symptom_02",
+        "section": "Symptoms",
+        "subsection": "Core Symptoms",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+        "citation_evidence": "Name: Dry, Sensitive Skin (Xerosis). Excessively dry, rough, and scaly skin."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_029",
+    "source_file": "new_questions.json",
+    "question_text": "I was just diagnosed with eczema but now I'm also getting hives sometimes — can you have both, and does one cause the other?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should note that personal history of atopic dermatitis is a documented risk factor for urticaria (per urticaria risk factor chunk) — they can co-exist as part of the atopic triad. Must not conflate the two conditions' mechanisms: eczema is barrier-dysfunction driven while urticaria is histamine-mast cell driven. Avoid fabricating a causal relationship not stated in the data.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema",
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema",
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "HARD",
+    "original_category": "cross_condition",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": null,
+    "expected_sections": [
+      "Risk Factors"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  }
+]

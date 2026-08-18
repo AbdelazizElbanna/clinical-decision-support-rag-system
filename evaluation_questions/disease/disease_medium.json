@@ -1,0 +1,1725 @@
+[
+  {
+    "question_id": "ecz_008",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I have eczema and I'm about to go swimming in a chlorinated pool this weekend — what should I do before and after?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should combine the chlorinated-pool trigger info (apply barrier ointment before, shower immediately after, moisturize within 3 minutes) with general skin-care guidance.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Triggers",
+      "Skin Care and Self Care"
+    ],
+    "target_chunk_ids": [
+      "eczema_trigger_trig_chlorinated_pool",
+      "eczema_skin_care_and_self_care"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_trigger_trig_chlorinated_pool",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+        "citation_evidence": "Name: Chlorinated Swimming Pool Water. Mechanism: Chlorine strips superficial moisture and natural oils from vulnerable skin. Prevention and Action: Apply a barrier coat of petroleum jelly or thick ointment prior to swimming; shower with fresh warm water immediately upon exiting pool; apply moisturizer within 3 minutes."
+      },
+      {
+        "chunk_id": "eczema_skin_care_and_self_care",
+        "section": "Skin Care and Self Care",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+        "citation_evidence": "Moisturizing Protocol Soak And Seal: Follow the 'Soak and Seal' method: Apply prescribed topical medicine and/or generous thick moisturizer within 3 minutes of stepping out of bath while skin is still slightly damp."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_009",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My eczema flares up whenever it's cold outside — what's happening and how do I manage it long term as well as day to day?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should combine cold-temperature trigger mechanism with both immediate prevention advice and general flare-up management guidance.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_multi_source",
+    "expected_sections": [
+      "Triggers",
+      "Environmental Factors",
+      "Flare-Up Management"
+    ],
+    "target_chunk_ids": [
+      "eczema_trigger_trig_cold_temp",
+      "eczema_environmental_factor_02",
+      "eczema_flare_ups_management"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_trigger_trig_cold_temp",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+        "citation_evidence": "Name: Cold Temperatures and Artificial Indoor Heating. Threshold Risk: Cold outdoor weather (< 10°C / 50°F) combined with dry forced-air heating. Mechanism: Cold outdoor air combined with indoor radiators/heaters depletes atmospheric moisture and strips the natural lipid mantle of the skin."
+      },
+      {
+        "chunk_id": "eczema_environmental_factor_02",
+        "section": "Environmental Factors",
+        "subsection": "Environmental Factor",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+        "citation_evidence": "Factor: Cold Ambient Temperature. Open-Meteo Variable: temperature_2m. Risk Condition: Temperature < 10°C (50°F). Clinical Effect: Promotes epidermal dehydration and winter eczema flares, worsened by indoor artificial heating systems."
+      },
+      {
+        "chunk_id": "eczema_flare_ups_management",
+        "section": "Flare-Up Management",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "Immediate Action Plan: Start prescribed topical anti-inflammatory treatment at the earliest sign of flare. Intensify skin barrier hydration. Apply cool, damp cotton compresses. Identify and eliminate any recently introduced triggers."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_010",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "If topical steroids aren't controlling my eczema anymore, what are my options and are there any age restrictions?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should mention progression to topical non-steroidal options, phototherapy, and systemic biologics/JAK inhibitors, including age eligibility for each.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Medications and Treatments - Topical Therapy",
+      "Medications and Treatments - Phototherapy / Light Therapy",
+      "Medications and Treatments - Systemic Therapy / Biologic / JAK Inhibitor"
+    ],
+    "target_chunk_ids": [
+      "eczema_topical_therapy_02",
+      "eczema_topical_therapy_03",
+      "eczema_topical_therapy_04",
+      "eczema_phototherapy",
+      "eczema_systemic_therapy_01",
+      "eczema_systemic_therapy_05"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_topical_therapy_02",
+        "section": "Medications and Treatments",
+        "subsection": "Topical Therapy",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "Class: Topical Calcineurin Inhibitors (TCIs). FDA-approved for patients 2 years of age and older. Suitable for sensitive skin areas without causing skin thinning."
+      },
+      {
+        "chunk_id": "eczema_phototherapy",
+        "section": "Medications and Treatments",
+        "subsection": "Phototherapy / Light Therapy",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "Controlled medical ultraviolet light (narrowband UVB or excimer laser) administered 2 to 3 times weekly. Safe and effective for widespread moderate-to-severe disease."
+      },
+      {
+        "chunk_id": "eczema_systemic_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "Systemic Therapy / Biologic / JAK Inhibitor",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "Dupilumab (Dupixent): FDA-approved for patients 6 months of age and older."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_011",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My toddler has eczema — what parts of the body are usually affected and is there a connection to future allergies or asthma?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should combine infant age-variation locations with the Atopic March related-condition info linking eczema to allergic rhinitis, asthma, and food allergies.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Symptoms - Age Variation - Infants and Babies (Under 2)",
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "eczema_age_variation_infants",
+      "eczema_related_condition_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_age_variation_infants",
+        "section": "Symptoms",
+        "subsection": "Age Variation - Infants and Babies (Under 2)",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+        "citation_evidence": "Typical Locations: Cheeks and facial skin, Scalp and forehead, Outer arms and legs (extensor surfaces), Trunk."
+      },
+      {
+        "chunk_id": "eczema_related_condition_01",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
+        "citation_evidence": "Condition: The Atopic March (Allergic Rhinitis / Hay Fever, Asthma, Food Allergies). Relationship: Approximately one-third of children with atopic dermatitis later develop asthma, and two-thirds develop allergic rhinitis (hay fever)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_012",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Why does stress make my eczema worse, and what can I do about both the stress and the skin at the same time?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should link the emotional-stress trigger mechanism (cortisol/neuropeptides impairing barrier recovery) with related sleep/anxiety condition info and self-care advice.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Triggers",
+      "Related Conditions",
+      "Skin Care and Self Care"
+    ],
+    "target_chunk_ids": [
+      "eczema_trigger_trig_stress",
+      "eczema_related_condition_03",
+      "eczema_skin_care_and_self_care"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_trigger_trig_stress",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+        "citation_evidence": "Name: Emotional Stress and Anxiety. Mechanism: Stress hormones (cortisol, catecholamines) and pro-inflammatory neuropeptides impair barrier recovery and intensify the itch-scratch cycle."
+      },
+      {
+        "chunk_id": "eczema_related_condition_03",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
+        "citation_evidence": "Condition: Sleep Disturbances, Anxiety, and Depression. Chronic severe pruritus leads to sleep disruption, daytime fatigue, psychological distress, and elevated prevalence of anxiety and depression."
+      },
+      {
+        "chunk_id": "eczema_skin_care_and_self_care",
+        "section": "Skin Care and Self Care",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+        "citation_evidence": "Moisturizing Protocol Soak And Seal and bathing protocol guidance for daily skin management."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_024",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My eczema patch suddenly has honey-colored crusts and is oozing yellow pus and spreading fast, what's going on?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "EMERGENCY_RED_FLAG",
+    "intent": "Should flag this as possible secondary bacterial infection (staph impetigo/cellulitis) and urge prompt medical evaluation.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs"
+    ],
+    "target_chunk_ids": [
+      "eczema_red_flag_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_red_flag_01",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+        "citation_evidence": "Sign: Secondary Bacterial Infection (Staphylococcal Impetigo / Cellulitis). Description: Honey-colored or golden crusts forming over lesions, oozing yellow pus, rapidly spreading redness, marked warmth, or localized pain and swelling. Urgency: Urgent (Contact dermatologist or healthcare provider within 24-48 hours)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_025",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I suddenly have a bunch of painful blister clusters on top of my eczema and feel feverish, is that normal?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "EMERGENCY_RED_FLAG",
+    "intent": "Should recognize possible eczema herpeticum (a dermatologic emergency) and urge urgent/same-day medical care.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs"
+    ],
+    "target_chunk_ids": [
+      "eczema_red_flag_02"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_red_flag_02",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+        "citation_evidence": "Sign: Eczema Herpeticum (Disseminated Herpes Simplex Virus Infection). Description: Sudden outbreak of numerous clustered, dome-shaped fluid-filled blisters or punched-out sores, accompanied by high fever, chills, fatigue, and swollen lymph glands. Urgency: Medical Emergency (Seek immediate emergency room or urgent care attention)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_026",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My eczema covers most of my body now and creams aren't working and I can barely sleep from the itching, what should I do?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "EMERGENCY_RED_FLAG",
+    "intent": "Should identify this as a red-flag scenario (extensive uncontrolled rash / severe sleep deprivation) requiring prompt dermatologist follow-up.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs",
+      "When to See Doctor"
+    ],
+    "target_chunk_ids": [
+      "eczema_red_flag_03",
+      "eczema_when_to_see_doctor_02",
+      "eczema_when_to_see_doctor_04"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "eczema_red_flag_03",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+        "citation_evidence": "Sign: Extensive, Uncontrolled Rash or Severe Sleep Deprivation. Urgency: Prompt Dermatologist Evaluation. Action: Specialist assessment for advanced therapies."
+      },
+      {
+        "chunk_id": "eczema_when_to_see_doctor_04",
+        "section": "When to See Doctor",
+        "subsection": null,
+        "source_file": "eczema_atopic_dermatitis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+        "citation_evidence": "If itching and skin discomfort interfere with sleep, school, work, or cause emotional distress and depression."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_004",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What are common triggers that make psoriasis flare up?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "TRIGGER_IDENTIFICATION",
+    "intent": "Should list triggers from the data such as dry/cold weather, sunburn, and skin injury (Koebner phenomenon), among others.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_multi_source",
+    "expected_sections": [
+      "Triggers"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_dry_cold_weather",
+      "psoriasis_trigger_trig_sunburn_and_excess_sun",
+      "psoriasis_trigger_trig_skin_injury_koebner",
+      "psoriasis_trigger_trig_emotional_stress",
+      "psoriasis_trigger_trig_infections",
+      "psoriasis_trigger_trig_medications",
+      "psoriasis_trigger_trig_alcohol_smoking"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_trigger_trig_dry_cold_weather",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+        "citation_evidence": "Name: Dry, Cold Weather and Low Humidity. Threshold Risk: Low ambient temperature (< 10°C / 50°F) and low relative humidity (< 40%)."
+      },
+      {
+        "chunk_id": "psoriasis_trigger_trig_skin_injury_koebner",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+        "citation_evidence": "Name: Skin Injury and Physical Trauma (Koebner Phenomenon). Mechanism: Mechanical epidermal trauma triggers new psoriasis plaques at the site of injury 10 to 14 days later."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_006",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What are the risk factors for developing psoriasis?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should list the risk factors chunk items accurately without adding unlisted ones.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Risk Factors"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_risk_factor_01",
+      "psoriasis_risk_factor_02",
+      "psoriasis_risk_factor_03",
+      "psoriasis_risk_factor_04",
+      "psoriasis_risk_factor_05",
+      "psoriasis_risk_factor_06",
+      "psoriasis_risk_factor_07"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_risk_factor_01",
+        "section": "Risk Factors",
+        "subsection": null,
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/causes",
+        "citation_evidence": "Family history of psoriasis in first-degree blood relatives (parents, siblings)."
+      },
+      {
+        "chunk_id": "psoriasis_risk_factor_04",
+        "section": "Risk Factors",
+        "subsection": null,
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/causes",
+        "citation_evidence": "Smoking and tobacco use (strongly associated with increased severity and pustular forms)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_007",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What treatment options exist for psoriasis besides creams?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should mention phototherapy and systemic/oral/biologic therapies as escalation options.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "direct_factual",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Medications and Treatments - Phototherapy / Light Therapy",
+      "Medications and Treatments - Systemic Therapy / Oral / Biologic"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_phototherapy",
+      "psoriasis_systemic_therapy_01",
+      "psoriasis_systemic_therapy_02",
+      "psoriasis_systemic_therapy_03"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_phototherapy",
+        "section": "Medications and Treatments",
+        "subsection": "Phototherapy / Light Therapy",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/treatment/medications",
+        "citation_evidence": "Supervised exposure to specific wavelengths of ultraviolet light (Narrowband UVB, Broadband UVB, PUVA, or Excimer laser) 2 to 3 times weekly."
+      },
+      {
+        "chunk_id": "psoriasis_systemic_therapy_03",
+        "section": "Medications and Treatments",
+        "subsection": "Systemic Therapy / Oral / Biologic",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/treatment/medications",
+        "citation_evidence": "Biologics: TNF-alpha inhibitors, IL-17 inhibitors, IL-23 inhibitors, IL-12/23 inhibitors."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_008",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My fingers have started looking swollen like little sausages and I already have psoriasis on my skin — should I be worried?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should connect this description to early signs of psoriatic arthritis (dactylitis) as both a related condition and a red-flag warning sign.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs",
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_red_flag_03",
+      "psoriasis_related_condition_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_red_flag_03",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Sign: Early Signs of Psoriatic Arthritis. Description: Swollen 'sausage-like' fingers or toes (dactylitis), persistent morning joint stiffness lasting >30-60 minutes. Urgency: Urgent Dermatologist / Rheumatologist Evaluation."
+      },
+      {
+        "chunk_id": "psoriasis_related_condition_01",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
+        "citation_evidence": "Condition: Psoriatic Arthritis (PsA). Approximately 30% of patients with psoriasis develop psoriatic arthritis."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_009",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I got a small cut on my skin near a psoriasis patch and now new patches are forming around it — is that connected, and what should I avoid?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should explain the Koebner phenomenon trigger and connect it to trigger-avoidance guidance.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Triggers",
+      "Skin Care and Self Care"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_skin_injury_koebner",
+      "psoriasis_skin_care_and_self_care"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_trigger_trig_skin_injury_koebner",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+        "citation_evidence": "Name: Skin Injury and Physical Trauma (Koebner Phenomenon). Mechanism: Mechanical epidermal trauma triggers new psoriasis plaques at the exact site of injury 10 to 14 days later."
+      },
+      {
+        "chunk_id": "psoriasis_skin_care_and_self_care",
+        "section": "Skin Care and Self Care",
+        "subsection": null,
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/skin-care/baths-showers",
+        "citation_evidence": "Never scratch, pick, or peel psoriasis scales, as picking worsens plaque thickness (Koebner phenomenon). Wash your skin very gently using your hands only."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_010",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I have plaque psoriasis and I've also been feeling really down and isolating myself — is that related, and is there anything for both?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should link psoriasis's psychological-distress related condition with self-care/flare management resources.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "plaque psoriasis",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "plaque psoriasis",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions",
+      "Flare-Up Management"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_related_condition_05",
+      "psoriasis_flare_ups_management"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_related_condition_05",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
+        "citation_evidence": "Condition: Psychological Distress, Anxiety, and Depression. Visible plaques, social stigma, chronic pain, and itch lead to high rates of anxiety, depression, fatigue, and social isolation."
+      },
+      {
+        "chunk_id": "psoriasis_flare_ups_management",
+        "section": "Flare-Up Management",
+        "subsection": null,
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+        "citation_evidence": "Identify and manage recent triggers (stress, illness/infection, cold dry air, medication changes)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_011",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "If I have psoriasis, am I at higher risk for heart problems, and does that change what triggers I should avoid?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "TRIGGER_IDENTIFICATION",
+    "intent": "Should combine the cardiovascular-disease related-condition info with relevant trigger/lifestyle guidance.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions",
+      "Triggers"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_related_condition_02",
+      "psoriasis_trigger_trig_alcohol_smoking"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_related_condition_02",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
+        "citation_evidence": "Condition: Cardiovascular Disease and Metabolic Syndrome. Chronic systemic inflammation in psoriasis increases the risk of hypertension, atherosclerosis, myocardial infarction, stroke, type 2 diabetes."
+      },
+      {
+        "chunk_id": "psoriasis_trigger_trig_alcohol_smoking",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+        "citation_evidence": "Name: Smoking and Heavy Alcohol Consumption. Nicotine promotes cutaneous vascular inflammation and oxidative stress."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_023",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My skin suddenly turned bright red almost everywhere and I'm shivering uncontrollably, is that just a bad flare?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "EMERGENCY_RED_FLAG",
+    "intent": "Should recognize this as possible erythrodermic psoriasis, a dermatologic emergency, and urge immediate medical care.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_red_flag_02"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_red_flag_02",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Sign: Erythrodermic Psoriasis. Widespread intense fiery erythema covering >90% body surface, uncontrollable shivering, hypothermia, rapid heart rate. Urgency: Medical Emergency (Requires immediate emergency department admission)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_024",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I have sheets of pus-filled blisters all over and a high fever, what should I do?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "EMERGENCY_RED_FLAG",
+    "intent": "Should identify generalized pustular psoriasis (von Zumbusch) as a medical emergency requiring urgent care.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_red_flag_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_red_flag_01",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Sign: Generalized Pustular Psoriasis (von Zumbusch). Widespread sheets of sterile pus-filled blisters, high fever, severe shivering, tachycardia. Urgency: Medical Emergency (Requires immediate emergency department admission)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_025",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My morning joint stiffness has been lasting over an hour lately along with my psoriasis, is that a big deal?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "EMERGENCY_RED_FLAG",
+    "intent": "Should flag this as an early sign of psoriatic arthritis warranting prompt evaluation.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs",
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "psoriasis_red_flag_03",
+      "psoriasis_related_condition_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "psoriasis_red_flag_03",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "psoriasis_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+        "citation_evidence": "Sign: Early Signs of Psoriatic Arthritis. Persistent morning joint stiffness lasting >30-60 minutes. Urgency: Urgent Dermatologist / Rheumatologist Evaluation."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_006",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What are the risk factors for developing urticaria?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should list the risk factor items from the data accurately.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "urticaria"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "urticaria"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "direct_factual",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Risk Factors"
+    ],
+    "target_chunk_ids": [
+      "urticaria_risk_factor_01",
+      "urticaria_risk_factor_02",
+      "urticaria_risk_factor_03",
+      "urticaria_risk_factor_04",
+      "urticaria_risk_factor_05",
+      "urticaria_risk_factor_06",
+      "urticaria_risk_factor_07"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_risk_factor_01",
+        "section": "Risk Factors",
+        "subsection": null,
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Female sex (women are twice as likely as men to develop chronic spontaneous urticaria)."
+      },
+      {
+        "chunk_id": "urticaria_risk_factor_03",
+        "section": "Risk Factors",
+        "subsection": null,
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Racial background (African American women documented with 4 to 5 times higher risk of chronic urticaria)."
+      },
+      {
+        "chunk_id": "urticaria_risk_factor_07",
+        "section": "Risk Factors",
+        "subsection": null,
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Regular use of NSAIDs or aspirin in sensitive individuals."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_007",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My hives seem to come out mostly when I'm out in the sun — is that a real trigger, and what should I do to prevent it day to day?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "TRIGGER_IDENTIFICATION",
+    "intent": "Should combine the sunlight-exposure trigger with general flare-up management or skin-care guidance.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_multi_source",
+    "expected_sections": [
+      "Triggers",
+      "Flare-Up Management"
+    ],
+    "target_chunk_ids": [
+      "urticaria_trigger_trig_sunlight_exposure",
+      "urticaria_environmental_factor_03",
+      "urticaria_flare_ups_management"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_trigger_trig_sunlight_exposure",
+        "section": "Triggers",
+        "subsection": "Trigger",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Name: Direct Sunlight Exposure (Solar Urticaria). Mechanism: Photo-activation of cutaneous chromophores triggering rapid histamine release. Prevention: Wear sun-protective clothing, wide-brimmed hats, and broad-spectrum sunscreen."
+      },
+      {
+        "chunk_id": "urticaria_environmental_factor_03",
+        "section": "Environmental Factors",
+        "subsection": "Environmental Factor",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Factor: High Solar Radiation / UV Index. Open-Meteo Variable: uv_index. Risk Condition: UV Index >= 6 with direct sunlight exposure. Clinical Effect: Triggers Solar Urticaria wheals within minutes."
+      },
+      {
+        "chunk_id": "urticaria_flare_ups_management",
+        "section": "Flare-Up Management",
+        "subsection": null,
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-self-care",
+        "citation_evidence": "Immediate Action Plan: Take prescribed second-generation non-sedating H1-antihistamine. Apply cool damp compresses."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_008",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I've had hives for months now and I'm barely sleeping and feeling anxious about it — is there a connection, and what treatment options exist beyond antihistamines?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should combine the anxiety/sleep-disturbance related condition with escalation therapy options.",
+    "entities": {
+      "drugs": [
+        "antihistamine",
+        "antihistamines"
+      ],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [
+      "antihistamine",
+      "antihistamines"
+    ],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Related Conditions",
+      "Medications and Treatments - Second-Line / Advanced Targeted Therapy"
+    ],
+    "target_chunk_ids": [
+      "urticaria_related_condition_04",
+      "urticaria_advanced_therapy_01",
+      "urticaria_advanced_therapy_02",
+      "urticaria_advanced_therapy_03"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_related_condition_04",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "Condition: Anxiety, Sleep Disturbance, and Reduced Quality of Life. Chronic pruritus causes psychological distress, insomnia, and impaired work/school productivity."
+      },
+      {
+        "chunk_id": "urticaria_advanced_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "Second-Line / Advanced Targeted Therapy",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-treatment",
+        "citation_evidence": "Omalizumab (Xolair): FDA-approved for CSU in patients >=12 years unresponsive to antihistamines."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_009",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "If antihistamines aren't controlling my chronic hives, what's the next step, and should I get checked for anything else going on in my body?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should connect escalation to second-line/advanced therapies with the autoimmune-thyroid-disease related condition suggesting further workup.",
+    "entities": {
+      "drugs": [
+        "antihistamine",
+        "antihistamines"
+      ],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [
+      "antihistamine",
+      "antihistamines"
+    ],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Medications and Treatments - Second-Line / Advanced Targeted Therapy",
+      "Related Conditions"
+    ],
+    "target_chunk_ids": [
+      "urticaria_advanced_therapy_01",
+      "urticaria_advanced_therapy_02",
+      "urticaria_advanced_therapy_03",
+      "urticaria_related_condition_03"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_advanced_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "Second-Line / Advanced Targeted Therapy",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-treatment",
+        "citation_evidence": "Omalizumab (Xolair): Monthly subcutaneous injection for CSU >=12 years."
+      },
+      {
+        "chunk_id": "urticaria_related_condition_03",
+        "section": "Related Conditions",
+        "subsection": "Related Condition",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes",
+        "citation_evidence": "CSU frequently associated with underlying autoimmune thyroid disease (Hashimoto's thyroiditis)."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_020",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "My lips and tongue are swelling up fast and I'm having trouble swallowing along with my hives, what do I do?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "EMERGENCY_RED_FLAG",
+    "intent": "Should immediately flag this as possible anaphylaxis/severe angioedema and urge emergency care right away.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs"
+    ],
+    "target_chunk_ids": [
+      "urticaria_red_flag_01",
+      "urticaria_emergency_therapy_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_red_flag_01",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-overview",
+        "citation_evidence": "Sign: Anaphylaxis and Severe Upper Airway Angioedema. Rapid swelling of lips, tongue, mouth, throat; difficulty swallowing. Urgency: LIFE-THREATENING EMERGENCY (Call Emergency Services / Go to Nearest ER Immediately)."
+      },
+      {
+        "chunk_id": "urticaria_emergency_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "Emergency / Short-Term Therapy",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-treatment",
+        "citation_evidence": "Drug Name: Epinephrine (EpiPen). Emergency first-line treatment for acute anaphylaxis. Intramuscular injection into the anterolateral thigh."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_021",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I have hives all over my body plus a high fever and my joints hurt, is that just a bad flare?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "EMERGENCY_RED_FLAG",
+    "intent": "Should flag extensive body-wide swelling with fever/joint pain as a red flag possibly indicating urticarial vasculitis.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs"
+    ],
+    "target_chunk_ids": [
+      "urticaria_red_flag_02"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_red_flag_02",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-overview",
+        "citation_evidence": "Sign: Extensive Body-Wide Swelling with Fever. Widespread hives accompanied by high fever, joint pain (arthralgia), or painful purpuric bruising (raising suspicion of urticarial vasculitis). Urgency: Urgent Medical / Dermatologist Evaluation."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_022",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I'm wheezing and feel short of breath along with hives after eating shellfish, should I just take an antihistamine and wait?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should treat this as a possible anaphylaxis emergency and urge calling emergency services / using epinephrine.",
+    "entities": {
+      "drugs": [
+        "antihistamine"
+      ],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [
+      "antihistamine"
+    ],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "Red Flags and Warning Signs",
+      "Medications and Treatments - Emergency / Short-Term Therapy"
+    ],
+    "target_chunk_ids": [
+      "urticaria_red_flag_01",
+      "urticaria_emergency_therapy_01"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "urticaria_red_flag_01",
+        "section": "Red Flags and Warning Signs",
+        "subsection": "Warning Sign",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-overview",
+        "citation_evidence": "Sign: Anaphylaxis and Severe Upper Airway Angioedema. Shortness of breath or wheezing (dyspnea). Urgency: LIFE-THREATENING EMERGENCY. Action: Administer epinephrine auto-injector immediately."
+      },
+      {
+        "chunk_id": "urticaria_emergency_therapy_01",
+        "section": "Medications and Treatments",
+        "subsection": "Emergency / Short-Term Therapy",
+        "source_file": "urticaria_hives_chunked.json",
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-treatment",
+        "citation_evidence": "Epinephrine (EpiPen): Emergency first-line treatment. NOT antihistamine alone."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "ecz_033",
+    "source_file": "new_questions.json",
+    "question_text": "I have eczema on my hands and I work as a nurse washing hands dozens of times a day. What's happening to my skin barrier, and what's the most practical daily routine I should follow?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "GENERAL_CLINICAL_QUERY",
+    "intent": "Should connect the skin barrier defect cause (accelerated TEWL from repeated wet work / soap exposure) with the adult-pattern hand eczema location chunk and practical skin care self-care guidance (frequent gentle emollients, fragrance-free soap). Must ground all claims in the retrieved chunks.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "eczema"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "eczema"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "eczema_atopic_dermatitis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Causes",
+      "Symptoms - Age Variation - Adults",
+      "Skin Care and Self Care"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_031",
+    "source_file": "new_questions.json",
+    "question_text": "My child came home with strep throat last week and now has dozens of small teardrop-shaped spots all over their trunk — could this be related to psoriasis and is it serious?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "SYMPTOM_MANIFESTATION",
+    "intent": "Should connect strep throat infection to the guttate psoriasis trigger/type (Koebner-like strep-triggered outbreak in children/young adults), and combine this with the relevant red flag or when-to-see-doctor guidance. Should not diagnose but flag the pattern as requiring medical evaluation.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "psoriasis",
+        "strep throat"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "psoriasis",
+      "strep throat"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Symptoms - Types of Psoriasis - Guttate Psoriasis",
+      "Risk Factors",
+      "When to See Doctor"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "pso_032",
+    "source_file": "new_questions.json",
+    "question_text": "I have inverse psoriasis and I live somewhere very humid and sweaty. Does heat and sweat make inverse psoriasis worse, and how should I manage it?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "TRIGGER_IDENTIFICATION",
+    "intent": "Should combine the inverse psoriasis clinical features (aggravated by friction and sweat in skin folds) with the humid-heat environmental context. Must ground the friction/sweat aggravation in the inverse psoriasis chunk and add self-care guidance from the skin care chunk. Should not fabricate a humidity-specific mechanism not present in the data.",
+    "entities": {
+      "drugs": [],
+      "diseases": [
+        "inverse psoriasis",
+        "psoriasis"
+      ]
+    },
+    "drug_entities": [],
+    "disease_entities": [
+      "inverse psoriasis",
+      "psoriasis"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "psoriasis_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Symptoms - Types of Psoriasis - Inverse Psoriasis",
+      "Skin Care and Self Care"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "urt_028",
+    "source_file": "new_questions.json",
+    "question_text": "I have hives that always come on after I take ibuprofen for headaches. Could the medication be the cause and should I stop taking NSAIDs?",
+    "primary_domain": "DISEASE",
+    "secondary_domain": null,
+    "retrieval_target": "DISEASE",
+    "question_type": "PATHOPHYSIOLOGY_CAUSE",
+    "intent": "Should (1) link NSAID use to the urticaria risk factor chunk (NSAIDs/aspirin in sensitive individuals) and the causes chunk, (2) clarify this is a recognized association per the data, and (3) recommend consulting a doctor before stopping any medication rather than self-managing. Must not give specific dosage alternatives.",
+    "entities": {
+      "drugs": [
+        "ibuprofen",
+        "nsaid",
+        "nsaids"
+      ],
+      "diseases": [
+        "hives"
+      ]
+    },
+    "drug_entities": [
+      "ibuprofen",
+      "nsaid",
+      "nsaids"
+    ],
+    "disease_entities": [
+      "hives"
+    ],
+    "expected_knowledge_type": "Disease Knowledge Base",
+    "requires_drug_db": false,
+    "requires_disease_db": true,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required knowledge is disease-specific (symptoms, triggers, manifestations, differential diagnosis, red flag emergencies) stored in the Disease DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "urticaria_hives_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": null,
+    "expected_sections": [
+      "Risk Factors",
+      "Causes"
+    ],
+    "target_chunk_ids": [],
+    "supporting_chunks": [],
+    "expected_sources": null,
+    "evaluation_goal": null
+  }
+]

@@ -1,0 +1,461 @@
+[
+  {
+    "question_id": "drg_001",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What's the active ingredient in Dupixent?",
+    "primary_domain": "DRUG",
+    "secondary_domain": null,
+    "retrieval_target": "DRUG",
+    "question_type": "ACTIVE_INGREDIENT_LOOKUP",
+    "intent": "Should answer Dupilumab, and correctly identify the drug class (Dermatological Drugs / Monoclonal Antibodies).",
+    "entities": {
+      "drugs": [
+        "dupixent"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "dupixent"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "Drug Knowledge Base (Monograph & Local Product Metadata)",
+    "requires_drug_db": true,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required evidence is medication-specific (active ingredient, drug class, manufacturer, pregnancy/organ safety warning) stored in the Drug DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "drug lookup: DUPIXENT"
+    ],
+    "target_chunk_ids": [
+      "dupixent"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "dupixent",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: DUPIXENT. Active Ingredients: DUPILUMAB. Drug Class: Dermatological Drugs / Monoclonal Antibodies. Sources: karem505/egyptian-drug-database, mahmoudfalous/eg-drugs."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_002",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is cetirizine safe during pregnancy?",
+    "primary_domain": "DRUG",
+    "secondary_domain": null,
+    "retrieval_target": "DRUG",
+    "question_type": "PREGNANCY_SAFETY",
+    "intent": "Should retrieve and report the pregnancy safety warning field exactly as recorded for a cetirizine-containing product (e.g. Alerid), not a generalized guess.",
+    "entities": {
+      "drugs": [
+        "cetirizine"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "cetirizine"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "Drug Knowledge Base (Monograph & Local Product Metadata)",
+    "requires_drug_db": true,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required evidence is medication-specific (active ingredient, drug class, manufacturer, pregnancy/organ safety warning) stored in the Drug DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "drug lookup: ALERID / CETIRIZINE"
+    ],
+    "target_chunk_ids": [
+      "alerid"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "alerid",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: ALERID (or equivalent cetirizine product). Active Ingredients: CETIRIZINE. Pregnancy safety field: as recorded in the drug database for each product. System must report the exact recorded field value. Sources: karem505/egyptian-drug-database."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_003",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "What drug class does Hostacortin belong to and what's its active ingredient?",
+    "primary_domain": "DRUG",
+    "secondary_domain": null,
+    "retrieval_target": "DRUG",
+    "question_type": "ACTIVE_INGREDIENT_LOOKUP",
+    "intent": "Should answer Prednisone, Glucocorticoid class.",
+    "entities": {
+      "drugs": [
+        "hostacortin"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "hostacortin"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "Drug Knowledge Base (Monograph & Local Product Metadata)",
+    "requires_drug_db": true,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required evidence is medication-specific (active ingredient, drug class, manufacturer, pregnancy/organ safety warning) stored in the Drug DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "drug lookup: HOSTACORTIN"
+    ],
+    "target_chunk_ids": [
+      "hostacortin"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "hostacortin",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: HOSTACORTIN. Active Ingredients: PREDNISONE. Drug Class: GLUCOCORTICOIDS. Sources: karem505/egyptian-drug-database, mahmoudfalous/eg-drugs."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_004",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Who manufactures Adport (tacrolimus)?",
+    "primary_domain": "DRUG",
+    "secondary_domain": null,
+    "retrieval_target": "DRUG",
+    "question_type": "MANUFACTURER_LOOKUP",
+    "intent": "Should retrieve the correct manufacturer field for Adport.",
+    "entities": {
+      "drugs": [
+        "adport",
+        "tacrolimus"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "adport",
+      "tacrolimus"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "Drug Knowledge Base (Monograph & Local Product Metadata)",
+    "requires_drug_db": true,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required evidence is medication-specific (active ingredient, drug class, manufacturer, pregnancy/organ safety warning) stored in the Drug DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Retrieval Quality",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "drug lookup: ADPORT"
+    ],
+    "target_chunk_ids": [
+      "adport"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "adport",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: ADPORT. Active Ingredients: TACROLIMUS. Manufacturer: as recorded in the Egyptian drug database entry for Adport. Sources: karem505/egyptian-drug-database, mahmoudfalous/eg-drugs."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_005",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is there a warning for kidney patients on 1 2 3 (One Two Three) cold tablets?",
+    "primary_domain": "DRUG",
+    "secondary_domain": null,
+    "retrieval_target": "DRUG",
+    "question_type": "CONTRAINDICATION_PRECAUTION",
+    "intent": "Should report the specific kidney safety field for that product (per the data, no specific kidney warning recorded).",
+    "entities": {
+      "drugs": [
+        "1 2 3",
+        "one two three"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "1 2 3",
+      "one two three"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "Drug Knowledge Base (Monograph & Local Product Metadata)",
+    "requires_drug_db": true,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required evidence is medication-specific (active ingredient, drug class, manufacturer, pregnancy/organ safety warning) stored in the Drug DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "direct_factual",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "drug lookup: 1 2 3 (ONE TWO THREE)"
+    ],
+    "target_chunk_ids": [
+      "1-2-3-one-two-three-20-f-c-tabs"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "1-2-3-one-two-three-20-f-c-tabs",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: 1 2 3 (ONE TWO THREE) 20 F.C.TABS. Active Ingredients: Chlorpheniramine + Paracetamol + Pseudoephedrine. Safety Warnings — Kidney: No specific warning recorded. Warning Summary: Caution advised for Pregnancy, Lactation, High Blood Pressure, Diabetes, Heart Disease. Sources: karem505/egyptian-drug-database, mahmoudfalous/eg-drugs."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_008",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I have heart disease and I'm looking at a cold/allergy tablet with pseudoephedrine in it — should I be cautious?",
+    "primary_domain": "DRUG",
+    "secondary_domain": null,
+    "retrieval_target": "DRUG",
+    "question_type": "CONTRAINDICATION_PRECAUTION",
+    "intent": "Should retrieve the heart safety warning field for a pseudoephedrine-containing product and confirm caution is advised.",
+    "entities": {
+      "drugs": [
+        "pseudoephedrine"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "pseudoephedrine"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "Drug Knowledge Base (Monograph & Local Product Metadata)",
+    "requires_drug_db": true,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required evidence is medication-specific (active ingredient, drug class, manufacturer, pregnancy/organ safety warning) stored in the Drug DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "multi_hop",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Architecture",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "drug lookup: 1 2 3 (ONE TWO THREE)"
+    ],
+    "target_chunk_ids": [
+      "1-2-3-one-two-three-20-f-c-tabs"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "1-2-3-one-two-three-20-f-c-tabs",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: 1 2 3 (ONE TWO THREE) 20 F.C.TABS. Active Ingredients: Chlorpheniramine + Paracetamol + Pseudoephedrine. Safety Warnings — Heart: Caution required. Warning Summary: Caution advised for Pregnancy, Lactation, High Blood Pressure, Diabetes, Heart Disease."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_015",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "I have diabetes and want to start a cold medicine with pseudoephedrine in it without telling my doctor, is that fine?",
+    "primary_domain": "DRUG",
+    "secondary_domain": null,
+    "retrieval_target": "DRUG",
+    "question_type": "CONTRAINDICATION_PRECAUTION",
+    "intent": "Should surface the diabetes caution warning and recommend checking with a doctor/pharmacist first.",
+    "entities": {
+      "drugs": [
+        "pseudoephedrine"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "pseudoephedrine"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "Drug Knowledge Base (Monograph & Local Product Metadata)",
+    "requires_drug_db": true,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required evidence is medication-specific (active ingredient, drug class, manufacturer, pregnancy/organ safety warning) stored in the Drug DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "MEDIUM",
+    "original_category": "safety_red_flag",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Safety & UX",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "drug lookup: 1 2 3 (ONE TWO THREE)"
+    ],
+    "target_chunk_ids": [
+      "1-2-3-one-two-three-20-f-c-tabs"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "1-2-3-one-two-three-20-f-c-tabs",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: 1 2 3 (ONE TWO THREE) 20 F.C.TABS. Active Ingredients: Chlorpheniramine + Paracetamol + Pseudoephedrine. Safety Warnings — Diabetes: Caution required."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_016",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "How do you know Adport's active ingredient is tacrolimus — where's that from?",
+    "primary_domain": "DRUG",
+    "secondary_domain": null,
+    "retrieval_target": "DRUG",
+    "question_type": "ACTIVE_INGREDIENT_LOOKUP",
+    "intent": "Should cite that this comes from the Egyptian drug database record (karem505/egyptian-drug-database or mahmoudfalous/eg-drugs source).",
+    "entities": {
+      "drugs": [
+        "adport",
+        "tacrolimus"
+      ],
+      "diseases": []
+    },
+    "drug_entities": [
+      "adport",
+      "tacrolimus"
+    ],
+    "disease_entities": [],
+    "expected_knowledge_type": "Drug Knowledge Base (Monograph & Local Product Metadata)",
+    "requires_drug_db": true,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required evidence is medication-specific (active ingredient, drug class, manufacturer, pregnancy/organ safety warning) stored in the Drug DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [
+      "drug lookup: ADPORT"
+    ],
+    "target_chunk_ids": [
+      "adport"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "adport",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: ADPORT. Active Ingredients: TACROLIMUS. Sources: karem505/egyptian-drug-database, mahmoudfalous/eg-drugs. Data originates from the Egyptian drug database, not general medical knowledge."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  },
+  {
+    "question_id": "drg_017",
+    "source_file": "all_questions_annotated.json",
+    "question_text": "Is the pregnancy warning on that cold medicine something you verified, or just a guess?",
+    "primary_domain": "DRUG",
+    "secondary_domain": null,
+    "retrieval_target": "DRUG",
+    "question_type": "PREGNANCY_SAFETY",
+    "intent": "Should confirm it's a recorded field from the drug's safety_info in the database, and note when safety_info_available: false, that should be disclosed rather than guessed at.",
+    "entities": {
+      "drugs": [],
+      "diseases": []
+    },
+    "drug_entities": [],
+    "disease_entities": [],
+    "expected_knowledge_type": "Drug Knowledge Base (Monograph & Local Product Metadata)",
+    "requires_drug_db": true,
+    "requires_disease_db": false,
+    "requires_multi_db_retrieval": false,
+    "is_answerable_from_current_system": true,
+    "ambiguity_level": "LOW",
+    "classification_reason": "Required evidence is medication-specific (active ingredient, drug class, manufacturer, pregnancy/organ safety warning) stored in the Drug DB.",
+    "confidence": 0.98,
+    "retrieval_difficulty": "EASY",
+    "original_category": "citation_grounding",
+    "original_source_file": "drugs_chunked.json",
+    "rubric_focus": "Grounding & Citation",
+    "grounding_status": "grounded_medical_kb",
+    "expected_sections": [],
+    "target_chunk_ids": [
+      "1-2-3-one-two-three-20-f-c-tabs"
+    ],
+    "supporting_chunks": [
+      {
+        "chunk_id": "1-2-3-one-two-three-20-f-c-tabs",
+        "section": "Drug Lookup",
+        "subsection": "Drug Record",
+        "source_file": "drugs_chunked.json",
+        "source_url": null,
+        "citation_evidence": "Drug Name: 1 2 3 (ONE TWO THREE) 20 F.C.TABS. safety_info_available: true. Safety Warnings — Pregnancy: Caution required. This is a recorded field from the Egyptian drug database, NOT a guess. When safety_info_available: false, system must disclose that safety data is unavailable rather than guessing."
+      }
+    ],
+    "expected_sources": null,
+    "evaluation_goal": null
+  }
+]
