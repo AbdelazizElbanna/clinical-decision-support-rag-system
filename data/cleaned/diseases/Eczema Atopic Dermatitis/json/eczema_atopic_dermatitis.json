@@ -1,7 +1,7 @@
 {
     "condition_id": "eczema_atopic_dermatitis",
     "name_en": "Atopic Dermatitis",
-    "name_ar": "الإكزيما / التهاب الجلد التأتبي",
+    
     "aliases": [
         "Eczema",
         "Atopic Eczema",
@@ -12,39 +12,34 @@
     "category": "Dermatology",
     "overview": {
         "what_is_it": "Atopic dermatitis is the most common type of eczema. It is a chronic inflammatory skin condition characterized by intensely itchy, dry, irritable, and inflamed skin. It follows a relapsing-remitting course characterized by acute flare-ups and periods of clearance.",
-        "what_is_it_ar": "التهاب الجلد التأتبي هو النوع الأكثر شيوعًا من الإكزيما، وهو مرض جلدي التهابي مزمن يتميز بجفاف شديد وحكة حادة والتهاب في الجلد، ويمر بدورات من النوبات الحادة وفترات التحسن.",
         "how_common": "Very common, especially in children; it most often begins early in life (between 2 months and 5 years of age). It can also start during puberty or adulthood.",
         "chronic_or_acute": "Chronic condition that can last for years or be lifelong, although many children see their symptoms resolve by their teenage years.",
         "contagious": false,
         "skin_barrier_pathophysiology": "The skin barrier (stratum corneum) functions like a protective brick wall. In atopic dermatitis, microscopic gaps form in this barrier, allowing excessive moisture to escape (causing profound dryness and xerosis) while permitting environmental irritants, allergens, and microbial pathogens (bacteria and viruses) to penetrate into deeper skin layers, driving inflammatory flares.",
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis overview",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
-            "local_file": "eczema_atopic_dermatitis/overview.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis overview"
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis"
     },
     "symptoms": {
         "core_symptoms": [
             {
                 "name": "Intense Itching (Pruritus)",
-                "name_ar": "حكة شديدة",
                 "description": "Described as 'the itch that rashes'. Itching is often severe, persistent, worsens at night, and disrupts sleep, contributing to fatigue, anxiety, and distress.",
                 "timing": "Particularly aggravated at night, during sweating, or when exposed to dry cold air."
             },
             {
                 "name": "Dry, Sensitive Skin (Xerosis)",
-                "name_ar": "جفاف شديد وحساسية مفرطة في الجلد",
                 "description": "Excessively dry, rough, and scaly skin that easily stings, burns, cracks, and becomes irritated by contact with everyday substances."
             },
             {
                 "name": "Rash, Swelling, and Oozing Blisters",
-                "name_ar": "طفح جلدي، تورم، وبثور تنز سوائل",
                 "description": "Warm, inflamed patches of skin with swelling and small bumps/blisters that may leak clear or yellowish fluid and form crusts when scratched."
             },
             {
                 "name": "Skin Thickening and Lichenification",
-                "name_ar": "زيادة سمك الجلد وتجلده (Lichenification)",
                 "description": "Leathery, thickened skin with deepened skin lines resulting from repeated rubbing and scratching. Thickened areas often itch continuously even when no acute flare is active."
             }
         ],
@@ -86,41 +81,41 @@
             "darker_skin_tones": "Rashes frequently appear purple, grayish, or dark brown with subtle or absent redness; prominent follicular papules (small rough bumps) are more common; post-inflammatory hyperpigmentation or hypopigmentation often lingers for months after healing."
         },
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis symptoms",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
-            "local_file": "eczema_atopic_dermatitis/symptoms.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+            
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis symptoms"
+            
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms"
     },
     "causes": {
         "factors": [
             {
                 "factor": "Genetic Predisposition",
-                "factor_ar": "الاستعداد الوراثي والجينات",
                 "description": "Around 70% of individuals with atopic dermatitis have blood relatives with atopic dermatitis, asthma, or hay fever (allergic rhinitis). Inherited mutations affecting structural proteins of the stratum corneum compromise the skin barrier."
             },
             {
                 "factor": "Immune System Dysregulation",
-                "factor_ar": "فرط استجابة الجهاز المناعي",
                 "description": "An overreactive immune system that produces excess inflammatory signaling molecules in response to everyday environmental elements and skin barrier stress."
             },
             {
                 "factor": "Skin Barrier Defect",
-                "factor_ar": "خلل الحاجز الواقي للجلد",
                 "description": "Structural gaps in the skin barrier that allow accelerated transepidermal water loss and facilitate penetration of allergens, microbes, and irritants."
             },
             {
                 "factor": "Environmental and Urban Factors",
-                "factor_ar": "العوامل البيئية والتلوث الحضري",
                 "description": "Higher incidence is documented in urban environments with air pollution, in dry cold climates, and in geographical areas located far from the equator."
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis causes",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
-            "local_file": "eczema_atopic_dermatitis/causes.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+           
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis causes"
+            
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes"
     },
     "risk_factors": {
         "list": [
@@ -131,11 +126,13 @@
             "Altered gut and skin microbiome development during early infancy"
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis causes",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
-            "local_file": "eczema_atopic_dermatitis/causes.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+           
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis causes"
+            
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes"
     },
     "triggers": [
         {
@@ -147,11 +144,13 @@
             "mechanism": "Dries out the stratum corneum rapidly, widening skin barrier gaps, causing micro-cracking, severe tightness, and triggering intense itch receptors.",
             "prevention_and_action": "Use an indoor cool-mist humidifier in bedrooms and living spaces; apply thick ointment or cream emollients 2 to 3 times daily.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
-                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
-                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+               
+                "page_title": "(AAD)/Childhood eczema: Triggers can cause eczema to flare"
+               
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers"
         },
         {
             "id": "trig_cold_temp",
@@ -162,11 +161,13 @@
             "mechanism": "Cold outdoor air combined with indoor radiators/heaters depletes atmospheric moisture and strips the natural lipid mantle of the skin.",
             "prevention_and_action": "Dress in soft breathable 100% cotton layers; apply a protective layer of barrier ointment before heading outdoors; keep indoor heating moderate.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Eczema types: Atopic dermatitis skin care",
-                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
-                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+              
+                "page_title": "(AAD)/Eczema types: Atopic dermatitis skin care"
+               
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping"
         },
         {
             "id": "trig_heat_sweat",
@@ -177,11 +178,13 @@
             "mechanism": "Sweat contains mineral salts and metabolic byproducts that directly irritate broken skin barrier, causing severe stinging and prickly itch.",
             "prevention_and_action": "Stay in cool or air-conditioned environments; take brief lukewarm or cool showers promptly after sweating; pat dry gently and reapply moisturizer.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
-                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
-                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+                
+                "page_title": "(AAD)/Childhood eczema: Triggers can cause eczema to flare"
+               
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers"
         },
         {
             "id": "trig_temp_shift",
@@ -192,11 +195,13 @@
             "mechanism": "Rapid cutaneous vascular constriction and dilation combined with sudden moisture evaporation stimulates neurogenic itch pathways.",
             "prevention_and_action": "Layer clothing so layers can be added or removed gradually to adjust comfortably to ambient temperatures.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
-                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
-                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+                
+                "page_title": "(AAD)/Childhood eczema: Triggers can cause eczema to flare"
+               
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers"
         },
         {
             "id": "trig_fragrances",
@@ -206,11 +211,13 @@
             "mechanism": "Aromatic chemicals penetrate disrupted skin barrier and act as primary irritants or trigger contact allergic sensitization.",
             "prevention_and_action": "Exclusively purchase products labeled 'Fragrance-Free'. Avoid products labeled 'Unscented' because they contain masking fragrances that can still flare eczema.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Eczema types: Atopic dermatitis skin care",
-                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
-                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+                
+                "page_title": "(AAD)/Eczema types: Atopic dermatitis skin care"
+               
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping"
         },
         {
             "id": "trig_harsh_soaps",
@@ -220,11 +227,13 @@
             "mechanism": "Strong alkaline surfactants emulsify and dissolve the skin's protective lipid bilayer.",
             "prevention_and_action": "Use mild, soap-free, dye-free, and fragrance-free synthetic cleansers (syndet bars/liquids) and fragrance-free laundry detergents; double-rinse clothes.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Eczema types: Atopic dermatitis skin care",
-                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
-                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+                
+                "page_title": "(AAD)/Eczema types: Atopic dermatitis skin care"
+                
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping"
         },
         {
             "id": "trig_coarse_fabrics",
@@ -234,11 +243,13 @@
             "mechanism": "Mechanical friction and rigid fiber ends abrade sensitive stratum corneum.",
             "prevention_and_action": "Wear loose-fitting, soft 100% cotton clothing; remove clothing tags or choose tagless items; line irritating seams with silk; never wear wool next to bare skin.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Eczema types: Atopic dermatitis skin care",
-                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
-                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+               
+                "page_title": "(AAD)/Eczema types: Atopic dermatitis skin care"
+              
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping"
         },
         {
             "id": "trig_chlorinated_pool",
@@ -248,11 +259,13 @@
             "mechanism": "Chlorine strips superficial moisture and natural oils from vulnerable skin.",
             "prevention_and_action": "Apply a barrier coat of petroleum jelly or thick ointment prior to swimming; shower with fresh warm water immediately upon exiting pool; apply moisturizer within 3 minutes.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
-                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
-                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+                
+                "page_title": "(AAD)/Childhood eczema: Triggers can cause eczema to flare"
+               
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers"
         },
         {
             "id": "trig_stress",
@@ -262,11 +275,13 @@
             "mechanism": "Stress hormones (cortisol, catecholamines) and pro-inflammatory neuropeptides impair barrier recovery and intensify the itch-scratch cycle.",
             "prevention_and_action": "Incorporate stress management, maintain consistent sleep schedules, and avoid scratching by keeping fingernails clipped short.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
-                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
-                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+              
+                "page_title": "(AAD)/Childhood eczema: Triggers can cause eczema to flare"
+                
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers"
         }
     ],
     "environmental_factors": [
@@ -277,11 +292,13 @@
             "clinical_effect": "Accelerates transepidermal water loss, causes severe skin flaking, tight sensation, micro-fissuring, and intense itching.",
             "context_advice": "Increase moisturizer application to 3+ times daily; switch from lotion to ointment; use a bedroom cool-mist humidifier.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
-                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
-                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+               
+                "page_title": "(AAD)/Childhood eczema: Triggers can cause eczema to flare"
+                
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers"
         },
         {
             "factor": "Cold Ambient Temperature",
@@ -290,11 +307,13 @@
             "clinical_effect": "Promotes epidermal dehydration and winter eczema flares, worsened by indoor artificial heating systems.",
             "context_advice": "Apply occlusive ointment before outdoor exposure; wear 100% soft cotton base layers and protective gloves; avoid excessively hot baths.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Eczema types: Atopic dermatitis skin care",
-                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
-                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+              
+                "page_title": "(AAD)/Eczema types: Atopic dermatitis skin care"
+               
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping"
         },
         {
             "factor": "High Ambient Temperature and Heat Waves",
@@ -303,11 +322,13 @@
             "clinical_effect": "Triggers thermal sweating; accumulated perspiration in flexural folds causes intense stinging and secondary flare-ups.",
             "context_advice": "Wear lightweight, loose-fitting cotton clothes; take quick lukewarm rinse after sweating; stay in air-conditioned environments during peak heat.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
-                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
-                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+                
+                "page_title": "(AAD)/Childhood eczema: Triggers can cause eczema to flare"
+                
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/childhood/triggers"
         },
         {
             "factor": "High UV Radiation Index",
@@ -316,11 +337,13 @@
             "clinical_effect": "Sunburn causes acute thermal and inflammatory injury to the epidermis, triggering major eczema flare-ups.",
             "context_advice": "Use sensitive-skin mineral sunscreens (zinc oxide or titanium dioxide) labeled fragrance-free; wear UV-protective cotton clothing and seek shade.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Eczema types: Atopic dermatitis skin care",
-                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
-                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
-            }
+                "name_en": "Atopic Dermatitis",
+                "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+                
+                "page_title": "(AAD)/Eczema types: Atopic dermatitis skin care"
+               
+            },
+            "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping"
         }
     ],
     "skin_care_and_self_care": {
@@ -348,11 +371,13 @@
             "Remove tags from clothing or buy tagless garments; cover irritating seams with silk."
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis skin care",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
-            "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+            
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis skin care"
+           
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping"
     },
     "flare_ups_management": {
         "early_signs_of_flare": [
@@ -368,11 +393,13 @@
             "Identify and eliminate any recently introduced triggers (e.g., weather changes, new detergent, sweating, chlorine)."
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
-            "local_file": "eczema_atopic_dermatitis/treatment.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+           
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis diagnosis and treatment"
+           
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment"
     },
     "red_flags_and_warning_signs": {
         "signs": [
@@ -396,11 +423,13 @@
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis symptoms",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
-            "local_file": "eczema_atopic_dermatitis/symptoms.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+           
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis symptoms"
+           
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms"
     },
     "when_to_see_doctor": {
         "recommendations": [
@@ -411,11 +440,13 @@
             "To discuss advanced FDA-approved biologic or oral systemic treatment options when topical therapies are insufficient"
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
-            "local_file": "eczema_atopic_dermatitis/treatment.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+           
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis diagnosis and treatment"
+           
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment"
     },
     "related_conditions": {
         "conditions": [
@@ -441,11 +472,13 @@
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis causes",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
-            "local_file": "eczema_atopic_dermatitis/causes.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+           
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis causes"
+           
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes"
     },
     "medications_and_treatments": {
         "topical_therapies": [
@@ -551,48 +584,50 @@
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Eczema types: Atopic dermatitis diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
-            "local_file": "eczema_atopic_dermatitis/treatment.html"
-        }
+            "name_en": "Atopic Dermatitis",
+            "aliases": ["Eczema", "Atopic Eczema", "Atopic Dermatitis", "AD", "Infantile Eczema"],
+            
+            "page_title": "(AAD)/Eczema types: Atopic dermatitis diagnosis and treatment"
+           
+        },
+        "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment"
     },
     "sources_summary": [
         {
             "organization": "American Academy of Dermatology (AAD)",
             "page_title": "Eczema types: Atopic dermatitis overview",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
-            "local_file": "eczema_atopic_dermatitis/overview.html"
+            "local_file": "eczema_atopic_dermatitis/overview.html",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis"
         },
         {
             "organization": "American Academy of Dermatology (AAD)",
             "page_title": "Eczema types: Atopic dermatitis symptoms",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
-            "local_file": "eczema_atopic_dermatitis/symptoms.html"
+            "local_file": "eczema_atopic_dermatitis/symptoms.html",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms"
         },
         {
             "organization": "American Academy of Dermatology (AAD)",
             "page_title": "Eczema types: Atopic dermatitis causes",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
-            "local_file": "eczema_atopic_dermatitis/causes.html"
+            "local_file": "eczema_atopic_dermatitis/causes.html",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes"
         },
         {
             "organization": "American Academy of Dermatology (AAD)",
             "page_title": "Eczema types: Atopic dermatitis diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
-            "local_file": "eczema_atopic_dermatitis/treatment.html"
+            "local_file": "eczema_atopic_dermatitis/treatment.html",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment"
         },
         {
             "organization": "American Academy of Dermatology (AAD)",
             "page_title": "Eczema types: Atopic dermatitis skin care",
-            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
-            "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
+            "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping"
         },
         {
             "organization": "American Academy of Dermatology (AAD)",
             "page_title": "Childhood eczema: Triggers can cause eczema to flare",
-            "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
-            "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
+            "local_file": "eczema_atopic_dermatitis/childhood_triggers.html",
+            "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers"
         }
     ]
 }

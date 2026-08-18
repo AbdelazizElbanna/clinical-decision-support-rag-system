@@ -1,7 +1,6 @@
 {
     "condition_id": "urticaria_hives",
     "name_en": "Urticaria (Hives)",
-    "name_ar": "الارتكاريا / الشرى (خلايا النحل)",
     "aliases": [
         "Hives",
         "Urticaria",
@@ -16,39 +15,46 @@
     "category": "Dermatology",
     "overview": {
         "what_is_it": "Urticaria (commonly known as hives) is a sudden, highly itchy skin reaction characterized by the appearance of raised bumps, swollen plaques (wheals), or both. Individual hives are characteristically evanescent (transient), usually resolving within 24 hours while new hives may continue to erupt on other parts of the body.",
-        "what_is_it_ar": "الارتكاريا (أو الشرى / خلايا النحل) هي تفاعل جلدي مفاجئ وشديد الحكة يتميز بظهور نتوءات مرتفعة ولويحات متورمة (انتبار / Wheals). تتميز الحبة الواحدة بأنها مؤقتة وتختفي غالبًا خلال 24 ساعة، مع إمكانية ظهور حبوب جديدة في مناطق أخرى.",
         "how_common": "Extremely common; millions of individuals experience acute hives during their lifetime. Chronic spontaneous hives affect millions worldwide, occurring twice as often in women (most frequently between ages 20 and 40).",
         "chronic_or_acute": "Classified into Acute Urticaria (lasting fewer than 6 weeks, commonly resolving in days to weeks) and Chronic Urticaria (occurring daily or almost daily for 6 weeks or longer).",
-        "contagious": false,
+        "contagious": "Not Contagious",
         "histamine_pathophysiology": "Mast cells and basophils in the dermis release histamine and other vasoactive mediators. Histamine causes local capillary dilation and fluid leakage into the superficial dermis, leading to localized dermal edema (wheal), erythema, warmth, and intense itching. When fluid extravasates deeper into the subcutaneous or submucosal tissue, angioedema develops.",
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Overview",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-overview",
-            "local_file": "urticaria_hives/overview.html"
-        }
+            "page_title": "(AAD)/Hives: Overview",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-overview"
     },
     "symptoms": {
         "core_symptoms": [
             {
                 "name": "Itchy Raised Bumps and Plaques (Wheals)",
-                "name_ar": "نتوءات ولويحات منتفخة مثيرة للحكة (Wheals)",
                 "description": "Smooth, raised spots or large confluence plaques ranging from pinhead size to larger than a dinner plate. They feel intensely itchy, stinging, or burning, and are warm to the touch.",
-                "typical_locations": ["Can appear anywhere on the body, including trunk, arms, legs, face, hands, and feet."]
+                "typical_locations": [
+                    "Can appear anywhere on the body, including trunk, arms, legs, face, hands, and feet."
+                ]
             },
             {
                 "name": "Blanching Upon Pressure",
-                "name_ar": "ابيضاض الجلد عند الضغط عليه (Blanching)",
                 "description": "Pressing firmly on an active hive causes it to temporarily turn white or pale (blanch) as blood is displaced from dilated capillaries."
             },
             {
                 "name": "Evanescent / Migratory Pattern",
-                "name_ar": "طبيعة متطايرة ومتحركة (تختفي وتظهر في مكان آخر)",
                 "description": "An individual hive typically fades and completely disappears within 24 hours without leaving a scar, while new lesions emerge elsewhere."
             },
             {
                 "name": "Deep Subcutaneous Swelling (Angioedema)",
-                "name_ar": "وذمة وعائية عميقة (Angioedema)",
                 "description": "Deep, non-pitting swelling in subcutaneous or submucosal tissues. Commonly affects the eyelids, lips, tongue, throat, genitalia, hands, and feet. Lesions feel painful, tight, or burning rather than intensely itchy."
             }
         ],
@@ -57,46 +63,61 @@
             "darker_skin_tones": "Hives often match natural skin tone or appear slightly darker (brown, violaceous) or slightly lighter; redness is often subtle or undetectable; post-inflammatory hyperpigmentation (dark spots) can linger after hives resolve."
         },
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Signs and symptoms",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-symptoms",
-            "local_file": "urticaria_hives/symptoms.html"
-        }
+            "page_title": "(AAD)/Hives: Signs and symptoms",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-symptoms"
     },
     "causes": {
         "factors": [
             {
                 "factor": "Mast Cell Histamine De-granulation",
-                "factor_ar": "إفراز الهستامين من الخلايا البدينة",
                 "description": "Triggered release of pre-formed histamine and inflammatory cytokines from cutaneous mast cells, causing local vascular permeability and sensory nerve stimulation."
             },
             {
                 "factor": "IgE-Mediated Allergic Reactions",
-                "factor_ar": "تفاعلات الحساسية المناعية الفورية (IgE)",
                 "description": "Immediate hypersensitivity reactions to specific allergens such as foods (peanuts, shellfish, dairy, eggs), insect stings/bites, or medications (e.g., penicillin)."
             },
             {
                 "factor": "Infections and Viral Illnesses",
-                "factor_ar": "العدوى الفيروسية والبكتيرية",
                 "description": "Immune system response to infections such as upper respiratory viral infections, common cold, streptococcal pharyngitis, urinary tract infections, or COVID-19."
             },
             {
                 "factor": "Physical Stimuli (Inducible Urticaria)",
-                "factor_ar": "المحفزات الفيزيائية (البرودة، الحرارة، الضغط، الشمس)",
                 "description": "Direct physical activation of cutaneous mast cells by thermal shifts, sunlight exposure, mechanical friction, pressure, or vibration."
             },
             {
                 "factor": "Autoimmune / Idiopathic Mechanisms (Chronic Spontaneous Urticaria)",
-                "factor_ar": "العوامل المناعية الذاتية أو غير المحددة",
                 "description": "In the majority of chronic hives (> 6 weeks), no external trigger is found. Circulating autoantibodies (e.g., against IgE or high-affinity IgE receptors FcεRI) stimulate persistent histamine release."
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Causes",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-            "local_file": "urticaria_hives/causes_triggers.html"
-        }
+            "page_title": "(AAD)/Hives: Causes",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
     },
     "risk_factors": {
         "list": [
@@ -109,11 +130,21 @@
             "Regular use of NSAIDs or aspirin in sensitive individuals"
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Causes",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-            "local_file": "urticaria_hives/causes_triggers.html"
-        }
+            "page_title": "(AAD)/Hives: Causes",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
     },
     "triggers": [
         {
@@ -125,11 +156,21 @@
             "mechanism": "Direct activation of cold-sensitive cutaneous mast cells causing immediate histamine release upon re-warming.",
             "prevention_and_action": "Wear warm windproof clothing and face scarves in cold weather; avoid sudden immersion in cold bodies of water (severe risk of body-wide reaction); avoid icy drinks.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         },
         {
             "id": "trig_heat_and_sweating",
@@ -140,11 +181,21 @@
             "mechanism": "Rise in core body temperature and release of acetylcholine by sweat nerve fibers triggers mast cell degranulation, producing small pinpoint itchy wheals surrounded by large red flares.",
             "prevention_and_action": "Stay in cool air-conditioned environments during heatwaves; take lukewarm or cool showers; avoid hot tubs and intense workouts in high heat.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         },
         {
             "id": "trig_sunlight_exposure",
@@ -155,11 +206,21 @@
             "mechanism": "Photo-activation of endogenous cutaneous chromophores acting as photo-allergens, triggering rapid histamine release.",
             "prevention_and_action": "Wear tightly woven sun-protective clothing, wide-brimmed hats, and broad-spectrum sunscreen; avoid direct midday sunlight.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         },
         {
             "id": "trig_skin_pressure_friction",
@@ -169,11 +230,21 @@
             "mechanism": "Mechanical shear forces trigger physical mast cell degranulation ('skin writing' in dermatographism, or deep swelling 4-8 hours after sustained pressure).",
             "prevention_and_action": "Wear loose-fitting, soft 100% cotton clothing; avoid tight belts and heavy shoulder straps; refrain from scratching.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Overview",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-overview",
-                "local_file": "urticaria_hives/overview.html"
-            }
+                "page_title": "(AAD)/Hives: Overview",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-overview"
         },
         {
             "id": "trig_allergic_foods_insects",
@@ -183,11 +254,21 @@
             "mechanism": "IgE-crosslinking on mast cell surfaces causing acute explosive histamine release.",
             "prevention_and_action": "Strictly avoid identified food allergens; carry an epinephrine auto-injector if prescribed for systemic allergy.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         },
         {
             "id": "trig_medications_nsaids",
@@ -197,11 +278,21 @@
             "mechanism": "Non-allergic pseudo-allergic mast cell activation via cyclooxygenase (COX-1) inhibition and leukotriene accumulation.",
             "prevention_and_action": "Use acetaminophen (paracetamol) for fever/pain instead of NSAIDs if sensitive; consult physician before taking new medications.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         },
         {
             "id": "trig_emotional_stress",
@@ -211,11 +302,21 @@
             "mechanism": "Neuro-endocrine activation and neuropeptide release directly stimulate mast cell degranulation and lower itch thresholds.",
             "prevention_and_action": "Incorporate stress management, regular relaxation routines, and adequate rest.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         }
     ],
     "environmental_factors": [
@@ -226,11 +327,21 @@
             "clinical_effect": "Can trigger Cold Urticaria wheals on exposed facial/hand skin; dangerous systemic hypotension risk if immersed in cold water.",
             "context_advice": "Wear insulating layers, gloves, and scarves; avoid unheated outdoor pools or cold plunges.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         },
         {
             "factor": "High Ambient Temperature / Heat Waves",
@@ -239,11 +350,21 @@
             "clinical_effect": "Triggers Cholinergic Urticaria (heat/sweat hives) characterized by widespread intensely itchy punctate wheals.",
             "context_advice": "Stay in cool air-conditioned rooms; wear breathable, loose cotton clothing; take quick cool rinses.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         },
         {
             "factor": "High Solar Radiation / UV Index",
@@ -252,11 +373,21 @@
             "clinical_effect": "Triggers Solar Urticaria wheals within minutes on sun-exposed skin surfaces.",
             "context_advice": "Seek shade, wear UV-protective clothing and hats, apply broad-spectrum sunscreen.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         },
         {
             "factor": "Wind Speed and Wind Chill",
@@ -265,11 +396,21 @@
             "clinical_effect": "Accelerates cutaneous convective cooling, provoking cold-induced urticaria flares on exposed facial skin.",
             "context_advice": "Protect face with a scarf or mask; apply barrier emollient before going into windy cold weather.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Hives: Causes",
-                "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-                "local_file": "urticaria_hives/causes_triggers.html"
-            }
+                "page_title": "(AAD)/Hives: Causes",
+                "name_en": "Urticaria (Hives)",
+                "aliases": [
+                    "Hives",
+                    "Urticaria",
+                    "Wheals",
+                    "Welts",
+                    "Nettle Rash",
+                    "Chronic Spontaneous Urticaria (CSU)",
+                    "Physical Urticaria",
+                    "Inducible Urticaria",
+                    "Angioedema"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         }
     ],
     "skin_care_and_self_care": {
@@ -295,11 +436,21 @@
             "Keep a daily symptom and food diary noting the exact date/time hives erupted, activities preceding the flare, foods/drinks consumed, medications taken, temperature/sweat exposure, and stress levels."
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: How to get relief at home",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-self-care",
-            "local_file": "urticaria_hives/self_care.html"
-        }
+            "page_title": "(AAD)/Hives: How to get relief at home",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-self-care"
     },
     "flare_ups_management": {
         "early_signs_of_flare": [
@@ -314,11 +465,21 @@
             "Monitor immediately for any red flag signs of breathing difficulty or throat swelling."
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: How to get relief at home",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-self-care",
-            "local_file": "urticaria_hives/self_care.html"
-        }
+            "page_title": "(AAD)/Hives: How to get relief at home",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-self-care"
     },
     "red_flags_and_warning_signs": {
         "signs": [
@@ -336,11 +497,21 @@
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Overview",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-overview",
-            "local_file": "urticaria_hives/overview.html"
-        }
+            "page_title": "(AAD)/Hives: Overview",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-overview"
     },
     "when_to_see_doctor": {
         "recommendations": [
@@ -351,11 +522,21 @@
             "To formulate an individualized management plan and explore FDA-approved advanced biologic or targeted therapies"
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-treatment",
-            "local_file": "urticaria_hives/treatment.html"
-        }
+            "page_title": "(AAD)/Hives: Diagnosis and treatment",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-treatment"
     },
     "related_conditions": {
         "conditions": [
@@ -381,11 +562,21 @@
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Causes",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-            "local_file": "urticaria_hives/causes_triggers.html"
-        }
+            "page_title": "(AAD)/Hives: Causes",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
     },
     "medications_and_treatments": {
         "first_line_therapies": [
@@ -428,7 +619,11 @@
         "emergency_and_short_term_therapies": [
             {
                 "drug_name": "Epinephrine (Adrenaline) Auto-Injector",
-                "brand_names": ["EpiPen", "Auvi-Q", "Adrenaclick"],
+                "brand_names": [
+                    "EpiPen",
+                    "Auvi-Q",
+                    "Adrenaclick"
+                ],
                 "mechanism": "Alpha and beta adrenergic agonist",
                 "indication": "Emergency first-line treatment for acute anaphylaxis, throat swelling, or respiratory compromise.",
                 "administration": "Intramuscular injection into the anterolateral thigh."
@@ -442,7 +637,10 @@
         "alternative_and_refractory_therapies": [
             {
                 "drug_name": "Doxepin",
-                "brand_names": ["Silenor", "Sinequan"],
+                "brand_names": [
+                    "Silenor",
+                    "Sinequan"
+                ],
                 "details": "Tricyclic antidepressant with extremely potent dual H1 and H2 antihistaminic properties; useful for chronic severe nocturnal hives with insomnia.",
                 "prescription_status": "Prescription"
             },
@@ -453,42 +651,42 @@
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-treatment",
-            "local_file": "urticaria_hives/treatment.html"
-        }
+            "page_title": "(AAD)/Hives: Diagnosis and treatment",
+            "name_en": "Urticaria (Hives)",
+            "aliases": [
+                "Hives",
+                "Urticaria",
+                "Wheals",
+                "Welts",
+                "Nettle Rash",
+                "Chronic Spontaneous Urticaria (CSU)",
+                "Physical Urticaria",
+                "Inducible Urticaria",
+                "Angioedema"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/a-z/hives-treatment"
     },
     "sources_summary": [
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Overview",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-overview",
-            "local_file": "urticaria_hives/overview.html"
+            "page_title": "(AAD)/Hives: Overview",
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-overview"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Signs and symptoms",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-symptoms",
-            "local_file": "urticaria_hives/symptoms.html"
+            "page_title": "(AAD)/Hives: Signs and symptoms",
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-symptoms"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Causes",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-causes",
-            "local_file": "urticaria_hives/causes_triggers.html"
+            "page_title": "(AAD)/Hives: Causes",
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-causes"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: Diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-treatment",
-            "local_file": "urticaria_hives/treatment.html"
+            "page_title": "(AAD)/Hives: Diagnosis and treatment",
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-treatment"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Hives: How to get relief at home",
-            "url": "https://www.aad.org/public/diseases/a-z/hives-self-care",
-            "local_file": "urticaria_hives/self_care.html"
+            "page_title": "(AAD)/Hives: How to get relief at home",
+            "source_url": "https://www.aad.org/public/diseases/a-z/hives-self-care"
         }
     ]
 }

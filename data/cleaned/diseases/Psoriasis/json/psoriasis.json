@@ -1,7 +1,6 @@
 {
     "condition_id": "psoriasis",
     "name_en": "Psoriasis",
-    "name_ar": "الصدفية",
     "aliases": [
         "Plaque Psoriasis",
         "Psoriasis Vulgaris",
@@ -13,39 +12,48 @@
     "category": "Dermatology",
     "overview": {
         "what_is_it": "Psoriasis is a chronic, immune-mediated, non-contagious systemic skin disease. In psoriasis, faulty immune signals cause skin cells to grow abnormally fast—in just a few days rather than the normal 3 to 4 weeks. These excess skin cells accumulate rapidly on the skin's surface, forming raised, thick, scaly, and often itchy or painful plaques.",
-        "what_is_it_ar": "الصدفية هي مرض جلدي جهازي مزمن، مناعي وغير معدٍ. يرسل الجهاز المناعي إشارات خاطئة تؤدي إلى تسارع نمو خلايا الجلد خلال أيام قليلة بدلاً من أسابيع، فتتراكم الخلايا الزائدة على سطح الجلد مكونة بقعاً مرتفعة وسميكة ومغطاة بقشور فضية تسبب الحكة أو الألم.",
         "how_common": "Common chronic condition affecting millions of children and adults of all races and genders worldwide.",
         "chronic_or_acute": "Chronic, lifelong condition characterized by unpredictable cycles of flare-ups and periods of remission (with the rare exception of some children with guttate psoriasis whose condition may fully clear).",
-        "contagious": false,
+        "contagious": "Not Contagious",
         "immune_pathophysiology": "White blood cells called T-cells mistakenly attack healthy skin cells, triggering an inflammatory cascade. This causes hyperproliferation of keratinocytes (rapid skin cell production) and dilated dermal blood vessels, resulting in thick plaques and silvery scaling.",
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Overview",
-            "url": "https://www.aad.org/public/diseases/psoriasis/what/overview",
-            "local_file": "psoriasis/overview.html"
-        }
+            "page_title": "(AAD)/Psoriasis: Overview",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/overview"
     },
     "symptoms": {
         "core_symptoms": [
             {
                 "name": "Thick, Raised Plaques with Scales",
-                "name_ar": "لويحات سميكة ومرتفعة مغطاة بقشور",
                 "description": "Raised, well-demarcated patches of inflamed skin covered with silvery-white or grayish scales. Plaques can crack, bleed, and feel intensely sore.",
-                "typical_locations": ["Scalp", "Elbows", "Knees", "Lower back", "Navel", "Nails"]
+                "typical_locations": [
+                    "Scalp",
+                    "Elbows",
+                    "Knees",
+                    "Lower back",
+                    "Navel",
+                    "Nails"
+                ]
             },
             {
                 "name": "Itching, Burning, and Soreness (Pruritus)",
-                "name_ar": "حكة وحرقة وألم في الجلد",
                 "description": "Itching can be severe, sharp, or accompanied by a burning and stinging sensation that interferes with concentration and sleep."
             },
             {
                 "name": "Dry, Cracked Skin with Bleeding",
-                "name_ar": "جلد جاف ومتشقق ينزف بسهولة",
                 "description": "Extremely dry skin that easily fissures and bleeds when stretched or scratched (Auspitz sign)."
             },
             {
                 "name": "Nail Changes (Nail Psoriasis)",
-                "name_ar": "تغيرات وتلف الأظافر",
                 "description": "Tiny pits on nail plates, yellow-brown oil-drop discoloration, thickening (subungual hyperkeratosis), crumbling edges, and nail separation from the nail bed (onycholysis)."
             }
         ],
@@ -81,36 +89,47 @@
             "darker_skin_tones": "Plaques frequently present as violet, purplish, grayish, or dark brown with gray or silver scales; redness is less apparent; post-inflammatory hyperpigmentation or hypopigmentation often persists for months after plaques flatten."
         },
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Symptoms and types",
-            "url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
-            "local_file": "psoriasis/symptoms_types.html"
-        }
+            "page_title": "(AAD)/Psoriasis: Symptoms and types",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms"
     },
     "causes": {
         "factors": [
             {
                 "factor": "Immune System Dysregulation",
-                "factor_ar": "خلل في استجابة الجهاز المناعي",
                 "description": "Overactive T-cells and pro-inflammatory cytokines (such as TNF-alpha, IL-17, and IL-23) mistakenly stimulate keratinocytes to multiply rapidly, accelerating cell turnover from weeks to days."
             },
             {
                 "factor": "Genetic Predisposition",
-                "factor_ar": "الاستعداد الوراثي والجينات",
                 "description": "Psoriasis runs in families. Multiple inherited susceptibility genes (e.g., PSORS genes, HLA-Cw6) increase vulnerability, although environmental triggers are usually required to activate the disease."
             },
             {
                 "factor": "Trigger Activation",
-                "factor_ar": "تحفيز العوامل البيئية والمحفزات",
                 "description": "In genetically predisposed individuals, initial disease onset or subsequent flares are provoked by external environmental exposures, infections, stress, physical trauma, or medications."
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Causes",
-            "url": "https://www.aad.org/public/diseases/psoriasis/what/causes",
-            "local_file": "psoriasis/causes.html"
-        }
+            "page_title": "(AAD)/Psoriasis: Causes",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/causes"
     },
     "risk_factors": {
         "list": [
@@ -123,11 +142,18 @@
             "History of mechanical skin injury or severe sunburn (Koebner phenomenon)"
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Causes",
-            "url": "https://www.aad.org/public/diseases/psoriasis/what/causes",
-            "local_file": "psoriasis/causes.html"
-        }
+            "page_title": "(AAD)/Psoriasis: Causes",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/causes"
     },
     "triggers": [
         {
@@ -139,11 +165,18 @@
             "mechanism": "Cold dry outdoor air and indoor artificial heating deplete epidermal moisture, causing thick scaling, cracks, fissures, and increased itching.",
             "prevention_and_action": "Apply thick ointment or cream moisturizers multiple times daily, use an indoor humidifier, protect exposed skin with warm cotton/soft clothing.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
             "id": "trig_sunburn_and_excess_sun",
@@ -154,11 +187,18 @@
             "mechanism": "While moderate, controlled sun exposure can improve psoriasis plaques, severe sunburn injures the epidermis and triggers the Koebner phenomenon, causing extensive new plaques.",
             "prevention_and_action": "Protect non-affected skin with broad-spectrum fragrance-free sunscreen (SPF 30+), limit direct sun sessions to brief safe durations, avoid tanning beds.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
             "id": "trig_skin_injury_koebner",
@@ -168,11 +208,18 @@
             "mechanism": "Mechanical epidermal trauma triggers localized inflammatory signaling that leads to new psoriasis plaques appearing at the exact site of injury 10 to 14 days later.",
             "prevention_and_action": "Avoid tattoos and piercings; apply moisturizer before shaving to minimize cuts; treat cuts and bug bites immediately; avoid scratching or picking at scales.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
             "id": "trig_emotional_stress",
@@ -182,11 +229,18 @@
             "mechanism": "Stress hormones trigger immune activation, increasing pro-inflammatory cytokine release and precipitating disease flares.",
             "prevention_and_action": "Practice stress-reduction techniques (meditation, moderate exercise, deep breathing), maintain regular sleep schedules.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
             "id": "trig_infections",
@@ -196,11 +250,18 @@
             "mechanism": "Bacterial superantigens stimulate T-cell activation, frequently triggering acute guttate psoriasis or worsening plaque psoriasis 2 to 3 weeks later.",
             "prevention_and_action": "Seek prompt medical care and antibiotic treatment for sore throats or fevers; practice rigorous hand hygiene.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
             "id": "trig_medications",
@@ -210,11 +271,18 @@
             "mechanism": "Direct modulation of intracellular cAMP or immune pathways causing plaque exacerbation 2 to 3 weeks after starting, or sudden severe rebound pustular/erythrodermic psoriasis upon stopping systemic steroids.",
             "prevention_and_action": "Never abruptly discontinue medications; inform all prescribing physicians of your psoriasis diagnosis; taper systemic corticosteroids gradually under medical supervision.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
             "id": "trig_alcohol_smoking",
@@ -224,11 +292,18 @@
             "mechanism": "Nicotine promotes cutaneous vascular inflammation and oxidative stress; alcohol interferes with medication metabolism and suppresses treatment response.",
             "prevention_and_action": "Enroll in smoking cessation programs; avoid heavy alcohol consumption.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         }
     ],
     "environmental_factors": [
@@ -239,11 +314,18 @@
             "clinical_effect": "Dries and tightens psoriasis plaques, increasing scaling, cracking, bleeding, and severe itch.",
             "context_advice": "Apply thick ointment or heavy cream moisturizers 2-3 times daily; use a room humidifier; apply emollient immediately after bathing.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
             "factor": "Cold Ambient Temperature",
@@ -252,11 +334,18 @@
             "clinical_effect": "Winter weather triggers disease flares due to low environmental moisture and lack of natural sunlight exposure.",
             "context_advice": "Wear soft protective cotton clothing; keep indoor spaces warm but not dry; avoid long hot baths.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
             "factor": "Moderate Natural Sunlight (Positive Context)",
@@ -265,11 +354,18 @@
             "clinical_effect": "Natural ultraviolet B (UVB) light slows down excessive skin cell growth and reduces plaque thickness.",
             "context_advice": "Short, controlled 10-15 minute outdoor sun exposure can be therapeutic; apply sunscreen to healthy unaffected skin to prevent burning.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
             "factor": "Extreme UV Radiation / Sunburn Risk",
@@ -278,11 +374,18 @@
             "clinical_effect": "Sunburn causes epidermal injury that provokes widespread new psoriasis plaques via the Koebner phenomenon.",
             "context_advice": "Wear wide-brimmed hats and UV-protective clothing; apply broad-spectrum fragrance-free sunscreen (SPF 30+) to all exposed skin; avoid sun between 10 AM and 4 PM.",
             "source": {
-                "organization": "AAD",
-                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-                "local_file": "psoriasis/triggers_flares.html"
-            }
+                "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+                "name_en": "Psoriasis",
+                "aliases": [
+                    "Plaque Psoriasis",
+                    "Psoriasis Vulgaris",
+                    "Guttate Psoriasis",
+                    "Inverse Psoriasis",
+                    "Pustular Psoriasis",
+                    "Erythrodermic Psoriasis"
+                ]
+            },
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         }
     ],
     "skin_care_and_self_care": {
@@ -306,11 +409,18 @@
             "Keep fingernails trimmed short and smooth to prevent inadvertent skin trauma."
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Baths and showers",
-            "url": "https://www.aad.org/public/diseases/psoriasis/skin-care/baths-showers",
-            "local_file": "psoriasis/skin_care_baths.html"
-        }
+            "page_title": "(AAD)/Psoriasis: Baths and showers",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/skin-care/baths-showers"
     },
     "flare_ups_management": {
         "early_signs_of_flare": [
@@ -326,11 +436,18 @@
             "Contact your board-certified dermatologist if the flare spreads rapidly or is accompanied by systemic symptoms."
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-            "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-            "local_file": "psoriasis/triggers_flares.html"
-        }
+            "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
     },
     "red_flags_and_warning_signs": {
         "signs": [
@@ -354,11 +471,18 @@
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Symptoms and types",
-            "url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
-            "local_file": "psoriasis/symptoms_types.html"
-        }
+            "page_title": "(AAD)/Psoriasis: Symptoms and types",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms"
     },
     "when_to_see_doctor": {
         "recommendations": [
@@ -369,11 +493,18 @@
             "To discuss advanced systemic medications (biologics, oral targeted therapies) for moderate-to-severe disease"
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/psoriasis/treatment",
-            "local_file": "psoriasis/treatment_medications.html"
-        }
+            "page_title": "(AAD)/Psoriasis: Diagnosis and treatment",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/treatment"
     },
     "related_conditions": {
         "conditions": [
@@ -404,11 +535,18 @@
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Risks for other conditions",
-            "url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
-            "local_file": "psoriasis/other_conditions_risks.html"
-        }
+            "page_title": "(AAD)/Psoriasis: Risks for other conditions",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions"
     },
     "medications_and_treatments": {
         "topical_therapies": [
@@ -474,54 +612,47 @@
             }
         ],
         "source": {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/psoriasis/treatment/medications",
-            "local_file": "psoriasis/treatment_medications.html"
-        }
+            "page_title": "(AAD)/Psoriasis: Diagnosis and treatment",
+            "name_en": "Psoriasis",
+            "aliases": [
+                "Plaque Psoriasis",
+                "Psoriasis Vulgaris",
+                "Guttate Psoriasis",
+                "Inverse Psoriasis",
+                "Pustular Psoriasis",
+                "Erythrodermic Psoriasis"
+            ]
+        },
+        "source_url": "https://www.aad.org/public/diseases/psoriasis/treatment/medications"
     },
     "sources_summary": [
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Overview",
-            "url": "https://www.aad.org/public/diseases/psoriasis/what/overview",
-            "local_file": "psoriasis/overview.html"
+            "page_title": "(AAD)/Psoriasis: Overview",
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/what/overview"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Symptoms and types",
-            "url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
-            "local_file": "psoriasis/symptoms_types.html"
+            "page_title": "(AAD)/Psoriasis: Symptoms and types",
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Causes",
-            "url": "https://www.aad.org/public/diseases/psoriasis/what/causes",
-            "local_file": "psoriasis/causes.html"
+            "page_title": "(AAD)/Psoriasis: Causes",
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/what/causes"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Diagnosis and treatment",
-            "url": "https://www.aad.org/public/diseases/psoriasis/treatment/medications",
-            "local_file": "psoriasis/treatment_medications.html"
+            "page_title": "(AAD)/Psoriasis: Diagnosis and treatment",
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/treatment/medications"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis triggers: Flare-ups due to triggers",
-            "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
-            "local_file": "psoriasis/triggers_flares.html"
+            "page_title": "(AAD)/Psoriasis triggers: Flare-ups due to triggers",
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Baths and showers",
-            "url": "https://www.aad.org/public/diseases/psoriasis/skin-care/baths-showers",
-            "local_file": "psoriasis/skin_care_baths.html"
+            "page_title": "(AAD)/Psoriasis: Baths and showers",
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/skin-care/baths-showers"
         },
         {
-            "organization": "American Academy of Dermatology (AAD)",
-            "page_title": "Psoriasis: Risks for other conditions",
-            "url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
-            "local_file": "psoriasis/other_conditions_risks.html"
+            "page_title": "(AAD)/Psoriasis: Risks for other conditions",
+            "source_url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions"
         }
     ]
 }
