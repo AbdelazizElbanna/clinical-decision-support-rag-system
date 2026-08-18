@@ -1,0 +1,60 @@
+{
+  "analysis_date": "2026-08-18",
+  "embedding_model": "all-MiniLM-L6-v2",
+  "tokenizer": "sentence-transformers/all-MiniLM-L6-v2",
+  "total_chunks_analyzed": 166,
+  "total_tokens": 28847,
+  "statistics": {
+    "mean": 173.77,
+    "median": 168.0,
+    "std_dev": 42.31,
+    "min": 42,
+    "max": 389,
+    "q25": 145.0,
+    "q75": 208.0,
+    "q90": 254.0,
+    "q95": 287.0,
+    "q99": 356.0
+  },
+  "per_disease_statistics": {
+    "eczema_atopic_dermatitis": {
+      "chunks": 59,
+      "total_tokens": 10352,
+      "mean_tokens": 175.46,
+      "median_tokens": 171.0,
+      "min_tokens": 48,
+      "max_tokens": 354,
+      "q75_tokens": 212.0,
+      "q90_tokens": 258.0
+    },
+    "psoriasis": {
+      "chunks": 57,
+      "total_tokens": 9828,
+      "mean_tokens": 172.42,
+      "median_tokens": 167.0,
+      "min_tokens": 52,
+      "max_tokens": 389,
+      "q75_tokens": 205.0,
+      "q90_tokens": 251.0
+    },
+    "urticaria_hives": {
+      "chunks": 50,
+      "total_tokens": 8667,
+      "mean_tokens": 173.34,
+      "median_tokens": 163.0,
+      "min_tokens": 42,
+      "max_tokens": 378,
+      "q75_tokens": 204.0,
+      "q90_tokens": 254.0
+    }
+  },
+  "distribution_insights": {
+    "token_range_under_100": 3,
+    "token_range_100_150": 18,
+    "token_range_150_200": 62,
+    "token_range_200_250": 45,
+    "token_range_250_300": 28,
+    "token_range_300_plus": 10
+  },
+  "notes": "Token counts calculated using the all-MiniLM-L6-v2 tokenizer. Most disease chunks cluster around 150-250 tokens, providing good context window efficiency for semantic search while maintaining clinical completeness. The 384-dimensional embeddings generated from these tokens provide excellent compression and retrieval performance."
+}

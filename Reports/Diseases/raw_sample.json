@@ -1,0 +1,27 @@
+{
+  "condition_id": "psoriasis",
+  "condition_name": "Psoriasis",
+  "condition_aliases": [
+    "Psoriasis",
+    "Plaque Psoriasis",
+    "Psoriatic Arthritis"
+  ],
+  "primary_sources": [
+    {
+      "source_type": "educational_html",
+      "url": "https://dermatological-reference.org/psoriasis/overview",
+      "title": "Psoriasis: Comprehensive Clinical Overview"
+    }
+  ],
+  "raw_content": {
+    "overview": "<div class='content'><h1>Understanding Psoriasis</h1><p>Psoriasis is a chronic, autoimmune disease that affects the skin, causing red, scaly patches that may be painful or itchy. The condition occurs when the immune system mistakes the body's own cells as foreign pathogens, triggering an accelerated skin cell turnover cycle.</p></div>",
+    "symptoms_section": "<div class='symptoms'><h2>Common Symptoms</h2><ul><li>Red patches with silvery scales</li><li>Itching and burning sensations</li><li>Thickened and cracked skin</li><li>Nail changes</li></ul></div>",
+    "triggers_section": "<div class='triggers'><h2>Known Triggers</h2><p>Stress, infections, cold weather, certain medications, and skin injuries can trigger or worsen psoriasis flare-ups.</p></div>",
+    "treatment_section": "<div class='treatment'><h2>Treatment Options</h2><p>Treatments range from topical creams and phototherapy to systemic medications. The choice depends on severity and affected body surface area.</p></div>"
+  },
+  "metadata": {
+    "page_count": 7,
+    "extraction_date": "2026-08-17",
+    "language": "en"
+  }
+}

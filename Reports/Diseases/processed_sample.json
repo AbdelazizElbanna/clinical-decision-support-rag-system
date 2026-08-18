@@ -1,0 +1,33 @@
+{
+  "chunk_id": "urticaria_symptoms_primary",
+  "condition_id": "urticaria_hives",
+  "condition": "Urticaria",
+  "section": "Symptoms",
+  "subsection": "Primary Manifestations",
+  "chunk_type": "object",
+  "source": {
+    "name_en": "Urticaria",
+    "aliases": [
+      "Hives",
+      "Urticaria",
+      "Wheals",
+      "Acute Urticaria",
+      "Chronic Urticaria"
+    ],
+    "page_title": "Clinical Guide to Urticaria and Hives"
+  },
+  "source_url": "https://medical-reference.org/urticaria/symptoms",
+  "content": {
+    "primary_symptoms": [
+      "Raised, itchy welts or wheals on the skin",
+      "Wheals may be red, pink, or skin-colored",
+      "Intense itching, burning, or stinging sensation",
+      "Welts may appear and disappear rapidly",
+      "Angioedema: deeper tissue swelling, often around eyes and lips"
+    ],
+    "onset_characteristics": "Hives typically appear suddenly and can appear and disappear within minutes to hours. Lesions are highly pruritic and can be extremely uncomfortable.",
+    "distribution_patterns": "Can appear anywhere on the body, commonly on face, neck, torso, and extremities. In acute urticaria, welts typically resolve within 24 hours.",
+    "severity_spectrum": "Ranges from mild localized welts to severe widespread urticaria with associated systemic symptoms including fever and malaise in cases with underlying infection or severe allergic reaction."
+  },
+  "text": "Condition: Urticaria (Hives)\nSection: Symptoms\nSubsection: Primary Manifestations\n\nPrimary Symptoms:\n- Raised, itchy welts or wheals on the skin\n- Wheals may be red, pink, or skin-colored\n- Intense itching, burning, or stinging sensation\n- Welts may appear and disappear rapidly\n- Angioedema: deeper tissue swelling, often around eyes and lips\n\nOnset Characteristics: Hives typically appear suddenly and can appear and disappear within minutes to hours. Lesions are highly pruritic and can be extremely uncomfortable.\n\nDistribution Patterns: Can appear anywhere on the body, commonly on face, neck, torso, and extremities. In acute urticaria, welts typically resolve within 24 hours.\n\nSeverity Spectrum: Ranges from mild localized welts to severe widespread urticaria with associated systemic symptoms including fever and malaise in cases with underlying infection or severe allergic reaction.\n\nSource: Clinical Medical Reference\nSource URL: https://medical-reference.org/urticaria/symptoms"
+}

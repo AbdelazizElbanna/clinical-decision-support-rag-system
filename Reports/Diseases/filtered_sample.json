@@ -1,0 +1,29 @@
+{
+  "chunk_id": "eczema_treatment_topical",
+  "condition_id": "eczema_atopic_dermatitis",
+  "condition": "Atopic Dermatitis",
+  "section": "Treatment",
+  "subsection": "Topical Therapies",
+  "chunk_type": "object",
+  "source": {
+    "name_en": "Atopic Dermatitis Treatment",
+    "aliases": [
+      "Eczema Treatment",
+      "Topical Eczema Therapy",
+      "Atopic Dermatitis Management"
+    ],
+    "page_title": "Evidence-Based Treatment Approaches for Atopic Dermatitis"
+  },
+  "source_url": "https://www.aad.org/public/diseases/eczema/treatment",
+  "content": {
+    "first_line_treatments": [
+      "Emollients and moisturizers: Apply liberally and frequently, especially after bathing. Ointments and creams are more effective than lotions.",
+      "Topical corticosteroids: Reduce inflammation and itching. Strength varies by location and severity.",
+      "Topical calcineurin inhibitors: Non-steroidal option for face and skin folds."
+    ],
+    "emollient_guidance": "Regular use of emollients is fundamental to management. Apply within 3 minutes of bathing to lock in moisture. Choose fragrance-free products to minimize irritation.",
+    "steroid_potency": "Low-potency steroids for face/neck; medium-potency for trunk/extremities; high-potency for severe disease or thick-skinned areas. Rotate formulations to minimize tolerance.",
+    "adjunctive_therapies": "Phototherapy (UVB or PUVA) for moderate-to-severe disease. Systemic medications (JAK inhibitors, biologic agents) for severe, refractory cases."
+  },
+  "text": "Condition: Atopic Dermatitis\nSection: Treatment\nSubsection: Topical Therapies\n\nFirst-Line Treatments:\n- Emollients and moisturizers: Apply liberally and frequently, especially after bathing. Ointments and creams are more effective than lotions.\n- Topical corticosteroids: Reduce inflammation and itching. Strength varies by location and severity.\n- Topical calcineurin inhibitors: Non-steroidal option for face and skin folds.\n\nEmollient Guidance: Regular use of emollients is fundamental to management. Apply within 3 minutes of bathing to lock in moisture. Choose fragrance-free products to minimize irritation.\n\nSteroid Potency: Low-potency steroids for face/neck; medium-potency for trunk/extremities; high-potency for severe disease or thick-skinned areas. Rotate formulations to minimize tolerance.\n\nAdjunctive Therapies: Phototherapy (UVB or PUVA) for moderate-to-severe disease. Systemic medications (JAK inhibitors, biologic agents) for severe, refractory cases.\n\nSource: American Academy of Dermatology (AAD)\nSource URL: https://www.aad.org/public/diseases/eczema/treatment"
+}

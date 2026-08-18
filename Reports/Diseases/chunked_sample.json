@@ -1,0 +1,28 @@
+{
+  "chunk_id": "eczema_overview",
+  "condition_id": "eczema_atopic_dermatitis",
+  "condition": "Atopic Dermatitis",
+  "section": "Overview",
+  "subsection": null,
+  "chunk_type": "object",
+  "source": {
+    "name_en": "Atopic Dermatitis",
+    "aliases": [
+      "Eczema",
+      "Atopic Eczema",
+      "Atopic Dermatitis",
+      "AD",
+      "Infantile Eczema"
+    ],
+    "page_title": "(AAD)/Eczema types: Atopic dermatitis overview"
+  },
+  "source_url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
+  "content": {
+    "what_is_it": "Atopic dermatitis is the most common type of eczema. It is a chronic inflammatory skin condition characterized by intensely itchy, dry, irritable, and inflamed skin. It follows a relapsing-remitting course characterized by acute flare-ups and periods of clearance.",
+    "how_common": "Very common, especially in children; it most often begins early in life (between 2 months and 5 years of age). It can also start during puberty or adulthood.",
+    "chronic_or_acute": "Chronic condition that can last for years or be lifelong, although many children see their symptoms resolve by their teenage years.",
+    "contagious": false,
+    "skin_barrier_pathophysiology": "The skin barrier (stratum corneum) functions like a protective brick wall. In atopic dermatitis, microscopic gaps form in this barrier, allowing excessive moisture to escape (causing profound dryness and xerosis) while permitting environmental irritants, allergens, and microbial pathogens (bacteria and viruses) to penetrate into deeper skin layers, driving inflammatory flares."
+  },
+  "text": "Condition: Atopic Dermatitis\nSection: Overview\n\nWhat Is It: Atopic dermatitis is the most common type of eczema. It is a chronic inflammatory skin condition characterized by intensely itchy, dry, irritable, and inflamed skin. It follows a relapsing-remitting course characterized by acute flare-ups and periods of clearance.\nHow Common: Very common, especially in children; it most often begins early in life (between 2 months and 5 years of age). It can also start during puberty or adulthood.\nChronic Or Acute: Chronic condition that can last for years or be lifelong, although many children see their symptoms resolve by their teenage years.\nContagious: No\nSkin Barrier Pathophysiology: The skin barrier (stratum corneum) functions like a protective brick wall. In atopic dermatitis, microscopic gaps form in this barrier, allowing excessive moisture to escape (causing profound dryness and xerosis) while permitting environmental irritants, allergens, and microbial pathogens (bacteria and viruses) to penetrate into deeper skin layers, driving inflammatory flares.\n\nSource: American Academy of Dermatology (AAD)\nPage: (AAD)/Eczema types: Atopic dermatitis overview\nSource URL: https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis"
+}
