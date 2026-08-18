@@ -1,0 +1,27 @@
+{
+  "slug": "1-2-3-one-two-three-20-f-c-tabs",
+  "name_en": "1 2 3 (ONE TWO THREE) 20 F.C.TABS.",
+  "name_ar": "ون تو ثري 20 قرص",
+  "active_ingredients": "CHLORPHENIRAMINE+PARACETAMOL(ACETAMINOPHEN)+PSEUDOEPHEDRINE",
+  "drug_class": "COLD PRODUCTS",
+  "route": "ORAL.SOLID",
+  "manufacturer": "HIKMA PHARMA",
+  "uses_ar": "تخفيف أعراض نزلات البرد والإنفلونزا مثل الصداع وارتفاع درجة الحرارة. يساعد في علاج احتقان الأنف والجيوب الأنفية وتحسين التنفس.",
+  "uses_en": "temporarily relieves nasal congestion due to the common cold, hay fever or other upper respiratory allergies temporarily relieves sinus congestion and pressure || Uses temporarily relieves these symptoms due to hay fever (allergic rhinitis) or other upper respiratory allergies: sneezing runny nose itching of the nose or throat itchy, watery eyes.",
+  "safety_warnings": {
+    "pregnancy": true,
+    "lactation": true,
+    "hypertension": true,
+    "diabetes": true,
+    "kidney": false,
+    "liver": false,
+    "heart": true
+  },
+  "warnings_summary_ar": "يحذر أو يوصى بالحذر تحت إشراف طبي في الحالات التالية: الحمل، الرضاعة الطبيعية، ارتفاع ضغط الدم، مرض السكري، أمراض القلب.",
+  "warnings_summary_en": "Caution or warning advised under medical supervision for: Pregnancy, Lactation/Breastfeeding, High Blood Pressure, Diabetes, Heart Disease.",
+  "barcode": "6221000000010",
+  "sources": [
+    "karem505/egyptian-drug-database",
+    "mahmoudfalous/eg-drugs"
+  ]
+}

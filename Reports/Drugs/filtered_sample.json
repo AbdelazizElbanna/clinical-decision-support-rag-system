@@ -1,0 +1,24 @@
+{
+  "slug": "1-2-3-one-two-three-20-f-c-tabs",
+  "name_en": "1 2 3 (ONE TWO THREE) 20 F.C.TABS.",
+  "active_ingredients": "CHLORPHENIRAMINE + PARACETAMOL(ACETAMINOPHEN) + PSEUDOEPHEDRINE",
+  "drug_class": "COLD PRODUCTS",
+  "route": "ORAL.SOLID",
+  "manufacturer": "HIKMA PHARMA",
+  "uses_en": "Temporarily relieves nasal congestion due to the common cold, hay fever or other upper respiratory allergies temporarily relieves sinus congestion and pressure || Uses temporarily relieves these symptoms due to hay fever (allergic rhinitis) or other upper respiratory allergies: sneezing runny nose itching of the nose or throat itchy, watery eyes.",
+  "safety_warnings": {
+    "pregnancy": "Caution required",
+    "lactation": "Caution required",
+    "hypertension": "Caution required",
+    "diabetes": "Caution required",
+    "kidney": "No specific warning recorded",
+    "liver": "No specific warning recorded",
+    "heart": "Caution required"
+  },
+  "barcode": "6221000000010",
+  "sources": [
+    "karem505/egyptian-drug-database",
+    "mahmoudfalous/eg-drugs"
+  ],
+  "warnings_summary_en": "Caution or warning advised under medical supervision for: Pregnancy, Lactation/Breastfeeding, High Blood Pressure, Diabetes, Heart Disease."
+}
