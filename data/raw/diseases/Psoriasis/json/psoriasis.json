@@ -1,0 +1,527 @@
+{
+    "condition_id": "psoriasis",
+    "name_en": "Psoriasis",
+    "name_ar": "الصدفية",
+    "aliases": [
+        "Plaque Psoriasis",
+        "Psoriasis Vulgaris",
+        "Guttate Psoriasis",
+        "Inverse Psoriasis",
+        "Pustular Psoriasis",
+        "Erythrodermic Psoriasis"
+    ],
+    "category": "Dermatology",
+    "overview": {
+        "what_is_it": "Psoriasis is a chronic, immune-mediated, non-contagious systemic skin disease. In psoriasis, faulty immune signals cause skin cells to grow abnormally fast—in just a few days rather than the normal 3 to 4 weeks. These excess skin cells accumulate rapidly on the skin's surface, forming raised, thick, scaly, and often itchy or painful plaques.",
+        "what_is_it_ar": "الصدفية هي مرض جلدي جهازي مزمن، مناعي وغير معدٍ. يرسل الجهاز المناعي إشارات خاطئة تؤدي إلى تسارع نمو خلايا الجلد خلال أيام قليلة بدلاً من أسابيع، فتتراكم الخلايا الزائدة على سطح الجلد مكونة بقعاً مرتفعة وسميكة ومغطاة بقشور فضية تسبب الحكة أو الألم.",
+        "how_common": "Common chronic condition affecting millions of children and adults of all races and genders worldwide.",
+        "chronic_or_acute": "Chronic, lifelong condition characterized by unpredictable cycles of flare-ups and periods of remission (with the rare exception of some children with guttate psoriasis whose condition may fully clear).",
+        "contagious": false,
+        "immune_pathophysiology": "White blood cells called T-cells mistakenly attack healthy skin cells, triggering an inflammatory cascade. This causes hyperproliferation of keratinocytes (rapid skin cell production) and dilated dermal blood vessels, resulting in thick plaques and silvery scaling.",
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Overview",
+            "url": "https://www.aad.org/public/diseases/psoriasis/what/overview",
+            "local_file": "psoriasis/overview.html"
+        }
+    },
+    "symptoms": {
+        "core_symptoms": [
+            {
+                "name": "Thick, Raised Plaques with Scales",
+                "name_ar": "لويحات سميكة ومرتفعة مغطاة بقشور",
+                "description": "Raised, well-demarcated patches of inflamed skin covered with silvery-white or grayish scales. Plaques can crack, bleed, and feel intensely sore.",
+                "typical_locations": ["Scalp", "Elbows", "Knees", "Lower back", "Navel", "Nails"]
+            },
+            {
+                "name": "Itching, Burning, and Soreness (Pruritus)",
+                "name_ar": "حكة وحرقة وألم في الجلد",
+                "description": "Itching can be severe, sharp, or accompanied by a burning and stinging sensation that interferes with concentration and sleep."
+            },
+            {
+                "name": "Dry, Cracked Skin with Bleeding",
+                "name_ar": "جلد جاف ومتشقق ينزف بسهولة",
+                "description": "Extremely dry skin that easily fissures and bleeds when stretched or scratched (Auspitz sign)."
+            },
+            {
+                "name": "Nail Changes (Nail Psoriasis)",
+                "name_ar": "تغيرات وتلف الأظافر",
+                "description": "Tiny pits on nail plates, yellow-brown oil-drop discoloration, thickening (subungual hyperkeratosis), crumbling edges, and nail separation from the nail bed (onycholysis)."
+            }
+        ],
+        "types_of_psoriasis": {
+            "plaque_psoriasis": {
+                "name": "Plaque Psoriasis (Psoriasis Vulgaris)",
+                "prevalence": "Most common type, accounting for 80% to 90% of all psoriasis cases.",
+                "clinical_features": "Raised, red/salmon or violet/brown patches covered with silvery-white or gray scales, commonly on elbows, knees, scalp, and lower back."
+            },
+            "guttate_psoriasis": {
+                "name": "Guttate Psoriasis",
+                "prevalence": "Common in children and young adults.",
+                "clinical_features": "Sudden outbreak of numerous small, drop-shaped, scaly spots across the trunk, arms, and legs. Frequently triggered by an acute streptococcal infection (such as strep throat)."
+            },
+            "inverse_psoriasis": {
+                "name": "Inverse Psoriasis (Flexural Psoriasis)",
+                "prevalence": "Occurs in intertriginous skin folds.",
+                "clinical_features": "Smooth, shiny, bright red or discolored patches without silvery scales; develops in skin folds (armpits, under breasts, groin, buttocks); aggravated by friction and sweat."
+            },
+            "pustular_psoriasis": {
+                "name": "Pustular Psoriasis (Localized & Generalized von Zumbusch)",
+                "prevalence": "Less common; localized on palms/soles (palmoplantar pustulosis) or acute generalized.",
+                "clinical_features": "Painful, sterile pus-filled bumps (pustules) surrounded by inflamed skin. Generalized von Zumbusch is a severe medical emergency characterized by widespread pustules, high fever, shivering, and rapid dehydration."
+            },
+            "erythrodermic_psoriasis": {
+                "name": "Erythrodermic Psoriasis",
+                "prevalence": "Rare, severe life-threatening dermatologic emergency.",
+                "clinical_features": "Widespread intense fiery redness and skin shedding covering more than 90% of total body surface area, accompanied by severe hypothermia, rapid heart rate, severe protein/fluid loss, and risk of heart failure or sepsis."
+            }
+        },
+        "skin_tone_variations": {
+            "lighter_skin_tones": "Plaques typically appear salmon-pink or bright red with classic silvery-white scales.",
+            "darker_skin_tones": "Plaques frequently present as violet, purplish, grayish, or dark brown with gray or silver scales; redness is less apparent; post-inflammatory hyperpigmentation or hypopigmentation often persists for months after plaques flatten."
+        },
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Symptoms and types",
+            "url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+            "local_file": "psoriasis/symptoms_types.html"
+        }
+    },
+    "causes": {
+        "factors": [
+            {
+                "factor": "Immune System Dysregulation",
+                "factor_ar": "خلل في استجابة الجهاز المناعي",
+                "description": "Overactive T-cells and pro-inflammatory cytokines (such as TNF-alpha, IL-17, and IL-23) mistakenly stimulate keratinocytes to multiply rapidly, accelerating cell turnover from weeks to days."
+            },
+            {
+                "factor": "Genetic Predisposition",
+                "factor_ar": "الاستعداد الوراثي والجينات",
+                "description": "Psoriasis runs in families. Multiple inherited susceptibility genes (e.g., PSORS genes, HLA-Cw6) increase vulnerability, although environmental triggers are usually required to activate the disease."
+            },
+            {
+                "factor": "Trigger Activation",
+                "factor_ar": "تحفيز العوامل البيئية والمحفزات",
+                "description": "In genetically predisposed individuals, initial disease onset or subsequent flares are provoked by external environmental exposures, infections, stress, physical trauma, or medications."
+            }
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Causes",
+            "url": "https://www.aad.org/public/diseases/psoriasis/what/causes",
+            "local_file": "psoriasis/causes.html"
+        }
+    },
+    "risk_factors": {
+        "list": [
+            "Family history of psoriasis in first-degree blood relatives (parents, siblings)",
+            "Recent streptococcal bacterial infection (e.g., strep throat triggering guttate psoriasis)",
+            "High chronic psychological stress levels",
+            "Smoking and tobacco use (strongly associated with increased severity and pustular forms)",
+            "Heavy alcohol consumption (reduces treatment efficacy and exacerbates disease)",
+            "Obesity and metabolic syndrome",
+            "History of mechanical skin injury or severe sunburn (Koebner phenomenon)"
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Causes",
+            "url": "https://www.aad.org/public/diseases/psoriasis/what/causes",
+            "local_file": "psoriasis/causes.html"
+        }
+    },
+    "triggers": [
+        {
+            "id": "trig_dry_cold_weather",
+            "name": "Dry, Cold Weather and Low Humidity",
+            "type": "environmental",
+            "weather_variable": "temperature_and_humidity",
+            "threshold_risk": "Low ambient temperature (< 10°C / 50°F) and low relative humidity (< 40%)",
+            "mechanism": "Cold dry outdoor air and indoor artificial heating deplete epidermal moisture, causing thick scaling, cracks, fissures, and increased itching.",
+            "prevention_and_action": "Apply thick ointment or cream moisturizers multiple times daily, use an indoor humidifier, protect exposed skin with warm cotton/soft clothing.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        },
+        {
+            "id": "trig_sunburn_and_excess_sun",
+            "name": "Severe Sunburn and Excessive UV Exposure",
+            "type": "environmental_physical",
+            "weather_variable": "uv_index",
+            "threshold_risk": "High UV Index (>= 6) without sun protection leading to thermal erythema/burn",
+            "mechanism": "While moderate, controlled sun exposure can improve psoriasis plaques, severe sunburn injures the epidermis and triggers the Koebner phenomenon, causing extensive new plaques.",
+            "prevention_and_action": "Protect non-affected skin with broad-spectrum fragrance-free sunscreen (SPF 30+), limit direct sun sessions to brief safe durations, avoid tanning beds.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        },
+        {
+            "id": "trig_skin_injury_koebner",
+            "name": "Skin Injury and Physical Trauma (Koebner Phenomenon)",
+            "type": "physical_mechanical",
+            "threshold_risk": "Cuts, scrapes, bug bites, surgical incisions, shaving nicks, tattoos, body piercings, or aggressive scratching",
+            "mechanism": "Mechanical epidermal trauma triggers localized inflammatory signaling that leads to new psoriasis plaques appearing at the exact site of injury 10 to 14 days later.",
+            "prevention_and_action": "Avoid tattoos and piercings; apply moisturizer before shaving to minimize cuts; treat cuts and bug bites immediately; avoid scratching or picking at scales.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        },
+        {
+            "id": "trig_emotional_stress",
+            "name": "Emotional Stress and Anxiety",
+            "type": "internal_psychological",
+            "threshold_risk": "High psychological strain, major life changes, work/school pressure",
+            "mechanism": "Stress hormones trigger immune activation, increasing pro-inflammatory cytokine release and precipitating disease flares.",
+            "prevention_and_action": "Practice stress-reduction techniques (meditation, moderate exercise, deep breathing), maintain regular sleep schedules.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        },
+        {
+            "id": "trig_infections",
+            "name": "Infections (Especially Streptococcal Throat Infection)",
+            "type": "biological",
+            "threshold_risk": "Streptococcal pharyngitis (strep throat), tonsillitis, respiratory infections",
+            "mechanism": "Bacterial superantigens stimulate T-cell activation, frequently triggering acute guttate psoriasis or worsening plaque psoriasis 2 to 3 weeks later.",
+            "prevention_and_action": "Seek prompt medical care and antibiotic treatment for sore throats or fevers; practice rigorous hand hygiene.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        },
+        {
+            "id": "trig_medications",
+            "name": "Certain Prescription Medications",
+            "type": "pharmacological",
+            "threshold_risk": "Lithium, Antimalarials (hydroxychloroquine), Beta-blockers, Rapid withdrawal of oral systemic corticosteroids (prednisone rebound), certain NSAIDs",
+            "mechanism": "Direct modulation of intracellular cAMP or immune pathways causing plaque exacerbation 2 to 3 weeks after starting, or sudden severe rebound pustular/erythrodermic psoriasis upon stopping systemic steroids.",
+            "prevention_and_action": "Never abruptly discontinue medications; inform all prescribing physicians of your psoriasis diagnosis; taper systemic corticosteroids gradually under medical supervision.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        },
+        {
+            "id": "trig_alcohol_smoking",
+            "name": "Smoking and Heavy Alcohol Consumption",
+            "type": "lifestyle",
+            "threshold_risk": "Tobacco smoking, exposure to secondhand smoke, frequent or heavy alcohol intake",
+            "mechanism": "Nicotine promotes cutaneous vascular inflammation and oxidative stress; alcohol interferes with medication metabolism and suppresses treatment response.",
+            "prevention_and_action": "Enroll in smoking cessation programs; avoid heavy alcohol consumption.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        }
+    ],
+    "environmental_factors": [
+        {
+            "factor": "Low Relative Humidity / Dry Air",
+            "open_meteo_variable": "relative_humidity_2m",
+            "risk_condition": "Relative humidity < 40%",
+            "clinical_effect": "Dries and tightens psoriasis plaques, increasing scaling, cracking, bleeding, and severe itch.",
+            "context_advice": "Apply thick ointment or heavy cream moisturizers 2-3 times daily; use a room humidifier; apply emollient immediately after bathing.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        },
+        {
+            "factor": "Cold Ambient Temperature",
+            "open_meteo_variable": "temperature_2m",
+            "risk_condition": "Temperature < 10°C (50°F)",
+            "clinical_effect": "Winter weather triggers disease flares due to low environmental moisture and lack of natural sunlight exposure.",
+            "context_advice": "Wear soft protective cotton clothing; keep indoor spaces warm but not dry; avoid long hot baths.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        },
+        {
+            "factor": "Moderate Natural Sunlight (Positive Context)",
+            "open_meteo_variable": "uv_index",
+            "risk_condition": "Moderate UV Index (3 to 5)",
+            "clinical_effect": "Natural ultraviolet B (UVB) light slows down excessive skin cell growth and reduces plaque thickness.",
+            "context_advice": "Short, controlled 10-15 minute outdoor sun exposure can be therapeutic; apply sunscreen to healthy unaffected skin to prevent burning.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        },
+        {
+            "factor": "Extreme UV Radiation / Sunburn Risk",
+            "open_meteo_variable": "uv_index",
+            "risk_condition": "UV Index >= 6 without adequate sun protection",
+            "clinical_effect": "Sunburn causes epidermal injury that provokes widespread new psoriasis plaques via the Koebner phenomenon.",
+            "context_advice": "Wear wide-brimmed hats and UV-protective clothing; apply broad-spectrum fragrance-free sunscreen (SPF 30+) to all exposed skin; avoid sun between 10 AM and 4 PM.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+                "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+                "local_file": "psoriasis/triggers_flares.html"
+            }
+        }
+    ],
+    "skin_care_and_self_care": {
+        "bathing_protocol": [
+            "Take only one bath or shower per day.",
+            "Limit showers to 5 minutes and baths to 15 minutes or less.",
+            "Use warm water every time—NEVER hot water, as hot water strips natural skin oils and worsens irritation.",
+            "Use a gentle, moisture-rich soap or cleanser formulated for sensitive skin; avoid deodorant soaps and abrasive scrubs.",
+            "Wash your skin very gently using your hands only—skip loofahs, sponges, buff puffs, and washcloths which can cause micro-trauma and flare psoriasis (Koebner phenomenon).",
+            "Rinse off cleansers thoroughly but gently.",
+            "Dry your skin gently by blotting water with a soft towel, leaving skin slightly damp."
+        ],
+        "moisturizing_protocol": [
+            "Apply a fragrance-free moisturizer to all skin within 5 minutes of stepping out of the shower or bath to seal in hydration.",
+            "Thick creams or ointments (like petroleum jelly) work best for locking in moisture; apply a generous layer before bedtime.",
+            "Reapply moisturizer whenever skin feels dry or tight throughout the day."
+        ],
+        "itch_relief_and_scratching_prevention": [
+            "Apply cool, damp compresses to itchy plaques to reduce inflammation and calm the urge to scratch.",
+            "Never scratch, pick, or peel psoriasis scales, as picking causes bleeding and worsens plaque thickness (Koebner phenomenon).",
+            "Keep fingernails trimmed short and smooth to prevent inadvertent skin trauma."
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Baths and showers",
+            "url": "https://www.aad.org/public/diseases/psoriasis/skin-care/baths-showers",
+            "local_file": "psoriasis/skin_care_baths.html"
+        }
+    },
+    "flare_ups_management": {
+        "early_signs_of_flare": [
+            "Increased scaling and thickening of existing plaques",
+            "Appearance of new red or violet spots on skin",
+            "Sudden worsening of localized itch, burning, or soreness",
+            "Joint stiffness or swelling in fingers, toes, or lower back"
+        ],
+        "immediate_action_plan": [
+            "Resume or adjust prescribed topical treatments (e.g., topical corticosteroids, vitamin D analogues) as directed in your dermatologist's action plan.",
+            "Intensify emollient application using thick ointments.",
+            "Identify and manage recent triggers (stress, illness/infection, cold dry air, medication changes).",
+            "Contact your board-certified dermatologist if the flare spreads rapidly or is accompanied by systemic symptoms."
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+            "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+            "local_file": "psoriasis/triggers_flares.html"
+        }
+    },
+    "red_flags_and_warning_signs": {
+        "signs": [
+            {
+                "sign": "Generalized Pustular Psoriasis (von Zumbusch)",
+                "description": "Sudden widespread eruption of sheets of sterile pus-filled blisters covering large areas of the body, accompanied by high fever, severe shivering, intense burning pain, tachycardia, and profound fatigue.",
+                "urgency": "Medical Emergency (Requires immediate emergency department admission)",
+                "action": "Life-threatening condition requiring urgent inpatient medical stabilization, fluid/electrolyte management, and specialized systemic therapy."
+            },
+            {
+                "sign": "Erythrodermic Psoriasis",
+                "description": "Widespread intense, fiery erythema and severe scaling covering >90% of the body surface area, accompanied by uncontrollable shivering, hypothermia, rapid heart rate, and swelling of the ankles/legs.",
+                "urgency": "Medical Emergency (Requires immediate emergency department admission)",
+                "action": "Life-threatening complication requiring immediate hospitalization due to high risk of hypothermia, severe fluid/protein loss, high-output heart failure, and sepsis."
+            },
+            {
+                "sign": "Early Signs of Psoriatic Arthritis",
+                "description": "Swollen 'sausage-like' fingers or toes (dactylitis), persistent morning joint stiffness lasting >30-60 minutes, tender swollen joints, or heel pain (Achilles tendonitis / enthesitis).",
+                "urgency": "Urgent Dermatologist / Rheumatologist Evaluation",
+                "action": "Early diagnosis and treatment are critical to prevent irreversible permanent joint destruction and long-term disability."
+            }
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Symptoms and types",
+            "url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+            "local_file": "psoriasis/symptoms_types.html"
+        }
+    },
+    "when_to_see_doctor": {
+        "recommendations": [
+            "To obtain an accurate medical diagnosis and differentiate psoriasis from other skin conditions (such as eczema or fungal infections)",
+            "If you experience any joint pain, morning stiffness, or swollen fingers/toes to screen for psoriatic arthritis",
+            "If your psoriasis is widespread, worsening, or failing to respond to current topical treatments",
+            "If signs of medical emergencies develop (widespread pus bumps, body-wide red burnt skin, fever, chills)",
+            "To discuss advanced systemic medications (biologics, oral targeted therapies) for moderate-to-severe disease"
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Diagnosis and treatment",
+            "url": "https://www.aad.org/public/diseases/psoriasis/treatment",
+            "local_file": "psoriasis/treatment_medications.html"
+        }
+    },
+    "related_conditions": {
+        "conditions": [
+            {
+                "condition": "Psoriatic Arthritis (PsA)",
+                "relationship": "Approximately 30% of patients with psoriasis develop psoriatic arthritis, causing joint inflammation, stiffness, dactylitis (sausage digits), enthesitis (heel pain), and potential permanent joint damage.",
+                "type": "Musculoskeletal Comorbidity"
+            },
+            {
+                "condition": "Cardiovascular Disease and Metabolic Syndrome",
+                "relationship": "Chronic systemic inflammation in psoriasis increases the risk of hypertension, atherosclerosis, myocardial infarction (heart attack), stroke, type 2 diabetes, obesity, and non-alcoholic fatty liver disease (NAFLD).",
+                "type": "Cardiovascular & Metabolic Comorbidity"
+            },
+            {
+                "condition": "Ocular Inflammation (Uveitis, Blepharitis)",
+                "relationship": "Patients with psoriasis have increased risk of inflammatory eye diseases including uveitis and blepharitis, requiring ophthalmologic evaluation if eye redness or pain occurs.",
+                "type": "Ocular Comorbidity"
+            },
+            {
+                "condition": "Inflammatory Bowel Disease (Crohn's Disease and Ulcerative Colitis)",
+                "relationship": "Shared immune-mediated inflammatory pathways link psoriasis to higher incidence of Crohn's disease and ulcerative colitis.",
+                "type": "Gastrointestinal Comorbidity"
+            },
+            {
+                "condition": "Psychological Distress, Anxiety, and Depression",
+                "relationship": "Visible plaques, social stigma, chronic pain, and itch lead to high rates of anxiety, depression, fatigue, and social isolation.",
+                "type": "Psychosocial Comorbidity"
+            }
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Risks for other conditions",
+            "url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
+            "local_file": "psoriasis/other_conditions_risks.html"
+        }
+    },
+    "medications_and_treatments": {
+        "topical_therapies": [
+            {
+                "class": "Topical Corticosteroids",
+                "details": "Most frequently prescribed topical therapy; reduces inflammation, redness, swelling, itch, and plaque thickness. Available in various potencies (from mild OTC hydrocortisone to super-potent prescription formulations).",
+                "prescription_status": "Prescription (mild hydrocortisone OTC)"
+            },
+            {
+                "class": "Vitamin D Analogues (Calcipotriene, Calcitriol)",
+                "details": "Synthetic vitamin D forms that slow down abnormal skin cell growth and flatten plaques; often combined with topical corticosteroids for synergistic efficacy.",
+                "prescription_status": "Prescription"
+            },
+            {
+                "class": "Topical Retinoids (Tazarotene)",
+                "details": "Vitamin A derivative that normalizes skin cell growth and reduces scale and plaque thickness; frequently combined with topical corticosteroids.",
+                "prescription_status": "Prescription"
+            },
+            {
+                "class": "Topical Calcineurin Inhibitors (TCIs - Tacrolimus, Pimecrolimus)",
+                "details": "Steroid-free anti-inflammatory creams/ointments particularly effective for thin, sensitive skin areas such as the face, eyelids, and intertriginous skin folds (inverse psoriasis).",
+                "prescription_status": "Prescription"
+            },
+            {
+                "class": "Coal Tar Preparations",
+                "details": "One of the oldest treatments; slows rapid cell growth, reduces inflammation, itching, and scaling. Available OTC and by prescription in shampoos, creams, and bath solutions.",
+                "prescription_status": "OTC and Prescription"
+            },
+            {
+                "class": "Keratolytics (Salicylic Acid)",
+                "details": "Helps soften and lift thick silvery scales, allowing other topical medications to penetrate more effectively into plaques.",
+                "prescription_status": "OTC and Prescription"
+            }
+        ],
+        "phototherapy_light_therapy": {
+            "details": "Supervised exposure to specific wavelengths of ultraviolet light (Narrowband UVB, Broadband UVB, PUVA - psoralen plus UVA, or Excimer laser) 2 to 3 times weekly. Slows rapid cell proliferation and dampens immune overactivity. (Note: AAD strongly warns against commercial tanning beds due to skin cancer risks)."
+        },
+        "systemic_therapies_oral_and_biologics": [
+            {
+                "category": "Oral Targeted PDE4 Inhibitor",
+                "drug_name": "Apremilast",
+                "brand_name": "Otezla",
+                "mechanism": "Oral phosphodiesterase-4 (PDE4) inhibitor",
+                "indication": "FDA-approved oral tablet for moderate-to-severe plaque psoriasis and active psoriatic arthritis; does not require routine laboratory blood monitoring.",
+                "administration": "Oral tablet twice daily."
+            },
+            {
+                "category": "Conventional Systemic Immunosuppressants",
+                "drug_name": "Methotrexate, Cyclosporine, Acitretin",
+                "details": "Oral medications used for extensive, disabling psoriasis. Methotrexate suppresses immune activation (alcohol strictly avoided); Cyclosporine provides rapid clearance for severe flares (short-term use due to kidney/blood pressure risks); Acitretin is an oral retinoid (strict pregnancy contraindication).",
+                "administration": "Oral medication under regular laboratory monitoring."
+            },
+            {
+                "category": "Biologics and Biosimilars",
+                "details": "Targeted biologic monoclonal antibodies that specifically block key inflammatory proteins (cytokines) driving psoriasis and psoriatic arthritis. Highly effective for moderate-to-severe disease.",
+                "classes": [
+                    "TNF-alpha inhibitors (e.g., Adalimumab / Humira, Etanercept / Enbrel, Infliximab / Remicade)",
+                    "IL-17 inhibitors (e.g., Secukinumab / Cosentyx, Ixekizumab / Taltz, Brodalumab / Siliq)",
+                    "IL-23 inhibitors (e.g., Guselkumab / Tremfya, Risankizumab / Skyrizi, Tildrakizumab / Ilumya)",
+                    "IL-12/23 inhibitors (e.g., Ustekinumab / Stelara)"
+                ],
+                "administration": "Subcutaneous injection or intravenous infusion under regular medical monitoring."
+            }
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Diagnosis and treatment",
+            "url": "https://www.aad.org/public/diseases/psoriasis/treatment/medications",
+            "local_file": "psoriasis/treatment_medications.html"
+        }
+    },
+    "sources_summary": [
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Overview",
+            "url": "https://www.aad.org/public/diseases/psoriasis/what/overview",
+            "local_file": "psoriasis/overview.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Symptoms and types",
+            "url": "https://www.aad.org/public/diseases/psoriasis/what/symptoms",
+            "local_file": "psoriasis/symptoms_types.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Causes",
+            "url": "https://www.aad.org/public/diseases/psoriasis/what/causes",
+            "local_file": "psoriasis/causes.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Diagnosis and treatment",
+            "url": "https://www.aad.org/public/diseases/psoriasis/treatment/medications",
+            "local_file": "psoriasis/treatment_medications.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis triggers: Flare-ups due to triggers",
+            "url": "https://www.aad.org/public/diseases/psoriasis/triggers/flares",
+            "local_file": "psoriasis/triggers_flares.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Baths and showers",
+            "url": "https://www.aad.org/public/diseases/psoriasis/skin-care/baths-showers",
+            "local_file": "psoriasis/skin_care_baths.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Psoriasis: Risks for other conditions",
+            "url": "https://www.aad.org/public/diseases/psoriasis/insider/other-conditions",
+            "local_file": "psoriasis/other_conditions_risks.html"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+  "id": "1-2-3-one-two-three-20-f-c-tabs",
+  "page_content": "Drug Name: 1 2 3 (ONE TWO THREE) 20 F.C.TABS.\n\nActive Ingredients: Chlorpheniramine + Paracetamol (Acetaminophen) + Pseudoephedrine\n\nDrug Class: Cold Products\n\nRoute: Oral Solid\n\nManufacturer: Hikma Pharma\n\nUses: Temporarily relieves nasal congestion due to the common cold, hay fever or other upper respiratory allergies temporarily relieves sinus congestion and pressure || Uses temporarily relieves these symptoms due to hay fever (allergic rhinitis) or other upper respiratory allergies: sneezing runny nose itching of the nose or throat itchy, watery eyes.\n\nSafety Warnings:\n  Pregnancy: Caution required\n  Lactation: Caution required\n  Hypertension: Caution required\n  Diabetes: Caution required\n  Kidney: No specific warning recorded\n  Liver: No specific warning recorded\n  Heart: Caution required\n\nWarning Summary: Caution or warning advised under medical supervision for: Pregnancy, Lactation/Breastfeeding, High Blood Pressure, Diabetes, Heart Disease.",
+  "metadata": {
+    "drug_id": "1-2-3-one-two-three-20-f-c-tabs",
+    "slug": "1-2-3-one-two-three-20-f-c-tabs",
+    "name_en": "1 2 3 (ONE TWO THREE) 20 F.C.TABS.",
+    "active_ingredients": "CHLORPHENIRAMINE + PARACETAMOL(ACETAMINOPHEN) + PSEUDOEPHEDRINE",
+    "drug_class": "COLD PRODUCTS",
+    "route": "ORAL.SOLID",
+    "manufacturer": "HIKMA PHARMA",
+    "barcode": "6221000000010",
+    "sources": [
+      "karem505/egyptian-drug-database",
+      "mahmoudfalous/eg-drugs"
+    ],
+    "safety_info_available": true
+  }
+}
