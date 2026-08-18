@@ -1,0 +1,598 @@
+{
+    "condition_id": "eczema_atopic_dermatitis",
+    "name_en": "Atopic Dermatitis",
+    "name_ar": "الإكزيما / التهاب الجلد التأتبي",
+    "aliases": [
+        "Eczema",
+        "Atopic Eczema",
+        "Atopic Dermatitis",
+        "AD",
+        "Infantile Eczema"
+    ],
+    "category": "Dermatology",
+    "overview": {
+        "what_is_it": "Atopic dermatitis is the most common type of eczema. It is a chronic inflammatory skin condition characterized by intensely itchy, dry, irritable, and inflamed skin. It follows a relapsing-remitting course characterized by acute flare-ups and periods of clearance.",
+        "what_is_it_ar": "التهاب الجلد التأتبي هو النوع الأكثر شيوعًا من الإكزيما، وهو مرض جلدي التهابي مزمن يتميز بجفاف شديد وحكة حادة والتهاب في الجلد، ويمر بدورات من النوبات الحادة وفترات التحسن.",
+        "how_common": "Very common, especially in children; it most often begins early in life (between 2 months and 5 years of age). It can also start during puberty or adulthood.",
+        "chronic_or_acute": "Chronic condition that can last for years or be lifelong, although many children see their symptoms resolve by their teenage years.",
+        "contagious": false,
+        "skin_barrier_pathophysiology": "The skin barrier (stratum corneum) functions like a protective brick wall. In atopic dermatitis, microscopic gaps form in this barrier, allowing excessive moisture to escape (causing profound dryness and xerosis) while permitting environmental irritants, allergens, and microbial pathogens (bacteria and viruses) to penetrate into deeper skin layers, driving inflammatory flares.",
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis overview",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
+            "local_file": "eczema_atopic_dermatitis/overview.html"
+        }
+    },
+    "symptoms": {
+        "core_symptoms": [
+            {
+                "name": "Intense Itching (Pruritus)",
+                "name_ar": "حكة شديدة",
+                "description": "Described as 'the itch that rashes'. Itching is often severe, persistent, worsens at night, and disrupts sleep, contributing to fatigue, anxiety, and distress.",
+                "timing": "Particularly aggravated at night, during sweating, or when exposed to dry cold air."
+            },
+            {
+                "name": "Dry, Sensitive Skin (Xerosis)",
+                "name_ar": "جفاف شديد وحساسية مفرطة في الجلد",
+                "description": "Excessively dry, rough, and scaly skin that easily stings, burns, cracks, and becomes irritated by contact with everyday substances."
+            },
+            {
+                "name": "Rash, Swelling, and Oozing Blisters",
+                "name_ar": "طفح جلدي، تورم، وبثور تنز سوائل",
+                "description": "Warm, inflamed patches of skin with swelling and small bumps/blisters that may leak clear or yellowish fluid and form crusts when scratched."
+            },
+            {
+                "name": "Skin Thickening and Lichenification",
+                "name_ar": "زيادة سمك الجلد وتجلده (Lichenification)",
+                "description": "Leathery, thickened skin with deepened skin lines resulting from repeated rubbing and scratching. Thickened areas often itch continuously even when no acute flare is active."
+            }
+        ],
+        "age_variations": {
+            "infants_and_babies_under_2": {
+                "typical_locations": [
+                    "Cheeks and facial skin",
+                    "Scalp and forehead",
+                    "Outer arms and legs (extensor surfaces)",
+                    "Trunk"
+                ],
+                "appearance": "Pink/red rash on lighter skin or purplish/grayish/brown on darker skin; rough bumps, oozing lesions, and crusting caused by rubbing against bedding or carpeting.",
+                "behavioral_impact": "Extreme restlessness, constant rubbing against sheets or caregivers, fussiness, and severe difficulty sleeping."
+            },
+            "children_and_adolescents_2_to_puberty": {
+                "typical_locations": [
+                    "Creases of elbows (antecubital fossa)",
+                    "Backs of knees (popliteal fossa)",
+                    "Neck, wrists, and ankles",
+                    "Front of knees and elbows (frequently observed in darker skin tones)",
+                    "Trunk and hands"
+                ],
+                "appearance": "Itchy, scaly patches, discrete follicular papules (small itchy bumps), Dennie-Morgan folds (distinctive creases under lower eyelids), and areas of thickened skin from chronic scratching."
+            },
+            "adults": {
+                "typical_locations": [
+                    "Hands and wrists (chronic hand eczema)",
+                    "Around the eyes and eyelids",
+                    "Face and neck",
+                    "Flexural creases (elbows and knees)",
+                    "Feet and ankles",
+                    "Nipples (nipple eczema)"
+                ],
+                "appearance": "Prominently leathery, lichenified plaques, hyperpigmented or hypopigmented patches, chronic hand dermatitis with painful fissures, and persistent periorbital hyperpigmentation."
+            }
+        },
+        "skin_tone_variations": {
+            "lighter_skin_tones": "Rashes typically present with distinct pink or red coloration accompanied by visible redness and swelling.",
+            "darker_skin_tones": "Rashes frequently appear purple, grayish, or dark brown with subtle or absent redness; prominent follicular papules (small rough bumps) are more common; post-inflammatory hyperpigmentation or hypopigmentation often lingers for months after healing."
+        },
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis symptoms",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+            "local_file": "eczema_atopic_dermatitis/symptoms.html"
+        }
+    },
+    "causes": {
+        "factors": [
+            {
+                "factor": "Genetic Predisposition",
+                "factor_ar": "الاستعداد الوراثي والجينات",
+                "description": "Around 70% of individuals with atopic dermatitis have blood relatives with atopic dermatitis, asthma, or hay fever (allergic rhinitis). Inherited mutations affecting structural proteins of the stratum corneum compromise the skin barrier."
+            },
+            {
+                "factor": "Immune System Dysregulation",
+                "factor_ar": "فرط استجابة الجهاز المناعي",
+                "description": "An overreactive immune system that produces excess inflammatory signaling molecules in response to everyday environmental elements and skin barrier stress."
+            },
+            {
+                "factor": "Skin Barrier Defect",
+                "factor_ar": "خلل الحاجز الواقي للجلد",
+                "description": "Structural gaps in the skin barrier that allow accelerated transepidermal water loss and facilitate penetration of allergens, microbes, and irritants."
+            },
+            {
+                "factor": "Environmental and Urban Factors",
+                "factor_ar": "العوامل البيئية والتلوث الحضري",
+                "description": "Higher incidence is documented in urban environments with air pollution, in dry cold climates, and in geographical areas located far from the equator."
+            }
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis causes",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
+            "local_file": "eczema_atopic_dermatitis/causes.html"
+        }
+    },
+    "risk_factors": {
+        "list": [
+            "Family history of atopic conditions (atopic dermatitis, asthma, allergic rhinitis / hay fever)",
+            "Racial disparity (In the US, Black children have twice the risk of developing atopic dermatitis compared to white children)",
+            "Urban residence and exposure to high levels of air pollution",
+            "Living in dry, cold geographic zones with low ambient humidity",
+            "Altered gut and skin microbiome development during early infancy"
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis causes",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
+            "local_file": "eczema_atopic_dermatitis/causes.html"
+        }
+    },
+    "triggers": [
+        {
+            "id": "trig_dry_air",
+            "name": "Dry Air and Low Humidity",
+            "type": "environmental",
+            "weather_variable": "relative_humidity",
+            "threshold_risk": "Relative humidity below 40% or sudden indoor/outdoor humidity drops",
+            "mechanism": "Dries out the stratum corneum rapidly, widening skin barrier gaps, causing micro-cracking, severe tightness, and triggering intense itch receptors.",
+            "prevention_and_action": "Use an indoor cool-mist humidifier in bedrooms and living spaces; apply thick ointment or cream emollients 2 to 3 times daily.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
+                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
+            }
+        },
+        {
+            "id": "trig_cold_temp",
+            "name": "Cold Temperatures and Artificial Indoor Heating",
+            "type": "environmental",
+            "weather_variable": "temperature",
+            "threshold_risk": "Cold outdoor weather (< 10°C / 50°F) combined with dry forced-air heating",
+            "mechanism": "Cold outdoor air combined with indoor radiators/heaters depletes atmospheric moisture and strips the natural lipid mantle of the skin.",
+            "prevention_and_action": "Dress in soft breathable 100% cotton layers; apply a protective layer of barrier ointment before heading outdoors; keep indoor heating moderate.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Eczema types: Atopic dermatitis skin care",
+                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
+            }
+        },
+        {
+            "id": "trig_heat_sweat",
+            "name": "High Heat and Sweating",
+            "type": "environmental_physical",
+            "weather_variable": "temperature",
+            "threshold_risk": "Warm/hot weather (> 28°C / 82°F) or heavy exertion causing active perspiration",
+            "mechanism": "Sweat contains mineral salts and metabolic byproducts that directly irritate broken skin barrier, causing severe stinging and prickly itch.",
+            "prevention_and_action": "Stay in cool or air-conditioned environments; take brief lukewarm or cool showers promptly after sweating; pat dry gently and reapply moisturizer.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
+                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
+            }
+        },
+        {
+            "id": "trig_temp_shift",
+            "name": "Sudden Temperature Shifts",
+            "type": "environmental",
+            "weather_variable": "temperature",
+            "threshold_risk": "Abrupt transitions between cold outdoor air and heated indoor rooms, or hot outdoors and icy air conditioning",
+            "mechanism": "Rapid cutaneous vascular constriction and dilation combined with sudden moisture evaporation stimulates neurogenic itch pathways.",
+            "prevention_and_action": "Layer clothing so layers can be added or removed gradually to adjust comfortably to ambient temperatures.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
+                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
+            }
+        },
+        {
+            "id": "trig_fragrances",
+            "name": "Fragrances and Scented Products",
+            "type": "chemical_irritant",
+            "threshold_risk": "Direct skin contact with perfumes, fragranced lotions, scented soaps, or 'unscented' masking products",
+            "mechanism": "Aromatic chemicals penetrate disrupted skin barrier and act as primary irritants or trigger contact allergic sensitization.",
+            "prevention_and_action": "Exclusively purchase products labeled 'Fragrance-Free'. Avoid products labeled 'Unscented' because they contain masking fragrances that can still flare eczema.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Eczema types: Atopic dermatitis skin care",
+                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
+            }
+        },
+        {
+            "id": "trig_harsh_soaps",
+            "name": "Harsh Soaps, Detergents, and Cleaning Chemicals",
+            "type": "chemical_irritant",
+            "threshold_risk": "Regular alkaline bar soaps, bubble baths, antibacterial washes, or standard laundry detergents",
+            "mechanism": "Strong alkaline surfactants emulsify and dissolve the skin's protective lipid bilayer.",
+            "prevention_and_action": "Use mild, soap-free, dye-free, and fragrance-free synthetic cleansers (syndet bars/liquids) and fragrance-free laundry detergents; double-rinse clothes.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Eczema types: Atopic dermatitis skin care",
+                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
+            }
+        },
+        {
+            "id": "trig_coarse_fabrics",
+            "name": "Coarse Fabrics and Clothing Tags (Wool and Synthetics)",
+            "type": "physical_mechanical",
+            "threshold_risk": "Direct skin contact with wool sweaters, coarse polyester, nylon, or scratchy garment tags",
+            "mechanism": "Mechanical friction and rigid fiber ends abrade sensitive stratum corneum.",
+            "prevention_and_action": "Wear loose-fitting, soft 100% cotton clothing; remove clothing tags or choose tagless items; line irritating seams with silk; never wear wool next to bare skin.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Eczema types: Atopic dermatitis skin care",
+                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
+            }
+        },
+        {
+            "id": "trig_chlorinated_pool",
+            "name": "Chlorinated Swimming Pool Water",
+            "type": "chemical_irritant",
+            "threshold_risk": "Swimming in chemically chlorinated pools or hot tubs",
+            "mechanism": "Chlorine strips superficial moisture and natural oils from vulnerable skin.",
+            "prevention_and_action": "Apply a barrier coat of petroleum jelly or thick ointment prior to swimming; shower with fresh warm water immediately upon exiting pool; apply moisturizer within 3 minutes.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
+                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
+            }
+        },
+        {
+            "id": "trig_stress",
+            "name": "Emotional Stress and Anxiety",
+            "type": "internal_psychological",
+            "threshold_risk": "Psychological stress, exams, emotional strain, social distress",
+            "mechanism": "Stress hormones (cortisol, catecholamines) and pro-inflammatory neuropeptides impair barrier recovery and intensify the itch-scratch cycle.",
+            "prevention_and_action": "Incorporate stress management, maintain consistent sleep schedules, and avoid scratching by keeping fingernails clipped short.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
+                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
+            }
+        }
+    ],
+    "environmental_factors": [
+        {
+            "factor": "Low Relative Humidity / Dry Air",
+            "open_meteo_variable": "relative_humidity_2m",
+            "risk_condition": "Relative humidity < 40%",
+            "clinical_effect": "Accelerates transepidermal water loss, causes severe skin flaking, tight sensation, micro-fissuring, and intense itching.",
+            "context_advice": "Increase moisturizer application to 3+ times daily; switch from lotion to ointment; use a bedroom cool-mist humidifier.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
+                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
+            }
+        },
+        {
+            "factor": "Cold Ambient Temperature",
+            "open_meteo_variable": "temperature_2m",
+            "risk_condition": "Temperature < 10°C (50°F)",
+            "clinical_effect": "Promotes epidermal dehydration and winter eczema flares, worsened by indoor artificial heating systems.",
+            "context_advice": "Apply occlusive ointment before outdoor exposure; wear 100% soft cotton base layers and protective gloves; avoid excessively hot baths.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Eczema types: Atopic dermatitis skin care",
+                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
+            }
+        },
+        {
+            "factor": "High Ambient Temperature and Heat Waves",
+            "open_meteo_variable": "temperature_2m",
+            "risk_condition": "Temperature > 28°C (82°F)",
+            "clinical_effect": "Triggers thermal sweating; accumulated perspiration in flexural folds causes intense stinging and secondary flare-ups.",
+            "context_advice": "Wear lightweight, loose-fitting cotton clothes; take quick lukewarm rinse after sweating; stay in air-conditioned environments during peak heat.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Childhood eczema: Triggers can cause eczema to flare",
+                "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+                "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
+            }
+        },
+        {
+            "factor": "High UV Radiation Index",
+            "open_meteo_variable": "uv_index",
+            "risk_condition": "UV Index >= 6 without adequate sun protection",
+            "clinical_effect": "Sunburn causes acute thermal and inflammatory injury to the epidermis, triggering major eczema flare-ups.",
+            "context_advice": "Use sensitive-skin mineral sunscreens (zinc oxide or titanium dioxide) labeled fragrance-free; wear UV-protective cotton clothing and seek shade.",
+            "source": {
+                "organization": "AAD",
+                "page_title": "Eczema types: Atopic dermatitis skin care",
+                "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+                "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
+            }
+        }
+    ],
+    "skin_care_and_self_care": {
+        "bathing_protocol": [
+            "Take short baths or showers (5 to 10 minutes maximum) once daily or every other day.",
+            "Use lukewarm (warm) water, never hot water, as hot water strips away essential skin barrier oils.",
+            "Use mild, soap-free, fragrance-free cleanser only where needed (groin, armpits, feet, neck); do not scrub skin with washcloths or sponges.",
+            "Gently pat the skin dry with a clean, soft cotton towel—never rub vigorously."
+        ],
+        "moisturizing_protocol_soak_and_seal": [
+            "Follow the 'Soak and Seal' method: Apply prescribed topical medicine and/or generous thick moisturizer within 3 minutes of stepping out of bath while skin is still slightly damp.",
+            "Select thick ointments (like petroleum jelly) or rich barrier creams rather than thin lotions, as lotions contain higher water and alcohol content that evaporate quickly and may irritate skin.",
+            "Reapply moisturizer whenever skin feels dry, tight, or itchy throughout the day (at least 2 to 3 times daily).",
+            "Only use products explicitly labeled 'Fragrance-Free'. Avoid 'Unscented' products."
+        ],
+        "patch_testing_new_products": [
+            "Before applying any new moisturizer or skin product widely, apply a small (quarter-sized) amount to the inner arm daily for 7 to 10 consecutive days.",
+            "If the test spot shows no redness, rash, or itching after 10 days, the product is generally safe for broader use."
+        ],
+        "clothing_and_laundry_hygiene": [
+            "Wear loose-fitting, breathable 100% cotton clothing, bed linens, and towels.",
+            "Avoid wool, mohair, and coarse synthetic fabrics directly against the skin.",
+            "Wash all newly purchased clothing and bedding before first use.",
+            "Use dye-free and fragrance-free liquid laundry detergent; avoid fabric softeners and dryer sheets.",
+            "Remove tags from clothing or buy tagless garments; cover irritating seams with silk."
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis skin care",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+            "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
+        }
+    },
+    "flare_ups_management": {
+        "early_signs_of_flare": [
+            "Localized increase in itching intensity or urge to scratch",
+            "New or spreading patches of redness, warmth, or darker discoloration",
+            "Increased skin roughness, flaking, or tiny raised bumps",
+            "Nocturnal awakenings caused by itching"
+        ],
+        "immediate_action_plan": [
+            "Start prescribed topical anti-inflammatory treatment (such as topical corticosteroid, TCI, or crisaborole) at the earliest sign of flare as directed by dermatologist.",
+            "Intensify skin barrier hydration by applying thick ointment-based moisturizers frequently.",
+            "Apply cool, damp cotton compresses to itchy areas for 10 to 15 minutes to quickly soothe inflammation.",
+            "Identify and eliminate any recently introduced triggers (e.g., weather changes, new detergent, sweating, chlorine)."
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis diagnosis and treatment",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+            "local_file": "eczema_atopic_dermatitis/treatment.html"
+        }
+    },
+    "red_flags_and_warning_signs": {
+        "signs": [
+            {
+                "sign": "Secondary Bacterial Infection (Staphylococcal Impetigo / Cellulitis)",
+                "description": "Honey-colored or golden crusts forming over lesions, oozing yellow pus, rapidly spreading redness, marked warmth, or localized pain and swelling.",
+                "urgency": "Urgent (Contact dermatologist or healthcare provider within 24-48 hours)",
+                "action": "Requires medical examination; typically treated with prescription topical or oral antimicrobial therapy."
+            },
+            {
+                "sign": "Eczema Herpeticum (Disseminated Herpes Simplex Virus Infection)",
+                "description": "Sudden outbreak of numerous clustered, dome-shaped fluid-filled blisters or punched-out sores, accompanied by high fever, chills, fatigue, and swollen lymph glands.",
+                "urgency": "Medical Emergency (Seek immediate emergency room or urgent care attention)",
+                "action": "Potentially life-threatening, especially in infants and young children. Requires immediate systemic antiviral treatment (such as acyclovir)."
+            },
+            {
+                "sign": "Extensive, Uncontrolled Rash or Severe Sleep Deprivation",
+                "description": "Eczema covering extensive body surface area failing to respond to standard topical creams, with severe skin cracking, bleeding, or extreme itch disrupting daily functioning.",
+                "urgency": "Prompt Dermatologist Evaluation",
+                "action": "Specialist assessment for advanced therapies including phototherapy, biologics, or systemic JAK inhibitors."
+            }
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis symptoms",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+            "local_file": "eczema_atopic_dermatitis/symptoms.html"
+        }
+    },
+    "when_to_see_doctor": {
+        "recommendations": [
+            "To obtain an accurate medical diagnosis and a tailored management plan if you or your child develop persistent dry, itchy, or inflamed skin rashes",
+            "If prescribed treatments fail to control symptoms or if flares become increasingly severe and frequent",
+            "If you notice any warning signs of bacterial or viral infection (golden crusts, pus, fever, widespread blister clusters)",
+            "If itching and skin discomfort interfere with sleep, school, work, or cause emotional distress and depression",
+            "To discuss advanced FDA-approved biologic or oral systemic treatment options when topical therapies are insufficient"
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis diagnosis and treatment",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+            "local_file": "eczema_atopic_dermatitis/treatment.html"
+        }
+    },
+    "related_conditions": {
+        "conditions": [
+            {
+                "condition": "The Atopic March (Allergic Rhinitis / Hay Fever, Asthma, Food Allergies)",
+                "relationship": "Atopic dermatitis is frequently the first disease to manifest in the 'Atopic March'. Approximately one-third of children with atopic dermatitis later develop asthma, and two-thirds develop allergic rhinitis (hay fever).",
+                "type": "Allergic / Atopic Comorbidities"
+            },
+            {
+                "condition": "Cutaneous Infections (Staphylococcus aureus, Molluscum contagiosum, Herpes Simplex Virus)",
+                "relationship": "Impaired stratum corneum barrier and reduced antimicrobial peptide expression render eczema patients exceptionally susceptible to secondary bacterial colonisation (Staph), viral molluscum, and severe eczema herpeticum.",
+                "type": "Infectious Complications"
+            },
+            {
+                "condition": "Sleep Disturbances, Anxiety, and Depression",
+                "relationship": "Chronic severe pruritus leads to sleep disruption, daytime fatigue, psychological distress, social withdrawal, and elevated prevalence of anxiety and depression.",
+                "type": "Psychosocial Comorbidities"
+            },
+            {
+                "condition": "Contact Dermatitis (Allergic and Irritant)",
+                "relationship": "Disrupted skin barrier increases vulnerability to allergic contact sensitization (e.g., fragrances, nickel, preservatives) and irritant contact dermatitis.",
+                "type": "Dermatologic Overlap"
+            }
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis causes",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
+            "local_file": "eczema_atopic_dermatitis/causes.html"
+        }
+    },
+    "medications_and_treatments": {
+        "topical_therapies": [
+            {
+                "class": "Topical Corticosteroids (TCS)",
+                "details": "First-line prescription anti-inflammatory agents applied directly to active lesions during flares to suppress inflammation, erythema, and itch. Used according to prescribed potency, frequency, and duration under dermatologist supervision.",
+                "prescription_status": "Prescription (mild hydrocortisone available OTC)"
+            },
+            {
+                "class": "Topical Calcineurin Inhibitors (TCIs)",
+                "brand_names": [
+                    "Protopic (tacrolimus ointment 0.03% and 0.1%)",
+                    "Elidel (pimecrolimus cream 1%)"
+                ],
+                "details": "Steroid-free anti-inflammatory medications FDA-approved for patients 2 years of age and older. Particularly suitable for sensitive skin areas (face, eyelids, neck, skin folds) without causing cutaneous atrophy (skin thinning).",
+                "prescription_status": "Prescription"
+            },
+            {
+                "class": "Topical PDE4 Inhibitor (Crisaborole Ointment)",
+                "brand_names": [
+                    "Eucrisa (crisaborole 2% ointment)"
+                ],
+                "details": "Steroid-free topical ointment FDA-approved for mild-to-moderate atopic dermatitis in patients 3 months of age and older.",
+                "prescription_status": "Prescription"
+            },
+            {
+                "class": "Topical PDE4 Inhibitor (Roflumilast Cream)",
+                "brand_names": [
+                    "Zoryve (roflumilast cream 0.15% / 0.05%)"
+                ],
+                "details": "Once-daily non-steroidal cream providing rapid itch reduction and lesion clearance, FDA-approved for atopic dermatitis in patients 6 years of age and older.",
+                "prescription_status": "Prescription"
+            },
+            {
+                "class": "Topical JAK Inhibitor (Ruxolitinib Cream)",
+                "brand_names": [
+                    "Opzelura (ruxolitinib 1.5% cream)"
+                ],
+                "details": "Targeted topical Janus kinase inhibitor FDA-approved for short-term and non-continuous chronic treatment of mild-to-moderate atopic dermatitis in non-immunocompromised patients 12 years of age and older.",
+                "prescription_status": "Prescription"
+            },
+            {
+                "class": "Topical Aryl Hydrocarbon Receptor Agonist (Tapinarof Cream)",
+                "brand_names": [
+                    "Vtama (tapinarof 1% cream)"
+                ],
+                "details": "Once-daily steroid-free topical cream demonstrated to provide rapid itch relief (often within 24 hours) and clear eczema lesions.",
+                "prescription_status": "Prescription"
+            }
+        ],
+        "phototherapy_light_therapy": {
+            "details": "Controlled medical ultraviolet light (narrowband UVB or excimer laser) administered 2 to 3 times weekly under medical supervision at a dermatology clinic. Safe and effective for widespread moderate-to-severe disease. (Note: AAD strictly warns against tanning beds or commercial sunlamps due to severe skin cancer risks)."
+        },
+        "systemic_therapies_biologics_and_jak_inhibitors": [
+            {
+                "drug_name": "Dupilumab",
+                "brand_name": "Dupixent",
+                "mechanism": "Biologic monoclonal antibody (IL-4 / IL-13 receptor alpha inhibitor)",
+                "indication": "FDA-approved for moderate-to-severe atopic dermatitis in patients 6 months of age and older whose disease is not adequately controlled with topical therapies.",
+                "administration": "Subcutaneous injection administered every 2 to 4 weeks (can be injected at home after training)."
+            },
+            {
+                "drug_name": "Lebrikizumab-lbkz",
+                "brand_name": "Ebglyss",
+                "mechanism": "Biologic monoclonal antibody (selective IL-13 cytokine inhibitor)",
+                "indication": "FDA-approved for moderate-to-severe atopic dermatitis in adults and adolescents 12 years of age and older weighing at least 40 kg.",
+                "administration": "Subcutaneous injection."
+            },
+            {
+                "drug_name": "Tralokinumab-ldrm",
+                "brand_name": "Adbry",
+                "mechanism": "Biologic monoclonal antibody (specifically targets and neutralizes IL-13)",
+                "indication": "FDA-approved for moderate-to-severe atopic dermatitis in patients 12 years of age and older.",
+                "administration": "Subcutaneous injection."
+            },
+            {
+                "drug_name": "Nemolizumab-ilto",
+                "brand_name": "Nemluvio",
+                "mechanism": "Biologic monoclonal antibody (IL-31 receptor alpha inhibitor)",
+                "indication": "FDA-approved for moderate-to-severe atopic dermatitis in patients 12 years of age and older with prominent severe pruritus.",
+                "administration": "Subcutaneous injection."
+            },
+            {
+                "drug_name": "Abrocitinib, Upadacitinib, and Baricitinib",
+                "brand_names": [
+                    "Cibinqo (abrocitinib)",
+                    "Rinvoq (upadacitinib)",
+                    "Olumiant (baricitinib)"
+                ],
+                "mechanism": "Oral JAK (Janus Kinase) Inhibitors",
+                "indication": "Targeted oral medications FDA/EMA-approved for moderate-to-severe refractory atopic dermatitis providing rapid itch relief and lesion clearance in eligible patients.",
+                "administration": "Once-daily oral tablets taken under ongoing medical monitoring."
+            }
+        ],
+        "supportive_and_infection_treatments": [
+            {
+                "intervention": "Antimicrobial Therapy",
+                "details": "Prescription topical or oral antibiotics utilized when bacterial secondary infection (such as Staphylococcus aureus) occurs to clear infection and halt spread."
+            },
+            {
+                "intervention": "Dilute Bleach-Bath Therapy",
+                "details": "Adding a precise, small amount of household bleach (e.g., 1 teaspoon per gallon of water, or approximately 1/2 cup for a full standard bathtub) to warm water 2 to 3 times weekly as prescribed by a dermatologist. Helps reduce bacterial colonization on the skin and reduce flare frequency without causing bacterial resistance."
+            }
+        ],
+        "source": {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis diagnosis and treatment",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+            "local_file": "eczema_atopic_dermatitis/treatment.html"
+        }
+    },
+    "sources_summary": [
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis overview",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis",
+            "local_file": "eczema_atopic_dermatitis/overview.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis symptoms",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/symptoms",
+            "local_file": "eczema_atopic_dermatitis/symptoms.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis causes",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/causes",
+            "local_file": "eczema_atopic_dermatitis/causes.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis diagnosis and treatment",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/treatment",
+            "local_file": "eczema_atopic_dermatitis/treatment.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Eczema types: Atopic dermatitis skin care",
+            "url": "https://www.aad.org/public/diseases/eczema/types/atopic-dermatitis/atopic-dermatitis-coping",
+            "local_file": "eczema_atopic_dermatitis/atopic-dermatitis-coping.html"
+        },
+        {
+            "organization": "American Academy of Dermatology (AAD)",
+            "page_title": "Childhood eczema: Triggers can cause eczema to flare",
+            "url": "https://www.aad.org/public/diseases/eczema/childhood/triggers",
+            "local_file": "eczema_atopic_dermatitis/childhood_triggers.html"
+        }
+    ]
+}
