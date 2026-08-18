@@ -1,0 +1,12 @@
+{
+  "embedding_model": "all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "distance_metric": "cosine",
+  "normalized": true,
+  "collection_name": "diseases",
+  "total_chunks_input": 166,
+  "newly_embedded": 166,
+  "skipped_existing": 0,
+  "failed": 0,
+  "timestamp_unix": 1787050617
+}
