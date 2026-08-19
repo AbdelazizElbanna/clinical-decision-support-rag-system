@@ -38,6 +38,7 @@ yarn-error.log*
 # Datasets & Vector Indexes (Avoid committing large data dumps to version control)
 data/vectorstores/
 *.sqlite3
+*.db
 *.bin
 *.pickle
 
