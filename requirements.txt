@@ -19,6 +19,7 @@ uvicorn[standard]
 httpx
 python-dotenv
 groq
+edge-tts
 
 # Evaluation & Metrics
 # Evaluations utilize groq directly, standard libraries like json and math are used.
