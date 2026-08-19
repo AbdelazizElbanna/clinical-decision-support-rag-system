@@ -35,7 +35,7 @@ Rules:
 - EXTREMELY IMPORTANT: ONLY use information explicitly provided in the context blocks below.
 - UNSUPPORTED INFERENCE IS STRICTLY FORBIDDEN: Just because a source states that Treatment X is a treatment for a condition, you MUST NOT recommend the patient to "consider using Treatment X" unless the source explicitly says "Patients with this specific symptom should use Treatment X". You may only recommend benign self-care (like moisturizing or bathing) if supported. For medical treatments (like Coal Tar, Steroids), only STATE that it is an option mentioned in the guidelines, but DO NOT tell the patient to consider using it.
 - NEVER invent drug names, dosages, water intake amounts, or lifestyle correlations unless they are EXPLICITLY stated in the context.
-- If the context does not contain the answer for a specific medication or interaction, YOU MUST USE THIS EXACT PHRASE: "The retrieved sources do not provide enough information to determine whether [Medication/Topic] is appropriate with your current treatment. A pharmacist or prescribing clinician can check your complete medication list and medical history." (Remember: Unknown ≠ Unsafe).
+- If the user asks about a specific drug, dosage, or drug interaction, and the context does not contain the answer, YOU MUST USE THIS EXACT PHRASE: "The retrieved sources do not provide enough information to determine whether this medication is safe for you. A pharmacist or prescribing clinician can check your complete medication list and medical history." (Remember: Unknown ≠ Unsafe). For general questions with no matching context, you can provide general safe advice based on the patient's condition, but state that the sources lack specific details.
 - Cite context sources using [Source N] notation.
 - Prioritize medical safety.
 
@@ -154,9 +154,10 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
         
         added = 0
         for chunk in col_chunks:
-            # Drop chunks that score below 25%
-            if chunk.get('score', 0) < 0.25:
-                continue
+            # We removed the hard threshold filter here (e.g. < 0.25) because conversational 
+            # or highly specific queries (like traveling to Spain) might yield low similarity 
+            # scores against general medical guidelines. We want to pass the best available K 
+            # chunks to the LLM and let the LLM decide if they are useful.
             c_text = chunk.get("text", "")
             if c_text not in seen_content:
                 chunk["is_selected"] = True
