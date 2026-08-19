@@ -7,7 +7,7 @@ const TOKEN_KEY = 'access_token';
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(() => {
-    // Load from cache immediately — no flicker on refresh
+    // Load from cache immediately - no flicker on refresh
     try {
       const cached = localStorage.getItem(CACHE_KEY);
       return cached ? JSON.parse(cached) : null;
@@ -21,7 +21,7 @@ export function AuthProvider({ children }) {
       setLoading(false);
       return;
     }
-    // Verify token validity in background — don't block UI
+    // Verify token validity in background - don't block UI
     fetch(`${BASE_URL}/api/me`, {
       headers: { 'Authorization': `Bearer ${token}` }
     })
@@ -40,7 +40,7 @@ export function AuthProvider({ children }) {
       }
     })
     .catch(() => {
-      // Network error — keep using cached data (offline tolerance)
+      // Network error - keep using cached data (offline tolerance)
       console.warn('Could not verify token, using cached session.');
     })
     .finally(() => setLoading(false));

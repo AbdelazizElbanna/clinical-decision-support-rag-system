@@ -231,7 +231,7 @@ async def list_governorates():
              "lat": c["lat"], "lon": c["lon"]} for c in cities]
 
 
-# Serve React static build — MUST be last
+# Serve React static build - MUST be last
 FRONTEND_DIST = os.path.join(os.path.dirname(__file__), "..", "frontend", "dist")
 if os.path.exists(FRONTEND_DIST):
     app.mount("/", StaticFiles(directory=FRONTEND_DIST, html=True), name="frontend")

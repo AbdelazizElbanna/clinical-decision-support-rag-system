@@ -163,7 +163,7 @@ def main():
 
         for res in [dis_res, drug_res]:
             if res["misses"]:
-                f.write(f"## {res['domain']} — Missed Questions (Sample)\n")
+                f.write(f"## {res['domain']} - Missed Questions (Sample)\n")
                 for m in res["misses"][:5]:
                     f.write(f"- **Q ({m['id']}):** {m['question']}\n")
                     f.write(f"  - *Expected:* `{m['expected']}`\n")

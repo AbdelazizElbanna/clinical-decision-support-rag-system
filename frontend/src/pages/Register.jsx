@@ -79,7 +79,7 @@ export default function Register() {
 
         {step === 1 && (
           <form onSubmit={handleStep1} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Step 1 — Account Info</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Step 1 - Account Info</p>
             <input name="username" type="text" placeholder="Full Name" value={formData.username} onChange={handleChange} className="auth-input" required />
             <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} className="auth-input" required />
             <div style={{ position: 'relative' }}>
@@ -119,7 +119,7 @@ export default function Register() {
 
         {step === 2 && (
           <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Step 2 — Patient Profile</p>
+            <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Step 2 - Patient Profile</p>
             <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>This helps personalize medical recommendations. All fields are optional.</p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '12px' }}>
               <input name="age" type="number" placeholder="Age" min="1" max="120" value={formData.age} onChange={handleChange} className="auth-input" />
@@ -132,7 +132,7 @@ export default function Register() {
             </div>
             <textarea
               name="notes"
-              placeholder="Medical notes (allergies, chronic conditions, etc.) — optional"
+              placeholder="Medical notes (allergies, chronic conditions, etc.) - optional"
               value={formData.notes}
               onChange={handleChange}
               className="auth-input"

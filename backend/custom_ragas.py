@@ -4,11 +4,11 @@ custom_ragas.py
 Lightweight implementation of RAGAS-style metrics.
 
 Metrics implemented:
-  1. Faithfulness      — LLM-as-judge: are all claims grounded in the context?
+  1. Faithfulness      - LLM-as-judge: are all claims grounded in the context?
                          (with retry on empty response, shorter truncated prompt)
-  2. Answer Relevance  — Embedding cosine similarity: question vs answer
-                         (pure local, no LLM needed — how RAGAS actually does it)
-  3. Context Precision — Embedding cosine similarity: question vs each chunk > threshold
+  2. Answer Relevance  - Embedding cosine similarity: question vs answer
+                         (pure local, no LLM needed - how RAGAS actually does it)
+  3. Context Precision - Embedding cosine similarity: question vs each chunk > threshold
                          (pure local, no LLM needed)
 
 Usage:
@@ -73,10 +73,10 @@ Respond ONLY with valid JSON:
 def measure_faithfulness(question, answer, contexts):
     if not answer.strip():
         return None
-    # If no contexts, the system abstained — that is safe behaviour
+    # If no contexts, the system abstained - that is safe behaviour
     if not contexts:
         return {"score": 1.0, "total_claims": 0, "supported_claims": 0,
-                "unsupported": [], "note": "No context retrieved — system abstained"}
+                "unsupported": [], "note": "No context retrieved - system abstained"}
 
     # Truncate aggressively to keep prompt short and increase chance of response
     context_str = "\n\n".join(contexts[:2])[:1200]
@@ -110,7 +110,7 @@ def measure_faithfulness(question, answer, contexts):
         except Exception as ex:
             err = str(ex)
             if "400" in err or "model" in err.lower():
-                print(f"    [Faithfulness] model error — skipping")
+                print(f"    [Faithfulness] model error - skipping")
                 return None
             print(f"    [Faithfulness error] {ex}")
         time.sleep(2 + attempt * 2)
@@ -254,11 +254,11 @@ def main():
     faith_avg = avg(faithfulness_scores)
     print("\n── Medical Safety Verdict ──")
     if faith_avg >= 0.95:
-        print("  ✅ SAFE — LLM is faithful to retrieved context (hallucination risk: LOW)")
+        print("  ✅ SAFE - LLM is faithful to retrieved context (hallucination risk: LOW)")
     elif faith_avg >= 0.80:
-        print("  ⚠️  CAUTION — Some ungrounded claims detected (hallucination risk: MEDIUM)")
+        print("  ⚠️  CAUTION - Some ungrounded claims detected (hallucination risk: MEDIUM)")
     elif faith_avg > 0:
-        print("  🚨 UNSAFE — Significant hallucination risk detected!")
+        print("  🚨 UNSAFE - Significant hallucination risk detected!")
     else:
         print("  ⚠️  Faithfulness could not be evaluated (model returned empty responses)")
 

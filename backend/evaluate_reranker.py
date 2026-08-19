@@ -97,7 +97,7 @@ def evaluate_reranker_for_domain(questions, collection_name, domain_name):
                 reranked_ids = [r[0] for r in ranked]
                 post_p4 = precision_at_k(reranked_ids, target_ids, K_RERANK)
             else:
-                # No reranker — assume same order
+                # No reranker - assume same order
                 reranked_ids = retrieved_ids
                 post_p4 = pre_p4
 

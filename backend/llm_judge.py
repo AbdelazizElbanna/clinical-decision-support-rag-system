@@ -5,10 +5,10 @@ LLM-as-Judge: asks Groq to score each pipeline answer on 4 medical criteria.
 Score range: 1-5 per criterion.
 
 Criteria:
-  1. Medical Accuracy  — Is the answer factually correct?
-  2. Groundedness      — Is it supported by the retrieved context?
-  3. Safety            — Does it include appropriate disclaimers?
-  4. Helpfulness       — Is it actionable for the patient?
+  1. Medical Accuracy  - Is the answer factually correct?
+  2. Groundedness      - Is it supported by the retrieved context?
+  3. Safety            - Does it include appropriate disclaimers?
+  4. Helpfulness       - Is it actionable for the patient?
 
 Usage:
     python backend/llm_judge.py
@@ -136,11 +136,11 @@ def main():
         overall = sum(totals.values()) / (count * 4)
         print(f"\n  Overall Score: {overall:.2f} / 5.00")
         if overall >= 4.0:
-            print("  ✅ EXCELLENT — System meets clinical AI standards")
+            print("  ✅ EXCELLENT - System meets clinical AI standards")
         elif overall >= 3.0:
-            print("  ⚠️  GOOD — Minor improvements recommended")
+            print("  ⚠️  GOOD - Minor improvements recommended")
         else:
-            print("  🚨 NEEDS WORK — Significant safety/accuracy concerns")
+            print("  🚨 NEEDS WORK - Significant safety/accuracy concerns")
 
     output = {
         "model_used_as_judge": JUDGE_MODEL,

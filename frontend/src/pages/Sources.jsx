@@ -57,16 +57,6 @@ export default function Sources() {
       glow: 'rgba(6, 182, 212, 0.12)',
       badge: t('badge_internal')
     },
-    {
-      category: t('cat_infra'),
-      name: t('src_chroma_name'),
-      desc: t('src_chroma_desc'),
-      url: 'https://www.trychroma.com/',
-      icon: <Database size={24} />,
-      color: 'var(--warning)',
-      glow: 'rgba(251, 191, 36, 0.12)',
-      badge: t('badge_vector')
-    },
   ];
 
   const grouped = sources.reduce((acc, s) => {

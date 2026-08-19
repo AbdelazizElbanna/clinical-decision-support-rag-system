@@ -22,7 +22,7 @@ import time
 sys.path.append(r"e:\salah\salah_programing\clinical-decision-support-ref\backend")
 from pipeline import run_pipeline
 
-# A known irrelevant chunk — about a completely different topic
+# A known irrelevant chunk - about a completely different topic
 NOISE_CHUNK = """
 Drug Name: ASPIRIN 500MG 20 TABS
 Active Ingredient: Acetylsalicylic Acid 500mg
@@ -110,9 +110,9 @@ async def run_noise_test():
 
             if was_corrupted:
                 noise_corrupted += 1
-                print(f"  🔴 CORRUPTED — LLM mentioned noise content!")
+                print(f"  🔴 CORRUPTED - LLM mentioned noise content!")
             else:
-                print(f"  ✅ ROBUST — LLM ignored the noise")
+                print(f"  ✅ ROBUST - LLM ignored the noise")
 
             results.append({
                 "question": question,
@@ -144,11 +144,11 @@ async def run_noise_test():
     print(f"  Corrupted (cited noise): {noise_corrupted} ({100-robustness_rate:.1f}%)")
 
     if robustness_rate >= 95:
-        print("\n  ✅ EXCELLENT — System is highly resistant to irrelevant context")
+        print("\n  ✅ EXCELLENT - System is highly resistant to irrelevant context")
     elif robustness_rate >= 80:
-        print("\n  ⚠️  GOOD — Minor noise leakage, review System Prompt")
+        print("\n  ⚠️  GOOD - Minor noise leakage, review System Prompt")
     else:
-        print("\n  🚨 CRITICAL — System is easily misled by noisy context!")
+        print("\n  🚨 CRITICAL - System is easily misled by noisy context!")
 
     # Save
     output = {

@@ -109,11 +109,11 @@ async def measure():
     # Clinical assessment
     print("\n── User Experience Assessment ──")
     if p95 < 5:
-        print(f"  ✅ p95 < 5s — Excellent: clinically acceptable response time")
+        print(f"  ✅ p95 < 5s - Excellent: clinically acceptable response time")
     elif p95 < 10:
-        print(f"  ⚠️  p95 < 10s — Acceptable, but consider streaming (already implemented)")
+        print(f"  ⚠️  p95 < 10s - Acceptable, but consider streaming (already implemented)")
     else:
-        print(f"  🔴 p95 > 10s — Slow: optimize retrieval or use smaller model")
+        print(f"  🔴 p95 > 10s - Slow: optimize retrieval or use smaller model")
 
     results = {
         "n_samples": len(latencies),

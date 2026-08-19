@@ -49,7 +49,7 @@ function App() {
               <Route path="/sources"  element={<AppShell><Sources /></AppShell>} />
               <Route path="/team"     element={<AppShell><Team /></AppShell>} />
               <Route path="/"         element={<AppShell><ChatInterface /></AppShell>} />
-              {/* Catch-all — redirect unknown paths to home */}
+              {/* Catch-all - redirect unknown paths to home */}
               <Route path="*"         element={<Navigate to="/" replace />} />
             </Routes>
           </Router>

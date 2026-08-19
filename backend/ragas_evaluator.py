@@ -111,11 +111,11 @@ for metric, score in result_dict.items():
 print("\n── Medical Safety Assessment ──")
 faith_score = result_dict.get("faithfulness", 0)
 if faith_score >= 0.95:
-    print("  ✅ Faithfulness EXCELLENT — LLM is NOT hallucinating.")
+    print("  ✅ Faithfulness EXCELLENT - LLM is NOT hallucinating.")
 elif faith_score >= 0.80:
     print("  ⚠️  Faithfulness GOOD but below medical threshold (target: 0.95).")
 else:
-    print("  🚨 Faithfulness CRITICAL — LLM is generating unsupported claims!")
+    print("  🚨 Faithfulness CRITICAL - LLM is generating unsupported claims!")
 
 # ── Save Results ──────────────────────────────────────────────────────────────
 output = {

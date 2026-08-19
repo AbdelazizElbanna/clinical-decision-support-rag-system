@@ -180,22 +180,22 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
         profile_parts.append(f"Medical Notes/Allergies: {safe_notes}")
 
     if profile_parts:
-        ctx.append(f"[PATIENT PROFILE — {username}]\n" + "\n".join(profile_parts) + "\nIMPORTANT: Take this patient profile into account when recommending dosages, contraindications, and safety notes.")
+        ctx.append(f"[PATIENT PROFILE - {username}]\n" + "\n".join(profile_parts) + "\nIMPORTANT: Take this patient profile into account when recommending dosages, contraindications, and safety notes.")
 
     if clinical_summary:
-        ctx.append(f"[CONVERSATION CONTEXT — Working Memory]\n{clinical_summary}\nUse this to understand follow-up questions and maintain continuity.")
+        ctx.append(f"[CONVERSATION CONTEXT - Working Memory]\n{clinical_summary}\nUse this to understand follow-up questions and maintain continuity.")
 
     if weather_data and gov_record:
         import datetime
         now_str = datetime.datetime.now().strftime("%Y-%m-%d %I:%M %p")
-        ctx.append(f"[WEATHER CONTEXT — {gov_record['governorate_en']}, Live at {now_str}]\nTemperature: {weather_data['temperature_c']}°C (Feels like: {weather_data['apparent_temperature_c']}°C)\nHumidity: {weather_data['humidity_percent']}%\nUV Index: {weather_data['uv_index']}\nWind: {weather_data['wind_speed_kmh']} km/h\nDust: {weather_data.get('dust', 'N/A')} µg/m³ | PM2.5: {weather_data.get('pm2_5', 'N/A')} µg/m³")
+        ctx.append(f"[WEATHER CONTEXT - {gov_record['governorate_en']}, Live at {now_str}]\nTemperature: {weather_data['temperature_c']}°C (Feels like: {weather_data['apparent_temperature_c']}°C)\nHumidity: {weather_data['humidity_percent']}%\nUV Index: {weather_data['uv_index']}\nWind: {weather_data['wind_speed_kmh']} km/h\nDust: {weather_data.get('dust', 'N/A')} µg/m³ | PM2.5: {weather_data.get('pm2_5', 'N/A')} µg/m³")
     elif requires_weather and governorate != "None" and not gov_record:
         ctx.append(f"[WEATHER CONTEXT]\nFailed to retrieve weather data for '{governorate}'. Inform the user weather info is unavailable for this location.")
 
     for i, chunk in enumerate(selected_chunks, 1):
         meta = chunk["metadata"]
         url = meta.get("source_url", "") or meta.get("slug", meta.get("name_en", "Local Database"))
-        ctx.append(f"[Source {i} — Source: {url}]\n{chunk['text']}")
+        ctx.append(f"[Source {i} - Source: {url}]\n{chunk['text']}")
 
     if meds_current or meds_new:
         ctx.append(f"[MEDICATION CONTEXT]\nCurrently taking: {', '.join(meds_current) or 'None stated'}\nConsidering starting: {', '.join(meds_new) or 'None stated'}")
