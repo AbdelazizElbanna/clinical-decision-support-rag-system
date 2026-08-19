@@ -16,7 +16,8 @@ export default function ChatInterface() {
 
 
 
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const isRTL = language === 'ar';
   const [messages, setMessages] = useState(() => {
     try {
       const saved = sessionStorage.getItem('chatMessages');
@@ -431,24 +432,28 @@ export default function ChatInterface() {
             style={{
               position: 'absolute',
               top: '20px',
-              right: '0',
+              right: isRTL ? 'auto' : '0',
+              left: isRTL ? '0' : 'auto',
               zIndex: 10,
               background: 'var(--surface-2)',
               border: '1px solid var(--border)',
-              borderRight: 'none',
+              borderRight: isRTL ? '1px solid var(--border)' : 'none',
+              borderLeft: isRTL ? 'none' : '1px solid var(--border)',
               color: isClearExpanded ? 'var(--error)' : 'var(--text-muted)',
               padding: '8px 12px',
-              borderRadius: '20px 0 0 20px',
+              borderRadius: isRTL ? '0 20px 20px 0' : '20px 0 0 20px',
               display: 'flex',
               alignItems: 'center',
               gap: '8px',
               cursor: 'pointer',
               fontSize: '0.85rem',
               fontWeight: '500',
-              boxShadow: '-4px 4px 12px rgba(0,0,0,0.1)',
+              boxShadow: isRTL ? '4px 4px 12px rgba(0,0,0,0.1)' : '-4px 4px 12px rgba(0,0,0,0.1)',
               transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
               backdropFilter: 'blur(8px)',
-              transform: isClearExpanded ? 'translateX(0)' : 'translateX(calc(100% - 32px))',
+              transform: isClearExpanded 
+                ? 'translateX(0)' 
+                : (isRTL ? 'translateX(calc(-100% + 32px))' : 'translateX(calc(100% - 32px))'),
             }}
           >
             <Trash2 size={16} />
