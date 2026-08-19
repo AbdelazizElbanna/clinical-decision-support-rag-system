@@ -32,7 +32,7 @@ Rules:
 
 JSON Schema:
 {
-  "is_medical_query": "true | false (false for simple greetings/chit-chat like 'hi', 'how are you', 'thanks')",
+  "is_medical_query": "true | false (false ONLY for absolute greetings/chit-chat like 'hi', 'thanks'. ANY question about care, moisturizers, treatments, or symptoms is TRUE, especially if continuing a previous medical topic)",
   "search_query_en": "short English phrase for vector DB search (CRITICAL: DO NOT DELETE ANY SYMPTOMS. TRANSLATE AND KEEP EVERY DETAIL MENTIONED)",
   "condition": "Eczema | Psoriasis | Urticaria | General | Unknown",
   "governorate": "City name in English, or None",
