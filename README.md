@@ -14,24 +14,21 @@
 
 <br />
 
+<div align="center">
+  <video src="media/demo.mp4" width="100%" controls autoplay loop muted>
+    Your browser does not support the video tag.
+  </video>
+</div>
+
+<br />
+
 The Clinical Decision Support RAG System is an advanced medical AI architecture engineered to provide accurate, evidence-based answers to clinical and pharmacological questions. Drawing from a strictly curated knowledge base of Egyptian pharmaceutical data and certified American Academy of Dermatology disease protocols, the system employs rigorous LLM-as-a-judge guardrails to achieve mathematically verified resistance to medical hallucinations and injected noise.
-
----
-
-## Key Features & Clinical Guidelines
-
-*   **Dermatology Protocols (AAD)**: Scraped and structurally normalized treatment paths and differential diagnoses from the American Academy of Dermatology.
-*   **Egyptian Pharmacopeia**: Integrated, heavily cleansed datasets merging multiple Egyptian drug repositories, tracking specific trade names, contraindications, and active ingredients.
-*   **Dual-Domain Knowledge Base**: Independent indexing and retrieval pipelines for Dermatology and Pharmacology to maximize context relevance.
-*   **Zero-Hallucination Guardrails**: Adheres to strict evidence-grounding constraints, achieving a 1.0 (100%) score in Faithfulness and Noise Robustness.
-*   **High-Speed SSE Streaming**: Architected with Server-Sent Events (SSE) to drop perceived latency (Time-To-First-Token) to under 1 second.
-*   **Ground-Truth Citation Tracking**: Automates deep provenance mapping directly from source data to the generated response, delivering transparent evidence URLs to clinicians.
 
 ---
 
 ## High-Level Architecture Summary
 
-The project operates on a specialized multi-stage data pipeline designed to maintain strict boundaries between data processing and real-time inference. 
+The project operates on a specialized multi-stage data pipeline designed to maintain strict boundaries between data processing and real-time inference.
 
 ```text
 [Data Sources: AAD HTML & Drug JSONs]
@@ -56,8 +53,6 @@ all-MiniLM-L6-v2           BAAI/bge-m3
           v
 [React/Vite Frontend: SSE Streaming & Citation UI]
 ```
-
-For a deep dive into the vector DB abstraction layer, GPU error handling strategies, and precise model architectures, please read the [Master Clinical RAG Documentation](./docs/MASTER_CLINICAL_RAG_DOCUMENTATION.md).
 
 ---
 
@@ -96,7 +91,7 @@ npm run dev
 
 ## Comprehensive Master Documentation
 
-All granular evaluation metrics, architecture rationale, iterative engineering logs, and hackathon rubric alignments have been consolidated into a single source of truth.
+For an exhaustive, step-by-step technical breakdown of the ingestion schemas, embedding vector isolation, algorithmic reranker optimization, latency metrics, and 100% Noise Robustness evaluation, please refer to the primary documentation index.
 
 **Read the definitive technical guide here:**
 **[docs/MASTER_CLINICAL_RAG_DOCUMENTATION.md](./docs/MASTER_CLINICAL_RAG_DOCUMENTATION.md)**
