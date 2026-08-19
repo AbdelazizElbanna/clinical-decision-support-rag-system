@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { BookOpen, Database, CheckCircle, Clock, ExternalLink } from 'lucide-react';
+import { BookOpen, Database, CheckCircle, Clock, ExternalLink, Copy } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 
 const SourceCard = function({ source, id }) {
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
   const { t } = useLanguage();
 
   if (!source) return null;
@@ -170,8 +171,35 @@ const SourceCard = function({ source, id }) {
             overflowY: 'auto',
             color: 'var(--text)'
           }}>
-            <div style={{ fontWeight: '700', color: accentColor, marginBottom: '8px', display: 'flex', justifyContent: 'space-between', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
+            <div style={{ fontWeight: '700', color: accentColor, marginBottom: '8px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '1px solid var(--border)', paddingBottom: '8px' }}>
               <span>Raw Vector Content</span>
+              <button 
+                onClick={(e) => {
+                  e.stopPropagation();
+                  navigator.clipboard.writeText(source.content);
+                  setIsCopied(true);
+                  setTimeout(() => setIsCopied(false), 2000);
+                }}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  color: isCopied ? 'var(--success)' : 'var(--text-muted)',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '4px',
+                  fontSize: '0.75rem',
+                  padding: '4px 8px',
+                  borderRadius: '4px',
+                  transition: 'all 0.2s',
+                  backgroundColor: isCopied ? 'rgba(16, 185, 129, 0.1)' : 'transparent'
+                }}
+                onMouseOver={(e) => e.currentTarget.style.backgroundColor = 'var(--surface)'}
+                onMouseOut={(e) => e.currentTarget.style.backgroundColor = isCopied ? 'rgba(16, 185, 129, 0.1)' : 'transparent'}
+              >
+                {isCopied ? <CheckCircle size={14} /> : <Copy size={14} />}
+                {isCopied ? 'Copied' : 'Copy'}
+              </button>
             </div>
             {source.content}
           </div>
