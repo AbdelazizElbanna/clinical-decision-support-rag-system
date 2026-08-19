@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
-import { Sparkles, AlertCircle, User, Mail, Lock, ChevronDown } from 'lucide-react';
+import { Sparkles, AlertCircle, User, Mail, Lock, ChevronDown, Eye, EyeOff } from 'lucide-react';
 
 export default function Register() {
   const [step, setStep] = useState(1); // 1: account info, 2: profile info
@@ -9,6 +9,7 @@ export default function Register() {
     username: '', email: '', password: '', confirmPassword: '',
     age: '', gender: '', notes: ''
   });
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { register } = useAuth();
@@ -81,8 +82,37 @@ export default function Register() {
             <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', fontWeight: '600', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Step 1 — Account Info</p>
             <input name="username" type="text" placeholder="Full Name" value={formData.username} onChange={handleChange} className="auth-input" required />
             <input name="email" type="email" placeholder="Email" value={formData.email} onChange={handleChange} className="auth-input" required />
-            <input name="password" type="password" placeholder="Password (min 6 chars)" value={formData.password} onChange={handleChange} className="auth-input" required />
-            <input name="confirmPassword" type="password" placeholder="Confirm Password" value={formData.confirmPassword} onChange={handleChange} className="auth-input" required />
+            <div style={{ position: 'relative' }}>
+              <input 
+                name="password" 
+                type={showPassword ? "text" : "password"} 
+                placeholder="Password (min 6 chars)" 
+                value={formData.password} 
+                onChange={handleChange} 
+                className="auth-input" 
+                style={{ width: '100%' }}
+                required 
+              />
+              <button 
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: '0' }}
+              >
+                {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+              </button>
+            </div>
+            <div style={{ position: 'relative' }}>
+              <input 
+                name="confirmPassword" 
+                type={showPassword ? "text" : "password"} 
+                placeholder="Confirm Password" 
+                value={formData.confirmPassword} 
+                onChange={handleChange} 
+                className="auth-input" 
+                style={{ width: '100%' }}
+                required 
+              />
+            </div>
             <button type="submit" className="auth-button" style={{ marginTop: '4px' }}>Continue →</button>
           </form>
         )}

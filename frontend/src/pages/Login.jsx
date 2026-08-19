@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate, Link } from 'react-router-dom';
-import { Sparkles, AlertCircle } from 'lucide-react';
+import { Sparkles, AlertCircle, Eye, EyeOff } from 'lucide-react';
 
 export default function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState('');
   const { login } = useAuth();
   const navigate = useNavigate();
@@ -39,7 +40,24 @@ export default function Login() {
 
         <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <input type="email" placeholder="Email Address" value={email} onChange={e => setEmail(e.target.value)} className="auth-input" required />
-          <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} className="auth-input" required />
+          <div style={{ position: 'relative' }}>
+            <input 
+              type={showPassword ? "text" : "password"} 
+              placeholder="Password" 
+              value={password} 
+              onChange={e => setPassword(e.target.value)} 
+              className="auth-input" 
+              style={{ width: '100%' }}
+              required 
+            />
+            <button 
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              style={{ position: 'absolute', right: '12px', top: '50%', transform: 'translateY(-50%)', background: 'none', border: 'none', color: 'var(--text-muted)', cursor: 'pointer', padding: '0' }}
+            >
+              {showPassword ? <EyeOff size={20} /> : <Eye size={20} />}
+            </button>
+          </div>
         </div>
 
         <button type="submit" className="auth-button">Sign In</button>

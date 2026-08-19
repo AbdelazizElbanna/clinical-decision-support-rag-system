@@ -35,6 +35,10 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Evaluation Results
+*_results.json
+traces.json
+
 # Datasets & Vector Indexes (Avoid committing large data dumps to version control)
 data/vectorstores/
 *.sqlite3
