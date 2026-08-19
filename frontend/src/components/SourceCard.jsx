@@ -175,7 +175,7 @@ const SourceCard = function({ source, id }) {
             </div>
             {source.content}
           </div>
-          {source.url && (
+          {source.url && source.type !== 'drugs' && (
             <a 
               href={source.url} 
               target="_blank" 
