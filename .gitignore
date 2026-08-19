@@ -36,9 +36,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # Datasets & Vector Indexes (Avoid committing large data dumps to version control)
-data/raw/
-data/cleaned/
-data/Chunked_Data/
 data/vectorstores/
 *.sqlite3
 *.bin
