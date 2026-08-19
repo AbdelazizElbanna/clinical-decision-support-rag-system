@@ -112,13 +112,35 @@ export default function ChatInterface() {
             chunksUsed: metadata.chunks_used,
             usingMockData: metadata.using_mock_data
           });
-        },
-        (doneData) => {
+          
+          // Add empty message for streaming
           setMessages(prev => [...prev, { 
             role: 'assistant', 
-            content: doneData.answer,
+            content: '',
             sources: latestSources
           }]);
+        },
+        (chunkText) => {
+          setMessages(prev => {
+            const newArray = [...prev];
+            const last = newArray[newArray.length - 1];
+            if (last && last.role === 'assistant') {
+              last.content += chunkText;
+            }
+            return newArray;
+          });
+        },
+        (doneData) => {
+          // Make sure final answer is exact
+          setMessages(prev => {
+            const newArray = [...prev];
+            const last = newArray[newArray.length - 1];
+            if (last && last.role === 'assistant') {
+              last.content = doneData.answer;
+              last.sources = latestSources;
+            }
+            return newArray;
+          });
           
           if (doneData.updated_summary) {
             setChatSummary(doneData.updated_summary);
