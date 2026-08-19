@@ -78,9 +78,11 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
     if not is_medical:
         is_arabic = any('؀' <= c <= 'ۿ' for c in user_query)
         lang_instruction = "Respond ENTIRELY in Arabic (باللغة العربية)." if is_arabic else "Respond ENTIRELY in English."
+        summary_text = f"Previous context: {clinical_summary}\n" if clinical_summary else ""
         prompt = (
-            f"You are MedLens AI, a clinical decision support system. The user sent a conversational message or greeting: '{user_query}'.\n"
-            f"Respond politely and briefly, and ask how you can help them with their skin conditions today.\n"
+            f"You are MedLens AI, a clinical decision support system. The user sent a conversational message, greeting, or thanks: '{user_query}'.\n"
+            f"{summary_text}"
+            f"Respond politely and briefly. If they are thanking you, acknowledge their specific condition if known, and wish them well without asking new questions. If they are just saying hello, ask how you can help with their skin conditions.\n"
             f"MANDATORY LANGUAGE: {lang_instruction}"
         )
         
