@@ -7,7 +7,12 @@
     "capital_en": "Cairo City",
     "lat": 30.0444,
     "lon": 31.2357,
-    "aliases": ["القاهرة", "مصر", "القاهره", "Cairo", "Helwan", "حلوان", "مصر الجديدة", "التجمع", "مدينة نصر", "المعادي", "cairo governorate"]
+    "aliases": [
+      "cairo",
+      "cairo city",
+      "cairo governorate",
+      "helwan"
+    ]
   },
   {
     "id": 2,
@@ -17,7 +22,13 @@
     "capital_en": "Giza City",
     "lat": 30.0131,
     "lon": 31.2089,
-    "aliases": ["الجيزة", "الجيزه", "Giza", "أكتوبر", "6th of October", "الشيخ زايد", "Sheikh Zayed", "الهرم", "الدقي", "المهندسين", "giza governorate"]
+    "aliases": [
+      "6th of october",
+      "giza",
+      "giza city",
+      "giza governorate",
+      "sheikh zayed"
+    ]
   },
   {
     "id": 3,
@@ -27,7 +38,13 @@
     "capital_en": "Alexandria City",
     "lat": 31.2001,
     "lon": 29.9187,
-    "aliases": ["الإسكندرية", "الإسكندريه", "اسكندرية", "اسكندريه", "Alexandria", "Alex", "برج العرب", "الساحل", "سموحة", "سيدي بشر", "alex governorate"]
+    "aliases": [
+      "alex",
+      "alex governorate",
+      "alexandria",
+      "alexandria city",
+      "alexandria governorate"
+    ]
   },
   {
     "id": 4,
@@ -37,7 +54,11 @@
     "capital_en": "Mansoura",
     "lat": 31.0409,
     "lon": 31.3785,
-    "aliases": ["الدقهلية", "الدقهليه", "المنصورة", "المنصوره", "Dakahlia", "Mansoura", "ميت غمر"]
+    "aliases": [
+      "dakahlia",
+      "dakahlia governorate",
+      "mansoura"
+    ]
   },
   {
     "id": 5,
@@ -47,7 +68,11 @@
     "capital_en": "Hurghada",
     "lat": 27.2579,
     "lon": 33.8116,
-    "aliases": ["البحر الأحمر", "البحر الاحمر", "الغردقة", "الغردقه", "Hurghada", "Red Sea", "الجونة", "مرسى علم", "سفاجا"]
+    "aliases": [
+      "hurghada",
+      "red sea",
+      "red sea governorate"
+    ]
   },
   {
     "id": 6,
@@ -57,7 +82,11 @@
     "capital_en": "Damanhour",
     "lat": 31.0361,
     "lon": 30.4695,
-    "aliases": ["البحيرة", "البحيره", "دمنهور", "كفر الدوار", "Beheira", "Damanhour"]
+    "aliases": [
+      "beheira",
+      "beheira governorate",
+      "damanhour"
+    ]
   },
   {
     "id": 7,
@@ -67,7 +96,12 @@
     "capital_en": "Fayoum City",
     "lat": 29.3084,
     "lon": 30.8428,
-    "aliases": ["الفيوم", "Fayoum", "Faiyum", "طامية", "سنورس"]
+    "aliases": [
+      "faiyum",
+      "fayoum",
+      "fayoum city",
+      "fayoum governorate"
+    ]
   },
   {
     "id": 8,
@@ -77,7 +111,12 @@
     "capital_en": "Tanta",
     "lat": 30.7865,
     "lon": 31.0004,
-    "aliases": ["الغربية", "الغربيه", "طنطا", "المحلة الكبرى", "المحلة", "Gharbia", "Tanta", "El Mahalla"]
+    "aliases": [
+      "el mahalla",
+      "gharbia",
+      "gharbia governorate",
+      "tanta"
+    ]
   },
   {
     "id": 9,
@@ -87,7 +126,11 @@
     "capital_en": "Ismailia City",
     "lat": 30.5965,
     "lon": 32.2715,
-    "aliases": ["الإسماعيلية", "الاسماعيلية", "الاسماعيليه", "Ismailia", "فايد", "القنطرة"]
+    "aliases": [
+      "ismailia",
+      "ismailia city",
+      "ismailia governorate"
+    ]
   },
   {
     "id": 10,
@@ -96,8 +139,13 @@
     "capital_ar": "شبين الكوم",
     "capital_en": "Shibin El Kom",
     "lat": 30.5526,
-    "lon": 31.0090,
-    "aliases": ["المنوفية", "المنوفيه", "شبين الكوم", "أشمون", "السادات", "Monufia", "Menofia"]
+    "lon": 31.009,
+    "aliases": [
+      "menofia",
+      "monufia",
+      "monufia governorate",
+      "shibin el kom"
+    ]
   },
   {
     "id": 11,
@@ -107,7 +155,11 @@
     "capital_en": "Minya City",
     "lat": 28.1099,
     "lon": 30.7503,
-    "aliases": ["المنيا", "Minya", "ملوي", "مغاغة", "بني مزار"]
+    "aliases": [
+      "minya",
+      "minya city",
+      "minya governorate"
+    ]
   },
   {
     "id": 12,
@@ -115,9 +167,13 @@
     "governorate_en": "Qalyubia",
     "capital_ar": "بنها",
     "capital_en": "Banha",
-    "lat": 30.4660,
+    "lat": 30.466,
     "lon": 31.1856,
-    "aliases": ["القليوبية", "القليوبيه", "بنها", "شبرا الخيمة", "شبرا", "Qalyubia", "Banha"]
+    "aliases": [
+      "banha",
+      "qalyubia",
+      "qalyubia governorate"
+    ]
   },
   {
     "id": 13,
@@ -127,7 +183,11 @@
     "capital_en": "Kharga",
     "lat": 25.4514,
     "lon": 30.5475,
-    "aliases": ["الوادي الجديد", "الوادى الجديد", "الخارجة", "الداخلة", "الفرافرة", "New Valley", "Kharga"]
+    "aliases": [
+      "kharga",
+      "new valley",
+      "new valley governorate"
+    ]
   },
   {
     "id": 14,
@@ -137,7 +197,12 @@
     "capital_en": "Suez City",
     "lat": 29.9668,
     "lon": 32.5498,
-    "aliases": ["السويس", "Suez", "العين السخنة", "السخنة", "Ain Sokhna"]
+    "aliases": [
+      "ain sokhna",
+      "suez",
+      "suez city",
+      "suez governorate"
+    ]
   },
   {
     "id": 15,
@@ -147,7 +212,11 @@
     "capital_en": "Aswan City",
     "lat": 24.0889,
     "lon": 32.8998,
-    "aliases": ["أسوان", "اسوان", "Aswan", "النوبة", "ابو سمبل", "إدفو", "كوم أمبو"]
+    "aliases": [
+      "aswan",
+      "aswan city",
+      "aswan governorate"
+    ]
   },
   {
     "id": 16,
@@ -157,7 +226,12 @@
     "capital_en": "Asyut City",
     "lat": 27.1809,
     "lon": 31.1837,
-    "aliases": ["أسيوط", "اسيوط", "Asyut", "Assiut", "ديروط", "منفلوط"]
+    "aliases": [
+      "assiut",
+      "asyut",
+      "asyut city",
+      "asyut governorate"
+    ]
   },
   {
     "id": 17,
@@ -167,7 +241,11 @@
     "capital_en": "Beni Suef City",
     "lat": 29.0661,
     "lon": 31.0994,
-    "aliases": ["بني سويف", "بنى سويف", "Beni Suef", "الواسطى", "ببا"]
+    "aliases": [
+      "beni suef",
+      "beni suef city",
+      "beni suef governorate"
+    ]
   },
   {
     "id": 18,
@@ -177,7 +255,11 @@
     "capital_en": "Port Said City",
     "lat": 31.2653,
     "lon": 32.3019,
-    "aliases": ["بورسعيد", "بور سعيد", "Port Said", "بورفؤاد"]
+    "aliases": [
+      "port said",
+      "port said city",
+      "port said governorate"
+    ]
   },
   {
     "id": 19,
@@ -187,7 +269,11 @@
     "capital_en": "Damietta City",
     "lat": 31.4175,
     "lon": 31.8144,
-    "aliases": ["دمياط", "Damietta", "رأس البر", "كفر سعد"]
+    "aliases": [
+      "damietta",
+      "damietta city",
+      "damietta governorate"
+    ]
   },
   {
     "id": 20,
@@ -197,7 +283,11 @@
     "capital_en": "Zagazig",
     "lat": 30.5765,
     "lon": 31.5041,
-    "aliases": ["الشرقية", "الشرقيه", "الزقازيق", "العاشر من رمضان", "بلبيس", "فاقوس", "Sharkia", "Zagazig"]
+    "aliases": [
+      "sharkia",
+      "sharkia governorate",
+      "zagazig"
+    ]
   },
   {
     "id": 21,
@@ -207,7 +297,13 @@
     "capital_en": "El Tor",
     "lat": 27.9158,
     "lon": 34.3299,
-    "aliases": ["جنوب سيناء", "South Sinai", "شرم الشيخ", "شرم", "دهب", "نويبع", "طابا", "طور سيناء", "سانت كاترين", "Sharm El Sheikh", "Dahab"]
+    "aliases": [
+      "dahab",
+      "el tor",
+      "sharm el sheikh",
+      "south sinai",
+      "south sinai governorate"
+    ]
   },
   {
     "id": 22,
@@ -217,7 +313,12 @@
     "capital_en": "Kafr El Sheikh City",
     "lat": 31.1107,
     "lon": 30.9388,
-    "aliases": ["كفر الشيخ", "Kafr El Sheikh", "دسوق", "بلطيم", "كفرالشيخ", "kafr el-sheikh", "kafr el sheikh governorate", "فوه", "مطوبس"]
+    "aliases": [
+      "kafr el sheikh",
+      "kafr el sheikh city",
+      "kafr el sheikh governorate",
+      "kafr el-sheikh"
+    ]
   },
   {
     "id": 23,
@@ -227,7 +328,11 @@
     "capital_en": "Marsa Matruh",
     "lat": 31.3543,
     "lon": 27.2373,
-    "aliases": ["مطروح", "مرسى مطروح", "مرسي مطروح", "Matrouh", "Marsa Matruh", "سيوة", "العلمين", "الضبعة"]
+    "aliases": [
+      "marsa matruh",
+      "matrouh",
+      "matrouh governorate"
+    ]
   },
   {
     "id": 24,
@@ -237,7 +342,11 @@
     "capital_en": "Luxor City",
     "lat": 25.6872,
     "lon": 32.6396,
-    "aliases": ["الأقصر", "الاقصر", "Luxor", "إسنا", "ارمنت"]
+    "aliases": [
+      "luxor",
+      "luxor city",
+      "luxor governorate"
+    ]
   },
   {
     "id": 25,
@@ -246,8 +355,12 @@
     "capital_ar": "قنا",
     "capital_en": "Qena City",
     "lat": 26.1551,
-    "lon": 32.7160,
-    "aliases": ["قنا", "Qena", "نجع حمادي", "دشنا", "قوص"]
+    "lon": 32.716,
+    "aliases": [
+      "qena",
+      "qena city",
+      "qena governorate"
+    ]
   },
   {
     "id": 26,
@@ -257,7 +370,11 @@
     "capital_en": "Arish",
     "lat": 31.1316,
     "lon": 33.7984,
-    "aliases": ["شمال سيناء", "North Sinai", "العريش", "رفح", "الشيخ زويد", "بئر العبد", "Arish"]
+    "aliases": [
+      "arish",
+      "north sinai",
+      "north sinai governorate"
+    ]
   },
   {
     "id": 27,
@@ -267,6 +384,10 @@
     "capital_en": "Sohag City",
     "lat": 26.5569,
     "lon": 31.6948,
-    "aliases": ["سوهاج", "Sohag", "طهطا", "جرجا", "أخميم"]
+    "aliases": [
+      "sohag",
+      "sohag city",
+      "sohag governorate"
+    ]
   }
 ]
