@@ -77,11 +77,20 @@
 
 ## Slide 8: Empirical Evaluation
 **Slide Content (English):**
-- Benchmarked across structured test cases (direct, multi-chunk, out-of-scope).
-- Measuring Retrieval Precision@K and Unsupported Claim Rate.
+- Evaluated on 20 questions across RAGAS, Noise Robustness, and LLM-as-a-Judge.
+- All metrics exceed defined safety thresholds.
+
+| Metric | Result |
+|--------|--------|
+| Faithfulness | **1.0 (100%)** |
+| Noise Robustness | **1.0 (100%)** — 20/20 cases |
+| Context Precision | **1.0 (100%)** |
+| Answer Relevance | **0.834 (83.4%)** |
+| LLM-Judge (Medical Accuracy / Groundedness / Safety / Helpfulness) | **5.0 / 5.0** |
+| Reranker Precision@4 Gain (Disease) | **+8.96%** |
 
 **🗣️ Speaker Script (Mix):**
-"وعلشان نثبت كفاءة السيستم بالأرقام، بنينا Evaluation Script بيختبر الموديل على سيناريوهات مختلفة وبنقيس فيه الـ Precision@K ومعدل الـ Unsupported Claims، وده بيأكد إن السيستم بيحافظ على الـ Safety Thresholds اللي حددناها."
+"وعلشان نثبت كفاءة السيستم بالأرقام الفعلية، شغلنا منظومة Evaluation شاملة على 20 سؤال مختلف. النتائج كانت: **Faithfulness 100%** يعني مفيش حاجة واحدة قالها الموديل من دماغه بدون مصدر. **Noise Robustness 100%** يعني في كل الحالات الـ 20 التي أدخلنا فيها معلومات طبية مفبركة جوه الـ Retrieval، الموديل رفض يستخدمها. **Context Precision 100%**، و**Answer Relevance 83.4%**. وأهم حاجة: الـ LLM-as-a-Judge اللي شغلناه كان بيديه **5 من 5 في Medical Accuracy والـ Safety والـ Groundedness والـ Helpfulness**. ده بيثبت إن السيستم safe ومفيد في نفس الوقت."
 
 ---
 

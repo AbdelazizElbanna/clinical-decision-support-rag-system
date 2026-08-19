@@ -58,6 +58,9 @@ Follow the 3 cases requested in the rubric:
 
 ---
 
+
+---
+
 ## 🎯 Pro-Tips for the Q&A
-*   **If asked about "Evaluation Depth (15%)":** Mention our `llm_judge.py` and `dermatology_ai_test_suite.md`. We actively measure Retrieval Precision and Unsupported Claim Rates.
-*   **If asked about latency:** Explain how our TTS chunking circumvents API delays, making the UX extremely snappy despite heavy backend processing.
+*   **If asked about "Evaluation Depth (15%)":** Quote the actual results: Faithfulness 100%, Noise Robustness 100% (20/20 cases), Context Precision 100%, Answer Relevance 83.4%, Reranker Precision@4 +8.96%, and LLM-Judge scores of 5.0/5.0 across all dimensions. Mention `llm_judge.py` and `dermatology_ai_test_suite.md` as the evaluation framework.
+*   **If asked about latency:** TTFT (Time-to-First-Token) is < 1s via SSE streaming. Full response median is ~15s — normal for RAG with reranking. Emphasize that our Karaoke TTS chunking makes the UX feel instant since it reads while generating.

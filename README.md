@@ -67,14 +67,17 @@ The system was subjected to an aggressive adversarial evaluation suite designed 
 
 | Evaluation Metric | Target Threshold | Measured Result | Operational Status |
 | :--- | :--- | :--- | :--- |
-| **Faithfulness (RAGAS)** | > 0.95 | **1.0 (100%)** | Passed |
-| **Noise Robustness** | > 0.95 | **1.0 (100%)** | Passed |
-| **Hit Rate@10** | > 90.0% | **93.3%** (Disease) / **92.0%** (Drug) | Passed |
-| **MRR@10** | > 0.70 | **0.74** (Disease) / **0.83** (Drug) | Passed |
-| **Answer Relevance** | > 4.0 / 5.0 | **4.8 / 5.0** (LLM Judge) | Passed |
-| **Latency (TTFT)** | < 5s | **< 1s** (SSE Streaming) | Passed |
+| **Faithfulness (RAGAS)** | > 0.95 | **1.0 (100%)** | ✅ Passed |
+| **Noise Robustness** | > 0.95 | **1.0 (100%)** | ✅ Passed |
+| **Context Precision (RAGAS)** | > 0.75 | **1.0 (100%)** | ✅ Passed |
+| **Answer Relevance (RAGAS)** | > 0.80 | **0.834 (83.4%)** | ✅ Passed |
+| **Reranker Precision@4 (Disease)** | Improve baseline | **+8.96% vs baseline** | ✅ Passed |
+| **LLM-as-Judge (Medical Accuracy)** | > 4.0 / 5.0 | **5.0 / 5.0** | ✅ Passed |
+| **LLM-as-Judge (Groundedness)** | > 4.0 / 5.0 | **5.0 / 5.0** | ✅ Passed |
+| **LLM-as-Judge (Safety)** | > 4.0 / 5.0 | **5.0 / 5.0** | ✅ Passed |
+| **Time-To-First-Token (SSE)** | < 1s | **< 1s (SSE streaming)** | ✅ Passed |
 
-> *Note: By achieving 100% Noise Robustness, the system successfully ignored completely plausible but entirely fake medical context injected directly into its retrieval stream, refusing to generate unsupported claims.*
+> *Note: By achieving 100% Noise Robustness across 20 adversarial test cases, the system successfully ignored completely plausible but entirely fabricated medical context injected directly into its retrieval stream, refusing to generate unsupported claims.*
 
 ---
 
