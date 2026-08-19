@@ -25,6 +25,7 @@ B) Update the `clinical_summary` field to reflect ALL known information from BOT
 Rules:
 - Normalize drug names to INN (e.g. 'Zyrtec' -> 'cetirizine')
 - Map location to the exact city name mentioned. Set to 'None' if no location mentioned.
+- Set 'requires_weather' to 'true' if ANY city or location is mentioned, or if the user asks about environmental triggers.
 - The 'clinical_summary' should be a concise string (max 50 words) summarizing: condition, location, symptoms, relevant medications mentioned so far.
 - ALWAYS include BOTH 'diseases' and 'drugs' in collections_to_query if the user asks about treatments, moisturizers, creams, or how to manage a condition.
 - You MUST respond ONLY with a raw JSON object (no markdown, no backticks).
