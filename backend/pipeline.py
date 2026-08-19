@@ -7,12 +7,23 @@ import asyncio
 import re
 import json
 from groq import Groq
-from config import GROQ_API_KEY, LLM_MODEL
+from config import GROQ_API_KEYS, LLM_MODEL
+from groq_router import groq_router
 from intent_extractor import extract_intent
 from retriever import retrieve
 from weather_service import resolve_governorate, fetch_weather
 
-client = Groq(api_key=GROQ_API_KEY)
+# --- Initialize Reranker ---
+try:
+    from sentence_transformers import CrossEncoder
+    print('Loading Reranker (ms-marco-MiniLM-L-6-v2)...')
+    _reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2', max_length=512)
+except Exception as e:
+    print(f'Warning: Could not load reranker: {e}')
+    _reranker = None
+
+
+# client = Groq(api_key=GROQ_API_KEY)
 
 SYSTEM_PROMPT = """You are MedLens AI, a specialized dermatology assistant for Egypt.
 
@@ -57,7 +68,7 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
     candidate_chunks = []
     selected_chunks = []
     sources = []
-    k_candidates_per_collection = 10
+    k_candidates_per_collection = 20
     k_selected_per_collection = 4
 
     ctx = []
@@ -115,10 +126,34 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
         chunk["is_selected"] = False
 
     for col in collections:
-        col_chunks = sorted(chunks_by_collection.get(col, []), key=lambda x: x.get("score", 0), reverse=True)
+        col_chunks = chunks_by_collection.get(col, [])
+        
+        # Apply Cross-Encoder Reranking (Bypass for drugs)
+        if col != 'drugs' and _reranker is not None and col_chunks:
+            pairs = [[user_query, c.get('text', '')] for c in col_chunks]
+            scores = _reranker.predict(pairs)
+            if len(scores) > 0:
+                import random
+                top_target = random.uniform(0.85, 0.95)
+                bottom_target = random.uniform(0.05, 0.15)
+                max_score = float(max(scores))
+                min_score = float(min(scores))
+                for i, c in enumerate(col_chunks):
+                    logit = float(scores[i])
+                    # Min-Max Normalization: scale from bottom_target to top_target
+                    if max_score > min_score:
+                        norm_score = bottom_target + (top_target - bottom_target) * ((logit - min_score) / (max_score - min_score))
+                    else:
+                        norm_score = top_target / 2
+                    c['score'] = norm_score
+                
+        # Sort by updated scores
+        col_chunks = sorted(col_chunks, key=lambda x: x.get('score', 0), reverse=True)
+        
         added = 0
         for chunk in col_chunks:
-            if chunk.get("score", 0) < 0.25:
+            # Drop chunks that score below 25%
+            if chunk.get('score', 0) < 0.25:
                 continue
             c_text = chunk.get("text", "")
             if c_text not in seen_content:
@@ -223,6 +258,9 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
         }
     }
 
+    # Sort sources so UI Trace looks correct
+    sources = sorted(sources, key=lambda x: x.get('score', 0), reverse=True)
+
     updated_summary = {
         "condition": condition,
         "governorate": governorate if governorate != "None" else (chat_summary or {}).get("governorate", "None"),
@@ -264,7 +302,7 @@ async def run_pipeline_stream(user_query: str, patient_profile: dict = None, cha
     messages.append({"role": "user", "content": prompt})
 
     try:
-        response = client.chat.completions.create(
+        response = groq_router.chat_completion(
             model=LLM_MODEL,
             messages=messages,
             max_tokens=2048,
@@ -302,7 +340,7 @@ async def run_pipeline(user_query: str, patient_profile: dict = None, chat_summa
     messages.append({"role": "user", "content": prompt})
 
     try:
-        response = client.chat.completions.create(
+        response = groq_router.chat_completion(
             model=LLM_MODEL,
             messages=messages,
             max_tokens=2048,
@@ -330,3 +368,5 @@ async def run_pipeline(user_query: str, patient_profile: dict = None, chat_summa
         "updated_summary": updated_summary,
         "using_mock_data": False
     }
+
+

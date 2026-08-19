@@ -97,7 +97,7 @@ def retrieve(
 
         res = diseases_col.query(
             query_embeddings=[disease_embedding],
-            n_results=n_per_collection,
+            n_results=20,
             where=filter_meta
         )
         if res["documents"] and res["documents"][0]:
@@ -119,7 +119,7 @@ def retrieve(
 
         res = drugs_col.query(
             query_embeddings=[drug_embedding],
-            n_results=n_per_collection
+            n_results=10
         )
         if res["documents"] and res["documents"][0]:
             for i, doc in enumerate(res["documents"][0]):

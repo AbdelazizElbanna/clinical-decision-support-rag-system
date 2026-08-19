@@ -6,9 +6,10 @@ Now also handles updating the working memory (chat_summary) based on each new qu
 import json
 import re
 from groq import Groq
-from config import GROQ_API_KEY, LLM_MODEL
+from config import GROQ_API_KEYS, LLM_MODEL
+from groq_router import groq_router
 
-client = Groq(api_key=GROQ_API_KEY)
+# client = Groq(api_key=GROQ_API_KEY)
 
 SYSTEM_PROMPT = """You are a medical context extractor for a dermatology RAG system.
 
@@ -32,7 +33,7 @@ Rules:
 JSON Schema:
 {
   "is_medical_query": "true | false (false for simple greetings/chit-chat like 'hi', 'how are you', 'thanks')",
-  "search_query_en": "short English phrase for vector DB search",
+  "search_query_en": "short English phrase for vector DB search (CRITICAL: DO NOT DELETE ANY SYMPTOMS. TRANSLATE AND KEEP EVERY DETAIL MENTIONED)",
   "condition": "Eczema | Psoriasis | Urticaria | General | Unknown",
   "governorate": "City name in English, or None",
   "medications_current": ["list"],
@@ -41,7 +42,16 @@ JSON Schema:
   "intent": ["ENVIRONMENTAL_WEATHER", "DRUG_SAFETY_CHECK", "DRUG_INTERACTION_CHECK", "SYMPTOM_INQUIRY", "GENERAL_CONDITION_INFO", "GREETING"],
   "requires_weather": "true | false",
   "clinical_summary": "Concise merged summary of ALL known context so far"
-}"""
+}
+
+Examples of GOOD search_query_en:
+User: عندي بقع حمرا فيها قشور بتظهر في كوعي ومسببة حكة شديدة بقالها اسبوع
+search_query_en: "red plaques with scales on the elbow causing severe itching for one week" (Kept 'red plaques', 'scales', 'elbow', 'severe itching', 'one week')
+
+User: بنتي عندها حساسية في وشها وبتاخد زيرتيك بس مفيش تحسن
+search_query_en: "facial allergy taking cetirizine with no improvement" (Kept 'facial', 'allergy', 'cetirizine', 'no improvement')
+
+CRITICAL RULE: Never summarize 'search_query_en' to just the disease name. Translate the full symptom profile into English."""
 
 def extract_intent(query: str, chat_summary: dict = None, patient_profile: dict = None) -> dict:
     """Extract structured intent and update working memory."""
@@ -66,7 +76,7 @@ def extract_intent(query: str, chat_summary: dict = None, patient_profile: dict 
     user_message = f"{context_block}\n\nNEW QUERY: {query}" if context_block else query
 
     try:
-        response = client.chat.completions.create(
+        response = groq_router.chat_completion(
             model=LLM_MODEL,
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
@@ -114,3 +124,5 @@ def extract_intent(query: str, chat_summary: dict = None, patient_profile: dict 
         "requires_weather": "false",
         "clinical_summary": prev_summary
     }
+
+
