@@ -4,7 +4,7 @@
   "team": "Team",
   "terms": "Terms of Use",
   "welcome": "Welcome to MedLens AI - your personal dermatology assistant in Egypt. How can I help you understand your skin today?",
-  "input_placeholder": "Ask about skin conditions (e.g. 'Eczema in Aswan')...",
+  "input_placeholder": "Ask about skin conditions...",
   "terms_title": "Terms of Use and Privacy Policy",
   "data_collection_title": "1. Data Collection",
   "data_collection_desc": "Please note that MedLens AI collects and stores your basic data (such as age, gender, medical history) to improve the quality of medical responses.",
