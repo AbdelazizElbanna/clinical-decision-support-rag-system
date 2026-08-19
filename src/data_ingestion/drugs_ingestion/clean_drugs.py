@@ -13,7 +13,9 @@ Example:
 import json
 import re
 import sys
+import argparse
 import logging
+from pathlib import Path
 from typing import Optional
 
 logging.basicConfig(
@@ -346,11 +348,20 @@ def main(input_path: str, output_path: str) -> None:
 # ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print(
-            "Usage: python clean_drugs.py <input_path> <output_path>",
-            file=sys.stderr,
-        )
-        sys.exit(1)
+    PROJECT_ROOT = Path(__file__).resolve().parents[3]
+    RAW_DRUGS_DIR = PROJECT_ROOT / "data" / "raw" / "Drugs"
 
-    main(sys.argv[1], sys.argv[2])
+    parser = argparse.ArgumentParser(description="Cleans the unified Egyptian drug dataset JSON file.")
+    parser.add_argument(
+        "--input", "-i",
+        default=str(RAW_DRUGS_DIR / "unified_egyptian_drugs.json"),
+        help="Path to unified_egyptian_drugs.json"
+    )
+    parser.add_argument(
+        "--output", "-o",
+        default=str(RAW_DRUGS_DIR / "cleaned_drugs.json"),
+        help="Output path for cleaned JSON"
+    )
+    args = parser.parse_args()
+
+    main(args.input, args.output)

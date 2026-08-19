@@ -5,13 +5,11 @@ Smart Merger & Cleaner for Egyptian Drug Datasets:
 
 Cleans & Produces:
 - drugs/unified_egyptian_drugs.json (Cleaned, Deduplicated, Price-free)
-- drugs/unified_egyptian_drugs.csv (Cleaned, Deduplicated, Price-free)
 """
 
 import json
 import re
 import os
-import pandas as pd
 from collections import defaultdict
 
 def canonical_key(s):
@@ -109,11 +107,13 @@ def generate_slug(name):
 
 def run_merge():
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    path1_json = os.path.join(base_dir, "eg-drugs-main", "data", "eg_drugs.json")
-    path2_json = os.path.join(base_dir, "egyptian-drug-database-main", "data", "egyptian-drugs.json")
+    project_root = os.path.abspath(os.path.join(base_dir, "..", "..", ".."))
+    raw_drugs_dir = os.path.join(project_root, "data", "raw", "Drugs")
+    
+    path1_json = os.path.join(raw_drugs_dir, "eg_drugs_raw.json")
+    path2_json = os.path.join(raw_drugs_dir, "egyptian_drugs_raw.json")
 
-    out_json = os.path.join(base_dir, "unified_egyptian_drugs.json")
-    out_csv = os.path.join(base_dir, "unified_egyptian_drugs.csv")
+    out_json = os.path.join(raw_drugs_dir, "unified_egyptian_drugs.json")
 
     print("Loading Dataset 1 (mahmoudfalous/eg-drugs)...")
     with open(path1_json, "r", encoding="utf-8") as f:
@@ -314,42 +314,11 @@ def run_merge():
     with open(out_json, "w", encoding="utf-8") as f:
         json.dump(final_records, f, ensure_ascii=False, indent=2)
 
-    # 6. Write to CSV
-    print(f"Writing clean unified CSV to: {out_csv}")
-    csv_rows = []
-    for r in final_records:
-        sw = r.get("safety_warnings") or {}
-        row = {
-            "slug": r["slug"],
-            "name_en": r["name_en"],
-            "name_ar": r["name_ar"],
-            "active_ingredients": r["active_ingredients"],
-            "drug_class": r["drug_class"],
-            "route": r["route"],
-            "manufacturer": r["manufacturer"],
-            "uses_ar": r["uses_ar"],
-            "uses_en": r["uses_en"],
-            "warning_pregnancy": 1 if sw.get("pregnancy") else 0,
-            "warning_lactation": 1 if sw.get("lactation") else 0,
-            "warning_hypertension": 1 if sw.get("hypertension") else 0,
-            "warning_diabetes": 1 if sw.get("diabetes") else 0,
-            "warning_kidney": 1 if sw.get("kidney") else 0,
-            "warning_liver": 1 if sw.get("liver") else 0,
-            "warning_heart": 1 if sw.get("heart") else 0,
-            "warnings_summary_ar": r["warnings_summary_ar"],
-            "warnings_summary_en": r["warnings_summary_en"],
-            "barcode": r["barcode"],
-            "sources": "|".join(r["sources"])
-        }
-        csv_rows.append(row)
 
-    df_out = pd.DataFrame(csv_rows)
-    df_out.to_csv(out_csv, index=False, encoding="utf-8-sig")
 
     print(f"\n Master Clean Egyptian Drug Database Generated Successfully!")
     print(f"- Total Clean Drugs: {len(final_records)}")
     print(f"- JSON File Size: {os.path.getsize(out_json) / (1024*1024):.2f} MB")
-    print(f"- CSV File Size: {os.path.getsize(out_csv) / (1024*1024):.2f} MB")
 
 if __name__ == "__main__":
     run_merge()

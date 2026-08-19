@@ -190,19 +190,19 @@ def main(input_path: str, output_path: str) -> None:
 # ── 4. Entry point ─────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
-    # Base directory = folder containing this script (works from any working directory)
-    SCRIPT_DIR = Path(__file__).parent.resolve()
+    PROJECT_ROOT = Path(__file__).resolve().parents[3]
+    RAW_DRUGS_DIR = PROJECT_ROOT / "data" / "raw" / "Drugs"
 
     parser = argparse.ArgumentParser(description="Filter Egyptian drugs for skin/allergy domain")
     parser.add_argument(
         "--input",
-        default=str(SCRIPT_DIR / "unified_egyptian_drugs.json"),
-        help="Path to unified_egyptian_drugs.json (default: same folder as script)"
+        default=str(RAW_DRUGS_DIR / "unified_egyptian_drugs.json"),
+        help="Path to unified_egyptian_drugs.json"
     )
     parser.add_argument(
         "--output",
-        default=str(SCRIPT_DIR / "skin_allergy_drugs.json"),
-        help="Output path for filtered JSON (default: same folder as script)"
+        default=str(RAW_DRUGS_DIR / "skin_allergy_drugs.json"),
+        help="Output path for filtered JSON"
     )
     args = parser.parse_args()
     main(args.input, args.output)
