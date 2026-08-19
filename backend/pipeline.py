@@ -35,22 +35,31 @@ Rules:
 - EXTREMELY IMPORTANT: ONLY use information explicitly provided in the context blocks below.
 - UNSUPPORTED INFERENCE IS STRICTLY FORBIDDEN: Just because a source states that Treatment X is a treatment for a condition, you MUST NOT recommend the patient to "consider using Treatment X" unless the source explicitly says "Patients with this specific symptom should use Treatment X". You may only recommend benign self-care (like moisturizing or bathing) if supported. For medical treatments (like Coal Tar, Steroids), only STATE that it is an option mentioned in the guidelines, but DO NOT tell the patient to consider using it.
 - NEVER invent drug names, dosages, water intake amounts, or lifestyle correlations unless they are EXPLICITLY stated in the context.
+- TRADE NAMES: When a drug context block contains a "Drug Name" (trade/brand name), ALWAYS mention it alongside the active ingredient. For example: "CALCIPCORT ointment (Betamethasone + Calcipotriol)" or "DAIVOBET gel (Calcipotriol + Betamethasone)". Do NOT replace trade names with generic names only — patients need to know what to ask for at the pharmacy.
 - If the user asks about a specific drug, dosage, or drug interaction, and the context does not contain the answer, YOU MUST USE THIS EXACT PHRASE: "The retrieved sources do not provide enough information to determine whether this medication is safe for you. A pharmacist or prescribing clinician can check your complete medication list and medical history." (Remember: Unknown ≠ Unsafe). For general questions with no matching context, you can provide general safe advice based on the patient's condition, but state that the sources lack specific details.
 - Cite context sources using EXACTLY the English string [Source N]. DO NOT translate the word "Source" to Arabic (DO NOT write [المصدر N]). This exact English string is required for UI rendering. You MUST append the citation at the end of EVERY sentence or bullet point that uses information from a source, especially in the Practical Recommendations section.
 - Prioritize medical safety.
 
 Formatting Rules (Keep it short and structured):
-Do not write long essays. Always structure your response exactly like this:
-1. Short Answer: Direct response to the core questions.
-2. Evidence: Brief mention of what the sources say.
-3. Practical Recommendations: Bullet points of actionable advice (ONLY benign self-care unless explicitly directed by context). YOU MUST CITE [Source N] for EVERY recommendation bullet point.
-4. Safety & When to seek care: Brief disclaimer.
+Do not write long essays. Always structure your response exactly like this. Use the localized headers based on your response language:
+
+If responding in English:
+1. Short Answer: (Direct response to the core questions)
+2. Evidence: (Brief mention of what the sources say)
+3. Practical Recommendations: (Bullet points of actionable advice. YOU MUST CITE [Source N] for EVERY recommendation bullet point)
+4. Safety & When to seek care: (Brief disclaimer)
+
+If responding in Arabic:
+1. إجابة مختصرة: (Direct response to the core questions)
+2. الأدلة: (Brief mention of what the sources say)
+3. توصيات عملية: (Bullet points of actionable advice. YOU MUST CITE [Source N] for EVERY recommendation bullet point)
+4. الأمان ومراجعة الطبيب: (Brief disclaimer)
 """
 
-async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_summary: dict):
+async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_summary: dict, is_voice: bool = False):
     """Helper to process intent and retrieve context, returning everything needed for generation."""
     patient_profile = patient_profile or {}
-    intent = extract_intent(user_query, chat_summary, patient_profile)
+    intent = extract_intent(user_query, chat_summary, patient_profile, is_voice=is_voice)
     
     is_medical = intent.get("is_medical_query", True)
     if isinstance(is_medical, str):
@@ -277,9 +286,9 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
 
     return prompt, intent, weather_data, gov_record, sources, selected_chunks, pipeline_trace, updated_summary
 
-async def run_pipeline_stream(user_query: str, patient_profile: dict = None, chat_summary: dict = None):
+async def run_pipeline_stream(user_query: str, patient_profile: dict = None, chat_summary: dict = None, is_voice: bool = False):
     prompt, intent, weather_data, gov_record, sources, selected_chunks, pipeline_trace, updated_summary = await _build_response_kwargs(
-        user_query, patient_profile, chat_summary
+        user_query, patient_profile, chat_summary, is_voice=is_voice
     )
 
     # Yield metadata instantly

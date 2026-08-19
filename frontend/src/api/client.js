@@ -35,7 +35,7 @@ export async function getGovernorates() {
   return res.json();
 }
 
-export async function sendQueryStream(query, chatSummary, onMetadata, onChunk, onDone, onError) {
+export async function sendQueryStream(query, chatSummary, isVoice, onMetadata, onChunk, onDone, onError) {
   try {
     const res = await fetch(`${BASE_URL}/api/query/stream`, {
       method: 'POST',
@@ -43,7 +43,7 @@ export async function sendQueryStream(query, chatSummary, onMetadata, onChunk, o
         'Content-Type': 'application/json',
         ...getAuthHeaders()
       },
-      body: JSON.stringify({ query, chat_summary: chatSummary })
+      body: JSON.stringify({ query, chat_summary: chatSummary, is_voice: !!isVoice })
     });
 
     if (!res.ok) {

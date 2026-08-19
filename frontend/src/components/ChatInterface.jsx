@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, AlertCircle, Info, Sparkles, Menu, X, Layers, Activity, Trash2 } from 'lucide-react';
+import { Send, AlertCircle, Info, Sparkles, Menu, X, Layers, Activity, Trash2, Mic, Square } from 'lucide-react';
 import MessageBubble from './MessageBubble';
 import WeatherCard from './WeatherCard';
 import SourceCard from './SourceCard';
@@ -39,6 +39,13 @@ export default function ChatInterface() {
   const [sourceFilter, setSourceFilter] = useState('all'); // 'all' | 'selected' | 'candidate'
   const [isClearExpanded, setIsClearExpanded] = useState(false);
   const [showClearConfirm, setShowClearConfirm] = useState(false);
+
+  // Voice recording state
+  const [isRecording, setIsRecording] = useState(false);
+  const [isTranscribing, setIsTranscribing] = useState(false);
+  const [micError, setMicError] = useState(null);
+  const mediaRecorderRef = useRef(null);
+  const audioChunksRef = useRef([]);
   
   // Working memory - persisted in localStorage
   const [chatSummary, setChatSummary] = useState(() => {
@@ -67,6 +74,7 @@ export default function ChatInterface() {
       setCurrentResult(null);
       sessionStorage.removeItem('chatMessages');
       sessionStorage.removeItem('chatCurrentResult');
+      localStorage.removeItem('chatSummary'); // clear working memory
     };
     window.addEventListener('clear-chat', handleClear);
     return () => window.removeEventListener('clear-chat', handleClear);
@@ -88,6 +96,7 @@ export default function ChatInterface() {
     setCurrentResult(null);
     sessionStorage.removeItem('chatMessages');
     sessionStorage.removeItem('chatCurrentResult');
+    localStorage.removeItem('chatSummary'); // clear working memory
     setIsClearExpanded(false);
     setShowClearConfirm(false);
   };
@@ -142,10 +151,77 @@ export default function ChatInterface() {
     return () => window.removeEventListener('toggle-sidebar', handleToggle);
   }, []);
 
+  // Keep a ref to handleSend so recorder.onstop always calls the latest version
+  const handleSendRef = React.useRef(null);
 
-  const handleSend = async (e) => {
+  // --- Voice recording handlers ---
+  const startRecording = async () => {
+    setMicError(null);
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const mimeType = MediaRecorder.isTypeSupported('audio/webm;codecs=opus')
+        ? 'audio/webm;codecs=opus'
+        : 'audio/webm';
+      const recorder = new MediaRecorder(stream, { mimeType });
+      audioChunksRef.current = [];
+      recorder.ondataavailable = (e) => {
+        if (e.data.size > 0) audioChunksRef.current.push(e.data);
+      };
+      recorder.onstop = async () => {
+        // Stop all mic tracks
+        stream.getTracks().forEach((t) => t.stop());
+        const blob = new Blob(audioChunksRef.current, { type: mimeType });
+        if (blob.size < 1000) return; // too short, ignore
+        setIsTranscribing(true);
+        try {
+          const formData = new FormData();
+          formData.append('file', blob, 'recording.webm');
+          const token = localStorage.getItem('access_token');
+          const res = await fetch('/api/transcribe', {
+            method: 'POST',
+            headers: { Authorization: `Bearer ${token}` },
+            body: formData,
+          });
+          if (!res.ok) throw new Error(`Server error ${res.status}`);
+          const data = await res.json();
+          if (data.text && data.text.trim()) {
+            // Auto-send with is_voice=true so the pipeline knows it's from STT
+            handleSendRef.current?.(null, data.text.trim(), true);
+          }
+        } catch (err) {
+          console.error('Transcription error:', err);
+          setMicError(t('mic_error_transcribe') || 'Transcription failed. Please try again.');
+        } finally {
+          setIsTranscribing(false);
+        }
+      };
+      mediaRecorderRef.current = recorder;
+      recorder.start();
+      setIsRecording(true);
+    } catch (err) {
+      if (err.name === 'NotAllowedError') {
+        setMicError(t('mic_error_permission') || 'Microphone access denied. Please allow mic access in your browser.');
+      } else if (err.name === 'NotFoundError') {
+        setMicError(t('mic_error_not_found') || 'No microphone found.');
+      } else {
+        setMicError(t('mic_error_generic') || 'Could not start recording.');
+      }
+    }
+  };
+
+  const stopRecording = () => {
+    if (mediaRecorderRef.current && mediaRecorderRef.current.state !== 'inactive') {
+      mediaRecorderRef.current.stop();
+    }
+    setIsRecording(false);
+  };
+
+
+  const handleSend = async (e, directQuery = null, isVoice = false) => {
     e?.preventDefault();
-    if (!input.trim() || isLoading) return;
+    const userQuery = directQuery ?? input.trim();
+    if (!userQuery || isLoading) return;
+    if (!directQuery) setInput('');
 
     // Guard: must be logged in and accepted terms
     if (!user) {
@@ -163,18 +239,19 @@ export default function ChatInterface() {
       return;
     }
 
-    const userQuery = input.trim();
-    setInput('');
+    const q = directQuery ?? input.trim();
+    if (!directQuery) setInput('');
     
-    setMessages(prev => [...prev, { role: 'user', content: userQuery }]);
+    setMessages(prev => [...prev, { role: 'user', content: q }]);
     setIsLoading(true);
     setCurrentResult(null);
 
     try {
       let latestSources = [];
       await sendQueryStream(
-        userQuery, 
+        q,
         chatSummary,
+        isVoice,
         (metadata) => {
           latestSources = metadata.sources;
           setCurrentResult({
@@ -240,6 +317,9 @@ export default function ChatInterface() {
       setIsLoading(false);
     }
   };
+
+  // Always keep ref pointing to latest handleSend
+  handleSendRef.current = handleSend;
 
   return (
     <div className="layout-container" style={{ height: "100%", minHeight: 0 }}>
@@ -576,6 +656,28 @@ export default function ChatInterface() {
 
         {/* Input Area */}
         <div className="input-padding" style={{ padding: '16px 40px 24px' }}>
+          {/* Mic permission/transcribe error */}
+          {micError && (
+            <div style={{
+              marginBottom: '8px',
+              padding: '8px 14px',
+              borderRadius: '12px',
+              background: 'rgba(239,68,68,0.1)',
+              border: '1px solid rgba(239,68,68,0.25)',
+              color: 'var(--error)',
+              fontSize: '0.85rem',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+            }}>
+              <AlertCircle size={14} />
+              {micError}
+              <button
+                onClick={() => setMicError(null)}
+                style={{ marginLeft: 'auto', background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', padding: '0 4px' }}
+              >✕</button>
+            </div>
+          )}
           <form className="glass" onSubmit={handleSend} style={{ display: 'flex', gap: '12px', alignItems: 'flex-end', position: 'relative', borderRadius: '24px', padding: '6px 8px' }}>
             <div style={{ flex: 1, position: 'relative' }}>
               <textarea
@@ -583,12 +685,12 @@ export default function ChatInterface() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={handleKeyDown}
-                placeholder={t('input_placeholder')}
+                placeholder={isRecording ? (t('recording_placeholder') || '🔴 Recording… click ■ to stop') : t('input_placeholder')}
                 rows={1}
                 style={{
                   width: '100%',
                   padding: '16px 20px',
-                  paddingRight: '60px',
+                  paddingRight: '110px',
                   borderRadius: '20px',
                   border: 'none',
                   background: 'transparent',
@@ -603,6 +705,39 @@ export default function ChatInterface() {
                   boxSizing: 'border-box'
                 }}
               />
+              {/* Mic button — absolute, left of send */}
+              <button
+                type="button"
+                onClick={isRecording ? stopRecording : startRecording}
+                disabled={isTranscribing || isLoading}
+                title={isRecording ? (t('stop_recording') || 'Stop recording') : (t('start_recording') || 'Speak')}
+                style={{
+                  position: 'absolute',
+                  right: '54px',
+                  bottom: '4px',
+                  background: isRecording
+                    ? 'linear-gradient(135deg, #ef4444, #dc2626)'
+                    : 'var(--surface-2)',
+                  color: isRecording ? '#fff' : isTranscribing ? 'var(--primary)' : 'var(--text-muted)',
+                  border: isRecording ? 'none' : '1px solid var(--border)',
+                  padding: '12px',
+                  borderRadius: '16px',
+                  cursor: isTranscribing || isLoading ? 'default' : 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transition: 'all 0.3s ease',
+                  animation: isRecording ? 'pulse-mic 1.5s ease-in-out infinite' : 'none',
+                  boxShadow: isRecording ? '0 4px 12px rgba(239,68,68,0.35)' : 'none',
+                }}
+              >
+                {isTranscribing
+                  ? <span style={{ width: 18, height: 18, border: '2px solid var(--primary)', borderTopColor: 'transparent', borderRadius: '50%', display: 'inline-block', animation: 'spin 0.7s linear infinite' }} />
+                  : isRecording
+                    ? <Square size={18} />
+                    : <Mic size={18} />}
+              </button>
+              {/* Send button */}
               <button
                 type="submit"
                 disabled={!input.trim() || isLoading}
@@ -627,6 +762,15 @@ export default function ChatInterface() {
               </button>
             </div>
           </form>
+          <style>{`
+            @keyframes pulse-mic {
+              0%, 100% { box-shadow: 0 4px 12px rgba(239,68,68,0.35); }
+              50% { box-shadow: 0 4px 24px rgba(239,68,68,0.65); }
+            }
+            @keyframes spin {
+              to { transform: rotate(360deg); }
+            }
+          `}</style>
         </div>
       </main>
     </div>

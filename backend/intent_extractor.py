@@ -30,6 +30,17 @@ Rules:
 - ALWAYS include BOTH 'diseases' and 'drugs' in collections_to_query if the user asks about treatments, moisturizers, creams, or how to manage a condition.
 - You MUST respond ONLY with a raw JSON object (no markdown, no backticks).
 
+CONDITION RE-EVALUATION RULE (CRITICAL):
+- If a KNOWN CONDITION is provided from previous context, use it as a prior — but OVERRIDE it if the new query contains symptoms that clearly contradict it.
+- Always let the CURRENT SYMPTOMS take priority over the stored condition.
+- Example: if stored condition is "Eczema" but user now describes "well-defined silvery plaques on knees/elbows", the correct answer is "Psoriasis", not "Eczema".
+
+CLINICAL DIFFERENTIATORS to help you choose the correct condition:
+- Psoriasis: well-defined, thickened plaques with SILVERY or white scales; typically on knees, elbows, scalp, lower back; non-weeping; chronic.
+- Eczema (Atopic Dermatitis): poorly-defined, red, weeping or lichenified lesions; typically in flexural areas (inner elbow, behind knees, neck); intense itch; often with personal/family history of atopy.
+- Urticaria: raised wheals/hives, transient (hours), severe itch, angioedema possible; no scales.
+- General: when the query is about general skin care, drug safety, or the condition cannot be clearly mapped to the above.
+
 JSON Schema:
 {
   "is_medical_query": "true | false (false ONLY for absolute greetings/chit-chat like 'hi', 'thanks'. ANY question about care, moisturizers, treatments, or symptoms is TRUE, especially if continuing a previous medical topic)",
@@ -53,7 +64,7 @@ search_query_en: "facial allergy taking cetirizine with no improvement" (Kept 'f
 
 CRITICAL RULE: Never summarize 'search_query_en' to just the disease name. Translate the full symptom profile into English."""
 
-def extract_intent(query: str, chat_summary: dict = None, patient_profile: dict = None) -> dict:
+def extract_intent(query: str, chat_summary: dict = None, patient_profile: dict = None, is_voice: bool = False) -> dict:
     """Extract structured intent and update working memory."""
 
     # Build context for the extractor
@@ -73,7 +84,18 @@ def extract_intent(query: str, chat_summary: dict = None, patient_profile: dict 
         context_parts.append(f"KNOWN LOCATION SO FAR: {chat_summary['governorate']}")
 
     context_block = "\n".join(context_parts)
-    user_message = f"{context_block}\n\nNEW QUERY: {query}" if context_block else query
+
+    # STT hint: prepend when query came from voice transcription
+    stt_hint = ""
+    if is_voice:
+        stt_hint = (
+            "[STT INPUT] This query was transcribed from voice by a speech-to-text model. "
+            "Some words may be misrecognized — especially medical terms, drug names, or Arabic dialect words. "
+            "Use surrounding context and medical knowledge to infer the most plausible meaning. "
+            "Do NOT penalize misspellings of medical terms; treat them as phonetic approximations.\n\n"
+        )
+
+    user_message = f"{context_block}\n\n{stt_hint}NEW QUERY: {query}" if context_block else f"{stt_hint}NEW QUERY: {query}"
 
     try:
         response = groq_router.chat_completion(
