@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, AlertCircle, Info, Sparkles, Menu, X, Layers, Activity } from 'lucide-react';
+import { Send, AlertCircle, Info, Sparkles, Menu, X, Layers, Activity, Trash2 } from 'lucide-react';
 import MessageBubble from './MessageBubble';
 import WeatherCard from './WeatherCard';
 import SourceCard from './SourceCard';
@@ -68,6 +68,16 @@ export default function ChatInterface() {
     window.addEventListener('clear-chat', handleClear);
     return () => window.removeEventListener('clear-chat', handleClear);
   }, [t]);
+
+  const handleManualClear = () => {
+    if (window.confirm(t('confirm_clear') || 'Are you sure you want to clear the chat?')) {
+      setMessages([{ role: 'assistant', content: t('welcome') }]);
+      setChatSummary(null);
+      setCurrentResult(null);
+      sessionStorage.removeItem('chatMessages');
+      sessionStorage.removeItem('chatCurrentResult');
+    }
+  };
 
   // Persist messages
   useEffect(() => {
@@ -399,8 +409,38 @@ export default function ChatInterface() {
       {/* Main Chat Area */}
       <main className="main-chat" style={{ position: 'relative' }}>
         
-        {/* Floating Context Toggle for Mobile */}
-        
+        {/* Floating Clear Button */}
+        {messages.length > 1 && (
+          <button
+            onClick={handleManualClear}
+            title={t('clear_chat')}
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '20px',
+              zIndex: 10,
+              background: 'var(--surface-2)',
+              border: '1px solid var(--border)',
+              color: 'var(--text-muted)',
+              padding: '8px 12px',
+              borderRadius: '20px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '6px',
+              cursor: 'pointer',
+              fontSize: '0.8rem',
+              fontWeight: '500',
+              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+              transition: 'all 0.2s ease',
+              backdropFilter: 'blur(8px)'
+            }}
+            onMouseOver={(e) => { e.currentTarget.style.color = 'var(--error)'; e.currentTarget.style.borderColor = 'var(--error)'; }}
+            onMouseOut={(e) => { e.currentTarget.style.color = 'var(--text-muted)'; e.currentTarget.style.borderColor = 'var(--border)'; }}
+          >
+            <Trash2 size={16} />
+            <span className="hide-on-mobile">{t('clear_chat')}</span>
+          </button>
+        )}
 
 
         <div className="chat-padding" style={{ flex: 1, overflowY: 'auto', padding: '32px 40px', display: 'flex', flexDirection: 'column' }}>

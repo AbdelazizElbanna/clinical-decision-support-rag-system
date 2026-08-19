@@ -124,5 +124,7 @@
   "terms_liability_title": "4. Limitation of Liability",
   "terms_liability_desc": "MedLens AI and its creators are not liable for any direct or indirect damages resulting from the use of this tool. Your health decisions remain your responsibility.",
   "hero_subtitle": "Your AI companion for dermatology and skin health in Egypt.",
-  "hero_doctor_only": "Not a replacement for professional medical advice."
+  "hero_doctor_only": "Not a replacement for professional medical advice.",
+  "clear_chat": "Clear Chat",
+  "confirm_clear": "Are you sure you want to clear the chat?"
 }
