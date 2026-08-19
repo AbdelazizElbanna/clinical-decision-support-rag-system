@@ -1,4 +1,4 @@
-﻿"""
+"""
 ChromaDB retriever with dual-model lazy encoding.
 
 Diseases collection: all-MiniLM-L6-v2 (384 dims)
@@ -12,6 +12,7 @@ from config import (
     CHROMA_DISEASES_DIR, CHROMA_DRUGS_DIR,
     DISEASES_COLLECTION, DRUGS_COLLECTION
 )
+from device_utils import get_device
 
 # Separate model configs per collection
 DISEASES_EMBEDDING_MODEL = "all-MiniLM-L6-v2"
@@ -27,7 +28,7 @@ def _get_disease_model():
     global _model_diseases
     if _model_diseases is None:
         print("Loading disease embedding model (all-MiniLM-L6-v2)...")
-        _model_diseases = SentenceTransformer(DISEASES_EMBEDDING_MODEL)
+        _model_diseases = SentenceTransformer(DISEASES_EMBEDDING_MODEL, device=get_device(), model_kwargs={"use_safetensors": True})
     return _model_diseases
 
 
@@ -35,7 +36,7 @@ def _get_drug_model():
     global _model_drugs
     if _model_drugs is None:
         print("Loading drug embedding model (BAAI/bge-m3)...")
-        _model_drugs = SentenceTransformer(DRUGS_EMBEDDING_MODEL)
+        _model_drugs = SentenceTransformer(DRUGS_EMBEDDING_MODEL, device=get_device(), model_kwargs={"use_safetensors": True})
     return _model_drugs
 
 

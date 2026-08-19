@@ -12,12 +12,13 @@ from groq_router import groq_router
 from intent_extractor import extract_intent
 from retriever import retrieve
 from weather_service import resolve_governorate, fetch_weather
+from device_utils import get_device
 
 # --- Initialize Reranker ---
 try:
     from sentence_transformers import CrossEncoder
     print('Loading Reranker (ms-marco-MiniLM-L-6-v2)...')
-    _reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2', max_length=512)
+    _reranker = CrossEncoder('cross-encoder/ms-marco-MiniLM-L-6-v2', max_length=512, device=get_device(), model_kwargs={"use_safetensors": True})
 except Exception as e:
     print(f'Warning: Could not load reranker: {e}')
     _reranker = None
