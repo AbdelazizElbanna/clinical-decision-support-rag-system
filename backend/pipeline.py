@@ -131,7 +131,8 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
         
         # Apply Cross-Encoder Reranking (Bypass for drugs)
         if col != 'drugs' and _reranker is not None and col_chunks:
-            pairs = [[user_query, c.get('text', '')] for c in col_chunks]
+            search_query_en = intent.get("search_query_en", user_query)
+            pairs = [[search_query_en, c.get('text', '')] for c in col_chunks]
             scores = _reranker.predict(pairs)
             if len(scores) > 0:
                 import math
