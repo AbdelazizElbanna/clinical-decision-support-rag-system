@@ -17,12 +17,22 @@ export default function ChatInterface() {
 
 
   const { t } = useLanguage();
-  const [messages, setMessages] = useState([
-    { role: 'assistant', content: t('welcome') }
-  ]);
+  const [messages, setMessages] = useState(() => {
+    try {
+      const saved = sessionStorage.getItem('chatMessages');
+      if (saved) return JSON.parse(saved);
+    } catch (e) {}
+    return [{ role: 'assistant', content: t('welcome') }];
+  });
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
-  const [currentResult, setCurrentResult] = useState(null);
+  const [currentResult, setCurrentResult] = useState(() => {
+    try {
+      const saved = sessionStorage.getItem('chatCurrentResult');
+      if (saved) return JSON.parse(saved);
+    } catch (e) {}
+    return null;
+  });
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('context'); // 'context' | 'trace'
   const [sourceFilter, setSourceFilter] = useState('all'); // 'all' | 'selected' | 'candidate'
@@ -49,13 +59,37 @@ export default function ChatInterface() {
   // Listen for clear-chat events (e.g. on logout)
   useEffect(() => {
     const handleClear = () => {
-      setMessages([]);
+      setMessages([{ role: 'assistant', content: t('welcome') }]);
       setChatSummary(null);
       setCurrentResult(null);
+      sessionStorage.removeItem('chatMessages');
+      sessionStorage.removeItem('chatCurrentResult');
     };
     window.addEventListener('clear-chat', handleClear);
     return () => window.removeEventListener('clear-chat', handleClear);
-  }, []);
+  }, [t]);
+
+  // Persist messages
+  useEffect(() => {
+    try {
+      if (messages.length > 1) {
+        sessionStorage.setItem('chatMessages', JSON.stringify(messages));
+      } else {
+        sessionStorage.removeItem('chatMessages');
+      }
+    } catch (e) {}
+  }, [messages]);
+
+  // Persist currentResult
+  useEffect(() => {
+    try {
+      if (currentResult) {
+        sessionStorage.setItem('chatCurrentResult', JSON.stringify(currentResult));
+      } else {
+        sessionStorage.removeItem('chatCurrentResult');
+      }
+    } catch (e) {}
+  }, [currentResult]);
 
   const messagesEndRef = useRef(null);
   
