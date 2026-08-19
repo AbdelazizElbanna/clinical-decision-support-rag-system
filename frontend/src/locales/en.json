@@ -126,5 +126,7 @@
   "hero_subtitle": "Your AI companion for dermatology and skin health in Egypt.",
   "hero_doctor_only": "Not a replacement for professional medical advice.",
   "clear_chat": "Clear Chat",
-  "confirm_clear": "Are you sure you want to clear the chat?"
+  "confirm_clear": "Are you sure you want to clear the chat?",
+  "cancel": "Cancel",
+  "clear": "Clear"
 }

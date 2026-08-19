@@ -36,6 +36,8 @@ export default function ChatInterface() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('context'); // 'context' | 'trace'
   const [sourceFilter, setSourceFilter] = useState('all'); // 'all' | 'selected' | 'candidate'
+  const [isClearExpanded, setIsClearExpanded] = useState(false);
+  const [showClearConfirm, setShowClearConfirm] = useState(false);
   
   // Working memory - persisted in localStorage
   const [chatSummary, setChatSummary] = useState(() => {
@@ -69,14 +71,24 @@ export default function ChatInterface() {
     return () => window.removeEventListener('clear-chat', handleClear);
   }, [t]);
 
-  const handleManualClear = () => {
-    if (window.confirm(t('confirm_clear') || 'Are you sure you want to clear the chat?')) {
-      setMessages([{ role: 'assistant', content: t('welcome') }]);
-      setChatSummary(null);
-      setCurrentResult(null);
-      sessionStorage.removeItem('chatMessages');
-      sessionStorage.removeItem('chatCurrentResult');
+  const handleManualClear = (e) => {
+    if (!isClearExpanded) {
+      e.preventDefault();
+      setIsClearExpanded(true);
+    } else {
+      e.preventDefault();
+      setShowClearConfirm(true);
     }
+  };
+
+  const confirmClearChat = () => {
+    setMessages([{ role: 'assistant', content: t('welcome') }]);
+    setChatSummary(null);
+    setCurrentResult(null);
+    sessionStorage.removeItem('chatMessages');
+    sessionStorage.removeItem('chatCurrentResult');
+    setIsClearExpanded(false);
+    setShowClearConfirm(false);
   };
 
   // Persist messages
@@ -413,33 +425,116 @@ export default function ChatInterface() {
         {messages.length > 1 && (
           <button
             onClick={handleManualClear}
+            onMouseEnter={() => setIsClearExpanded(true)}
+            onMouseLeave={() => setIsClearExpanded(false)}
             title={t('clear_chat')}
             style={{
               position: 'absolute',
               top: '20px',
-              right: '20px',
+              right: '0',
               zIndex: 10,
               background: 'var(--surface-2)',
               border: '1px solid var(--border)',
-              color: 'var(--text-muted)',
+              borderRight: 'none',
+              color: isClearExpanded ? 'var(--error)' : 'var(--text-muted)',
               padding: '8px 12px',
-              borderRadius: '20px',
+              borderRadius: '20px 0 0 20px',
               display: 'flex',
               alignItems: 'center',
-              gap: '6px',
+              gap: '8px',
               cursor: 'pointer',
-              fontSize: '0.8rem',
+              fontSize: '0.85rem',
               fontWeight: '500',
-              boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-              transition: 'all 0.2s ease',
-              backdropFilter: 'blur(8px)'
+              boxShadow: '-4px 4px 12px rgba(0,0,0,0.1)',
+              transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+              backdropFilter: 'blur(8px)',
+              transform: isClearExpanded ? 'translateX(0)' : 'translateX(calc(100% - 32px))',
             }}
-            onMouseOver={(e) => { e.currentTarget.style.color = 'var(--error)'; e.currentTarget.style.borderColor = 'var(--error)'; }}
-            onMouseOut={(e) => { e.currentTarget.style.color = 'var(--text-muted)'; e.currentTarget.style.borderColor = 'var(--border)'; }}
           >
             <Trash2 size={16} />
             <span className="hide-on-mobile">{t('clear_chat')}</span>
           </button>
+        )}
+
+        {/* Custom Confirmation Modal */}
+        {showClearConfirm && (
+          <div style={{
+            position: 'absolute',
+            top: 0, left: 0, right: 0, bottom: 0,
+            background: 'rgba(0,0,0,0.6)',
+            backdropFilter: 'blur(4px)',
+            zIndex: 100,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '20px',
+            animation: 'fadeIn 0.2s ease'
+          }}>
+            <div className="glass" style={{
+              background: 'var(--surface-1)',
+              padding: '24px',
+              borderRadius: '24px',
+              maxWidth: '320px',
+              width: '100%',
+              boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
+              textAlign: 'center',
+              border: '1px solid var(--border)',
+              animation: 'slideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1)'
+            }}>
+              <div style={{
+                background: 'rgba(239, 68, 68, 0.1)',
+                width: '64px', height: '64px',
+                borderRadius: '50%',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                margin: '0 auto 16px auto'
+              }}>
+                <Trash2 size={32} color="var(--error)" />
+              </div>
+              <h3 style={{ marginBottom: '12px', color: 'var(--text)', fontSize: '1.2rem' }}>{t('clear_chat')}</h3>
+              <p style={{ color: 'var(--text-muted)', marginBottom: '24px', fontSize: '0.95rem', lineHeight: '1.5' }}>
+                {t('confirm_clear')}
+              </p>
+              <div style={{ display: 'flex', gap: '12px' }}>
+                <button
+                  onClick={() => setShowClearConfirm(false)}
+                  style={{
+                    flex: 1,
+                    padding: '12px',
+                    borderRadius: '12px',
+                    border: '1px solid var(--border)',
+                    background: 'var(--surface-2)',
+                    color: 'var(--text)',
+                    cursor: 'pointer',
+                    fontWeight: '600',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseOver={(e) => e.target.style.background = 'var(--surface-3)'}
+                  onMouseOut={(e) => e.target.style.background = 'var(--surface-2)'}
+                >
+                  {t('cancel') || 'Cancel'}
+                </button>
+                <button
+                  onClick={confirmClearChat}
+                  style={{
+                    flex: 1,
+                    padding: '12px',
+                    borderRadius: '12px',
+                    border: 'none',
+                    background: 'var(--error)',
+                    color: '#fff',
+                    cursor: 'pointer',
+                    fontWeight: '600',
+                    transition: 'all 0.2s ease',
+                    boxShadow: '0 4px 12px rgba(239, 68, 68, 0.2)'
+                  }}
+                  onMouseOver={(e) => { e.target.style.transform = 'translateY(-1px)'; e.target.style.boxShadow = '0 6px 16px rgba(239, 68, 68, 0.3)'; }}
+                  onMouseOut={(e) => { e.target.style.transform = 'translateY(0)'; e.target.style.boxShadow = '0 4px 12px rgba(239, 68, 68, 0.2)'; }}
+                >
+                  {t('clear') || 'Clear'}
+                </button>
+              </div>
+            </div>
+          </div>
         )}
 
 
