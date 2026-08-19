@@ -21,9 +21,9 @@ Usage:
     python convert_disease_html_to_json.py --input page.html --output out/
 
     # Convert all HTML files in a directory
-    python convert_disease_html_to_json.py --input data/raw/diseases/Eczema/ --output data/cleaned/diseases/Eczema/
+    python convert_disease_html_to_json.py --input data/raw/diseases/Eczema/ --output data/raw/diseases/Eczema/
 
-    # Using project defaults (data/raw/diseases → data/cleaned/diseases)
+    # Using project defaults (data/raw/diseases → data/raw/diseases)
     python convert_disease_html_to_json.py
 
 Dependencies:
@@ -70,7 +70,7 @@ logger = logging.getLogger(__name__)
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
 DEFAULT_INPUT = PROJECT_ROOT / "data" / "raw" / "diseases"
-DEFAULT_OUTPUT = PROJECT_ROOT / "data" / "cleaned" / "diseases"
+DEFAULT_OUTPUT = PROJECT_ROOT / "data" / "raw" / "diseases"
 
 # HTML parser preference (lxml is faster and more forgiving)
 try:
@@ -598,8 +598,7 @@ def find_html_files(input_path: Path) -> list[Path]:
     Find HTML files at the given path.
 
     If input_path is a file, return it as a single-item list.
-    If input_path is a directory, find all .html files recursively,
-    but skip any files inside /json/ subdirectories.
+    If input_path is a directory, find all .html files recursively.
     """
     if input_path.is_file():
         if input_path.suffix.lower() in (".html", ".htm"):
@@ -611,15 +610,10 @@ def find_html_files(input_path: Path) -> list[Path]:
     if input_path.is_dir():
         html_files = []
         for html_file in sorted(input_path.rglob("*.html")):
-            # Skip files inside json/ subdirectories
-            if "json" in html_file.parts:
-                continue
             html_files.append(html_file)
 
         # Also check for .htm extension
         for htm_file in sorted(input_path.rglob("*.htm")):
-            if "json" in htm_file.parts:
-                continue
             if htm_file not in html_files:
                 html_files.append(htm_file)
 
@@ -720,7 +714,7 @@ def main() -> None:
         epilog=(
             "Examples:\n"
             "  %(prog)s --input page.html --output output/\n"
-            "  %(prog)s --input data/raw/diseases/ --output data/cleaned/diseases/\n"
+            "  %(prog)s --input data/raw/diseases/ --output data/raw/diseases/\n"
             "  %(prog)s   (uses project defaults)\n"
         ),
     )

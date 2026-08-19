@@ -11,7 +11,7 @@ Usage:
     python chunk_urticaria.py --input <path> --output <path>
 
 Defaults:
-    input:  data/cleaned/diseases/Urticaria_hives/json/urticaria_hives.json
+    input:  data/raw/diseases/Urticaria_hives/urticaria_hives.json
     output: data/Chunked_Data/diseases_chunked/urticaria_hives_chunked.json
 """
 
@@ -49,10 +49,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_INPUT = (
     PROJECT_ROOT
     / "data"
-    / "cleaned"
+    / "raw"
     / "diseases"
     / "Urticaria_hives"
-    / "json"
     / "urticaria_hives.json"
 )
 

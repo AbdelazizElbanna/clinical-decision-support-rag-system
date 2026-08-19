@@ -11,7 +11,7 @@ Usage:
     python chunk_eczema.py --input <path> --output <path>
 
 Defaults:
-    input:  data/cleaned/diseases/Eczema Atopic Dermatitis/json/eczema_atopic_dermatitis.json
+    input:  data/raw/diseases/Eczema Atopic Dermatitis/eczema_atopic_dermatitis.json
     output: data/Chunked_Data/diseases_chunked/eczema_atopic_dermatitis_chunked.json
 """
 
@@ -50,10 +50,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_INPUT = (
     PROJECT_ROOT
     / "data"
-    / "cleaned"
+    / "raw"
     / "diseases"
     / "Eczema Atopic Dermatitis"
-    / "json"
     / "eczema_atopic_dermatitis.json"
 )
 

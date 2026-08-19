@@ -11,7 +11,7 @@ Usage:
     python chunk_psoriasis.py --input <path> --output <path>
 
 Defaults:
-    input:  data/cleaned/diseases/Psoriasis/json/psoriasis.json
+    input:  data/raw/diseases/Psoriasis/psoriasis.json
     output: data/Chunked_Data/diseases_chunked/psoriasis_chunked.json
 """
 
@@ -49,10 +49,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[3]
 DEFAULT_INPUT = (
     PROJECT_ROOT
     / "data"
-    / "cleaned"
+    / "raw"
     / "diseases"
     / "Psoriasis"
-    / "json"
     / "psoriasis.json"
 )
 
