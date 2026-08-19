@@ -76,7 +76,7 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
     
     # Fast path for non-medical queries (greetings, chit-chat)
     if not is_medical:
-        is_arabic = any('؀' <= c <= 'ۿ' for c in user_query)
+        is_arabic = bool(re.search(r'[\u0621-\u064A]', user_query))
         lang_instruction = "Respond ENTIRELY in Arabic (باللغة العربية)." if is_arabic else "Respond ENTIRELY in English."
         summary_text = f"Previous context: {clinical_summary}\n" if clinical_summary else ""
         prompt = (
@@ -205,7 +205,7 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
 
     full_context = "\n\n".join(ctx)
 
-    is_arabic = any('؀' <= c <= 'ۿ' for c in user_query)
+    is_arabic = bool(re.search(r'[\u0621-\u064A]', user_query))
     lang_instruction = "Respond ENTIRELY in Arabic (باللغة العربية)." if is_arabic else "Respond ENTIRELY in English."
 
     prompt = f"{full_context}\n\n[PATIENT QUERY]\n{user_query}\n\nBased ONLY on the context above, give a clinically helpful, grounded response.\nMANDATORY LANGUAGE: {lang_instruction}"
