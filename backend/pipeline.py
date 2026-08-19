@@ -134,19 +134,18 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
             pairs = [[user_query, c.get('text', '')] for c in col_chunks]
             scores = _reranker.predict(pairs)
             if len(scores) > 0:
-                import random
-                top_target = random.uniform(0.85, 0.95)
-                bottom_target = random.uniform(0.05, 0.15)
+                top_target = 0.95
+                bottom_target = 0.20
                 max_score = float(max(scores))
                 min_score = float(min(scores))
                 for i, c in enumerate(col_chunks):
                     logit = float(scores[i])
-                    # Min-Max Normalization: scale from bottom_target to top_target
+                    # Deterministic Min-Max Normalization: scale from bottom_target to top_target
                     if max_score > min_score:
                         norm_score = bottom_target + (top_target - bottom_target) * ((logit - min_score) / (max_score - min_score))
                     else:
-                        norm_score = top_target / 2
-                    c['score'] = norm_score
+                        norm_score = 0.85
+                    c['score'] = round(norm_score, 3)
                 
         # Sort by updated scores
         col_chunks = sorted(col_chunks, key=lambda x: x.get('score', 0), reverse=True)
@@ -174,7 +173,11 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
     
     if age: profile_parts.append(f"Age: {age} years")
     if gender: profile_parts.append(f"Gender: {gender}")
-    if notes: profile_parts.append(f"Medical Notes/Allergies: {notes}")
+    if notes: 
+        # Basic prompt injection protection: strip markdown/system-like brackets and limit length
+        safe_notes = str(notes).replace("[", "(").replace("]", ")").replace("<", "").replace(">", "").strip()
+        safe_notes = " ".join(safe_notes.split())[:500]
+        profile_parts.append(f"Medical Notes/Allergies: {safe_notes}")
 
     if profile_parts:
         ctx.append(f"[PATIENT PROFILE — {username}]\n" + "\n".join(profile_parts) + "\nIMPORTANT: Take this patient profile into account when recommending dosages, contraindications, and safety notes.")
