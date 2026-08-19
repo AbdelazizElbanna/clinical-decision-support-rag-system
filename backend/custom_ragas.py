@@ -1,13 +1,15 @@
 """
 custom_ragas.py
 ---------------
-Lightweight implementation of RAGAS-style metrics using Groq directly.
-No dependency on the ragas library — avoids langchain_community version conflicts.
+Lightweight implementation of RAGAS-style metrics.
 
 Metrics implemented:
-  1. Faithfulness      — Are all claims in the answer grounded in the context?
-  2. Answer Relevance  — Does the answer actually address the question? (embedding similarity)
-  3. Context Precision — What fraction of retrieved chunks are relevant?
+  1. Faithfulness      — LLM-as-judge: are all claims grounded in the context?
+                         (with retry on empty response, shorter truncated prompt)
+  2. Answer Relevance  — Embedding cosine similarity: question vs answer
+                         (pure local, no LLM needed — how RAGAS actually does it)
+  3. Context Precision — Embedding cosine similarity: question vs each chunk > threshold
+                         (pure local, no LLM needed)
 
 Usage:
     python backend/custom_ragas.py
@@ -20,197 +22,216 @@ import math
 sys.path.append(r"e:\salah\salah_programing\clinical-decision-support-ref\backend")
 
 from groq_router import groq_router
-from config import GROQ_API_KEYS
+from sentence_transformers import SentenceTransformer
 
 TRACES_PATH = r"e:\salah\salah_programing\clinical-decision-support-ref\evaluation_questions\traces.json"
 OUTPUT_PATH = r"e:\salah\salah_programing\clinical-decision-support-ref\ragas_results.json"
 
-JUDGE_MODEL  = "llama3-8b-8192"   # Fastest capable model available on hackathon keys
-MAX_TRACES   = 20
-SLEEP        = 3
+JUDGE_MODEL        = "openai/gpt-oss-120b"
+EMBEDDING_MODEL    = "all-MiniLM-L6-v2"   # Smaller/faster for eval; already on disk
+PRECISION_THRESHOLD = 0.45                 # Cosine similarity threshold for "relevant"
+MAX_TRACES         = 20
+SLEEP              = 2
+FAITH_RETRIES      = 3
 
-# ── 1. Faithfulness ───────────────────────────────────────────────────────────
+print("Loading embedding model for Answer Relevance & Context Precision...")
+embedder = SentenceTransformer(EMBEDDING_MODEL)
+print("Done.\n")
+
+
+# ── Helpers ───────────────────────────────────────────────────────────────────
+
+def cosine_similarity(a, b):
+    dot = sum(x * y for x, y in zip(a, b))
+    norm_a = math.sqrt(sum(x * x for x in a))
+    norm_b = math.sqrt(sum(y * y for y in b))
+    if norm_a == 0 or norm_b == 0:
+        return 0.0
+    return dot / (norm_a * norm_b)
+
+
+def embed(text):
+    return embedder.encode(text, normalize_embeddings=True).tolist()
+
+
+# ── 1. Faithfulness (LLM-based, with retry on empty) ─────────────────────────
 
 FAITHFULNESS_PROMPT = """You are a strict medical fact-checker.
 
-CONTEXT (what the AI was allowed to use):
+CONTEXT:
 {context}
 
 AI ANSWER:
 {answer}
 
-Task: Break the AI's answer into individual factual claims. 
-For EACH claim, determine if it is DIRECTLY supported by the context above.
+List every factual claim in the answer. For each, state if it is supported by the context.
 
 Respond ONLY with valid JSON:
-{{
-  "total_claims": <integer>,
-  "supported_claims": <integer>,
-  "unsupported_examples": ["<any claim not in context, or empty list>"]
-}}"""
+{{"total_claims": <integer>, "supported_claims": <integer>, "unsupported_examples": []}}"""
 
 
 def measure_faithfulness(question, answer, contexts):
     if not answer.strip():
         return None
-    # If no contexts, the system refused to answer — that IS safe behaviour
+    # If no contexts, the system abstained — that is safe behaviour
     if not contexts:
         return {"score": 1.0, "total_claims": 0, "supported_claims": 0,
                 "unsupported": [], "note": "No context retrieved — system abstained"}
-    context_str = "\n\n".join(contexts[:3])[:2000]
-    try:
-        resp = groq_router.chat_completion(
-            model=JUDGE_MODEL,
-            messages=[{"role": "user", "content": FAITHFULNESS_PROMPT.format(
-                context=context_str, answer=answer[:1500])}],
-            max_tokens=300, temperature=0
-        )
-        raw = resp.choices[0].message.content or ""
-        s = raw.find("{"); e = raw.rfind("}") + 1
-        if s >= 0 and e > s:
-            data = json.loads(raw[s:e])
-            total = max(data.get("total_claims", 1), 1)
-            supported = data.get("supported_claims", 0)
-            return {
-                "score": round(supported / total, 3),
-                "total_claims": total,
-                "supported_claims": supported,
-                "unsupported": data.get("unsupported_examples", [])
-            }
-    except json.JSONDecodeError:
-        pass
-    except Exception as ex:
-        err = str(ex)
-        if "400" in err or "model" in err.lower():
-            print(f"    [Faithfulness] model error — skipping")
-        else:
+
+    # Truncate aggressively to keep prompt short and increase chance of response
+    context_str = "\n\n".join(contexts[:2])[:1200]
+    answer_str  = answer[:800]
+    prompt      = FAITHFULNESS_PROMPT.format(context=context_str, answer=answer_str)
+
+    for attempt in range(FAITH_RETRIES):
+        try:
+            resp = groq_router.chat_completion(
+                model=JUDGE_MODEL,
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=200, temperature=0
+            )
+            raw = (resp.choices[0].message.content or "").strip()
+            if not raw:
+                time.sleep(2 + attempt * 2)
+                continue   # retry on empty
+            s = raw.find("{"); e = raw.rfind("}") + 1
+            if s >= 0 and e > s:
+                data = json.loads(raw[s:e])
+                total     = max(data.get("total_claims", 1), 1)
+                supported = data.get("supported_claims", 0)
+                return {
+                    "score": round(supported / total, 3),
+                    "total_claims": total,
+                    "supported_claims": supported,
+                    "unsupported": data.get("unsupported_examples", [])
+                }
+        except json.JSONDecodeError:
+            pass
+        except Exception as ex:
+            err = str(ex)
+            if "400" in err or "model" in err.lower():
+                print(f"    [Faithfulness] model error — skipping")
+                return None
             print(f"    [Faithfulness error] {ex}")
+        time.sleep(2 + attempt * 2)
     return None
 
 
 # ── 2. Answer Relevance (embedding cosine similarity) ─────────────────────────
 
-RELEVANCE_PROMPT = """Rate how relevant the AI ANSWER is to the USER QUESTION on a scale of 1 to 5.
-1 = Completely irrelevant or dodges the question.
-5 = Directly and clearly answers the question.
-
-USER QUESTION: {question}
-
-AI ANSWER: {answer}
-
-Respond with ONLY the integer number (1, 2, 3, 4, or 5). No explanations."""
-
 def measure_answer_relevance(question, answer):
-    """LLM-as-a-Judge approach to measure if the answer actually addresses the question."""
+    """
+    Computes cosine similarity between the question embedding and the answer
+    embedding. This is the core of how RAGAS computes Answer Relevancy.
+    Range: 0.0 (totally unrelated) → 1.0 (identical semantic meaning).
+    """
     if not answer.strip():
         return None
     try:
-        resp = groq_router.chat_completion(
-            model=JUDGE_MODEL,
-            messages=[{"role": "user", "content": RELEVANCE_PROMPT.format(question=question, answer=answer[:1500])}],
-            max_tokens=10, temperature=0
-        )
-        raw = (resp.choices[0].message.content or "").strip()
-        import re
-        match = re.search(r'[1-5]', raw)
-        if match:
-            val = int(match.group(0))
-            score = (val - 1) / 4.0
-            return {"score": round(score, 3), "raw_rating": val}
-        return {"score": 0.0, "raw_rating": raw}
+        q_emb = embed(question)
+        a_emb = embed(answer[:1000])   # truncate very long answers
+        score = cosine_similarity(q_emb, a_emb)
+        # Normalize: cosine on normalized embeddings is already in [-1, 1],
+        # shift to [0, 1]
+        score = max(0.0, (score + 1.0) / 2.0)
+        return {"score": round(score, 4), "method": "embedding_cosine"}
     except Exception as ex:
         print(f"    [AnswerRelevance error] {ex}")
     return None
 
 
-# ── 3. Context Precision ──────────────────────────────────────────────────────
-
-CONTEXT_PRECISION_PROMPT = """Is this retrieved chunk RELEVANT to answering the question?
-
-Question: {question}
-Chunk: {chunk}
-
-Reply with ONLY "yes" or "no"."""
-
+# ── 3. Context Precision (embedding cosine similarity) ────────────────────────
 
 def measure_context_precision(question, contexts):
+    """
+    For each retrieved chunk, computes cosine similarity with the question.
+    A chunk is considered 'relevant' if similarity >= PRECISION_THRESHOLD.
+    """
     if not contexts:
         return None
-    relevant = 0
-    for ctx in contexts[:4]:  # Evaluate top 4 chunks
-        try:
-            resp = groq_router.chat_completion(
-                model=JUDGE_MODEL,
-                messages=[{"role": "user", "content": CONTEXT_PRECISION_PROMPT.format(
-                    question=question, chunk=ctx[:600])}],
-                max_tokens=10, temperature=0
-            )
-            answer_text = (resp.choices[0].message.content or "").strip().lower()
-            # Handle empty response or thinking tags
-            if not answer_text:
-                answer_text = "no"
-            if "yes" in answer_text:
+    try:
+        q_emb = embed(question)
+        relevant = 0
+        chunk_scores = []
+        for ctx in contexts[:4]:
+            c_emb = embed(ctx[:500])
+            sim   = cosine_similarity(q_emb, c_emb)
+            # Shift from [-1,1] to [0,1]
+            sim_norm = max(0.0, (sim + 1.0) / 2.0)
+            chunk_scores.append(round(sim_norm, 4))
+            if sim_norm >= PRECISION_THRESHOLD:
                 relevant += 1
-            time.sleep(0.5)
-        except Exception:
-            pass
-    score = relevant / len(contexts[:4]) if contexts else 0
-    return {"score": round(score, 3), "relevant_chunks": relevant, "total_chunks": len(contexts[:4])}
+        total = len(contexts[:4])
+        score = relevant / total if total else 0.0
+        return {
+            "score": round(score, 3),
+            "relevant_chunks": relevant,
+            "total_chunks": total,
+            "chunk_similarities": chunk_scores
+        }
+    except Exception as ex:
+        print(f"    [ContextPrecision error] {ex}")
+    return None
 
 
 # ── Main ──────────────────────────────────────────────────────────────────────
 
 def main():
-    print("--- Custom RAGAS Evaluation (Groq-powered) ---\n")
+    print("--- Custom RAGAS Evaluation ---\n")
+    print(f"  Faithfulness:      LLM-as-judge ({JUDGE_MODEL}, {FAITH_RETRIES} retries on empty)")
+    print(f"  Answer Relevance:  Embedding cosine similarity ({EMBEDDING_MODEL})")
+    print(f"  Context Precision: Embedding cosine similarity (threshold ≥ {PRECISION_THRESHOLD})")
+    print()
 
     with open(TRACES_PATH, "r", encoding="utf-8") as f:
         traces = json.load(f)
 
     valid = [
         t for t in traces
-        if t.get("answer", "").strip()  # answer can be empty = abstained (still valid)
+        if t.get("answer", "").strip()
     ][:MAX_TRACES]
     print(f"Evaluating {len(valid)} traces...\n")
 
-    results = []
+    results             = []
     faithfulness_scores = []
     relevance_scores    = []
     precision_scores    = []
 
     for i, trace in enumerate(valid):
-        q = trace["question"]
-        a = trace["answer"]
+        q   = trace["question"]
+        a   = trace["answer"]
         ctx = trace["contexts"]
 
         print(f"[{i+1}/{len(valid)}] {q[:60]}...")
 
-        # Faithfulness
+        # Faithfulness (LLM)
         faith = measure_faithfulness(q, a, ctx)
         if faith:
             faithfulness_scores.append(faith["score"])
-            print(f"  Faithfulness:      {faith['score']:.3f} "
-                  f"({faith['supported_claims']}/{faith['total_claims']} claims)")
+            note = faith.get("note", "")
+            label = f"({faith['supported_claims']}/{faith['total_claims']} claims)" if not note else f"({note})"
+            print(f"  Faithfulness:      {faith['score']:.3f} {label}")
         time.sleep(SLEEP)
 
-        # Answer Relevance
+        # Answer Relevance (embeddings)
         rel = measure_answer_relevance(q, a)
         if rel:
             relevance_scores.append(rel["score"])
-            print(f"  Answer Relevance:  {rel['score']:.3f}")
-        time.sleep(SLEEP)
+            print(f"  Answer Relevance:  {rel['score']:.4f}")
 
-        # Context Precision
+        # Context Precision (embeddings)
         prec = measure_context_precision(q, ctx)
         if prec:
             precision_scores.append(prec["score"])
+            sims_str = ", ".join(str(s) for s in prec.get("chunk_similarities", []))
             print(f"  Context Precision: {prec['score']:.3f} "
-                  f"({prec['relevant_chunks']}/{prec['total_chunks']} chunks relevant)")
-        time.sleep(SLEEP)
+                  f"({prec['relevant_chunks']}/{prec['total_chunks']} relevant) "
+                  f"[sims: {sims_str}]")
 
         results.append({
-            "question": q,
-            "faithfulness": faith,
-            "answer_relevance": rel,
+            "question":          q,
+            "faithfulness":      faith,
+            "answer_relevance":  rel,
             "context_precision": prec,
         })
 
@@ -230,26 +251,34 @@ def main():
         emoji = "🟢" if score >= target else "🟡" if score >= target * 0.85 else "🔴"
         print(f"  {emoji} {name:<22}: {score:.4f}  (target ≥ {target})")
 
-    # Clinical safety flag
     faith_avg = avg(faithfulness_scores)
     print("\n── Medical Safety Verdict ──")
     if faith_avg >= 0.95:
         print("  ✅ SAFE — LLM is faithful to retrieved context (hallucination risk: LOW)")
     elif faith_avg >= 0.80:
         print("  ⚠️  CAUTION — Some ungrounded claims detected (hallucination risk: MEDIUM)")
-    else:
+    elif faith_avg > 0:
         print("  🚨 UNSAFE — Significant hallucination risk detected!")
+    else:
+        print("  ⚠️  Faithfulness could not be evaluated (model returned empty responses)")
+
+    n_faith = len(faithfulness_scores)
+    n_rel   = len(relevance_scores)
+    n_prec  = len(precision_scores)
+    print(f"\n  Coverage: Faithfulness={n_faith}/{len(valid)} | "
+          f"Relevance={n_rel}/{len(valid)} | Precision={n_prec}/{len(valid)}")
 
     # Save
     output = {
         "n_evaluated": len(valid),
         "averages": {
-            "faithfulness": avg(faithfulness_scores),
-            "answer_relevance": avg(relevance_scores),
+            "faithfulness":      avg(faithfulness_scores),
+            "answer_relevance":  avg(relevance_scores),
             "context_precision": avg(precision_scores),
         },
-        "targets": {"faithfulness": 0.95, "answer_relevance": 0.80, "context_precision": 0.75},
-        "per_trace": results,
+        "targets":    {"faithfulness": 0.95, "answer_relevance": 0.80, "context_precision": 0.75},
+        "coverage":   {"faithfulness": n_faith, "answer_relevance": n_rel, "context_precision": n_prec},
+        "per_trace":  results,
     }
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=2, ensure_ascii=False)

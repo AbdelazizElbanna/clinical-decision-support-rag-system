@@ -110,7 +110,7 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
         collections = ["medical_guidelines"]
 
     candidate_chunks = retrieve(
-        query=user_query,
+        query=intent.get("search_query_en", user_query),
         collections_to_query=collections,
         condition=condition,
         n_per_collection=k_candidates_per_collection
