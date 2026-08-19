@@ -135,16 +135,17 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
             scores = _reranker.predict(pairs)
             if len(scores) > 0:
                 import math
-                def sigmoid(x):
+                def temp_sigmoid(x, T=3.0):
                     # Cap x to prevent overflow
                     x = max(min(x, 20), -20)
-                    return 1 / (1 + math.exp(-x))
+                    return 1 / (1 + math.exp(-(x / T)))
                     
                 for i, c in enumerate(col_chunks):
                     logit = float(scores[i])
-                    # Mathematically correct conversion from logits to probabilities
-                    # This gives completely organic, realistic scores without randomness
-                    prob = sigmoid(logit)
+                    # Mathematically correct conversion from logits to probabilities with temperature scaling
+                    # This gives completely organic, realistic scores without randomness, while preventing
+                    # overly harsh penalization of conversational queries.
+                    prob = temp_sigmoid(logit)
                     c['score'] = round(prob, 3)
                 
         # Sort by updated scores
