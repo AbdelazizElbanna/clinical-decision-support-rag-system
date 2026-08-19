@@ -63,6 +63,22 @@ export default function ChatInterface() {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
+  const textareaRef = useRef(null);
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      // Adjust height based on scrollHeight, max out at 150px
+      textareaRef.current.style.height = `${Math.min(textareaRef.current.scrollHeight, 150)}px`;
+    }
+  }, [input]);
+
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault();
+      handleSend(e);
+    }
+  };
+
   useEffect(() => {
     const handleToggle = () => setIsSidebarOpen(true);
     window.addEventListener('toggle-sidebar', handleToggle);
@@ -386,13 +402,15 @@ export default function ChatInterface() {
 
         {/* Input Area */}
         <div className="input-padding" style={{ padding: '16px 40px 24px' }}>
-          <form className="glass" onSubmit={handleSend} style={{ display: 'flex', gap: '12px', alignItems: 'center', position: 'relative', borderRadius: '24px', padding: '6px 8px' }}>
+          <form className="glass" onSubmit={handleSend} style={{ display: 'flex', gap: '12px', alignItems: 'flex-end', position: 'relative', borderRadius: '24px', padding: '6px 8px' }}>
             <div style={{ flex: 1, position: 'relative' }}>
-              <input
-                type="text"
+              <textarea
+                ref={textareaRef}
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
+                onKeyDown={handleKeyDown}
                 placeholder={t('input_placeholder')}
+                rows={1}
                 style={{
                   width: '100%',
                   padding: '16px 20px',
@@ -403,6 +421,12 @@ export default function ChatInterface() {
                   color: 'var(--text)',
                   fontSize: '1rem',
                   outline: 'none',
+                  resize: 'none',
+                  maxHeight: '150px',
+                  overflowY: 'auto',
+                  fontFamily: 'inherit',
+                  lineHeight: '1.5',
+                  boxSizing: 'border-box'
                 }}
               />
               <button
@@ -411,8 +435,7 @@ export default function ChatInterface() {
                 style={{
                   position: 'absolute',
                   right: '4px',
-                  top: '50%',
-                  transform: 'translateY(-50%)',
+                  bottom: '4px',
                   background: input.trim() && !isLoading ? 'linear-gradient(135deg, var(--primary), var(--accent))' : 'var(--surface-2)',
                   color: input.trim() && !isLoading ? '#fff' : 'var(--text-muted)',
                   border: 'none',
