@@ -22,3 +22,9 @@ groq
 
 # Evaluation & Metrics
 # Evaluations utilize groq directly, standard libraries like json and math are used.
+
+# Authentication & Database
+sqlalchemy
+bcrypt
+python-jose[cryptography]
+python-multipart
