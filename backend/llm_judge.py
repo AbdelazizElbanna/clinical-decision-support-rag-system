@@ -27,7 +27,7 @@ from config import GROQ_API_KEYS
 
 TRACES_PATH  = r"e:\salah\salah_programing\clinical-decision-support-ref\evaluation_questions\traces.json"
 OUTPUT_PATH  = r"e:\salah\salah_programing\clinical-decision-support-ref\llm_judge_results.json"
-JUDGE_MODEL  = "openai/gpt-oss-120b"   # Use capable model as judge (separate from generation model)
+JUDGE_MODEL  = "llama3-70b-8192"   # Use capable model as judge (separate from generation model)
 MAX_TRACES   = 20
 SLEEP        = 3
 
