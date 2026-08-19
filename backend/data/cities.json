@@ -7,7 +7,7 @@
     "capital_en": "Cairo City",
     "lat": 30.0444,
     "lon": 31.2357,
-    "aliases": ["القاهرة", "مصر", "القاهره", "Cairo", "Helwan", "حلوان", "مصر الجديدة", "التجمع"]
+    "aliases": ["القاهرة", "مصر", "القاهره", "Cairo", "Helwan", "حلوان", "مصر الجديدة", "التجمع", "مدينة نصر", "المعادي", "cairo governorate"]
   },
   {
     "id": 2,
@@ -17,7 +17,7 @@
     "capital_en": "Giza City",
     "lat": 30.0131,
     "lon": 31.2089,
-    "aliases": ["الجيزة", "الجيزه", "Giza", "أكتوبر", "6th of October", "الشيخ زايد", "Sheikh Zayed", "الهرم"]
+    "aliases": ["الجيزة", "الجيزه", "Giza", "أكتوبر", "6th of October", "الشيخ زايد", "Sheikh Zayed", "الهرم", "الدقي", "المهندسين", "giza governorate"]
   },
   {
     "id": 3,
@@ -27,7 +27,7 @@
     "capital_en": "Alexandria City",
     "lat": 31.2001,
     "lon": 29.9187,
-    "aliases": ["الإسكندرية", "الإسكندريه", "اسكندرية", "اسكندريه", "Alexandria", "Alex", "برج العرب", "الساحل"]
+    "aliases": ["الإسكندرية", "الإسكندريه", "اسكندرية", "اسكندريه", "Alexandria", "Alex", "برج العرب", "الساحل", "سموحة", "سيدي بشر", "alex governorate"]
   },
   {
     "id": 4,
@@ -217,7 +217,7 @@
     "capital_en": "Kafr El Sheikh City",
     "lat": 31.1107,
     "lon": 30.9388,
-    "aliases": ["كفر الشيخ", "Kafr El Sheikh", "دسوق", "بلطيم"]
+    "aliases": ["كفر الشيخ", "Kafr El Sheikh", "دسوق", "بلطيم", "كفرالشيخ", "kafr el-sheikh", "kafr el sheikh governorate", "فوه", "مطوبس"]
   },
   {
     "id": 23,

@@ -17,20 +17,23 @@ with open(CITIES_JSON_PATH, encoding="utf-8") as f:
 
 def resolve_governorate(governorate_en: str) -> Optional[dict]:
     """Find city record by name, capital, or alias (case-insensitive)."""
-    q = governorate_en.strip().lower()
+    q = governorate_en.strip().lower().replace("-", " ")
     for gov in _CITIES:
-        if gov.get("governorate_en", "").lower() == q:
+        gov_en = gov.get("governorate_en", "").lower().replace("-", " ")
+        cap_en = gov.get("capital_en", "").lower().replace("-", " ")
+        
+        if gov_en == q:
             return gov
-        if gov.get("capital_en", "").lower() == q:
+        if cap_en == q:
             return gov
         if gov.get("governorate_ar", "").strip() == governorate_en.strip():
             return gov
         if gov.get("capital_ar", "").strip() == governorate_en.strip():
             return gov
-        aliases = [a.lower() for a in gov.get("aliases", [])]
+            
+        aliases = [a.lower().replace("-", " ") for a in gov.get("aliases", [])]
         if q in aliases:
             return gov
-    return None
     return None
 
 
