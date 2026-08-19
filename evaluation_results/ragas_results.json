@@ -1,0 +1,217 @@
+{
+  "n_evaluated": 20,
+  "averages": {
+    "faithfulness": 1.0,
+    "answer_relevance": 0,
+    "context_precision": 0.0
+  },
+  "targets": {
+    "faithfulness": 0.95,
+    "answer_relevance": 0.8,
+    "context_precision": 0.75
+  },
+  "per_trace": [
+    {
+      "question": "Can you tell me more about the symptoms and overview of Atopic Dermatitis?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "Can you tell me more about the symptoms and overview of Atopic Dermatitis?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What does atopic dermatitis look like on a baby under 2 years old?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "Is eczema contagious?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What's the difference between how eczema looks on light vs dark skin tones?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "How does dry air make eczema worse?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What's Dupixent used for in eczema?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What is a bleach bath and why would a dermatologist recommend one?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "At what age does atopic dermatitis usually start?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "Where did you get the information that 70% of people with eczema have relatives with atopic conditions?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "Can you back up the claim about bleach baths reducing flares — is that from a real medical source?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "Is that skin-barrier 'brick wall' explanation something you made up or is it sourced?",
+      "faithfulness": {
+        "score": 1.0,
+        "total_claims": 0,
+        "supported_claims": 0,
+        "unsupported": [],
+        "note": "No context retrieved — system abstained"
+      },
+      "answer_relevance": null,
+      "context_precision": null
+    },
+    {
+      "question": "What's the most common type of psoriasis?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What does guttate psoriasis look like and who usually gets it?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What's inverse psoriasis and where does it show up on the body?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What is the active ingredient and dosage for 1 2 3 (ONE TWO THREE) 20 F.C.TABS.?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What is the active ingredient and dosage for 1 2 3 (ONE TWO THREE) EXTRA 20 F.C.TABS.?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What is the active ingredient and dosage for 1 2 3 (ONE TWO THREE) SUSP. 120 ML?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What is the active ingredient and dosage for 1 2 3 (ONE TWO THREE) SYRUP 120 ML?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    },
+    {
+      "question": "What is the active ingredient and dosage for 1 2 3 EXTRA 20 F.C. TAB?",
+      "faithfulness": null,
+      "answer_relevance": null,
+      "context_precision": {
+        "score": 0.0,
+        "relevant_chunks": 0,
+        "total_chunks": 4
+      }
+    }
+  ]
+}

@@ -1,0 +1,802 @@
+[
+  {
+    "question_id": "auto_mix_0",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take 1 2 3 (ONE TWO THREE) 20 F.C.TABS. or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_overview",
+      "1-2-3-one-two-three-20-f-c-tabs"
+    ]
+  },
+  {
+    "question_id": "auto_mix_1",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take 1 2 3 (ONE TWO THREE) EXTRA 20 F.C.TABS. or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_core_symptom_01",
+      "1-2-3-one-two-three-extra-20-f-c-tabs"
+    ]
+  },
+  {
+    "question_id": "auto_mix_2",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take 1 2 3 (ONE TWO THREE) SUSP. 120 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_core_symptom_02",
+      "1-2-3-one-two-three-susp-120-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_3",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take 1 2 3 (ONE TWO THREE) SYRUP 120 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_core_symptom_03",
+      "1-2-3-one-two-three-syrup-120-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_4",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take 1 2 3 EXTRA 20 F.C. TAB or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_core_symptom_04",
+      "1-2-3-extra-20-f-c-tab"
+    ]
+  },
+  {
+    "question_id": "auto_mix_5",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take 2M WHITES BEEGU MARIN SPRAY or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_age_variation_infants",
+      "2m-whites-beegu-marin-spray"
+    ]
+  },
+  {
+    "question_id": "auto_mix_6",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take A.ONE SOAP 100 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_age_variation_children_adolescents",
+      "a-one-soap-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_7",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take A1 CREAM 100 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_age_variation_adults",
+      "a1-cream-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_8",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take A1 CREAM 50 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_skin_tone_variations",
+      "a1-cream-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_9",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take AAPE RENEWAL FACE CREAM 50 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_cause_01",
+      "aape-renewal-face-cream-50-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_10",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take AAPE RENEWAL FACIAL TONER 130 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_cause_02",
+      "aape-renewal-facial-toner-130-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_11",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take AAPE RENEWAL MASK 10 PCS or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_cause_03",
+      "aape-renewal-mask-10-pcs"
+    ]
+  },
+  {
+    "question_id": "auto_mix_12",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take AAPE RENEWAL SERUM 40 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_cause_04",
+      "aape-renewal-serum-40-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_13",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take AAPE RENEWAL SUNSCREEN SPF 45 - 60 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_risk_factor_01",
+      "aape-renewal-sunscreen-spf-45-60-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_14",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABC MOCOTIVE TOPICAL SPRAY 70 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_risk_factor_02",
+      "abc-mocotive-topical-spray-70-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_15",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABERTO CREAM 75 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_risk_factor_03",
+      "aberto-cream-75-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_16",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABIONEM CREAM 60 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_risk_factor_04",
+      "abionem-cream-60-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_17",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABRAMMUNE 100 MG 50 CAPSULES or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_risk_factor_05",
+      "abrammune-100-mg-50-capsules"
+    ]
+  },
+  {
+    "question_id": "auto_mix_18",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABRAMMUNE 100MG/ML SYRUP or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_trigger_trig_dry_air",
+      "abrammune-100mg-ml-syrup"
+    ]
+  },
+  {
+    "question_id": "auto_mix_19",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABRAMMUNE 100MG/ML SYRUP(N/A YET) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_trigger_trig_cold_temp",
+      "abrammune-100mg-ml-syrup-n-a-yet"
+    ]
+  },
+  {
+    "question_id": "auto_mix_20",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABRAMMUNE 25 MG 10 CAPS or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_trigger_trig_heat_sweat",
+      "abrammune-25-mg-10-caps"
+    ]
+  },
+  {
+    "question_id": "auto_mix_21",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABRAMMUNE 25 MG 10 CAPS.(N/A YET) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_trigger_trig_temp_shift",
+      "abrammune-25-mg-10-caps-n-a-yet"
+    ]
+  },
+  {
+    "question_id": "auto_mix_22",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABRAMMUNE 50 MG 10 CAPS or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_trigger_trig_fragrances",
+      "abrammune-50-mg-10-caps"
+    ]
+  },
+  {
+    "question_id": "auto_mix_23",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABRAMMUNE 50 MG 10 CAPS.(N/A YET) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_trigger_trig_harsh_soaps",
+      "abrammune-50-mg-10-caps-n-a-yet"
+    ]
+  },
+  {
+    "question_id": "auto_mix_24",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABRAMMUNE 50MG/ML SYRUP or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_trigger_trig_coarse_fabrics",
+      "abrammune-50mg-ml-syrup"
+    ]
+  },
+  {
+    "question_id": "auto_mix_25",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ABRAMMUNE 50MG/ML SYRUP(N/A YET) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_trigger_trig_chlorinated_pool",
+      "abrammune-50mg-ml-syrup-n-a-yet"
+    ]
+  },
+  {
+    "question_id": "auto_mix_26",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACADIA BLAIR LIQUID CONDITIONER 200 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_trigger_trig_stress",
+      "acadia-blair-liquid-conditioner-200-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_27",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACADIA DESTINA BABY CREAM 60 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_environmental_factor_01",
+      "acadia-destina-baby-cream-60-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_28",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACADIA DESTINA LOTION 120 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_environmental_factor_02",
+      "acadia-destina-lotion-120-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_29",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACAVIO MASSAGE GEL 50 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_environmental_factor_03",
+      "acavio-massage-gel-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_30",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACECZEMA CREAM 15 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_environmental_factor_04",
+      "aceczema-cream-15-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_31",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACETASEE 1% EYE DROPS (SUSP.) 5 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_skin_care_and_self_care",
+      "acetasee-1-eye-drops-susp-5-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_32",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACETOFLU COLD AND FLU 20 F.C. TABS. or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_flare_ups_management",
+      "acetoflu-cold-and-flu-20-f-c-tabs"
+    ]
+  },
+  {
+    "question_id": "auto_mix_33",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACETOFLU COLD AND FLU SYRUP 100 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_red_flag_01",
+      "acetoflu-cold-and-flu-syrup-100-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_34",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACETOTHYME 10 SACHETS or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_red_flag_02",
+      "acetothyme-10-sachets"
+    ]
+  },
+  {
+    "question_id": "auto_mix_35",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACIK CREAM 50 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_red_flag_03",
+      "acik-cream-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_36",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACILIGHT 150MG 30 FILM COATED TAB. (CANCELLED) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_when_to_see_doctor_01",
+      "acilight-150mg-30-film-coated-tab-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_mix_37",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACILIGHT 75MG 20 COATED TAB. (CANCELLED) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_when_to_see_doctor_02",
+      "acilight-75mg-20-coated-tab-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_mix_38",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACILOC 150MG EFF.GRANULES 5 SACHETS (CANCELLED) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_when_to_see_doctor_03",
+      "aciloc-150mg-eff-granules-5-sachets-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_mix_39",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACILOC 300MG 20 F.C. TABS. (CANCELLED) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_when_to_see_doctor_04",
+      "aciloc-300mg-20-f-c-tabs-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_mix_40",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACILOC 75 MG 20 F.C. TABS. (CANCELLED) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_when_to_see_doctor_05",
+      "aciloc-75-mg-20-f-c-tabs-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_mix_41",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACITRETIN 10MG 30 CAPS. or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_related_condition_01",
+      "acitretin-10mg-30-caps"
+    ]
+  },
+  {
+    "question_id": "auto_mix_42",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACITRETIN 25MG 30 CAPS. or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_related_condition_02",
+      "acitretin-25mg-30-caps"
+    ]
+  },
+  {
+    "question_id": "auto_mix_43",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACLESS SOAP 100 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_related_condition_03",
+      "acless-soap-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_44",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE BENZ TOPICAL GEL 30 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_related_condition_04",
+      "acne-benz-topical-gel-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_45",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE BENZ TOPICAL GEL 30 GM (N/A) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_topical_therapy_01",
+      "acne-benz-topical-gel-30-gm-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_mix_46",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE BIOTIC PAINT 15 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_topical_therapy_02",
+      "acne-biotic-paint-15-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_47",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE FREE 0.025% GEL 30 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_topical_therapy_03",
+      "acne-free-0-025-gel-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_48",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE FREE 0.025% GEL 30 GM (N/A) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_topical_therapy_04",
+      "acne-free-0-025-gel-30-gm-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_mix_49",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE FREE 0.05% CREAM 30 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_topical_therapy_05",
+      "acne-free-0-05-cream-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_50",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE ZINC TOPICAL SOLUTION 20 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_topical_therapy_06",
+      "acne-zinc-topical-solution-20-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_51",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE-JED 0.1% TOPICAL GEL 15 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_phototherapy",
+      "acne-jed-0-1-topical-gel-15-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_52",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE-STOP CREAM 30 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_systemic_therapy_01",
+      "acne-stop-cream-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_53",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE-STOP FACIAL WASH 250 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_systemic_therapy_02",
+      "acne-stop-facial-wash-250-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_54",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNE-STOP SYSTEM (CREAM+WASH) or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_systemic_therapy_03",
+      "acne-stop-system-cream-wash"
+    ]
+  },
+  {
+    "question_id": "auto_mix_55",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNEBLESS CREAM 50 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_systemic_therapy_04",
+      "acnebless-cream-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_56",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNEBLESS FACIAL CLEANSING FOAMING GEL 200 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_systemic_therapy_05",
+      "acnebless-facial-cleansing-foaming-gel-200-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_57",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNEBLESS FACIAL GEL 50 ML or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_supportive_treatment_01",
+      "acnebless-facial-gel-50-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_58",
+    "question_text": "I am suffering from Atopic Dermatitis. Is it safe to take ACNEFENCE TOPICAL GEL 50 GM or are there warnings?",
+    "target_chunk_ids": [
+      "eczema_supportive_treatment_02",
+      "acnefence-topical-gel-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_59",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNELOFIX 20 MG 20 CAPS. or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_overview",
+      "acnelofix-20-mg-20-caps"
+    ]
+  },
+  {
+    "question_id": "auto_mix_60",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNESCAVE 0.1% TOPICAL GEL 30 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_core_symptom_01",
+      "acnescave-0-1-topical-gel-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_61",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNESEPT 80 GRAM SOAP or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_core_symptom_02",
+      "acnesept-80-gram-soap"
+    ]
+  },
+  {
+    "question_id": "auto_mix_62",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNESOL SOAP 100 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_core_symptom_03",
+      "acnesol-soap-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_63",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNESONE LOTION 60 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_core_symptom_04",
+      "acnesone-lotion-60-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_64",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNETIN- A 0.025% TOPICAL GEL 30 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_type_plaque",
+      "acnetin-a-0-025-topical-gel-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_65",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNETIN- A 0.05% CREAM 30 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_type_guttate",
+      "acnetin-a-0-05-cream-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_66",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNETIN- A 0.05% TOPICAL SOL. 15 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_type_inverse",
+      "acnetin-a-0-05-topical-sol-15-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_67",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNEVERA SOAP 80 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_type_pustular",
+      "acnevera-soap-80-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_68",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNEVIT ANTI-ACNE CLEANSING GEL 200 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_type_erythrodermic",
+      "acnevit-anti-acne-cleansing-gel-200-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_69",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNEVIT ANTI-ACNE SERUM 30 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_skin_tone_variations",
+      "acnevit-anti-acne-serum-30-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_70",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNI-CARE 2% LOTION 25 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_cause_01",
+      "acni-care-2-lotion-25-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_71",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNI-CARE 2% LOTION 25 ML (N/A) or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_cause_02",
+      "acni-care-2-lotion-25-ml-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_mix_72",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNI-CARE 2% TOP. GEL. 20 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_cause_03",
+      "acni-care-2-top-gel-20-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_73",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNI-CARE 2% TOP. GEL. 20 GM (N/A) or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_risk_factor_01",
+      "acni-care-2-top-gel-20-gm-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_mix_74",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNIACT TOPICAL GEL 15 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_risk_factor_02",
+      "acniact-topical-gel-15-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_75",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNIDU TOPICAL GEL or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_risk_factor_03",
+      "acnidu-topical-gel"
+    ]
+  },
+  {
+    "question_id": "auto_mix_76",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNIDU TOPICAL GEL (N/A) or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_risk_factor_04",
+      "acnidu-topical-gel-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_mix_77",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNIL LOTION 60 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_risk_factor_05",
+      "acnil-lotion-60-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_78",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNIMED FACE FOAM CLEANSER 200 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_risk_factor_06",
+      "acnimed-face-foam-cleanser-200-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_79",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNIMED TOPICAL GEL 75 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_risk_factor_07",
+      "acnimed-topical-gel-75-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_80",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACNORA CREAM 50 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_dry_cold_weather",
+      "acnora-cream-50-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_81",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACRETIN 0.025% CREAM 30 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_sunburn_and_excess_sun",
+      "acretin-0-025-cream-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_82",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACRETIN 0.05% CREAM 30 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_skin_injury_koebner",
+      "acretin-0-05-cream-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_83",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACRO CREAM 75 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_emotional_stress",
+      "acro-cream-75-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_84",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACROMAR H 30 ML NASAL SPRAY or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_infections",
+      "acromar-h-30-ml-nasal-spray"
+    ]
+  },
+  {
+    "question_id": "auto_mix_85",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTEMRA 162MG/0.9ML 4 SYRINGES or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_medications",
+      "actemra-162mg-0-9ml-4-syringes"
+    ]
+  },
+  {
+    "question_id": "auto_mix_86",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTEMRA 200 MG/10ML VIAL FOR I.V. INF. or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_trigger_trig_alcohol_smoking",
+      "actemra-200-mg-10ml-vial-for-i-v-inf"
+    ]
+  },
+  {
+    "question_id": "auto_mix_87",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTEMRA 400 MG/20ML VIAL FOR I.V. INF. or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_environmental_factor_01",
+      "actemra-400-mg-20ml-vial-for-i-v-inf"
+    ]
+  },
+  {
+    "question_id": "auto_mix_88",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTEMRA 80 MG/4ML VIAL FOR I.V. INF. or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_environmental_factor_02",
+      "actemra-80-mg-4ml-vial-for-i-v-inf"
+    ]
+  },
+  {
+    "question_id": "auto_mix_89",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTI 4 PLUS WHITENING CREAM 75 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_environmental_factor_03",
+      "acti-4-plus-whitening-cream-75-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_90",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTI-MASS MASSAGE CREAM50GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_environmental_factor_04",
+      "acti-mass-massage-cream50gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_91",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTI-VITA GOLD PROCGEN CREME DAY/NIGHT 50 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_skin_care_and_self_care",
+      "acti-vita-gold-procgen-creme-day-night-50-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_92",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTI-VITA GOLD PROCGEN SERUM 15 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_flare_ups_management",
+      "acti-vita-gold-procgen-serum-15-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_93",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTI-VITA GOLD PROCGEN SOFTENING LOTION 125 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_red_flag_01",
+      "acti-vita-gold-procgen-softening-lotion-125-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_94",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTI-VITA PERFECT COMPLEXION MASK 100 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_red_flag_02",
+      "acti-vita-perfect-complexion-mask-100-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_95",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTI-VITA ULTRA RICH CREME PROCGEN 50 ML or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_red_flag_03",
+      "acti-vita-ultra-rich-creme-procgen-50-ml"
+    ]
+  },
+  {
+    "question_id": "auto_mix_96",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTIFLASH MASSAGE GEL 100 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_when_to_see_doctor_01",
+      "actiflash-massage-gel-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_97",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTIFLASH MASSAGE GEL 50 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_when_to_see_doctor_02",
+      "actiflash-massage-gel-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_98",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTIVE HAIR CREAM 100 GM or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_when_to_see_doctor_03",
+      "active-hair-cream-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_mix_99",
+    "question_text": "I am suffering from Psoriasis. Is it safe to take ACTIVE-MENO 30 TABS. or are there warnings?",
+    "target_chunk_ids": [
+      "psoriasis_when_to_see_doctor_04",
+      "active-meno-30-tabs"
+    ]
+  }
+]

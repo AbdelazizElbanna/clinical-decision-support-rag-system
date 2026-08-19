@@ -35,7 +35,7 @@
       "drug lookup: DUPIXENT"
     ],
     "target_chunk_ids": [
-      "dupixent"
+      "dupixent-300-mg-2-pref-syringe-s-c"
     ],
     "supporting_chunks": [
       {
@@ -86,7 +86,7 @@
       "drug lookup: ALERID / CETIRIZINE"
     ],
     "target_chunk_ids": [
-      "alerid"
+      "alerid-10mg-ml-oral-drops-10-ml"
     ],
     "supporting_chunks": [
       {
@@ -137,7 +137,7 @@
       "drug lookup: HOSTACORTIN"
     ],
     "target_chunk_ids": [
-      "hostacortin"
+      "hostacortin-h-5mg-30-tab"
     ],
     "supporting_chunks": [
       {
@@ -190,7 +190,7 @@
       "drug lookup: ADPORT"
     ],
     "target_chunk_ids": [
-      "adport"
+      "adport-0-5-mg-100-caps"
     ],
     "supporting_chunks": [
       {
@@ -243,7 +243,7 @@
       "drug lookup: 1 2 3 (ONE TWO THREE)"
     ],
     "target_chunk_ids": [
-      "1-2-3-one-two-three-20-f-c-tabs"
+      "1-2-3-one-two-three-extra-20-f-c-tabs"
     ],
     "supporting_chunks": [
       {
@@ -294,7 +294,7 @@
       "drug lookup: 1 2 3 (ONE TWO THREE)"
     ],
     "target_chunk_ids": [
-      "1-2-3-one-two-three-20-f-c-tabs"
+      "1-2-3-one-two-three-extra-20-f-c-tabs"
     ],
     "supporting_chunks": [
       {
@@ -345,7 +345,7 @@
       "drug lookup: 1 2 3 (ONE TWO THREE)"
     ],
     "target_chunk_ids": [
-      "1-2-3-one-two-three-20-f-c-tabs"
+      "1-2-3-one-two-three-extra-20-f-c-tabs"
     ],
     "supporting_chunks": [
       {
@@ -398,7 +398,7 @@
       "drug lookup: ADPORT"
     ],
     "target_chunk_ids": [
-      "adport"
+      "adport-0-5-mg-100-caps"
     ],
     "supporting_chunks": [
       {
@@ -443,7 +443,7 @@
     "grounding_status": "grounded_medical_kb",
     "expected_sections": [],
     "target_chunk_ids": [
-      "1-2-3-one-two-three-20-f-c-tabs"
+      "1-2-3-one-two-three-extra-20-f-c-tabs"
     ],
     "supporting_chunks": [
       {

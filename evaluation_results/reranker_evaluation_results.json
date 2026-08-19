@@ -1,0 +1,80 @@
+{
+  "disease": {
+    "domain": "Disease",
+    "total": 120,
+    "pre_rerank_precision_at_4": 0.2791666666666667,
+    "post_rerank_precision_at_4": 0.30416666666666664,
+    "relative_improvement_pct": 8.955223880597003,
+    "changed_questions": [
+      {
+        "question": "Can you tell me more about the symptoms and overview of Atop",
+        "pre_p4": 0.0,
+        "post_p4": 0.25,
+        "delta": 0.25
+      },
+      {
+        "question": "Can you tell me more about the symptoms and overview of Atop",
+        "pre_p4": 0.0,
+        "post_p4": 0.25,
+        "delta": 0.25
+      },
+      {
+        "question": "Where did you get the information that 70% of people with ec",
+        "pre_p4": 0.0,
+        "post_p4": 0.25,
+        "delta": 0.25
+      },
+      {
+        "question": "My hives come and go within hours but my other rash stays fo",
+        "pre_p4": 0.0,
+        "post_p4": 0.25,
+        "delta": 0.25
+      },
+      {
+        "question": "Can psoriasis suddenly turn life-threatening the way I've he",
+        "pre_p4": 0.0,
+        "post_p4": 0.25,
+        "delta": 0.25
+      }
+    ]
+  },
+  "drug": {
+    "domain": "Drug",
+    "total": 100,
+    "pre_rerank_precision_at_4": 0.225,
+    "post_rerank_precision_at_4": 0.22,
+    "relative_improvement_pct": -2.222222222222224,
+    "changed_questions": [
+      {
+        "question": "What is the active ingredient and dosage for A.ONE SOAP 100 ",
+        "pre_p4": 0.25,
+        "post_p4": 0.0,
+        "delta": -0.25
+      },
+      {
+        "question": "What is the active ingredient and dosage for ACLESS SOAP 100",
+        "pre_p4": 0.25,
+        "post_p4": 0.0,
+        "delta": -0.25
+      },
+      {
+        "question": "What is the active ingredient and dosage for ACNEBLESS CREAM",
+        "pre_p4": 0.25,
+        "post_p4": 0.0,
+        "delta": -0.25
+      },
+      {
+        "question": "What is the active ingredient and dosage for ACNIMED FACE FO",
+        "pre_p4": 0.25,
+        "post_p4": 0.0,
+        "delta": -0.25
+      },
+      {
+        "question": "Is there a warning for kidney patients on 1 2 3 (One Two Thr",
+        "pre_p4": 0.0,
+        "post_p4": 0.25,
+        "delta": 0.25
+      }
+    ]
+  }
+}

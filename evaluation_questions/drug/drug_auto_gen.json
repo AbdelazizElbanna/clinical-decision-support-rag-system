@@ -1,0 +1,576 @@
+[
+  {
+    "question_id": "auto_drg_0",
+    "question_text": "What is the active ingredient and dosage for 1 2 3 (ONE TWO THREE) 20 F.C.TABS.?",
+    "target_chunk_ids": [
+      "1-2-3-one-two-three-20-f-c-tabs"
+    ]
+  },
+  {
+    "question_id": "auto_drg_1",
+    "question_text": "What is the active ingredient and dosage for 1 2 3 (ONE TWO THREE) EXTRA 20 F.C.TABS.?",
+    "target_chunk_ids": [
+      "1-2-3-one-two-three-extra-20-f-c-tabs"
+    ]
+  },
+  {
+    "question_id": "auto_drg_2",
+    "question_text": "What is the active ingredient and dosage for 1 2 3 (ONE TWO THREE) SUSP. 120 ML?",
+    "target_chunk_ids": [
+      "1-2-3-one-two-three-susp-120-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_3",
+    "question_text": "What is the active ingredient and dosage for 1 2 3 (ONE TWO THREE) SYRUP 120 ML?",
+    "target_chunk_ids": [
+      "1-2-3-one-two-three-syrup-120-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_4",
+    "question_text": "What is the active ingredient and dosage for 1 2 3 EXTRA 20 F.C. TAB?",
+    "target_chunk_ids": [
+      "1-2-3-extra-20-f-c-tab"
+    ]
+  },
+  {
+    "question_id": "auto_drg_5",
+    "question_text": "What is the active ingredient and dosage for 2M WHITES BEEGU MARIN SPRAY?",
+    "target_chunk_ids": [
+      "2m-whites-beegu-marin-spray"
+    ]
+  },
+  {
+    "question_id": "auto_drg_6",
+    "question_text": "What is the active ingredient and dosage for A.ONE SOAP 100 GM?",
+    "target_chunk_ids": [
+      "a-one-soap-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_7",
+    "question_text": "What is the active ingredient and dosage for A1 CREAM 100 GM?",
+    "target_chunk_ids": [
+      "a1-cream-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_8",
+    "question_text": "What is the active ingredient and dosage for A1 CREAM 50 GM?",
+    "target_chunk_ids": [
+      "a1-cream-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_9",
+    "question_text": "What is the active ingredient and dosage for AAPE RENEWAL FACE CREAM 50 ML?",
+    "target_chunk_ids": [
+      "aape-renewal-face-cream-50-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_10",
+    "question_text": "What is the active ingredient and dosage for AAPE RENEWAL FACIAL TONER 130 ML?",
+    "target_chunk_ids": [
+      "aape-renewal-facial-toner-130-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_11",
+    "question_text": "What is the active ingredient and dosage for AAPE RENEWAL MASK 10 PCS?",
+    "target_chunk_ids": [
+      "aape-renewal-mask-10-pcs"
+    ]
+  },
+  {
+    "question_id": "auto_drg_12",
+    "question_text": "What is the active ingredient and dosage for AAPE RENEWAL SERUM 40 ML?",
+    "target_chunk_ids": [
+      "aape-renewal-serum-40-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_13",
+    "question_text": "What is the active ingredient and dosage for AAPE RENEWAL SUNSCREEN SPF 45 - 60 ML?",
+    "target_chunk_ids": [
+      "aape-renewal-sunscreen-spf-45-60-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_14",
+    "question_text": "What is the active ingredient and dosage for ABC MOCOTIVE TOPICAL SPRAY 70 ML?",
+    "target_chunk_ids": [
+      "abc-mocotive-topical-spray-70-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_15",
+    "question_text": "What is the active ingredient and dosage for ABERTO CREAM 75 GM?",
+    "target_chunk_ids": [
+      "aberto-cream-75-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_16",
+    "question_text": "What is the active ingredient and dosage for ABIONEM CREAM 60 GM?",
+    "target_chunk_ids": [
+      "abionem-cream-60-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_17",
+    "question_text": "What is the active ingredient and dosage for ABRAMMUNE 100 MG 50 CAPSULES?",
+    "target_chunk_ids": [
+      "abrammune-100-mg-50-capsules"
+    ]
+  },
+  {
+    "question_id": "auto_drg_18",
+    "question_text": "What is the active ingredient and dosage for ABRAMMUNE 100MG/ML SYRUP?",
+    "target_chunk_ids": [
+      "abrammune-100mg-ml-syrup"
+    ]
+  },
+  {
+    "question_id": "auto_drg_19",
+    "question_text": "What is the active ingredient and dosage for ABRAMMUNE 100MG/ML SYRUP(N/A YET)?",
+    "target_chunk_ids": [
+      "abrammune-100mg-ml-syrup-n-a-yet"
+    ]
+  },
+  {
+    "question_id": "auto_drg_20",
+    "question_text": "What is the active ingredient and dosage for ABRAMMUNE 25 MG 10 CAPS?",
+    "target_chunk_ids": [
+      "abrammune-25-mg-10-caps"
+    ]
+  },
+  {
+    "question_id": "auto_drg_21",
+    "question_text": "What is the active ingredient and dosage for ABRAMMUNE 25 MG 10 CAPS.(N/A YET)?",
+    "target_chunk_ids": [
+      "abrammune-25-mg-10-caps-n-a-yet"
+    ]
+  },
+  {
+    "question_id": "auto_drg_22",
+    "question_text": "What is the active ingredient and dosage for ABRAMMUNE 50 MG 10 CAPS?",
+    "target_chunk_ids": [
+      "abrammune-50-mg-10-caps"
+    ]
+  },
+  {
+    "question_id": "auto_drg_23",
+    "question_text": "What is the active ingredient and dosage for ABRAMMUNE 50 MG 10 CAPS.(N/A YET)?",
+    "target_chunk_ids": [
+      "abrammune-50-mg-10-caps-n-a-yet"
+    ]
+  },
+  {
+    "question_id": "auto_drg_24",
+    "question_text": "What is the active ingredient and dosage for ABRAMMUNE 50MG/ML SYRUP?",
+    "target_chunk_ids": [
+      "abrammune-50mg-ml-syrup"
+    ]
+  },
+  {
+    "question_id": "auto_drg_25",
+    "question_text": "What is the active ingredient and dosage for ABRAMMUNE 50MG/ML SYRUP(N/A YET)?",
+    "target_chunk_ids": [
+      "abrammune-50mg-ml-syrup-n-a-yet"
+    ]
+  },
+  {
+    "question_id": "auto_drg_26",
+    "question_text": "What is the active ingredient and dosage for ACADIA BLAIR LIQUID CONDITIONER 200 ML?",
+    "target_chunk_ids": [
+      "acadia-blair-liquid-conditioner-200-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_27",
+    "question_text": "What is the active ingredient and dosage for ACADIA DESTINA BABY CREAM 60 GM?",
+    "target_chunk_ids": [
+      "acadia-destina-baby-cream-60-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_28",
+    "question_text": "What is the active ingredient and dosage for ACADIA DESTINA LOTION 120 ML?",
+    "target_chunk_ids": [
+      "acadia-destina-lotion-120-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_29",
+    "question_text": "What is the active ingredient and dosage for ACAVIO MASSAGE GEL 50 GM?",
+    "target_chunk_ids": [
+      "acavio-massage-gel-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_30",
+    "question_text": "What is the active ingredient and dosage for ACECZEMA CREAM 15 GM?",
+    "target_chunk_ids": [
+      "aceczema-cream-15-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_31",
+    "question_text": "What is the active ingredient and dosage for ACETASEE 1% EYE DROPS (SUSP.) 5 ML?",
+    "target_chunk_ids": [
+      "acetasee-1-eye-drops-susp-5-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_32",
+    "question_text": "What is the active ingredient and dosage for ACETOFLU COLD AND FLU 20 F.C. TABS.?",
+    "target_chunk_ids": [
+      "acetoflu-cold-and-flu-20-f-c-tabs"
+    ]
+  },
+  {
+    "question_id": "auto_drg_33",
+    "question_text": "What is the active ingredient and dosage for ACETOFLU COLD AND FLU SYRUP 100 ML?",
+    "target_chunk_ids": [
+      "acetoflu-cold-and-flu-syrup-100-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_34",
+    "question_text": "What is the active ingredient and dosage for ACETOTHYME 10 SACHETS?",
+    "target_chunk_ids": [
+      "acetothyme-10-sachets"
+    ]
+  },
+  {
+    "question_id": "auto_drg_35",
+    "question_text": "What is the active ingredient and dosage for ACIK CREAM 50 GM?",
+    "target_chunk_ids": [
+      "acik-cream-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_36",
+    "question_text": "What is the active ingredient and dosage for ACILIGHT 150MG 30 FILM COATED TAB. (CANCELLED)?",
+    "target_chunk_ids": [
+      "acilight-150mg-30-film-coated-tab-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_drg_37",
+    "question_text": "What is the active ingredient and dosage for ACILIGHT 75MG 20 COATED TAB. (CANCELLED)?",
+    "target_chunk_ids": [
+      "acilight-75mg-20-coated-tab-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_drg_38",
+    "question_text": "What is the active ingredient and dosage for ACILOC 150MG EFF.GRANULES 5 SACHETS (CANCELLED)?",
+    "target_chunk_ids": [
+      "aciloc-150mg-eff-granules-5-sachets-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_drg_39",
+    "question_text": "What is the active ingredient and dosage for ACILOC 300MG 20 F.C. TABS. (CANCELLED)?",
+    "target_chunk_ids": [
+      "aciloc-300mg-20-f-c-tabs-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_drg_40",
+    "question_text": "What is the active ingredient and dosage for ACILOC 75 MG 20 F.C. TABS. (CANCELLED)?",
+    "target_chunk_ids": [
+      "aciloc-75-mg-20-f-c-tabs-cancelled"
+    ]
+  },
+  {
+    "question_id": "auto_drg_41",
+    "question_text": "What is the active ingredient and dosage for ACITRETIN 10MG 30 CAPS.?",
+    "target_chunk_ids": [
+      "acitretin-10mg-30-caps"
+    ]
+  },
+  {
+    "question_id": "auto_drg_42",
+    "question_text": "What is the active ingredient and dosage for ACITRETIN 25MG 30 CAPS.?",
+    "target_chunk_ids": [
+      "acitretin-25mg-30-caps"
+    ]
+  },
+  {
+    "question_id": "auto_drg_43",
+    "question_text": "What is the active ingredient and dosage for ACLESS SOAP 100 GM?",
+    "target_chunk_ids": [
+      "acless-soap-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_44",
+    "question_text": "What is the active ingredient and dosage for ACNE BENZ TOPICAL GEL 30 GM?",
+    "target_chunk_ids": [
+      "acne-benz-topical-gel-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_45",
+    "question_text": "What is the active ingredient and dosage for ACNE BENZ TOPICAL GEL 30 GM (N/A)?",
+    "target_chunk_ids": [
+      "acne-benz-topical-gel-30-gm-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_drg_46",
+    "question_text": "What is the active ingredient and dosage for ACNE BIOTIC PAINT 15 ML?",
+    "target_chunk_ids": [
+      "acne-biotic-paint-15-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_47",
+    "question_text": "What is the active ingredient and dosage for ACNE FREE 0.025% GEL 30 GM?",
+    "target_chunk_ids": [
+      "acne-free-0-025-gel-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_48",
+    "question_text": "What is the active ingredient and dosage for ACNE FREE 0.025% GEL 30 GM (N/A)?",
+    "target_chunk_ids": [
+      "acne-free-0-025-gel-30-gm-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_drg_49",
+    "question_text": "What is the active ingredient and dosage for ACNE FREE 0.05% CREAM 30 GM?",
+    "target_chunk_ids": [
+      "acne-free-0-05-cream-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_50",
+    "question_text": "What is the active ingredient and dosage for ACNE ZINC TOPICAL SOLUTION 20 ML?",
+    "target_chunk_ids": [
+      "acne-zinc-topical-solution-20-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_51",
+    "question_text": "What is the active ingredient and dosage for ACNE-JED 0.1% TOPICAL GEL 15 GM?",
+    "target_chunk_ids": [
+      "acne-jed-0-1-topical-gel-15-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_52",
+    "question_text": "What is the active ingredient and dosage for ACNE-STOP CREAM 30 GM?",
+    "target_chunk_ids": [
+      "acne-stop-cream-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_53",
+    "question_text": "What is the active ingredient and dosage for ACNE-STOP FACIAL WASH 250 ML?",
+    "target_chunk_ids": [
+      "acne-stop-facial-wash-250-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_54",
+    "question_text": "What is the active ingredient and dosage for ACNE-STOP SYSTEM (CREAM+WASH)?",
+    "target_chunk_ids": [
+      "acne-stop-system-cream-wash"
+    ]
+  },
+  {
+    "question_id": "auto_drg_55",
+    "question_text": "What is the active ingredient and dosage for ACNEBLESS CREAM 50 GM?",
+    "target_chunk_ids": [
+      "acnebless-cream-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_56",
+    "question_text": "What is the active ingredient and dosage for ACNEBLESS FACIAL CLEANSING FOAMING GEL 200 ML?",
+    "target_chunk_ids": [
+      "acnebless-facial-cleansing-foaming-gel-200-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_57",
+    "question_text": "What is the active ingredient and dosage for ACNEBLESS FACIAL GEL 50 ML?",
+    "target_chunk_ids": [
+      "acnebless-facial-gel-50-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_58",
+    "question_text": "What is the active ingredient and dosage for ACNEFENCE TOPICAL GEL 50 GM?",
+    "target_chunk_ids": [
+      "acnefence-topical-gel-50-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_59",
+    "question_text": "What is the active ingredient and dosage for ACNELOFIX 20 MG 20 CAPS.?",
+    "target_chunk_ids": [
+      "acnelofix-20-mg-20-caps"
+    ]
+  },
+  {
+    "question_id": "auto_drg_60",
+    "question_text": "What is the active ingredient and dosage for ACNESCAVE 0.1% TOPICAL GEL 30 GM?",
+    "target_chunk_ids": [
+      "acnescave-0-1-topical-gel-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_61",
+    "question_text": "What is the active ingredient and dosage for ACNESEPT 80 GRAM SOAP?",
+    "target_chunk_ids": [
+      "acnesept-80-gram-soap"
+    ]
+  },
+  {
+    "question_id": "auto_drg_62",
+    "question_text": "What is the active ingredient and dosage for ACNESOL SOAP 100 GM?",
+    "target_chunk_ids": [
+      "acnesol-soap-100-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_63",
+    "question_text": "What is the active ingredient and dosage for ACNESONE LOTION 60 ML?",
+    "target_chunk_ids": [
+      "acnesone-lotion-60-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_64",
+    "question_text": "What is the active ingredient and dosage for ACNETIN- A 0.025% TOPICAL GEL 30 GM?",
+    "target_chunk_ids": [
+      "acnetin-a-0-025-topical-gel-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_65",
+    "question_text": "What is the active ingredient and dosage for ACNETIN- A 0.05% CREAM 30 GM?",
+    "target_chunk_ids": [
+      "acnetin-a-0-05-cream-30-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_66",
+    "question_text": "What is the active ingredient and dosage for ACNETIN- A 0.05% TOPICAL SOL. 15 ML?",
+    "target_chunk_ids": [
+      "acnetin-a-0-05-topical-sol-15-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_67",
+    "question_text": "What is the active ingredient and dosage for ACNEVERA SOAP 80 GM?",
+    "target_chunk_ids": [
+      "acnevera-soap-80-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_68",
+    "question_text": "What is the active ingredient and dosage for ACNEVIT ANTI-ACNE CLEANSING GEL 200 ML?",
+    "target_chunk_ids": [
+      "acnevit-anti-acne-cleansing-gel-200-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_69",
+    "question_text": "What is the active ingredient and dosage for ACNEVIT ANTI-ACNE SERUM 30 ML?",
+    "target_chunk_ids": [
+      "acnevit-anti-acne-serum-30-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_70",
+    "question_text": "What is the active ingredient and dosage for ACNI-CARE 2% LOTION 25 ML?",
+    "target_chunk_ids": [
+      "acni-care-2-lotion-25-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_71",
+    "question_text": "What is the active ingredient and dosage for ACNI-CARE 2% LOTION 25 ML (N/A)?",
+    "target_chunk_ids": [
+      "acni-care-2-lotion-25-ml-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_drg_72",
+    "question_text": "What is the active ingredient and dosage for ACNI-CARE 2% TOP. GEL. 20 GM?",
+    "target_chunk_ids": [
+      "acni-care-2-top-gel-20-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_73",
+    "question_text": "What is the active ingredient and dosage for ACNI-CARE 2% TOP. GEL. 20 GM (N/A)?",
+    "target_chunk_ids": [
+      "acni-care-2-top-gel-20-gm-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_drg_74",
+    "question_text": "What is the active ingredient and dosage for ACNIACT TOPICAL GEL 15 GM?",
+    "target_chunk_ids": [
+      "acniact-topical-gel-15-gm"
+    ]
+  },
+  {
+    "question_id": "auto_drg_75",
+    "question_text": "What is the active ingredient and dosage for ACNIDU TOPICAL GEL?",
+    "target_chunk_ids": [
+      "acnidu-topical-gel"
+    ]
+  },
+  {
+    "question_id": "auto_drg_76",
+    "question_text": "What is the active ingredient and dosage for ACNIDU TOPICAL GEL (N/A)?",
+    "target_chunk_ids": [
+      "acnidu-topical-gel-n-a"
+    ]
+  },
+  {
+    "question_id": "auto_drg_77",
+    "question_text": "What is the active ingredient and dosage for ACNIL LOTION 60 ML?",
+    "target_chunk_ids": [
+      "acnil-lotion-60-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_78",
+    "question_text": "What is the active ingredient and dosage for ACNIMED FACE FOAM CLEANSER 200 ML?",
+    "target_chunk_ids": [
+      "acnimed-face-foam-cleanser-200-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_79",
+    "question_text": "What is the active ingredient and dosage for ACNIMED TOPICAL GEL 75 ML?",
+    "target_chunk_ids": [
+      "acnimed-topical-gel-75-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_80",
+    "question_text": "What is the active ingredient and dosage for ACNORA CREAM 50 ML?",
+    "target_chunk_ids": [
+      "acnora-cream-50-ml"
+    ]
+  },
+  {
+    "question_id": "auto_drg_81",
+    "question_text": "What is the active ingredient and dosage for ACRETIN 0.025% CREAM 30 GM?",
+    "target_chunk_ids": [
+      "acretin-0-025-cream-30-gm"
+    ]
+  }
+]

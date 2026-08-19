@@ -35,7 +35,7 @@
       "drug lookup: 1 2 3 (ONE TWO THREE)"
     ],
     "target_chunk_ids": [
-      "1-2-3-one-two-three-20-f-c-tabs"
+      "1-2-3-one-two-three-extra-20-f-c-tabs"
     ],
     "supporting_chunks": [
       {
@@ -86,7 +86,7 @@
       "drug lookup: 1 2 3 (ONE TWO THREE)"
     ],
     "target_chunk_ids": [
-      "1-2-3-one-two-three-20-f-c-tabs"
+      "1-2-3-one-two-three-extra-20-f-c-tabs"
     ],
     "supporting_chunks": [
       {

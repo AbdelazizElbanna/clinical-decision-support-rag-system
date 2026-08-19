@@ -1,0 +1,208 @@
+{
+  "original_hit_rate": 75.0,
+  "rewritten_hit_rate": 80.0,
+  "delta_pct": 5.0,
+  "details": [
+    {
+      "question": "عندي حكة كتير في الجلد وجلدي بيجف، إيه المشكلة؟",
+      "rewritten_query": "itchy dry skin",
+      "target_ids": [
+        "eczema_core_symptom_01"
+      ],
+      "original_hit": false,
+      "rewritten_hit": true,
+      "outcome": "✅ Improved"
+    },
+    {
+      "question": "الصدفية بتأثر على الجلد إزاي؟",
+      "rewritten_query": "psoriasis skin effects",
+      "target_ids": [
+        "psoriasis_overview"
+      ],
+      "original_hit": false,
+      "rewritten_hit": false,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "ما هي أعراض الشرى؟",
+      "rewritten_query": "urticaria symptoms",
+      "target_ids": [
+        "urticaria_overview"
+      ],
+      "original_hit": false,
+      "rewritten_hit": true,
+      "outcome": "✅ Improved"
+    },
+    {
+      "question": "كيف أعالج الأكزيما في المنزل؟",
+      "rewritten_query": "home treatment for eczema",
+      "target_ids": [
+        "eczema_core_management_01"
+      ],
+      "original_hit": false,
+      "rewritten_hit": false,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "هل الإجهاد يزيد من حدة الصدفية؟",
+      "rewritten_query": "stress increase psoriasis severity",
+      "target_ids": [
+        "psoriasis_core_trigger_01"
+      ],
+      "original_hit": false,
+      "rewritten_hit": false,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "Can you tell me more about the symptoms and overview of Atopic Dermatitis?",
+      "rewritten_query": "atopic dermatitis symptoms overview",
+      "target_ids": [
+        "eczema_overview"
+      ],
+      "original_hit": true,
+      "rewritten_hit": false,
+      "outcome": "🔴 Degraded"
+    },
+    {
+      "question": "Can you tell me more about the symptoms and overview of Atopic Dermatitis?",
+      "rewritten_query": "atopic dermatitis symptoms overview",
+      "target_ids": [
+        "eczema_core_symptom_01"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "What does atopic dermatitis look like on a baby under 2 years old?",
+      "rewritten_query": "atopic dermatitis appearance baby under 2",
+      "target_ids": [
+        "eczema_age_variation_infants"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "Is eczema contagious?",
+      "rewritten_query": "eczema contagious",
+      "target_ids": [
+        "eczema_overview"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "What's the difference between how eczema looks on light vs dark skin tones?",
+      "rewritten_query": "eczema appearance light skin dark skin",
+      "target_ids": [
+        "eczema_skin_tone_variations"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "How does dry air make eczema worse?",
+      "rewritten_query": "dry air effect on eczema",
+      "target_ids": [
+        "eczema_trigger_trig_dry_air",
+        "eczema_environmental_factor_01"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "What's Dupixent used for in eczema?",
+      "rewritten_query": "Dupixent indication eczema",
+      "target_ids": [
+        "eczema_systemic_therapy_01"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "What is a bleach bath and why would a dermatologist recommend one?",
+      "rewritten_query": "bleach bath dermatology recommendation",
+      "target_ids": [
+        "eczema_supportive_treatment_02"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "At what age does atopic dermatitis usually start?",
+      "rewritten_query": "atopic dermatitis age of onset",
+      "target_ids": [
+        "eczema_overview"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "What's the most common type of psoriasis?",
+      "rewritten_query": "most common type of psoriasis",
+      "target_ids": [
+        "psoriasis_type_plaque"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "What does guttate psoriasis look like and who usually gets it?",
+      "rewritten_query": "guttate psoriasis appearance and typical patients",
+      "target_ids": [
+        "psoriasis_type_guttate"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "What's inverse psoriasis and where does it show up on the body?",
+      "rewritten_query": "inverse psoriasis body locations",
+      "target_ids": [
+        "psoriasis_type_inverse"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "What percentage of psoriasis patients develop joint problems?",
+      "rewritten_query": "psoriasis joint problems percentage",
+      "target_ids": [
+        "psoriasis_related_condition_01"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "Where does the 30% psoriatic arthritis statistic come from?",
+      "rewritten_query": "psoriatic arthritis prevalence statistic source",
+      "target_ids": [
+        "psoriasis_related_condition_01"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    },
+    {
+      "question": "How long do individual hives usually last?",
+      "rewritten_query": "duration of individual hives",
+      "target_ids": [
+        "urticaria_core_symptom_03"
+      ],
+      "original_hit": true,
+      "rewritten_hit": true,
+      "outcome": "➡️  Same"
+    }
+  ]
+}

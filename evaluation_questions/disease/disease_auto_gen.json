@@ -1,0 +1,16 @@
+[
+  {
+    "question_id": "auto_dis_0",
+    "question_text": "Can you tell me more about the symptoms and overview of Atopic Dermatitis?",
+    "target_chunk_ids": [
+      "eczema_overview"
+    ]
+  },
+  {
+    "question_id": "auto_dis_1",
+    "question_text": "Can you tell me more about the symptoms and overview of Atopic Dermatitis?",
+    "target_chunk_ids": [
+      "eczema_core_symptom_01"
+    ]
+  }
+]
