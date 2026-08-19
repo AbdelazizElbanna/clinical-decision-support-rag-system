@@ -6,3 +6,4 @@ chromadb
 sentence-transformers
 rapidfuzz
 groq
+edge-tts

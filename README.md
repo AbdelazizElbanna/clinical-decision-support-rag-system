@@ -14,96 +14,54 @@
 
 <br />
 
-The Clinical Decision Support RAG System is an advanced medical AI architecture engineered to provide accurate, evidence-based answers to clinical and pharmacological questions. Drawing from a strictly curated knowledge base of regional pharmaceutical data and certified dermatological disease protocols, the system employs rigorous LLM-as-a-judge guardrails to achieve **mathematically verified resistance to medical hallucinations and injected noise**.
-
-This system is built for uncompromising clinical safety, ensuring high-speed access to reliable differential diagnostics and cross-checking contraindications without the risks associated with standard generative AI pipelines.
+The Clinical Decision Support RAG System is an advanced medical AI architecture engineered to provide accurate, evidence-based answers to clinical and pharmacological questions. Drawing from a strictly curated knowledge base of Egyptian pharmaceutical data and certified American Academy of Dermatology disease protocols, the system employs rigorous LLM-as-a-judge guardrails to achieve mathematically verified resistance to medical hallucinations and injected noise.
 
 ---
 
-## Tech Stack & Infrastructure
+## Key Features & Clinical Guidelines
 
-<p align="center">
-  <img src="https://img.shields.io/badge/LangChain-121212?style=for-the-badge&logo=chainlink&logoColor=white" alt="LangChain" />
-  <img src="https://img.shields.io/badge/ChromaDB-FF6B6B?style=for-the-badge&logo=databricks&logoColor=white" alt="ChromaDB" />
-  <img src="https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn" />
-  <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" />
-  <img src="https://img.shields.io/badge/Groq_Cloud-000000?style=for-the-badge" alt="Groq Cloud" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind CSS" />
-</p>
+*   **Dermatology Protocols (AAD)**: Scraped and structurally normalized treatment paths and differential diagnoses from the American Academy of Dermatology.
+*   **Egyptian Pharmacopeia**: Integrated, heavily cleansed datasets merging multiple Egyptian drug repositories, tracking specific trade names, contraindications, and active ingredients.
+*   **Dual-Domain Knowledge Base**: Independent indexing and retrieval pipelines for Dermatology and Pharmacology to maximize context relevance.
+*   **Zero-Hallucination Guardrails**: Adheres to strict evidence-grounding constraints, achieving a 1.0 (100%) score in Faithfulness and Noise Robustness.
+*   **High-Speed SSE Streaming**: Architected with Server-Sent Events (SSE) to drop perceived latency (Time-To-First-Token) to under 1 second.
+*   **Ground-Truth Citation Tracking**: Automates deep provenance mapping directly from source data to the generated response, delivering transparent evidence URLs to clinicians.
 
 ---
 
-## Key System Capabilities
+## High-Level Architecture Summary
 
-* **Dual-Domain Knowledge Base**: Independent indexing and retrieval pipelines for Dermatology (Diseases) and Pharmacology (Drugs) to maximize embedding separation and context relevance.
-* **Zero-Hallucination Guardrails**: Adheres to strict evidence-grounding constraints. Evaluated to a perfect 1.0 (100%) score in Faithfulness and Noise Robustness.
-* **Intent-Driven Query Rewriting**: Employs an LLM-based Intent Extractor to standardize complex, vague, or colloquial Arabic clinical queries into precise English search constraints, actively increasing Hit Rate by +5.0%.
-* **High-Speed SSE Streaming**: Architected with Server-Sent Events (SSE) to drop perceived latency (Time-To-First-Token) to under 1 second.
-* **Ground-Truth Citation Tracking**: Automates deep provenance mapping directly from scraped source data to the generated response, delivering transparent evidence URLs to clinicians.
-
----
-
-## End-to-End System Architecture
-
-The project operates on a specialized multi-stage data pipeline designed to maintain strict boundaries between data processing and real-time inference.
-
-1. **Data Ingestion & Structuring**: 
-   Raw clinical HTML documentation and complex upstream pharmaceutical datasets are programmatically scraped, cleaned, and condensed into flat, lightweight JSON objects. Crucially, exact `sources_summary` provenance tracking is embedded at the root of every parsed object.
-2. **Dynamic Chunking & Indexing**: 
-   The system abandons generic character-based chunking. It utilizes *schema-aware semantic chunking* for disease protocols (preserving full symptom trees) and *object-level atomic chunking* for pharmaceuticals, ensuring vital warnings are never separated from their active ingredients.
-3. **Domain-Specific Embeddings**: 
-   High-dimensional vector embeddings are computed utilizing `all-MiniLM-L6-v2` (Diseases) and `BAAI/bge-m3` (Drugs), and pushed into independent ChromaDB spaces.
-4. **Hybrid RAG Retrieval Engine**: 
-   At query time, the system rewrites the prompt, isolates the clinical intent, and queries the targeted database. Cross-encoder reranking is dynamically bypassed for complex pharmacological trade names to preserve vector precision.
-5. **Clinical Interface**: 
-   A high-performance React web application provides clinicians with real-time text streaming, interactive citations, and integrated PDF export capabilities.
-
----
-
-## Benchmark Performance & Evaluation Highlights
-
-The system was subjected to an aggressive adversarial evaluation suite designed to test hallucination resistance via injected medical noise. Following architectural optimizations, the system meets or exceeds all operational safety targets.
-
-| Evaluation Metric | Target Threshold | Measured Result | Operational Status |
-| :--- | :--- | :--- | :--- |
-| **Faithfulness (RAGAS)** | > 0.95 | **1.0 (100%)** | ✅ Passed |
-| **Noise Robustness** | > 0.95 | **1.0 (100%)** | ✅ Passed |
-| **Context Precision (RAGAS)** | > 0.75 | **1.0 (100%)** | ✅ Passed |
-| **Answer Relevance (RAGAS)** | > 0.80 | **0.834 (83.4%)** | ✅ Passed |
-| **Reranker Precision@4 (Disease)** | Improve baseline | **+8.96% vs baseline** | ✅ Passed |
-| **LLM-as-Judge (Medical Accuracy)** | > 4.0 / 5.0 | **5.0 / 5.0** | ✅ Passed |
-| **LLM-as-Judge (Groundedness)** | > 4.0 / 5.0 | **5.0 / 5.0** | ✅ Passed |
-| **LLM-as-Judge (Safety)** | > 4.0 / 5.0 | **5.0 / 5.0** | ✅ Passed |
-| **Time-To-First-Token (SSE)** | < 1s | **< 1s (SSE streaming)** | ✅ Passed |
-
-> *Note: By achieving 100% Noise Robustness across 20 adversarial test cases, the system successfully ignored completely plausible but entirely fabricated medical context injected directly into its retrieval stream, refusing to generate unsupported claims.*
-
----
-
-## Repository Directory Structure
+The project operates on a specialized multi-stage data pipeline designed to maintain strict boundaries between data processing and real-time inference. 
 
 ```text
-clinical-decision-support-rag-system/
-├── backend/                  # FastAPI server, RAG engine, and SSE endpoints
-├── frontend/                 # React UI, Vite, custom Tailwind styling
-├── src/                      # Data pipeline: Scraping, Ingestion, and Embeddings
-├── data/
-│   ├── raw/                  # Flat, lightweight JSON databases (Diseases & Drugs)
-│   ├── Chunked_Data/         # Processed LangChain documents ready for vectorization
-│   └── vectorstores/         # ChromaDB collections (drugs_chroma, diseases_chroma)
-├── docs/                     # Comprehensive reports and architectural documentation
-├── evaluation_questions/     # Test cases and clinical queries for the pipeline
-├── evaluation_results/       # Output logs and artifacts from the evaluation scripts
-├── requirements.txt          # Consolidated Python dependencies
-└── SETUP_GUIDE.md            # Detailed setup instructions
+[Data Sources: AAD HTML & Drug JSONs]
+          |
+          v
+[Data Ingestion Layer: JSON Structuring & Normalization]
+          |
+          v
+[Dynamic Chunking Engine: Semantic vs. Atomic]
+          |
+          v
+[Vector Indexing: Dual-Domain ChromaDB Stores]
+   / (Diseases) \            / (Drugs) \
+all-MiniLM-L6-v2           BAAI/bge-m3
+          |                    |
+          v                    v
+[FastAPI Backend: Hybrid Retrieval & Cross-Encoder]
+          |
+          v
+[Groq Cloud LLM Generation (Llama-3 / Mixtral)]
+          |
+          v
+[React/Vite Frontend: SSE Streaming & Citation UI]
 ```
+
+For a deep dive into the vector DB abstraction layer, GPU error handling strategies, and precise model architectures, please read the [Master Clinical RAG Documentation](./docs/MASTER_CLINICAL_RAG_DOCUMENTATION.md).
 
 ---
 
-## Quick Setup & Local Deployment
-
-To deploy the entire stack locally, follow these steps. For an extended deployment breakdown, consult the [Setup Guide](./SETUP_GUIDE.md).
+## Quick Start & Local Deployment
 
 ### 1. Repository & Dependencies
 Clone the repository and install the backend environment:
@@ -136,13 +94,9 @@ npm run dev
 
 ---
 
-## Comprehensive Documentation Index
+## Comprehensive Master Documentation
 
-For deep technical dives into the engineering decisions, evaluation architecture, and historical experiments, please review the specialized documentation located in the `docs/` directory:
+All granular evaluation metrics, architecture rationale, iterative engineering logs, and hackathon rubric alignments have been consolidated into a single source of truth.
 
-1. [**Data Pipeline & Embeddings Technical Guide**](./docs/data_pipeline_and_embeddings.md) - Deep dive into data structuring, custom chunking algorithms, and embedding logic.
-2. [**Final Retrieval Evaluation Report**](./docs/final_retrieval_evaluation_report.md) - Exhaustive RAGAS metrics, Cross-Encoder latency analysis, and Hallucination robustness breakdown.
-3. [**Pipeline Refactoring & Audit Log**](./docs/pipeline_refactoring_report.md) - System audit verifying RAG ground-truth citation reliability and data cleanliness.
-4. [**Evaluation Metrics Guide**](./docs/evaluation_metrics_guide.md) - The mathematical reasoning underpinning our retrieval scoring strategy.
-5. [**Experiments Log (English)**](./docs/EXPERIMENTS_LOG_EN.md) - Engineering log detailing the 14 major system challenges resolved during development.
-6. [**Question Dataset Analysis Report**](./docs/question_dataset_analysis_report.md) - Categorical breakdown of the adversarial queries used to benchmark the system.
+**Read the definitive technical guide here:**
+**[docs/MASTER_CLINICAL_RAG_DOCUMENTATION.md](./docs/MASTER_CLINICAL_RAG_DOCUMENTATION.md)**
