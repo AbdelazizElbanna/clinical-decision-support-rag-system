@@ -1,0 +1,24 @@
+# Core RAG & LLM Frameworks
+langchain-core
+sentence-transformers
+transformers
+
+# Data Processing & Scraping
+beautifulsoup4
+lxml
+pandas
+requests
+
+# Vector Store & Search
+chromadb
+rapidfuzz
+
+# API & Backend
+fastapi
+uvicorn[standard]
+httpx
+python-dotenv
+groq
+
+# Evaluation & Metrics
+# Evaluations utilize groq directly, standard libraries like json and math are used.
