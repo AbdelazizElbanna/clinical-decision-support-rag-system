@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+[data-theme='dark'] {
+  --bg-gradient: linear-gradient(135deg, #09090b 0%, #17171d 100%);
+  --surface: rgba(26, 29, 39, 0.6);
+  --surface-2: rgba(43, 47, 61, 0.6);
+  --primary: #818cf8;
+  --primary-glow: rgba(129, 140, 248, 0.4);
+  --accent: #22d3ee;
+  --success: #34d399;
+  --warning: #fbbf24;
+  --error: #f87171;
+  --text: #f8fafc;
+  --text-muted: #94a3b8;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --border: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='light'] {
+  --bg-gradient: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  --surface: rgba(255, 255, 255, 0.8);
+  --surface-2: rgba(226, 232, 240, 0.8);
+  --primary: #4f46e5;
+  --primary-glow: rgba(79, 70, 229, 0.3);
+  --accent: #0284c7;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --text: #0f172a;
+  --text-muted: #475569;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --border: rgba(0, 0, 0, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-gradient);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--surface);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0 var(--primary-glow); }
+  70% { box-shadow: 0 0 10px 4px rgba(129, 140, 248, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(129, 140, 248, 0); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Base styles for markdown */
+.markdown-body {
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  overflow-wrap: anywhere;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.markdown-body p {
+  margin-bottom: 0.8rem;
+}
+.markdown-body p:last-child {
+  margin-bottom: 0;
+}
+.markdown-body ul, .markdown-body ol {
+  margin-bottom: 0.8rem;
+  padding-left: 1.5rem;
+}
+.markdown-body li {
+  margin-bottom: 0.3rem;
+}
+.markdown-body strong {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Layout and Responsive */
+.layout-container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 380px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  z-index: 30;
+  background: var(--surface-2);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--bg-gradient);
+  min-width: 0;
+}
+
+.mobile-header {
+  display: none;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  gap: 12px;
+  background: var(--surface-2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.mobile-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 8px;
+  margin-left: -8px;
+}
+
+.mobile-toggle:hover {
+  background: var(--surface-2);
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+/* Route Container for pages */
+.route-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    position: absolute;
+    top: 0;
+    inset-inline-start: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 85vw;
+    transform: translateX(calc(-100% * var(--is-rtl, 1)));
+    z-index: 40;
+  }
+  
+  html[dir="rtl"] .sidebar {
+    --is-rtl: -1;
+  }
+  html[dir="ltr"] .sidebar {
+    --is-rtl: 1;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+    box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+  }
+
+  .sidebar-overlay.open {
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 25;
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+
+  .mobile-header {
+    display: none !important;
+  }
+  
+  .chat-padding {
+    padding: 16px 20px !important;
+  }
+  
+  .input-padding {
+    padding: 12px 16px 16px !important;
+  }
+}
+
+/* Hide close button on Desktop sidebar */
+@media (min-width: 769px) {
+  .mobile-close-btn {
+    display: none !important;
+  }
+}
+
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 40px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.auth-input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+}
+.auth-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+.auth-button {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+.auth-button:hover {
+  opacity: 0.9;
+}
+
+/* Links inside chat message bubbles */
+.markdown-body a,
+.message-bubble a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-decoration-color: var(--primary-glow);
+  text-underline-offset: 3px;
+  font-weight: 600;
+  transition: opacity 0.15s;
+}
+.markdown-body a:hover,
+.message-bubble a:hover {
+  opacity: 0.8;
+}
+
+/* === Markdown Tables === */
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.88rem;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.markdown-body table thead {
+  background: var(--primary-glow);
+}
+
+.markdown-body table th {
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 700;
+  color: var(--primary);
+  border-bottom: 2px solid var(--border);
+  white-space: nowrap;
+}
+
+.markdown-body table td {
+  padding: 9px 14px;
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  line-height: 1.5;
+  vertical-align: top;
+}
+
+.markdown-body table tr:last-child td {
+  border-bottom: none;
+}
+
+.markdown-body table tr:nth-child(even) td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.markdown-body table tr:hover td {
+  background: var(--primary-glow);
+  transition: background 0.15s;
+}
+
+/* === Markdown Inline Code === */
+.markdown-body code {
+  background: var(--surface-2);
+  color: var(--accent);
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
+
+/* === Markdown Code Blocks === */
+.markdown-body pre {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  overflow-x: auto;
+  margin: 12px 0;
+}
+
+.markdown-body pre code {
+  background: none;
+  color: var(--text);
+  padding: 0;
+  font-size: 0.85rem;
+}
+
+/* === Markdown Blockquotes === */
+.markdown-body blockquote {
+  border-left: 3px solid var(--primary);
+  padding: 8px 16px;
+  margin: 12px 0;
+  color: var(--text-muted);
+  background: var(--primary-glow);
+  border-radius: 0 8px 8px 0;
+}
+
+/* === Markdown Lists === */
+.markdown-body ul, .markdown-body ol {
+  padding-left: 22px;
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
