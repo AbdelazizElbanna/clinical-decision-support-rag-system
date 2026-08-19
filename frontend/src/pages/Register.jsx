@@ -90,7 +90,7 @@ export default function Register() {
                 value={formData.password} 
                 onChange={handleChange} 
                 className="auth-input" 
-                style={{ width: '100%' }}
+                style={{ width: '100%', paddingRight: '40px' }}
                 required 
               />
               <button 
@@ -109,7 +109,7 @@ export default function Register() {
                 value={formData.confirmPassword} 
                 onChange={handleChange} 
                 className="auth-input" 
-                style={{ width: '100%' }}
+                style={{ width: '100%', paddingRight: '40px' }}
                 required 
               />
             </div>

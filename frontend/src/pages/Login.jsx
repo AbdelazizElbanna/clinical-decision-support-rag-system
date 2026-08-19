@@ -47,7 +47,7 @@ export default function Login() {
               value={password} 
               onChange={e => setPassword(e.target.value)} 
               className="auth-input" 
-              style={{ width: '100%' }}
+              style={{ width: '100%', paddingRight: '40px' }}
               required 
             />
             <button 
