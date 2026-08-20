@@ -78,6 +78,21 @@ all-MiniLM-L6-v2 (384-dim)        BAAI/bge-m3 (1024-dim)
 
 ---
 
+## Core Technical Innovations & Trade-Offs
+
+### 1. Dual Chunking Methodology
+Fixed-size character chunking fundamentally destroys clinical context. This system employs two distinct strategies:
+*   **Atomic Object-Level Chunking (Drugs)**: Pharmacological data is chunked atomically per drug. Critical warnings (contraindications, pregnancy safety) are hard-bound to the active ingredient context window, ensuring the LLM never retrieves a medication name without its associated clinical dangers.
+*   **Semantic Block Chunking (Diseases)**: Symptom trees and treatment protocols are recursively chunked by schema headings, preserving the complete diagnostic criteria in a single verifiable vector payload.
+
+### 2. Algorithmic Pivot: Bypassing the Cross-Encoder
+The system originally implemented a `ms-marco-MiniLM-L-6-v2` cross-encoder to rerank vector search results. During empirical testing, reranking improved Precision@4 for disease queries by +9.0%. However, it triggered a **-2.2% Precision@4 degradation** for the pharmacology pipeline. The MS MARCO dataset (general English web queries) actively penalized highly specific Egyptian pharmaceutical brand names. Consequently, reranking was bypassed explicitly for the drug domain to maintain maximum precision.
+
+### 3. Latency Optimization via SSE
+Static generation resulted in unacceptable 15-second wait times. By refactoring the FastAPI backend and React frontend to utilize **Server-Sent Events (SSE)**, the system eliminated the generation bottleneck. This engineering pivot reduced the perceived latency (Time-To-First-Token) to under **1.0 second**, enabling a seamless clinical user experience.
+
+---
+
 ## Comprehensive Setup & Installation Guide
 
 To deploy the project locally on your machine, follow these steps strictly in order.
