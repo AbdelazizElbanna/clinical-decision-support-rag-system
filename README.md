@@ -9,6 +9,7 @@
   <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" />
   <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React" />
   <img src="https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/ChromaDB-FF4F00?style=for-the-badge" alt="ChromaDB" />
   <img src="https://img.shields.io/badge/Evaluation-RAGAS-green?style=for-the-badge" alt="Evaluation" />
 </div>
 
@@ -162,9 +163,47 @@ The system underwent rigorous evaluation using RAGAS and custom adversarial test
 
 ---
 
-## Comprehensive Master Documentation
+## Repository Directory Tree
 
-For an exhaustive, step-by-step technical breakdown of the ingestion schemas, embedding vector isolation, algorithmic reranker optimization, latency metrics, and 100% Noise Robustness evaluation, please refer to the primary documentation index.
+The repository strictly separates backend logic, vector stores, and frontend UI components.
+
+```text
+.
+├── backend
+│   ├── data
+│   ├── medlens.db
+│   ├── main.py
+│   ├── pipeline.py
+│   ├── retriever.py
+│   ├── intent_extractor.py
+│   ├── device_utils.py
+│   └── requirements.txt
+├── data
+│   ├── Chunked_Data
+│   ├── cleaned
+│   ├── raw
+│   └── vectorstores
+├── docs
+│   ├── docs_guide
+│   └── MASTER_CLINICAL_RAG_DOCUMENTATION.md
+├── evaluation_questions
+├── evaluation_results
+├── frontend
+│   ├── public
+│   ├── src
+│   ├── package.json
+│   └── vite.config.js
+└── src
+    ├── data_ingestion
+    ├── embeddings
+    └── scrap_diseases
+```
+
+---
+
+## Master Documentation Link
+
+For an exhaustive, step-by-step technical breakdown of the ingestion schemas, embedding vector isolation, rigorous evaluation methodology, and trial history, please refer to our primary documentation index.
 
 **Read the definitive technical guide here:**
 **[docs/MASTER_CLINICAL_RAG_DOCUMENTATION.md](./docs/MASTER_CLINICAL_RAG_DOCUMENTATION.md)**
