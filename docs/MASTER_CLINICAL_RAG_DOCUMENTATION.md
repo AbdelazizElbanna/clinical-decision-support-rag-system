@@ -77,37 +77,6 @@ Web-scraped HTML is parsed using BeautifulSoup. Non-clinical noise (advertisemen
 #### 2. Vector DB Abstraction & Isolation
 Vector storage is strictly separated into two distinct ChromaDB collections: `diseases_chroma` and `drugs_chroma`. Mixing 384-dimensional English sentence embeddings (diseases) with 1024-dimensional multilingual embeddings (drugs) is technically impossible in a single standard collection. Conceptually, isolating them prevents symptom descriptions from matching chemically similar but functionally irrelevant drug compounds.
 
-#### 3. Hardware Fallback (`device_utils.py`)
-To prevent fatal crashes on lower-end deployment environments (e.g., Nvidia Quadro P620 with compute capability 6.1), the backend actively verifies CUDA kernel compatibility by attempting a tiny tensor allocation. If it fails, the system safely falls back to CPU execution.
-
-**Verbatim Implementation (`backend/device_utils.py`):**
-```python
-import torch
-
-_device = None
-
-def get_device() -> str:
-    global _device
-    if _device is not None:
-        return _device
-        
-    if torch.cuda.is_available():
-        try:
-            capability = torch.cuda.get_device_capability(0)
-            if capability[0] >= 6:
-                # Perform a tiny allocation test to ensure the wheel actually contains compatible kernels
-                _ = torch.rand(1, 1).to('cuda:0')
-                _device = "cuda"
-            else:
-                _device = "cpu"
-        except Exception as e:
-            _device = "cpu"
-    else:
-        _device = "cpu"
-        
-    return _device
-```
-
 ---
 
 ## Section 3: Ingestion & Retrieval Deep-Dive
@@ -129,14 +98,6 @@ The initial pipeline utilized a `ms-marco-MiniLM-L-6-v2` cross-encoder to rerank
 *   **The Diagnosis**: The MS MARCO dataset (which the cross-encoder was trained on) consists of general English web queries. It performs beautifully on standard medical phrases but actively penalized highly specific Egyptian pharmaceutical brand names, pushing relevant drugs out of the Top-K window.
 *   **The Algorithmic Pivot**: Reranking was dynamically bypassed for the drug pipeline.
 
-**Verbatim Bypass Implementation (`backend/pipeline.py`):**
-```python
-        # Apply Cross-Encoder Reranking (Bypass for drugs)
-        if col != 'drugs' and _reranker is not None and col_chunks:
-            search_query_en = intent.get("search_query_en", user_query)
-            pairs = [[search_query_en, c.get('text', '')] for c in col_chunks]
-            scores = _reranker.predict(pairs)
-```
 
 ---
 
