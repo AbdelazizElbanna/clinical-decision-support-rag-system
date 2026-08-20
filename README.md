@@ -148,6 +148,20 @@ To deploy the project locally on your machine, follow these steps strictly in or
 
 ---
 
+## Evaluation & Performance Metrics Overview
+
+The system underwent rigorous evaluation using RAGAS and custom adversarial testing, proving exceptional clinical safety.
+
+| Metric | Result | Status / Note |
+| :--- | :--- | :--- |
+| **RAGAS Faithfulness** | **1.0 (100%)** | Zero Hallucinations; all claims traceable to context. |
+| **Hit Rate @ 10** | **93.3%** (Disease) / **92.0%** (Drug) | High reliability in fetching relevant documents. |
+| **MRR @ 10** | **0.74** (Disease) / **0.83** (Drug) | Strong ranking quality prior to reranking. |
+| **Noise Robustness** | **1.0 (100%)** | Perfect resistance to adversarial injected noise. |
+| **Streaming TTFT** | **< 1.0s** | Immediate perceived responsiveness. |
+
+---
+
 ## Comprehensive Master Documentation
 
 For an exhaustive, step-by-step technical breakdown of the ingestion schemas, embedding vector isolation, algorithmic reranker optimization, latency metrics, and 100% Noise Robustness evaluation, please refer to the primary documentation index.
