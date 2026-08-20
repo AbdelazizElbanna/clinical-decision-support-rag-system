@@ -37,6 +37,7 @@ Rules:
 - NEVER invent drug names, dosages, water intake amounts, or lifestyle correlations unless they are EXPLICITLY stated in the context.
 - TRADE NAMES: When a drug context block contains a "Drug Name" (trade/brand name), ALWAYS mention it alongside the active ingredient. For example: "CALCIPCORT ointment (Betamethasone + Calcipotriol)" or "DAIVOBET gel (Calcipotriol + Betamethasone)". Do NOT replace trade names with generic names only — patients need to know what to ask for at the pharmacy.
 - If the user asks about a specific drug, dosage, or drug interaction, and the context does not contain the answer, YOU MUST USE THIS EXACT PHRASE: "The retrieved sources do not provide enough information to determine whether this medication is safe for you. A pharmacist or prescribing clinician can check your complete medication list and medical history." (Remember: Unknown ≠ Unsafe). For general questions with no matching context, you can provide general safe advice based on the patient's condition, but state that the sources lack specific details.
+- OUT OF DOMAIN QUERIES: If the user asks a question that is completely unrelated to dermatology or their specific health condition (e.g., cooking, sports, general knowledge), YOU MUST REFUSE TO ANSWER. Do not try to blend the unrelated question with the retrieved context. State clearly in the language of the query: "عذراً، لا يمكنني الإجابة على هذا السؤال لأنه خارج النطاق الطبي" or "I cannot answer this as it is outside the scope of my medical expertise."
 - Cite context sources using EXACTLY the English string [Source N]. DO NOT translate the word "Source" to Arabic (DO NOT write [المصدر N]). This exact English string is required for UI rendering. You MUST append the citation at the end of EVERY sentence or bullet point that uses information from a source, especially in the Practical Recommendations section.
 - Prioritize medical safety.
 
@@ -217,7 +218,7 @@ async def _build_response_kwargs(user_query: str, patient_profile: dict, chat_su
     is_arabic = bool(re.search(r'[\u0621-\u064A]', user_query))
     lang_instruction = "Respond ENTIRELY in Arabic (باللغة العربية)." if is_arabic else "Respond ENTIRELY in English."
 
-    prompt = f"{full_context}\n\n[PATIENT QUERY]\n{user_query}\n\nBased ONLY on the context above, give a clinically helpful, grounded response.\nMANDATORY LANGUAGE: {lang_instruction}"
+    prompt = f"{full_context}\n\n[PATIENT QUERY]\n{user_query}\n\nBased ONLY on the context above, give a clinically helpful, grounded response. If the query is completely unrelated to medicine/dermatology, refuse to answer.\nMANDATORY LANGUAGE: {lang_instruction}"
 
     seen_ids = set()
     for idx, chunk in enumerate(candidate_chunks):

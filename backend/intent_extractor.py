@@ -27,6 +27,7 @@ Rules:
 - Map location to the exact city name mentioned. If multiple cities are mentioned (e.g., traveling from A to B), ALWAYS extract the DESTINATION (B) as the location. Set to 'None' if no location is mentioned.
 - Set 'requires_weather' to 'true' if ANY city or location is mentioned, or if the user asks about environmental triggers.
 - The 'clinical_summary' should be a concise string (max 50 words) summarizing: condition, location, symptoms, relevant medications mentioned so far.
+- OUT OF DOMAIN QUERIES: If the new query contains non-medical, irrelevant topics (like cooking, sports, general knowledge), DO NOT include them in the `clinical_summary`. Keep the summary strictly focused on the patient's dermatology condition.
 - ALWAYS include BOTH 'diseases' and 'drugs' in collections_to_query if the user asks about treatments, moisturizers, creams, or how to manage a condition.
 - You MUST respond ONLY with a raw JSON object (no markdown, no backticks).
 
