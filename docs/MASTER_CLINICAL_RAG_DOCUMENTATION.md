@@ -1,202 +1,321 @@
 # Master Clinical RAG Documentation
 
-## Section 1: Executive Summary & Clinical Background
+## 1. Project Overview
 
-### Narrative and Clinical Imperatives
-The Clinical Decision Support RAG System was architected to resolve the extreme point-of-care friction experienced by clinicians cross-referencing complex dermatological symptoms with regional pharmacological contraindications. In the fast-paced clinical environments of Egypt, dermatologists must simultaneously query international standard-of-care protocols from the American Academy of Dermatology (AAD) and map those treatments to available local products registered in the Egyptian Drug Index.
+The Clinical Decision Support RAG System is an end-to-end knowledge retrieval and synthesis pipeline specialized for dermatology. It addresses the clinical friction experienced when cross-referencing complex dermatological symptoms with pharmacological contraindications. 
 
-Traditional Generative AI (LLMs) fundamentally fail at this task due to hallucinations—confidently generating plausible but clinically false drug names, incorrect dosages, or phantom indications. In medical environments, the mathematical necessity of zero-hallucination architectures cannot be overstated. A false positive (recommending an unsafe drug interaction) is catastrophic. 
+Standard Large Language Models (LLMs) hallucinate confidently in medical contexts—inventing drug names, incorrect dosages, or phantom indications. This system operates under the philosophy that a *fluent answer is not a safe answer*. To prevent hallucinated interactions, the system utilizes a **dual-domain Retrieval-Augmented Generation (RAG) architecture**. It completely isolates general medical guidelines (covering Eczema, Psoriasis, and Urticaria) from a highly specific local pharmacological knowledge base (the Egyptian Drug Index).
 
-To solve this, our system utilizes a dual-domain Retrieval-Augmented Generation (RAG) architecture. It completely isolates the general medical knowledge base from the local pharmacological knowledge base, ensuring strict semantic boundaries, preventing cross-contamination, and mathematically guaranteeing that the LLM grounds its responses strictly in verified text.
+By maintaining strict semantic boundaries and preventing cross-contamination, the architecture mathematically guarantees that the generative model grounds its clinical responses strictly in verified, retrieved text.
 
 ---
 
-## Section 2: End-to-End Pipeline & System Architecture
+## 2. System Architecture
 
-The project operates on a specialized multi-stage data pipeline designed to maintain strict boundaries between data processing and real-time inference.
+The project is built as a modular, 7-layer pipeline ensuring each stage is independently auditable:
 
-### High-Level End-to-End Flowchart
+1. **Ingestion Layer:** Raw HTML guidelines and JSON pharmacological databases are structured and cleaned.
+2. **Chunking Layer:** Data is chunked using domain-specific strategies (Semantic Block Chunking for diseases vs. Atomic Object Chunking for drugs).
+3. **Embedding Layer:** Multilingual and English-specific dense embeddings map the data into specialized latent spaces.
+4. **Vector Retrieval Layer:** Two independent ChromaDB collections store and retrieve top-K candidate chunks using Cosine Similarity.
+5. **Intent Classification & Routing (LLM-based):** An Intent Extractor categorizes user queries, standardizes vocabulary, manages conversational memory, and queries external APIs (Weather/UV Index).
+6. **Precision Reranking Layer:** A Cross-Encoder dynamically re-scores disease chunks for top-K optimization.
+7. **Grounded Generation & Safety Layer:** The primary LLM synthesizes evidence strictly based on retrieved context, enforcing markdown citations (`[Source N]`) and abstaining when evidence is absent.
 
 ```text
-DISEASES PIPELINE                                DRUGS PIPELINE
-================                                ==============
-
-Raw HTML Pages (AAD Scraped)                    Raw JSON Datasets (eg_drugs_raw.json)
-       │                                               │
-       ▼                                               ▼
-src/scrap_diseases/testhtml.py                 src/data_ingestion/drugs_ingestion/merge_drugs.py
-       │                                               │
-       ▼                                               ▼
-.tmp/scraped_html/*.html                       data/raw/Drugs/unified_egyptian_drugs.json
-       │                                               │
-       ▼                                               ▼
-convert_diseases_html_to_json.py               clean_drugs.py
-       │                                               │
-       ▼                                               ▼
-data/raw/diseases/*/*.json                     data/raw/Drugs/cleaned_drugs.json
-       │                                               │
-       ▼                                               ▼
-chunk_eczema.py (Schema-aware chunking)        filter_skin_allergy_drugs.py (Domain filter)
-       │                                               │
-       ▼                                               ▼
-data/Chunked_Data/diseases_chunked/*.json      data/raw/Drugs/skin_allergy_drugs.json (5,978)
-       │                                               │
-       │                                               ▼
-       │                                       chunk_drugs.py (Object-level formatting)
-       │                                               │
-       ▼                                               ▼
-embed_diseases.py                              embed_drugs.py
-(Model: all-MiniLM-L6-v2, 384-dim)             (Model: BAAI/bge-m3, 1024-dim)
-       │                                               │
-       ▼                                               ▼
-data/vectorstores/diseases_chroma/             data/vectorstores/drugs_chroma/
-(Collection: "diseases", 166 vectors)          (Collection: "drugs", 5,978 vectors)
+User Query (Text/Voice)
+      │
+      ▼
+[Intent Extractor (Groq)] ──(Context)──▶ [Weather API]
+      │
+      ├───────────────────────┐
+      ▼                       ▼
+[Diseases ChromaDB]      [Drugs ChromaDB]
+(all-MiniLM-L6-v2)       (BAAI/bge-m3)
+      │                       │
+      ▼                       │
+[Cross-Encoder Reranker]      │
+(ms-marco-MiniLM-L-6-v2)      │
+      │                       │
+      └─────────┬─────────────┘
+                ▼
+[Grounded LLM Generator (Groq Llama-3/Mixtral)]
+                │
+                ▼
+[React UI: SSE Stream, Evidence Panel, TTS]
 ```
-
-### Layer Breakdown
-
-#### 1. Ingestion Layer & Exact JSON Schemas
-Web-scraped HTML is parsed using BeautifulSoup. Non-clinical noise (advertisements, navigation) is stripped. The content is normalized into structural JSON.
-
-**Diseases JSON Chunk Schema (Example: Psoriasis Treatment):**
-```json
-{
-  "chunk_id": "psoriasis_treatment_01",
-  "condition_id": "pso",
-  "condition": "Psoriasis",
-  "section": "Treatment",
-  "subsection": "Topical Corticosteroids",
-  "text": "Condition: Psoriasis\nSection: Treatment\nSubsection: Topical Corticosteroids\nTopical corticosteroids are frequently prescribed as a first-line treatment for mild to moderate psoriasis... Source: American Academy of Dermatology (AAD)\nSource URL: https://www.aad.org/public/diseases/psoriasis/treatment",
-  "chunk_type": "Subsection",
-  "source": "diseases",
-  "source_url": "https://www.aad.org/public/diseases/psoriasis/treatment",
-  "sources_summary": "American Academy of Dermatology (AAD) - Psoriasis Treatment"
-}
-```
-
-#### 2. Vector DB Abstraction & Isolation
-Vector storage is strictly separated into two distinct ChromaDB collections: `diseases_chroma` and `drugs_chroma`. Mixing 384-dimensional English sentence embeddings (diseases) with 1024-dimensional multilingual embeddings (drugs) is technically impossible in a single standard collection. Conceptually, isolating them prevents symptom descriptions from matching chemically similar but functionally irrelevant drug compounds.
 
 ---
 
-## Section 3: Ingestion & Retrieval Deep-Dive
+## 3. Repository Architecture
 
-### Chunking Methodologies: Semantic vs. Atomic
-Fixed-size character chunking (e.g., splitting every 500 tokens) fundamentally destroys clinical context. The system employs two radically different chunking algorithms:
+The project follows a decoupled structure separating backend logic, frontend UI, data processing, and evaluation:
 
-1. **Semantic Block Chunking (Diseases)**: Symptom trees and treatment protocols are recursively chunked by HTML heading tags (`h2`, `h3`). This ensures that an entire symptom list remains intact within a single vector payload.
-2. **Object-Level Atomic Chunking (Drugs)**: Implements a "One Drug = One Document" philosophy. Pharmacological data is chunked atomically per drug record. Critical warnings (pregnancy contraindications) are hard-bound to the active ingredient in the text representation. If a drug is retrieved, its safety warnings are mathematically guaranteed to be retrieved with it.
-
-### Embedding Model Selection
-*   **Diseases (`all-MiniLM-L6-v2`)**: A highly efficient 384-dimensional model proven sufficient for standard English medical symptom descriptions. Total Context Size used: Mean 173.77 tokens / 512 Max.
-*   **Drugs (`BAAI/bge-m3`)**: A robust 1024-dimensional multilingual model. Selected explicitly to handle complex, non-standard Egyptian drug trade names (e.g., "1 2 3 EXTRA") and mixed Arabic/English pharmaceutical queries without severe token degradation. Total Context Size used: Mean 168.11 tokens / 8192 Max.
-
-### The Reranker Degradation Anomaly & Trial History
-The initial pipeline utilized a `ms-marco-MiniLM-L-6-v2` cross-encoder to rerank vector search results based on deep semantic relevance. 
-*   **The Trial**: We measured `Precision@4` across the validation set before and after cross-encoder reranking.
-*   **The Result**: For Diseases, `Precision@4` improved by **+9.0%** (0.279 → 0.304). For Drugs, `Precision@4` degraded by **-2.2%** (0.225 → 0.220).
-*   **The Diagnosis**: The MS MARCO dataset (which the cross-encoder was trained on) consists of general English web queries. It performs beautifully on standard medical phrases but actively penalized highly specific Egyptian pharmaceutical brand names, pushing relevant drugs out of the Top-K window.
-*   **The Algorithmic Pivot**: Reranking was dynamically bypassed for the drug pipeline.
-
-
----
-
-## Section 4: Grounding, Citations & Faithfulness
-
-### Citation Propagation via `sources_summary`
-Provenance is strictly maintained from HTML scraping to UI rendering. During ingestion, the script captures the `<title>` and `canonical_url` and stores them in the `sources_summary` node. This metadata is injected into the ChromaDB vector payload. During backend retrieval, it is passed directly into the React UI payload as `metadata.source_url`, allowing clinicians to instantly click out to the original AAD guidelines.
-
-### Normalization of Warning Flags
-During `clean_drugs.py` execution, raw booleans relating to pregnancy and lactation are forcefully normalized into standard clinical warning texts to ensure the LLM understands the severity without relying on implicit inference.
-*   `True` → `"Caution required"`
-*   `False` → `"No specific warning recorded"`
-*   `null` → `"Insufficient information available; consult a doctor or pharmacist."`
-
-### Verbatim System Prompts & Context Preservation
-To enforce Faithfulness, the LLM is given absolute boundaries.
-
-**Verbatim `SYSTEM_PROMPT` excerpt from `pipeline.py`:**
 ```text
-Rules:
-- EXTREMELY IMPORTANT: ONLY use information explicitly provided in the context blocks below.
-- UNSUPPORTED INFERENCE IS STRICTLY FORBIDDEN: Just because a source states that Treatment X is a treatment for a condition, you MUST NOT recommend the patient to "consider using Treatment X" unless the source explicitly says "Patients with this specific symptom should use Treatment X". 
-- TRADE NAMES: When a drug context block contains a "Drug Name" (trade/brand name), ALWAYS mention it alongside the active ingredient. For example: "CALCIPCORT ointment (Betamethasone + Calcipotriol)".
-- Cite context sources using EXACTLY the English string [Source N].
+clinical-decision-support-rag-system/
+├── backend/
+│   ├── main.py                   # FastAPI server entry point, SSE streaming
+│   ├── pipeline.py               # Core generation logic, LLM system prompts
+│   ├── retriever.py              # ChromaDB lazy-loading dual-model retrieval
+│   ├── intent_extractor.py       # Groq-based intent, memory, and query router
+│   ├── device_utils.py           # Hardware/CUDA fallback detection
+│   ├── weather_service.py        # Environmental context API integration
+│   ├── custom_ragas.py           # Retrieval and generation evaluation script
+│   └── evaluate_reranker.py      # Cross-encoder impact evaluation script
+├── data/
+│   ├── Chunked_Data/             # Final retrievable JSON arrays
+│   │   ├── diseases_chunked/     # 3 JSONs (Eczema, Psoriasis, Urticaria)
+│   │   └── drugs_chunked/        # 1 JSON (LangChain Document objects)
+│   ├── cleaned/                  # Intermediate normalized JSON files
+│   ├── raw/                      # Original HTML scraped files & huge drug JSONs
+│   └── vectorstores/
+│       ├── diseases_chroma/      # Chroma HNSW DB (data_level0.bin, sqlite3)
+│       └── drugs_chroma/         # Chroma HNSW DB
+├── docs/                         
+│   ├── docs_guide/               # Historical architecture notes and hackathon scripts
+│   └── MASTER_CLINICAL_RAG_DOCUMENTATION.md
+├── evaluation_questions/         # 122 curated benchmark queries (traces.json)
+├── frontend/                     # React + Vite UI (Tailwind CSS)
+│   └── src/components/           # SourceCards, ChatInterface, ConditionBadges
+├── Reports/                      # Intermediate pipeline token/chunking statistics
+└── src/
+    ├── data_ingestion/           
+    │   ├── diseases_ingestion/   # Scripts to convert HTML to chunked JSON
+    │   └── drugs_ingestion/      # Scripts to clean, filter, and chunk medications
+    └── embeddings/               # Analysis and embedding generation scripts
 ```
 
 ---
 
-## Section 5: Clinical Safety & Guardrails
+## 4. Disease Data Pipeline
 
-### Distance Metrics & Thresholds
-Retrieval relies on **Cosine Similarity**. In `custom_ragas.py`, the relevance threshold is aggressively set (`PRECISION_THRESHOLD = 0.45`). However, for the generative pipeline, we remove hard cutoff thresholds and instead pass the top `K` candidate blocks directly to the LLM. 
+The disease knowledge base represents standard-of-care clinical guidelines for Atopic Dermatitis, Psoriasis, and Urticaria.
 
-### Fallback & Abstention Triggers
-If the retrieved context lacks the necessary information to safely answer the user query, the LLM is explicitly instructed to abstain rather than hallucinate.
+1. **Source & Collection:** Clinical reference sites (e.g., American Academy of Dermatology) were scraped into HTML pages.
+2. **Extraction to JSON:** `convert_diseases_html_to_json.py` parsed raw HTML into structured dictionaries tracking the disease condition, major section (e.g., "Symptoms", "Treatment"), and text.
+3. **Structuring & Normalization:** `chunk_*.py` scripts (e.g., `chunk_eczema.py`) cleaned whitespace, stripped HTML tags, and preserved canonical source URLs and aliases.
+4. **Final Record Count:** The pipeline generated 166 final disease chunks across the three conditions (59 Eczema, 57 Psoriasis, 50 Urticaria).
+5. **Storage Location:** Final arrays stored in `data/Chunked_Data/diseases_chunked/`.
 
-**Verbatim Abstention Guardrail:**
-```text
-- If the user asks about a specific drug, dosage, or drug interaction, and the context does not contain the answer, YOU MUST USE THIS EXACT PHRASE: "The retrieved sources do not provide enough information to determine whether this medication is safe for you. A pharmacist or prescribing clinician can check your complete medication list and medical history."
+---
+
+## 5. Drug Data Pipeline
+
+The pharmacological knowledge base focuses strictly on medications relevant to dermatology and allergies.
+
+1. **Original Sources:** Unified Egyptian drug databases (`eg_drugs_raw.json` / `egyptian_drugs_raw.json`) containing 29,827 total records.
+2. **Cleaning:** `clean_drugs.py` removed Arabic fields (`name_ar`, `uses_ar`), normalized string casing for acronyms, collapsed whitespace, and explicitly transformed boolean safety warnings into readable strings (e.g., `True` → "Caution required").
+3. **Domain Filtering:** `filter_skin_allergy_drugs.py` enforced domain strictness. Records were retained only if their `drug_class`, `active_ingredients`, or `uses_en` matched dermatological keywords (e.g., "corticosteroid", "cetirizine").
+   - *Final Record Count:* 5,978 records (approx. 20% of the raw dataset).
+4. **Document Construction:** `chunk_drugs.py` mapped the filtered JSON objects into LangChain `Document` schemas, separating human-readable `page_content` from structured `metadata` (slug, barcode, sources).
+5. **Storage Location:** `data/Chunked_Data/drugs_chunked/drugs_chunked.json`.
+
+---
+
+## 6. Chunking Strategy
+
+Fixed-size character chunking fundamentally destroys clinical context. The system employs two distinct, implementation-verified strategies to preserve object integrity:
+
+### Semantic Block Chunking (Diseases)
+Disease data uses **One semantic unit per retrieval chunk.** 
+The pipeline respects semantic HTML boundaries (headings/sections). By keeping all symptoms of a disease together in one chunk, it avoids splitting lists mid-sentence. When a user asks "What are the symptoms of eczema?", they retrieve a complete, coherent list rather than a fragment.
+
+### Atomic Object-Level Chunking (Drugs)
+Pharmacological data uses **One drug record per retrieval document.**
+Drug records are chunked atomically. Critical warnings (contraindications, pregnancy safety) are hard-bound to the active ingredient context window. Slicing a drug record would separate a medication's name from its severe warnings, leading to catastrophic retrieval failures.
+
+---
+
+## 7. Token Analysis
+
+Token distributions were analyzed over the processed chunks to guarantee that chunks safely fit within their respective embedding model context limits.
+
+**Disease Chunks (Model: `all-MiniLM-L6-v2`)**
+- Total Chunks: 166
+- Average Tokens: 173.77
+- Median Tokens: 168.0
+- Max Tokens: 389 (Safely below the 512 max limit)
+
+**Drug Documents (Model: `BAAI/bge-m3`)**
+- Total Documents: 5,978
+- Average Tokens: 168.11
+- Median Tokens: 162.0
+- Max Tokens: 521 (Safely below the 8192 max limit)
+
+---
+
+## 8. Embedding Pipeline
+
+To prevent vector contamination between general English prose and highly specific pharmaceutical nomenclature, the embedding phase is split. `retriever.py` dynamically lazy-loads the required model based on the target collection.
+
+1. **Diseases Embedder:** `all-MiniLM-L6-v2`
+   - **Dimensions:** 384
+   - **Normalization:** True
+   - **Rationale:** Highly efficient, small disk footprint (~90MB), and mathematically optimal for standard English symptom/treatment descriptions.
+2. **Drugs Embedder:** `BAAI/bge-m3`
+   - **Dimensions:** 1024
+   - **Normalization:** True
+   - **Rationale:** Essential for complex Egyptian pharmaceutical brand names (e.g., "1 2 3 EXTRA"), mixed numeric identifiers, and multilingual edge cases.
+
+---
+
+## 9. Vector Database / Indexing
+
+Storage is strictly handled by two physically isolated ChromaDB persistence instances.
+
+- **Diseases DB Path:** `data/vectorstores/diseases_chroma/` (Collection: `diseases`)
+- **Drugs DB Path:** `data/vectorstores/drugs_chroma/` (Collection: `drugs`)
+
+Internal index structures (HNSW) include:
+- `data_level0.bin`: Raw dense vectors.
+- `chroma.sqlite3`: Relational database mapping IDs to LangChain metadata payloads.
+- `embedding_manifest.json`: Pipeline configuration trace.
+
+---
+
+## 10. Query Processing and Retrieval
+
+Queries are processed at runtime via `retriever.py`:
+1. The **Intent Extractor** determines the relevant collections to search.
+2. `retriever.py` lazy-loads the respective embedding models.
+3. The query is embedded (e.g., via `all-MiniLM-L6-v2` for diseases) and Cosine Similarity is used to fetch the Top-20 chunks (`k_candidates_per_collection`).
+4. Hard metadata filters are applied if the Intent Extractor isolates a specific condition (e.g., `where={"condition_id": "eczema_atopic_dermatitis"}`).
+5. Candidate chunks are yielded for reranking or direct LLM context injection.
+
+---
+
+## 11. Query Classification / Intent Logic
+
+`intent_extractor.py` utilizes the Groq LLM API to operate as the system's brain before vector search begins.
+
+1. **Classification:** It categorizes the intent (e.g., `ENVIRONMENTAL_WEATHER`, `SYMPTOM_INQUIRY`, `DRUG_SAFETY_CHECK`, or `GREETING`). Chit-chat completely bypasses the RAG layer.
+2. **Working Memory:** It manages a `clinical_summary` parameter across the session, merging previous known conditions with new symptoms.
+3. **Condition Overriding (Critical):** If a new query describes symptoms that contradict a previously established condition in memory, the system is explicitly prompted to override the old condition based on clinical differentiators (e.g., overriding Eczema to Psoriasis if "silvery scales" are mentioned).
+4. **Environmental Triggers:** If a city name is detected, `requires_weather` is set to true. The system automatically hits the OpenMeteo API (`weather_service.py`) to inject live Temperature, Humidity, and UV Index into the generation context.
+
+---
+
+## 12. Generation Layer
+
+The generation pipeline (`pipeline.py`) synthesizes evidence strictly based on the retrieved context using Groq (Llama-3/Mixtral).
+
+- **System Prompt Rules:**
+  - *"ONLY use information explicitly provided in the context blocks below."*
+  - *"UNSUPPORTED INFERENCE IS STRICTLY FORBIDDEN... DO NOT tell the patient to consider using it."*
+  - *"ALWAYS mention [Trade Name] alongside the active ingredient."*
+- **Formatting Constraints:** The prompt forces a strict 4-part structure: Short Answer, Evidence, Practical Recommendations, and Safety.
+- **Citations:** The generator is forced to append the exact string `[Source N]` to every factual claim. The UI parses this string via Regex and links it to `metadata.source_url` within an interactive Evidence Panel.
+
+---
+
+## 13. Safety and Abstention
+
+Safety mechanisms are hardcoded into the pipeline to prevent hallucinations when retrieval fails or information is missing.
+
+- **Absence of Evidence:** If the user asks about a specific drug, dosage, or interaction not found in the chunks, the LLM must generate a verbatim fallback: *"The retrieved sources do not provide enough information to determine whether this medication is safe for you. A pharmacist or prescribing clinician can check your complete medication list and medical history."*
+- **Safety Info Availability:** In the drug pipeline, if clinical trial warnings were unavailable in the raw dataset, the system injects *"Safety Information: Unavailable"*. The model distinguishes between "The drug has no warnings" and "Data is missing."
+- **Out of Scope:** Non-medical queries are blocked entirely by the intent extractor.
+
+---
+
+## 14. Evaluation Dataset
+
+The evaluation suite (`evaluation_questions/all_classified_questions.json` and `traces.json`) consists of 122 curated clinical questions.
+
+- **Disease Queries (74 Qs):** Diagnostic criteria, treatments, symptom identification.
+- **Drug Queries (9 Qs):** Specific Egyptian pharmacology, safety checks, ingredient overlaps.
+- **Cross-Domain (5 Qs):** Queries requiring joint retrieval from both collections.
+- **Excluded/Unsupported (23 Qs):** Ambiguous or out-of-scope requests used to test abstention behavior.
+
+---
+
+## 15. Retrieval Evaluation
+
+The system was evaluated using an automated custom framework (`custom_ragas.py`) measuring core RAGAS metrics via an LLM-as-a-judge (`openai/gpt-oss-120b`) and pure Cosine Similarity thresholds.
+
+- **Faithfulness:** **1.0 (100%)** — The generator produced zero claims that were unsupported by the provided context.
+- **Noise Robustness:** **1.0 (100%)** — The system reliably ignored adversarial, injected medical noise during testing.
+- **Answer Relevance:** **0.834** — High cosine similarity between the query intent and final answer.
+- **Context Precision:** **1.0 (100%)** — Candidate chunks reliably passed the `0.45` relevance threshold.
+
+---
+
+## 16. Failure Cases and Limitations
+
+### The Reranker Degradation Anomaly
+During architectural testing (`evaluate_reranker.py`), a `ms-marco-MiniLM-L-6-v2` Cross-Encoder was applied to Top-10 retrieved vectors to isolate Top-4 precision (`Precision@4`).
+- **Disease Impact:** Precision improved significantly (**+8.96%**).
+- **Drug Impact:** Precision degraded (**-2.2%**).
+- **Cause:** The Cross-Encoder, trained on general English web queries (MS MARCO), actively penalized unique Egyptian pharmacological brand names. 
+- **Resolution:** The reranker was bypassed entirely for the drug pipeline, remaining active only for disease collections.
+
+---
+
+## 17. End-to-End Execution
+
+A complete request lifecycle follows this trace:
+1. **User Query:** "I have psoriasis, can I use Daivobet?"
+2. **Intent Classification (`intent_extractor.py`):** Identifies `is_medical_query=True`, condition `Psoriasis`, and targets both `diseases` and `drugs` collections.
+3. **Retrieval (`retriever.py`):** 
+   - Embeds query with `all-MiniLM-L6-v2`, fetching psoriasis guidelines.
+   - Embeds query with `bge-m3`, fetching the "Daivobet" drug chunk.
+4. **Reranking:** Disease chunks are cross-encoded and re-sorted; Drug chunks skip reranking.
+5. **Context Construction (`pipeline.py`):** Chunks are stringified alongside patient memory and current weather.
+6. **Generation:** Groq LLM synthesizes the answer, citing `[Source 1]` (Guideline) and `[Source 2]` (Drug record).
+7. **Streaming Delivery:** Answer streams via Server-Sent Events (SSE) to the Vite React frontend.
+
+---
+
+## 18. Script / Module Reference
+
+- **`backend/pipeline.py`:** The main orchestrator. Handles LLM instantiation, context bounding, prompt engineering, and SSE stream formatting.
+- **`backend/retriever.py`:** Abstraction layer for ChromaDB. Implements lazy-loading of dual SentenceTransformers models to save VRAM.
+- **`backend/intent_extractor.py`:** Core parsing engine. Updates session-wide `clinical_summary`, extracts locations, and enforces condition priority logic.
+- **`src/data_ingestion/drugs_ingestion/chunk_drugs.py`:** Generates LangChain Documents. Translates JSON boolean safety flags into human-readable text for dense embeddings.
+- **`backend/custom_ragas.py`:** Evaluation script executing local embedding similarity (Answer Relevance / Context Precision) and LLM-as-a-judge Faithfulness validation.
+
+---
+
+## 19. Reproduction / Execution Guide
+
+**Environment Prerequisites:**
+- Python 3.10+
+- Node.js 18+
+- Groq API Key
+
+**Backend Startup:**
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+# Create .env and set GROQ_API_KEY=your_key
+python -m uvicorn main:app --host 0.0.0.0 --port 8000
+```
+*(Vector databases in `data/vectorstores` must exist locally before starting the backend).*
+
+**Frontend Startup:**
+```bash
+cd frontend
+npm install
+npm run dev
 ```
 
-### 100% Noise Robustness (Adversarial Methodology)
-To prove the system's safety, we executed a Noise Robustness evaluation. 
-**Methodology**: Highly plausible but completely fake medical context (e.g., inventing a dangerous dosage recommendation) was forcibly injected into the LLM's context window alongside real data. 
-**Result**: The LLM successfully ignored the irrelevant noise 100% of the time (20/20 tests), adhering strictly to the system prompt's safety guardrails.
+---
+
+## 20. Design Decisions
+
+1. **SSE Streaming over Static HTTP:** Static LLM generation resulted in median latencies of ~15 seconds. By implementing Server-Sent Events, the Time-To-First-Token (TTFT) was reduced to `< 1.0s`, allowing the UI's Text-To-Speech features to begin reading instantly.
+2. **ChromaDB Physical Isolation:** Mixing 384-dimensional and 1024-dimensional embeddings within a single latent space is mathematically unsupported by standard indexes. By isolating collections, we avoided dimensionality reduction trade-offs.
+3. **Whisper STT Tolerance:** The system injects an `[STT INPUT]` hint into the Intent Extractor when voice is used. This allows the system to forgive spelling approximations in medical terms caused by standard speech-to-text models.
 
 ---
 
-## Section 6: Evaluation Methodology & Metrics
+## 21. Technical Glossary
 
-### Dataset Evaluation Splits
-The dataset consists of 122 highly curated questions, structurally partitioned to prevent evaluation leakage across vector domains:
-*   **DRUG (9 questions / 7.38%)**: Independent Drug DB evaluation.
-*   **DISEASE (74 questions / 60.66%)**: Independent Disease DB evaluation.
-*   **BOTH (5 questions / 4.10%)**: Cross-domain queries requiring joint retrieval.
-*   **NEITHER (23 questions / 18.85%)**: Out-of-scope or live weather API queries (excluded from vector evaluations).
-
-*Difficulty Stratification*: 32% Easy, 47% Medium, 19% Hard.
-
-### Stage 1: Query Processing & Rewriting (Intent Extractor)
-The Intent Extractor resolves ambiguous colloquial Arabic into precise medical terms before embedding search.
-*   **Original Query Hit Rate@10:** 75.0%
-*   **Rewritten Query Hit Rate@10:** 80.0%
-*   **Impact:** `+5.0% Improvement`
-
-### Post-Optimization Retrieval Dashboard (Un-summarized)
-These metrics represent system performance *after* the reranker bypass and prompt refinement optimization phase.
-
-| Metric | Target | Result (Disease / Drug) | Status |
-| :--- | :--- | :--- | :--- |
-| **Rewriting Quality** | > 10% Improvement | **>10%** (Prompt Improved) | Passed |
-| **Hit Rate@10** | > 90% | **93.3%** / **92.0%** | Passed |
-| **MRR@10** | > 0.70 | **0.74** / **0.83** | Passed |
-| **NDCG@10** | > 0.75 | **0.71** / **0.85** | Passed |
-| **Precision@4 (Reranker)** | > Precision@4 before | **+9.0%** / **0.0%** (Drugs Bypassed)| Passed |
-| **Faithfulness (RAGAS)** | > 0.95 | **1.0** (100%) | Passed |
-| **Answer Relevance** | > 4/5 (LLM Judge) | **4.8 / 5.0** (LLM Evaluation) | Passed |
-| **Noise Robustness** | > 0.95 | **1.0** (100%) | Passed |
-
-### Latency Optimization (SSE Streaming)
-*   **Initial Status**: Static generation resulted in a `p50` latency of **15.05s**. Unacceptable for clinical flow.
-*   **Pivot**: Server-Sent Events (SSE) streaming was implemented in both the FastAPI backend and React frontend.
-*   **Final Result**: Time-To-First-Token (TTFT) was reduced to **< 1s**, providing immediate perceived responsiveness.
-
----
-
-## Section 7: UI & Clinical UX
-
-The frontend is a specialized React + Vite single-page application heavily styled with Tailwind CSS, explicitly engineered for high-stress medical settings.
-
-### Interactive Evidence Drawer Mechanics
-A cornerstone of the system's presentation score is clinical transparency. The LLM embeds citations using the exact string `[Source N]`. The React application parses these tags on the client side using regex and converts them into interactive UI buttons. 
-
-When a clinician clicks a citation, an interactive right-hand drawer slides out, directly exposing the exact raw context chunk (`metadata.content`) and the original `metadata.source_url` that the backend retrieved. This allows verification of any generated claim against the ground-truth literature in under 2 seconds.
-
-### Client-Side SSE Handling
-To support the TTFT latency improvements, the React UI connects to the FastAPI backend via an `EventSource` connection or fetch streams, dynamically parsing the stream into two distinct event types:
-1. `"metadata"`: Arrives instantly, populating the source drawers and patient intent state.
-2. `"done"` / stream chunks: Appends text to the markdown viewer in real-time. 
-
-### Visual Trust Indicators
-The UI enforces strict color coding. Recognized symptoms and matching drugs appear neutrally. Any missing contexts or "Caution Required" pharmacological flags trigger high-contrast visual alerts, ensuring the clinician's eye is drawn immediately to safety risks.
+- **AAD:** American Academy of Dermatology (source of disease guidelines).
+- **BGE-M3:** Advanced multilingual embedding model used for drug nomenclature.
+- **Cross-Encoder (Reranker):** A model that takes two texts (query and document) simultaneously to predict relevance, slower but highly precise.
+- **SSE:** Server-Sent Events (streaming protocol).
+- **RAGAS:** Retrieval Augmented Generation Assessment (evaluation framework).
+- **TTFT:** Time-To-First-Token (latency metric).
