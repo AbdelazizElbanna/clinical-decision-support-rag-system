@@ -56,36 +56,58 @@ all-MiniLM-L6-v2           BAAI/bge-m3
 
 ---
 
-## Quick Start & Local Deployment
+## Comprehensive Setup & Installation Guide
 
-### 1. Repository & Dependencies
-Clone the repository and install the backend environment:
-```bash
-cd backend
-pip install -r ../requirements.txt
-```
+To deploy the project locally on your machine, follow these steps strictly in order.
 
-### 2. Environment Configuration
-Establish your LLM routing layer by creating a `.env` file inside the `backend/` directory:
-```env
-GROQ_API_KEY=gsk_your_api_key_here
-```
+### 1. Environment Prerequisites
+- **Python 3.10+** (Required for the FastAPI Backend)
+- **Node.js 18+** (Required for the React Frontend)
+- **CUDA / GPU Drivers** (Optional, `device_utils.py` automatically falls back to CPU if capability checks fail)
+- **Groq API Key** (Required for the LLM inference engine)
 
-### 3. Run the Backend API
-Initiate the FastAPI Uvicorn server:
-```bash
-python -m uvicorn main:app --host 0.0.0.0 --port 8000
-```
-*The API is now actively listening at `http://localhost:8000`.*
+### 2. Backend Setup
+1. Open a terminal and navigate to the `backend` directory:
+   ```bash
+   cd backend
+   ```
+2. Create and activate a virtual environment (recommended):
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   ```
+3. Install the required Python dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Set up the API Keys by creating a `.env` file inside the `backend/` directory:
+   ```env
+   GROQ_API_KEY=gsk_your_api_key_here
+   ```
+5. Start the backend server:
+   ```bash
+   python -m uvicorn main:app --host 0.0.0.0 --port 8000
+   ```
+   *(The backend API is now actively listening at `http://localhost:8000`)*
 
-### 4. Run the Frontend Clinical UI
-Open a secondary terminal, initialize the React environment, and launch Vite:
-```bash
-cd frontend
-npm install
-npm run dev
-```
-*The Clinical Decision Support interface is accessible at `http://localhost:5173`.*
+### 3. Frontend Setup
+1. Open a new terminal window and navigate to the `frontend` directory:
+   ```bash
+   cd frontend
+   ```
+2. Install the required Node modules:
+   ```bash
+   npm install
+   ```
+3. Start the frontend development server:
+   ```bash
+   npm run dev
+   ```
+   *(The Clinical Decision Support interface is accessible at `http://localhost:5173`)*
+
+### 4. Verification
+- The backend should display `Device validation successful` or `Falling back to cpu` in the console on boot.
+- Verify vector storage health by querying the chat interface. If context sources appear in the UI, ChromaDB is active.
 
 ---
 
