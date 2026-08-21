@@ -678,89 +678,85 @@ export default function ChatInterface() {
               >✕</button>
             </div>
           )}
-          <form className="glass" onSubmit={handleSend} style={{ display: 'flex', gap: '12px', alignItems: 'flex-end', position: 'relative', borderRadius: '24px', padding: '6px 8px' }}>
-            <div style={{ flex: 1, position: 'relative' }}>
-              <textarea
-                ref={textareaRef}
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                onKeyDown={handleKeyDown}
-                placeholder={isRecording ? (t('recording_placeholder') || '🔴 Recording… click ■ to stop') : t('input_placeholder')}
-                rows={1}
-                style={{
-                  width: '100%',
-                  padding: '16px 20px',
-                  paddingRight: '110px',
-                  borderRadius: '20px',
-                  border: 'none',
-                  background: 'transparent',
-                  color: 'var(--text)',
-                  fontSize: '1rem',
-                  outline: 'none',
-                  resize: 'none',
-                  maxHeight: '150px',
-                  overflowY: 'auto',
-                  fontFamily: 'inherit',
-                  lineHeight: '1.5',
-                  boxSizing: 'border-box'
-                }}
-              />
-              {/* Mic button — absolute, left of send */}
-              <button
-                type="button"
-                onClick={isRecording ? stopRecording : startRecording}
-                disabled={isTranscribing || isLoading}
-                title={isRecording ? (t('stop_recording') || 'Stop recording') : (t('start_recording') || 'Speak')}
-                style={{
-                  position: 'absolute',
-                  right: '54px',
-                  bottom: '4px',
-                  background: isRecording
-                    ? 'linear-gradient(135deg, #ef4444, #dc2626)'
-                    : 'var(--surface-2)',
-                  color: isRecording ? '#fff' : isTranscribing ? 'var(--primary)' : 'var(--text-muted)',
-                  border: isRecording ? 'none' : '1px solid var(--border)',
-                  padding: '12px',
-                  borderRadius: '16px',
-                  cursor: isTranscribing || isLoading ? 'default' : 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transition: 'all 0.3s ease',
-                  animation: isRecording ? 'pulse-mic 1.5s ease-in-out infinite' : 'none',
-                  boxShadow: isRecording ? '0 4px 12px rgba(239,68,68,0.35)' : 'none',
-                }}
-              >
-                {isTranscribing
-                  ? <span style={{ width: 18, height: 18, border: '2px solid var(--primary)', borderTopColor: 'transparent', borderRadius: '50%', display: 'inline-block', animation: 'spin 0.7s linear infinite' }} />
-                  : isRecording
-                    ? <Square size={18} />
-                    : <Mic size={18} />}
-              </button>
-              {/* Send button */}
-              <button
-                type="submit"
-                disabled={!input.trim() || isLoading}
-                style={{
-                  position: 'absolute',
-                  right: '4px',
-                  bottom: '4px',
-                  background: input.trim() && !isLoading ? 'linear-gradient(135deg, var(--primary), var(--accent))' : 'var(--surface-2)',
-                  color: input.trim() && !isLoading ? '#fff' : 'var(--text-muted)',
-                  border: 'none',
-                  padding: '12px',
-                  borderRadius: '16px',
-                  cursor: input.trim() && !isLoading ? 'pointer' : 'default',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transition: 'all 0.3s ease',
-                  boxShadow: input.trim() && !isLoading ? '0 4px 12px rgba(129, 140, 248, 0.3)' : 'none'
-                }}
-              >
-                <Send size={18} />
-              </button>
-            </div>
+          <form className="glass" onSubmit={handleSend} style={{ display: 'flex', gap: '8px', alignItems: 'center', position: 'relative', borderRadius: '24px', padding: '6px 8px' }}>
+            <textarea
+              ref={textareaRef}
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={handleKeyDown}
+              placeholder={isRecording ? (t('recording_placeholder') || '🔴 Recording… click ■ to stop') : t('input_placeholder')}
+              rows={1}
+              style={{
+                flex: 1,
+                padding: '14px 20px',
+                borderRadius: '20px',
+                border: 'none',
+                background: 'transparent',
+                color: 'var(--text)',
+                fontSize: '1rem',
+                outline: 'none',
+                resize: 'none',
+                maxHeight: '150px',
+                overflowY: 'auto',
+                fontFamily: 'inherit',
+                lineHeight: '1.5',
+                boxSizing: 'border-box',
+                alignSelf: 'center',
+              }}
+            />
+            {/* Mic button */}
+            <button
+              type="button"
+              onClick={isRecording ? stopRecording : startRecording}
+              disabled={isTranscribing || isLoading}
+              title={isRecording ? (t('stop_recording') || 'Stop recording') : (t('start_recording') || 'Speak')}
+              style={{
+                flexShrink: 0,
+                alignSelf: 'center',
+                background: isRecording
+                  ? 'linear-gradient(135deg, #ef4444, #dc2626)'
+                  : 'var(--surface-2)',
+                color: isRecording ? '#fff' : isTranscribing ? 'var(--primary)' : 'var(--text-muted)',
+                border: isRecording ? 'none' : '1px solid var(--border)',
+                padding: '10px',
+                borderRadius: '14px',
+                cursor: isTranscribing || isLoading ? 'default' : 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'all 0.3s ease',
+                animation: isRecording ? 'pulse-mic 1.5s ease-in-out infinite' : 'none',
+                boxShadow: isRecording ? '0 4px 12px rgba(239,68,68,0.35)' : 'none',
+              }}
+            >
+              {isTranscribing
+                ? <span style={{ width: 18, height: 18, border: '2px solid var(--primary)', borderTopColor: 'transparent', borderRadius: '50%', display: 'inline-block', animation: 'spin 0.7s linear infinite' }} />
+                : isRecording
+                  ? <Square size={18} />
+                  : <Mic size={18} />}
+            </button>
+            {/* Send button */}
+            <button
+              type="submit"
+              disabled={!input.trim() || isLoading}
+              style={{
+                flexShrink: 0,
+                alignSelf: 'center',
+                background: input.trim() && !isLoading ? 'linear-gradient(135deg, var(--primary), var(--accent))' : 'var(--surface-2)',
+                color: input.trim() && !isLoading ? '#fff' : 'var(--text-muted)',
+                border: 'none',
+                padding: '10px',
+                borderRadius: '14px',
+                cursor: input.trim() && !isLoading ? 'pointer' : 'default',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transition: 'all 0.3s ease',
+                boxShadow: input.trim() && !isLoading ? '0 4px 12px rgba(129, 140, 248, 0.3)' : 'none'
+              }}
+            >
+              <Send size={18} />
+            </button>
           </form>
           <style>{`
             @keyframes pulse-mic {
